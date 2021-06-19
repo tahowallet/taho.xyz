@@ -4,12 +4,15 @@ The primary website for Tally, the community-owned Web3 wallet.
 
 ## Local development
 
-To build and serve the static site locally
+To develop the site locally
 
 ```shell
-yarn instal
-yarn build
-yarn serve
+yarn install
+yarn start
 ```
 
-You can visit the rendered site at `https://localhost:9000` 🎉
+You can visit the site locally at `https://localhost:8000` 🎉
+
+## Deployment
+
+The site is currently hosted and deployed by [Netlify](https://netlify.com).

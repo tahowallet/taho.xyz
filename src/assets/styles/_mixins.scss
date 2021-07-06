@@ -93,6 +93,7 @@
   display: flex;
   justify-content: center;
 }
+
 //--------------------------------------------------
 // [Typo]
 //--------------------------------------------------
@@ -136,4 +137,14 @@
   } @else {
     letter-spacing: #{$letter-spacing / $font-size}em;
   }
+}
+
+//--------------------------------------------------
+// [Common]
+//--------------------------------------------------
+@mixin background-image($img) {
+  background-image: url('#{$img}');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }

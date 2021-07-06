@@ -1,0 +1,60 @@
+@import "../../assets/styles/mixins";
+
+@mixin vertical-layout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 100%;
+
+    &__coming-soon {
+      order: 1;
+      margin: unset;
+    }
+
+    &__join-hunt {
+      order: 3;
+      margin: unset;
+    }
+
+    &__wallet {
+      order: 2;
+      margin: unset;
+    }
+}
+
+.workspace-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 43.89vh;
+
+  background-color: transparent;
+  border: 1px solid lightgreen;
+
+  &__coming-soon {
+    order: 1;
+    margin-right: auto;
+  }
+
+  &__join-hunt {
+    order: 2;
+    margin-right: auto;
+  }
+
+  &__wallet {
+    order: 3;
+    margin-left: auto;
+  }
+
+
+  @include screen-tablet {
+    @include vertical-layout();
+  }
+
+  @include screen-low-height {
+    @include vertical-layout();
+  }
+}

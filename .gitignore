@@ -108,3 +108,4 @@ dist
 
 # Netlify local directory
 .netlify
+.history/**

@@ -1,7 +1,5 @@
 
-//--------------------------------------------------
-// [Responsive]
-//--------------------------------------------------
+//#region Responsive
 
 // usage : @include screen-desktop {...}
 @mixin screen-desktop {
@@ -64,10 +62,9 @@
         @content;
     }
 }
+//#endregion Responsive
 
-//--------------------------------------------------
-// [Flex]
-//--------------------------------------------------
+//#region Flex
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -93,10 +90,9 @@
   display: flex;
   justify-content: center;
 }
+//#endregion Flex
 
-//--------------------------------------------------
-// [Typo]
-//--------------------------------------------------
+//#region Typography
 
 
 // usage : @include font-face(Roboto, "./assets/Roboto", normal, normal);
@@ -114,7 +110,7 @@
 }
 
 // usage: @include font-size(12, 18, 1.2);
-@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+@mixin font-size-auto-lh($font-size, $line-height: normal, $letter-spacing: normal) {
   font-size: $font-size * 1px;
   // font-size: $font-size * 0.1rem;
   // example using rem values and 62.5% font-size so 1rem = 10px
@@ -132,12 +128,17 @@
   }
 }
 
-//--------------------------------------------------
-// [Common]
-//--------------------------------------------------
+@mixin font-look($font-size, $line-height, $letter-spacing: normal) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+//#endregion Typography
+
+//#region Common
 @mixin background-image($img) {
   background-image: url('#{$img}');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
+//#endregion Common

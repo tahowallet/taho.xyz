@@ -1,3 +1,15 @@
-@import './variables';
-@import './fonts';
-@import './mixins';
+@import '/src/assets/styles/variables';
+@import '/src/assets/styles/mixins';
+@import '/src/assets/styles/fonts';
+
+@mixin font-quincy-cf {
+    font-family: QuincyCF-Regular;
+}
+
+@mixin font-quincy-cf-text {
+    font-family: QuincyCF-Text;
+}
+
+@mixin font-segment-regular {
+    font-family: Segment-Regular;
+}

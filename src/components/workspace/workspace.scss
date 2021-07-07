@@ -1,26 +1,26 @@
 @import "../../assets/styles/mixins";
 
 @mixin vertical-layout {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: 100%;
 
-    &__coming-soon {
-      order: 1;
-      margin: unset;
-    }
+  &__coming-soon {
+    order: 1;
+    margin: unset;
+  }
 
-    &__join-hunt {
-      order: 3;
-      margin: unset;
-    }
+  &__join-hunt {
+    order: 3;
+    margin: unset;
+  }
 
-    &__wallet {
-      order: 2;
-      margin: unset;
-    }
+  &__wallet {
+    order: 2;
+    margin: unset;
+  }
 }
 
 .workspace-section {
@@ -31,9 +31,6 @@
   width: 100%;
   height: 43.89vh;
 
-  background-color: transparent;
-  border: 1px solid lightgreen;
-
   &__coming-soon {
     order: 1;
     margin-right: auto;
@@ -41,6 +38,8 @@
 
   &__join-hunt {
     order: 2;
+    margin-top: 63px;
+    margin-left: 10px;
     margin-right: auto;
   }
 
@@ -48,7 +47,6 @@
     order: 3;
     margin-left: auto;
   }
-
 
   @include screen-tablet {
     @include vertical-layout();

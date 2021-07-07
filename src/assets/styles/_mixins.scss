@@ -98,8 +98,8 @@
 // [Typo]
 //--------------------------------------------------
 
-/* ===== Usage ===== */
-/* @include font-face(Roboto, "./assets/Roboto", normal, normal);*/
+
+// usage : @include font-face(Roboto, "./assets/Roboto", normal, normal);
 @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
   @font-face {
     font-family: quote($font-name);
@@ -113,14 +113,7 @@
   }
 }
 
-/* ===== Usage ===== */
-/*p {
-    @include font-size(12, 18, 1.2);
-    // returns
-    font-size: 12px;
-    line-height: 1.5; // 18 / 12
-    letter-spacing: 0.1em;
-  }*/
+// usage: @include font-size(12, 18, 1.2);
 @mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
   font-size: $font-size * 1px;
   // font-size: $font-size * 0.1rem;

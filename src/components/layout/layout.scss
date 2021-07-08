@@ -3,21 +3,37 @@
 
 .shell {
   display: flex;
+  position: relative;
 
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 
   width: 100%;
+  height: 100vh;
+  min-height: 1367px;
 
   background-color: $hunter-green;
 
+  &__bgr {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 55.81vh;
+    top: 30%;
+
+    @include background-image('../../assets/images/main-bg.svg');
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+
   &__header {
+    z-index: 1;
     width: 83.95%;
     margin: 77px auto 78px auto;
   }
 
   &__main {
+    z-index: 1;
     width: 80.42%;
     max-width: 80.42%;
 
@@ -28,6 +44,7 @@
   }
 
   &__footer {
+    z-index: 1;
     width: 15.90%;
     margin: 78px auto 61px auto;
   }

@@ -57,6 +57,10 @@
         @include font-quincy-cf();
         @include font-look(18px, 102.5%);
         color: $text-green-40;
+
+        &:hover {
+            color: $trophy-gold;
+        }
     }
 
     &__sign {

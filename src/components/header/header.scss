@@ -28,6 +28,10 @@
         }
     }
 
+    .github-icon:hover, .github-icon:active {
+        margin-right: -15px;
+    }
+
     @include screen-tablet {
 
         &__logo {

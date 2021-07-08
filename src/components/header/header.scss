@@ -1,4 +1,5 @@
-@import '../../assets/styles/mixins';
+@import '/src/assets/styles/mixins';
+@import '/src/assets/styles/app.scss';
 
 .header-section {
     @include flex-center();
@@ -24,25 +25,6 @@
 
         &:last-child{
             margin-right: 0;
-        }
-
-        &_discord {
-            height: 28px;
-            width: 24.5px;
-            @include background-image('../../assets/images/header/discord.svg');
-        }
-
-        &_twitter {
-            height: 22.75px;
-            width: 28px;
-            @include background-image('../../assets/images/header/twitter.svg');
-        }
-
-        &_github {
-            height: 27.240432739257812px;
-            width: 28px;
-
-            @include background-image('../../assets/images/header/github.svg');
         }
     }
 

@@ -1,0 +1,1 @@
+export * from './coming-soon';

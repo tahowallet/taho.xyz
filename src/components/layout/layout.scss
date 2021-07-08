@@ -1,0 +1,35 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.shell {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  //height: 100vh;
+
+  background-color: $hunter-green;
+
+  &__header {
+    width: 83.95%;
+    margin: 77px auto 78px auto;
+  }
+
+  &__main {
+    width: 80.42%;
+    max-width: 80.42%;
+
+    @include screen-tablet {
+        width: 91.24%;
+        max-width: 91.24%;
+    }
+  }
+
+  &__footer {
+    width: 15.90%;
+    margin: 78px auto 61px auto;
+  }
+}

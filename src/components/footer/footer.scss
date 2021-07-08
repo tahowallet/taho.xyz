@@ -1,7 +1,119 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+@import '../../assets/styles/app.scss';
+
+
 .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
     height: 141px;
 
-    background-color: transparent;
-    border: 1px solid yellow;
+    &__logo {
+        width: 29.54px;
+        height: 24px;
+
+        margin: 0 0 18px 0;
+
+        @include background-image('../../assets/images/footer/star.svg');
+    }
+
+    &__heading {
+        width: 159px;
+        height: 25px;
+
+        margin: 0 0 22px 0;
+
+        text-align: center;
+        @include font-quincy-cf();
+        @include font-look(24px, 25px, 0.2em);
+
+        text-transform: capitalize;
+        font-feature-settings: 'cpsp' on;
+
+        color: $trophy-gold;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 0 22px 0;
+    }
+
+    &__link {
+        display: flex;
+        margin: 0 30px 0 0;
+        &:last-child {
+            margin: 0;
+        }
+
+        text-align: center;
+        @include font-quincy-cf();
+        @include font-look(18px, 102.5%);
+        color: $text-green-40;
+    }
+
+    &__sign {
+        width: 126px;
+        height: 12px;
+        text-align: center;
+        @include font-quincy-cf();
+        @include font-look(12px, 102.5%);
+        color: $text-green-60;
+    }
+
+    &__discord, &__twitter, &__github {
+        display: none;
+    }
+
+    @include screen-tablet {
+
+        & {
+            height: 353.5px;
+            width: 186px;
+        }
+
+
+        &__links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 59.26px 0;
+        }
+
+        &__link {
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 34.63px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__discord, &__twitter, &__github {
+            display: flex;
+        }
+
+        &__discord {
+            margin-right: 13.5px;
+        }
+
+        &__twitter {
+            margin-right: 10px;
+        }
+
+        &__github {
+            margin-right: 10px;
+        }
+
+        &__sign {
+            margin: 0 0 81.5px 0;
+        }
+    }
 }

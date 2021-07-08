@@ -1,10 +1,55 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+$browser_width: 614.57px;
+$browser_height: 397.94px;
+
+$panel_width: 384px;
+$panel_height: 600px;
+
 .wallet {
-    min-width: 384px;
-    max-width: 384px;
+  display: grid;
+  justify-items: end;
 
-    min-height: 43.89vh;
-    max-height: 600px;
+  background-color: transparent;
+  border: 1px solid orange;
 
-    background-color: transparent;
-    border: 1px solid orange;
+  &__browser {
+    width: $browser_width;
+    height: $browser_height;
+
+    margin: 39px 0 0 0;
+
+    z-index: 1;
+    grid-row: 1;
+    grid-column: 1;
+
+    @include background-image("../../../assets/images/browser-illo.svg");
+    background-size: contain;
+  }
+
+  &__panel {
+    width: $panel_width;
+    height: $panel_height;
+
+    z-index: 2;
+    grid-row: 1;
+    grid-column: 1;
+
+    @include background-image("../../../assets/images/wallet.svg");
+    background-size: contain;
+  }
+
+  @include screen-tablet {
+    width: 278px;
+    height: 428px;
+
+    &__join-hunt {
+      margin-top: 82px;
+    }
+
+    &__coming-soon {
+      margin-bottom: 53px;
+    }
+  }
 }

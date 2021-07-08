@@ -1,12 +1,18 @@
 import PropTypes from "prop-types";
 import React from "react";
-import './wallet.scss';
+import "./wallet.scss";
 
 const Wallet = ({ children }: any) => {
-    return <div className="wallet">Wallet</div>
+  return (
+    <>
+      <div className="wallet">
+        <div className="wallet__browser"></div>
+        <div className="wallet__panel"></div>
+      </div>
+    </>
+  );
 };
 
-Wallet.propTypes = {
-};
+Wallet.propTypes = {};
 
 export default Wallet;

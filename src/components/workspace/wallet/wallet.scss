@@ -11,9 +11,6 @@ $panel_height: 600px;
   display: grid;
   justify-items: end;
 
-  background-color: transparent;
-  border: 1px solid orange;
-
   &__browser {
     width: $browser_width;
     height: $browser_height;
@@ -41,15 +38,29 @@ $panel_height: 600px;
   }
 
   @include screen-tablet {
-    width: 278px;
-    height: 428px;
-
-    &__join-hunt {
-      margin-top: 82px;
+    & {
+      width: 363px;
+      height: 428px;
     }
 
-    &__coming-soon {
-      margin-bottom: 53px;
+    &__browser {
+      width: 100%;
+      height: 285px;
+
+      margin: 1% 1% 0 0;
     }
+
+    &__panel {
+      height: 428px;
+      width: 278px;
+    }
+
+    // &__join-hunt {
+    //   margin-top: 82px;
+    // }
+
+    // &__coming-soon {
+    //   margin-bottom: 53px;
+    // }
   }
 }

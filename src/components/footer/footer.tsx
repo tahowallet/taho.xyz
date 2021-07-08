@@ -6,7 +6,7 @@ const Footer = ({}: any) => {
   return (
     <>
     <div className="footer-section">
-      <div className="footer-section__logo"></div>
+      <div className="footer-section__logo"><p></p></div>
       <div className="footer-section__heading">TALLY HO!</div>
       <div className="footer-section__links">
           <div className="footer-section__link">

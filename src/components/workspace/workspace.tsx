@@ -16,7 +16,6 @@ const Workspace = ({ children }: any) => {
 };
 
 Workspace.propTypes = {
-  //children: PropTypes.node.isRequired,
 };
 
 export default Workspace;

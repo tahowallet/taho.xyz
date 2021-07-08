@@ -1,7 +1,5 @@
 
-//--------------------------------------------------
-// [Responsive]
-//--------------------------------------------------
+//#region Responsive
 
 // usage : @include screen-desktop {...}
 @mixin screen-desktop {
@@ -64,10 +62,9 @@
         @content;
     }
 }
+//#endregion Responsive
 
-//--------------------------------------------------
-// [Flex]
-//--------------------------------------------------
+//#region Flex
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -93,12 +90,12 @@
   display: flex;
   justify-content: center;
 }
-//--------------------------------------------------
-// [Typo]
-//--------------------------------------------------
+//#endregion Flex
 
-/* ===== Usage ===== */
-/* @include font-face(Roboto, "./assets/Roboto", normal, normal);*/
+//#region Typography
+
+
+// usage : @include font-face(Roboto, "./assets/Roboto", normal, normal);
 @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
   @font-face {
     font-family: quote($font-name);
@@ -112,28 +109,17 @@
   }
 }
 
-/* ===== Usage ===== */
-/*p {
-    @include font-size(12, 18, 1.2);
-    // returns
-    font-size: 12px;
-    line-height: 1.5; // 18 / 12
-    letter-spacing: 0.1em;
-  }*/
-@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
-  font-size: $font-size * 1px;
-  // font-size: $font-size * 0.1rem;
-  // example using rem values and 62.5% font-size so 1rem = 10px
-
-  @if $line-height==normal {
-    line-height: normal;
-  } @else {
-    line-height: $line-height / $font-size;
-  }
-
-  @if $letter-spacing==normal {
-    letter-spacing: normal;
-  } @else {
-    letter-spacing: #{$letter-spacing / $font-size}em;
-  }
+@mixin font-look($font-size, $line-height, $letter-spacing: normal) {
+  font-size: $font-size;
+  line-height: $line-height;
 }
+//#endregion Typography
+
+//#region Common
+@mixin background-image($img) {
+  background-image: url('#{$img}');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+//#endregion Common

@@ -61,4 +61,31 @@
         border: none;
         border-radius: 24px;
     }
+
+    @include screen-tablet {
+
+        & {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &__email {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__form {
+            text-align: center;
+        }
+
+        &__btn {
+            margin: 12px 0 0 0;
+        }
+
+    }
 }

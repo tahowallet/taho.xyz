@@ -40,4 +40,18 @@
 
         color: $text-light;
     }
+
+    @include screen-tablet {
+
+        &__btn {
+            margin: auto;
+            align-self: center;
+        }
+
+        &__info {
+            margin: auto;
+            text-align: center;
+        }
+
+    }
 }

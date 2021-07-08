@@ -6,6 +6,7 @@ import Workspace from "../components/workspace/workspace"
 
 import 'normalize.css'
 import '../components/layout.css'
+import '../components/layout-theme.scss';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`

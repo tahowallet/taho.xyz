@@ -22,7 +22,7 @@
     top: 30%;
 
     @include background-image('../../assets/images/main-bg.svg');
-    background-size: contain;
+    background-size: 100vw;
     background-repeat: repeat-x;
   }
 
@@ -35,6 +35,7 @@
   &__main {
     z-index: 1;
     width: 80.42%;
+    height: 100%;
     max-width: 80.42%;
 
     @include screen-tablet {

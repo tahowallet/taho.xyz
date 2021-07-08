@@ -1,84 +1,82 @@
-@import '/src/assets/styles/mixins';
-@import '/src/assets/styles/variables';
-@import '/src/assets/styles/app.scss';
+@import "/src/assets/styles/mixins";
+@import "/src/assets/styles/variables";
+@import "/src/assets/styles/app.scss";
 
 .join-hunt {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 
-    width: 403px;
-    height: 109px;
+  width: 403px;
+  height: 109px;
+
+  &__text {
+    width: 263px;
+    height: 44px;
+
+    @include font-segment-regular();
+    @include font-look(18px, 22px);
+
+    color: $trophy-gold;
+  }
+
+  &__email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__form {
+    width: 234px;
+    height: 42px;
+
+    @include font-quincy-cf();
+    @include font-look(24px, 24.6px);
+
+    color: $text-light;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $trophy-gold;
+
+    &::placeholder {
+      color: $text-green;
+    }
+  }
+
+  &__btn {
+    @include flex-center();
+
+    width: 155px;
+    height: 42px;
+
+    margin: 0 0 0 14px;
+  }
+
+  @include screen-tablet {
+    & {
+      align-items: center;
+      justify-content: center;
+    }
 
     &__text {
-        width: 263px;
-        height: 44px;
-
-        @include font-segment-regular();
-        @include font-look(18px, 22px);
-
-        color: $trophy-gold;
+      text-align: center;
     }
 
     &__email {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     &__form {
-        width: 234px;
-        height: 42px;
-
-        @include font-quincy-cf();
-        @include font-look(24px, 24.6px);
-
-        color: $text-light;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid $trophy-gold;
-
-        &::placeholder {
-            color: $text-green;
-        }
+      text-align: center;
     }
 
     &__btn {
-        @include flex-center();
-
-        width: 155px;
-        height: 42px;
-
-        margin: 0 0 0 14px;
+      margin: 12px 0 0 0;
     }
-
-    @include screen-tablet {
-
-        & {
-            align-items: center;
-            justify-content: center;
-        }
-
-        &__text {
-            text-align: center;
-        }
-
-        &__email {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        &__form {
-            text-align: center;
-        }
-
-        &__btn {
-            margin: 12px 0 0 0;
-        }
-
-    }
+  }
 }

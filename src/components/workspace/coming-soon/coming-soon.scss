@@ -1,57 +1,55 @@
-@import '/src/assets/styles/mixins';
-@import '/src/assets/styles/variables';
-@import '/src/assets/styles/app.scss';
+@import "/src/assets/styles/mixins";
+@import "/src/assets/styles/variables";
+@import "/src/assets/styles/app.scss";
 
 .coming-soon {
-    width: 347px;
-    height: 156px;
+  width: 347px;
+  height: 156px;
 
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 119px;
+    height: 26px;
+
+    border: 1px solid $trophy-gold;
+    border-radius: 14px;
+  }
+
+  &__btn-text {
+    width: 91px;
+    height: 22px;
+
+    text-align: center;
+    @include font-segment-regular();
+    @include font-look(14px, 22px, 0.02em);
+
+    color: $trophy-gold;
+  }
+
+  &__info {
+    width: 337px;
+    height: 114px;
+
+    margin: 25px 0 0 10px;
+
+    @include font-quincy-cf();
+    @include font-look(52px, 109.5%);
+
+    color: $text-light;
+  }
+
+  @include screen-tablet {
     &__btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 119px;
-        height: 26px;
-
-        border: 1px solid $trophy-gold;
-        border-radius: 14px;
-    }
-
-    &__btn-text {
-        width: 91px;
-        height: 22px;
-
-        text-align: center;
-        @include font-segment-regular();
-        @include font-look(14px, 22px, 0.02em);
-
-        color: $trophy-gold;
+      margin: auto;
+      align-self: center;
     }
 
     &__info {
-        width: 337px;
-        height: 114px;
-
-        margin: 25px 0 0 10px;
-
-        @include font-quincy-cf();
-        @include font-look(52px, 109.5%);
-
-        color: $text-light;
+      margin: auto;
+      text-align: center;
     }
-
-    @include screen-tablet {
-
-        &__btn {
-            margin: auto;
-            align-self: center;
-        }
-
-        &__info {
-            margin: auto;
-            text-align: center;
-        }
-
-    }
+  }
 }

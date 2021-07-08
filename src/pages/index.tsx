@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Workspace from "../components/workspace/workspace"
 
 import 'normalize.css'
-import '../assets/styles/app.scss'
+import '../components/layout.css'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`

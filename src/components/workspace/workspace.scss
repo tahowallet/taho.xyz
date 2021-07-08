@@ -2,23 +2,22 @@
 
 @mixin vertical-layout {
   & {
-    grid-template-columns: 100%; 
-    grid-template-rows: 33% 33% 33%; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "coming-soon"
-    "wallet"
-    "join-hunt";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "coming-soon"
+      "wallet"
+      "join-hunt";
   }
 
   &__coming-soon {
     @include flex-center();
-    margin-bottom: 53px;
+    align-items: flex-start;
   }
 
   &__join-hunt {
     @include flex-center();
-    margin-top: 82px;
   }
 
   &__wallet {
@@ -27,30 +26,30 @@
 }
 
 .workspace-section {
-  display: grid; 
-  grid-template-columns: 30.95% auto 55.84%; 
-  grid-template-rows: 34% 34% 32%; 
-  gap: 0px 0px; 
-  grid-template-areas: 
+  display: grid;
+  grid-template-columns: 30.95% auto 55.84%;
+  grid-template-rows: 34% 34% 32%;
+  gap: 0px 0px;
+  grid-template-areas:
     "coming-soon coming-soon wallet"
     "join-hunt join-hunt wallet"
     "space space wallet";
 
-    &__wallet {
-      grid-area: wallet;
-    }
+  &__wallet {
+    grid-area: wallet;
+  }
 
-    &__coming-soon {
-      grid-area: coming-soon;
-      margin-top: 21px;
-    }
+  &__coming-soon {
+    grid-area: coming-soon;
+    margin-bottom: 53px;
+  }
 
-    &__join-hunt {
-      grid-area: join-hunt;
-      margin-top: 44px;
-   }
+  &__join-hunt {
+    grid-area: join-hunt;
+    margin-top: 82px;
+  }
 
-    @include screen-tablet {
-      @include vertical-layout();
-    }
+  @include screen-tablet {
+    @include vertical-layout();
+  }
 }

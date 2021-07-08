@@ -57,6 +57,7 @@
 
   @include screen-tablet {
     & {
+      height: 148px;
       align-items: center;
       justify-content: center;
     }

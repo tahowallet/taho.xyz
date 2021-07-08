@@ -42,13 +42,22 @@
   }
 
   @include screen-tablet {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 259px;
+      height: 126px;
+    }
+
     &__btn {
-      margin: auto;
+      margin: 0 0 12px 0;
       align-self: center;
     }
 
     &__info {
-      margin: auto;
+      margin: 0;
       text-align: center;
     }
   }

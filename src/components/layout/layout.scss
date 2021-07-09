@@ -37,11 +37,6 @@
     width: 82%;
     height: 100%;
     max-width: 82%;
-
-    @include screen-tablet {
-      width: 91.24%;
-      max-width: 91.24%;
-    }
   }
 
   &__footer {
@@ -51,5 +46,28 @@
 
     width: 15.9%;
     margin: 78px auto 61px auto;
+  }
+
+  @include screen-tablet {
+
+    &__main {
+      width: 91.24%;
+      max-width: 91.24%;
+    }
+
+    &__header {
+      margin: 71px auto 95px auto;
+    }
+
+    &__footer {
+      margin: 330px auto 81.5px auto;
+    }
+
+    &__bgr {
+      height: 30.56vh;
+      top: 42.88%;
+      background-size: cover;
+    }
+
   }
 }

@@ -60,6 +60,7 @@
 
         &:hover {
             color: $trophy-gold;
+            cursor: pointer;
         }
     }
 
@@ -68,7 +69,7 @@
         height: 12px;
         text-align: center;
         @include font-quincy-cf();
-        @include font-look(12px, 102.5%);
+        @include font-look(12px, 12.3px);
         color: $text-green-60;
     }
 
@@ -81,6 +82,12 @@
         & {
             height: 353.5px;
             width: 186px;
+        }
+
+        &__heading {
+            width: 186px;
+            height: 33px;
+            @include font-look(32px, 33px, 0.1em);
         }
 
         &__links {
@@ -116,6 +123,11 @@
         }
 
         &__sign {
+            width: 147px;
+            height: 14px;
+
+            @include font-look(14px, 14px);
+
             margin: 0 0 81.5px 0;
         }
     }

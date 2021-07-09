@@ -59,6 +59,7 @@
     &__info {
       margin: 0;
       text-align: center;
+      @include font-look(40px, 109.5%);
     }
   }
 }

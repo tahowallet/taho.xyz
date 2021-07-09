@@ -131,6 +131,7 @@
 @mixin font-look($font-size, $line-height, $letter-spacing: normal) {
   font-size: $font-size;
   line-height: $line-height;
+  letter-spacing: $letter-spacing;
 }
 //#endregion Typography
 

@@ -18,6 +18,7 @@ const Layout = ({ children }: any) => {
       <div className="shell__header"><Header></Header></div>
       <div className="shell__main"><>{children}</></div>
       <div className="shell__footer"><Footer></Footer></div>
+      <div className="shell__bgr"></div>
     </div>
   )
 }

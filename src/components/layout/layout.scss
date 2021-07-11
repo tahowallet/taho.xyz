@@ -3,32 +3,53 @@
 
 .shell {
   display: flex;
+  position: relative;
 
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 
   width: 100%;
+  height: 100vh;
+  min-height: 1367px;
 
   background-color: $hunter-green;
 
+  &__bgr {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 61.15vh;
+    top: 30%;
+
+    @include background-image("../../assets/images/main-bg.svg");
+    background-size: 100%;
+    background-repeat: repeat-x;
+  }
+
   &__header {
+    z-index: 1;
     width: 83.95%;
     margin: 77px auto 78px auto;
   }
 
   &__main {
-    width: 80.42%;
-    max-width: 80.42%;
+    z-index: 1;
+    width: 82%;
+    height: 100%;
+    max-width: 82%;
 
     @include screen-tablet {
-        width: 91.24%;
-        max-width: 91.24%;
+      width: 91.24%;
+      max-width: 91.24%;
     }
   }
 
   &__footer {
-    width: 15.90%;
+    z-index: 1;
+
+    @include flex-center();
+
+    width: 15.9%;
     margin: 78px auto 61px auto;
   }
 }

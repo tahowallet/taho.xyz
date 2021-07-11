@@ -7,9 +7,9 @@ const Header = ({ siteTitle }: any) => {
     <div className="header-section">
       <div className="header-section__logo"></div>
       <div className="header-section__links">
-        <div className="header-section__link header-section__link_discord"></div>
-        <div className="header-section__link header-section__link_twitter"></div>
-        <div className="header-section__link header-section__link_github"></div>
+        <div className="header-section__link header-section__link_discord discord-icon"></div>
+        <div className="header-section__link header-section__link_twitter twitter-icon"></div>
+        <div className="header-section__link header-section__link_github github-icon"></div>
       </div>
     </div>
   );

@@ -56,6 +56,9 @@
     &__btn {
       width: rwl(119);
       height: rhl(26);
+
+      min-width: 119px;
+
       margin: 0 0 rhl(12) 0;
       padding: rh(2) rw(14);
       align-self: center;

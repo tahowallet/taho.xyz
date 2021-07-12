@@ -1,11 +1,11 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/variables";
 
-$browser_width: 614.57px;
-$browser_height: 397.94px;
+$browser_width: rw(614.57);
+$browser_height: rh(397.94);
 
-$panel_width: 384px;
-$panel_height: 600px;
+$panel_width: rw(384);
+$panel_height: rh(600);
 
 .wallet {
   display: grid;
@@ -15,7 +15,7 @@ $panel_height: 600px;
     width: $browser_width;
     height: $browser_height;
 
-    margin: 39px 0 0 0;
+    margin: rh(39) 0 0 0;
 
     z-index: 1;
     grid-row: 1;
@@ -39,20 +39,20 @@ $panel_height: 600px;
 
   @include screen-tablet {
     & {
-      width: 363px;
-      height: 428px;
+      width: rwl(363);
+      height: rhl(428);
     }
 
     &__browser {
       width: 100%;
-      height: 285px;
+      height: rhl(285);
 
       margin: 1% 1% 0 0;
     }
 
     &__panel {
-      height: 428px;
-      width: 278px;
+      height: rhl(428);
+      width: rwl(278);
     }
   }
 }

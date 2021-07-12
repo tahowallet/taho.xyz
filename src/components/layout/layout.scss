@@ -18,7 +18,7 @@
     z-index: 0;
     position: absolute;
     width: 100%;
-    height: 61.15vh;
+    height: rh(763);
     top: 30%;
 
     @include background-image("../../assets/images/main-bg.svg");
@@ -29,7 +29,7 @@
   &__header {
     z-index: 1;
     width: 83.95%;
-    margin: 77px auto 78px auto;
+    margin: rh(77) auto rh(78) auto;
   }
 
   &__main {
@@ -45,7 +45,7 @@
     @include flex-center();
 
     width: 15.9%;
-    margin: 78px auto 61px auto;
+    margin: rh(78) auto rh(61) auto;
   }
 
   @include screen-tablet {
@@ -57,16 +57,16 @@
     }
 
     &__header {
-      margin: 71px auto 95px auto;
+      margin: rhl(71) auto rhl(95) auto;
     }
 
     &__footer {
-      margin: 330px auto 81.5px auto;
+      margin: rhl(330) auto rhl(81.5) auto;
     }
 
     &__bgr {
-      height: 30.56vh;
-      top: 42.88%;
+      height: rhl(558.76);
+      top: rhl(784);
       background-size: cover;
     }
 

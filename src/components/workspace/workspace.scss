@@ -14,10 +14,12 @@
   &__coming-soon {
     @include flex-center();
     align-items: flex-start;
+    margin-bottom: 53px;
   }
 
   &__join-hunt {
     @include flex-center();
+    margin-top: 82px;
   }
 
   &__wallet {
@@ -28,7 +30,7 @@
 .workspace-section {
   display: grid;
   grid-template-columns: 30.95% auto 55.84%;
-  grid-template-rows: 34% 34% 32%;
+  grid-template-rows: 26% 18.16% auto;
   gap: 0px 0px;
   grid-template-areas:
     "coming-soon coming-soon wallet"
@@ -41,12 +43,11 @@
 
   &__coming-soon {
     grid-area: coming-soon;
-    margin-bottom: 53px;
   }
 
   &__join-hunt {
     grid-area: join-hunt;
-    margin-top: 82px;
+    margin-top: 63px;
   }
 
   @include screen-tablet {

@@ -11,6 +11,8 @@
   width: 403px;
   height: 109px;
 
+  margin: 0 0 0 10px;
+
   &__text {
     width: 263px;
     height: 44px;
@@ -61,6 +63,7 @@
 
   @include screen-tablet {
     & {
+      margin: 0;
       height: 148px;
       align-items: center;
       justify-content: center;

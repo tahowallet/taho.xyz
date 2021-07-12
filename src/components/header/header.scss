@@ -9,7 +9,7 @@
     height: rh(80);
 
     &__logo {
-        width: 18.84%;
+        width: rw(225.39);
         height: inherit;
 
         margin-right: auto;
@@ -72,12 +72,12 @@
     @include screen-tablet {
 
         & {
-            height: rh(60)
+            height: rhl(60)
         }
 
         &__logo {
             width: 45.06%;
-            height: rh(60);
+            height: rhl(60);
             margin: 0;
             margin-left: auto;
             margin-right: auto;

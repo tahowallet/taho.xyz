@@ -3,21 +3,21 @@
 @import "/src/assets/styles/app.scss";
 
 .coming-soon {
-  width: 347px;
-  height: 156px;
+  width: rw(347);
+  height: rh(156);
 
   &__btn {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 119px;
-    height: 26px;
+    width: rw(119);
+    height: rh(26);
 
     padding: 2px 14px;
 
     border: 1px solid $trophy-gold;
-    border-radius: 14px;
+    border-radius: rh(14);
 
     white-space: nowrap;
   }
@@ -25,19 +25,19 @@
   &__btn-text {
     text-align: center;
     @include font-segment-regular();
-    @include font-look(14px, 22px, 0.02em);
+    @include font-look(rh(14), 157.14%, 0.02em);
 
     color: $trophy-gold;
   }
 
   &__info {
-    width: 337px;
-    height: 114px;
+    width: rw(337);
+    height: rh(114);
 
-    margin: 25px 0 0 10px;
+    margin: rh(25) 0 0 rw(10);
 
     @include font-quincy-cf();
-    @include font-look(52px, 109.5%);
+    @include font-look(rh(52), 109.5%);
 
     color: $text-light;
   }
@@ -48,19 +48,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 259px;
-      height: 126px;
+      width: rwl(259);
+      height: rhl(126);
     }
 
     &__btn {
-      margin: 0 0 12px 0;
+      margin: 0 0 rhl(12) 0;
       align-self: center;
     }
 
     &__info {
       margin: 0;
       text-align: center;
-      @include font-look(40px, 109.5%);
+      @include font-look(rhl(40), 109.5%);
     }
   }
 }

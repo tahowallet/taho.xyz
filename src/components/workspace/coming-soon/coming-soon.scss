@@ -10,13 +10,6 @@
 
     width: rw(119);
     height: rh(26);
-
-    padding: rh(2) rw(14);
-
-    border: 1px solid $trophy-gold;
-    border-radius: rh(14);
-
-    white-space: nowrap;
   }
 
   &__btn-text {
@@ -25,7 +18,11 @@
     @include font-segment-regular();
     @include font-look(rh(14), 157.14%, 0.02em);
 
+    padding: rh(2) rw(14);
+
     color: $trophy-gold;
+    border: 1px solid $trophy-gold;
+    border-radius: rh(14);
   }
 
   &__info {
@@ -57,11 +54,12 @@
       min-width: 119px;
 
       margin: 0 0 rhl(12) 0;
-      padding: rh(2) rw(14);
       align-self: center;
     }
 
     &__btn-text {
+      padding: rhl(2) rwl(14);
+      border-radius: rhl(14);
       @include font-look(rhl(14), 157.14%, 0.02em);
     }
 

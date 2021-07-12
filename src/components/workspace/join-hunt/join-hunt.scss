@@ -10,14 +10,10 @@ $join-hunt: 'join-hunt';
   align-items: flex-start;
   justify-content: space-between;
 
-  width: rw(403);
-  height: rh(109);
-
   margin: 0 0 0 rw(10);
 
   &__text {
     width: rw(263);
-    height: rh(44);
 
     @include font-segment-regular();
     @include font-look(rh(18), 122%);
@@ -57,14 +53,15 @@ $join-hunt: 'join-hunt';
   &__btn {
     @include flex-center();
 
-    width: rw(155);
-    height: rh(42);
+    width: auto;
 
     min-width: 155px;
-    min-height: 42px;
 
     margin: 0 0 0 rw(14);
     padding: rh(12) rw(28.5);
+
+    text-align: center;
+    white-space: nowrap;
   }
 
   @include screen-tablet {

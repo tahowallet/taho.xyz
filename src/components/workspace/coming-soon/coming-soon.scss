@@ -3,9 +3,6 @@
 @import "/src/assets/styles/app.scss";
 
 .coming-soon {
-  width: rw(347);
-  height: rh(156);
-
   &__btn {
     display: flex;
     align-items: center;
@@ -23,6 +20,7 @@
   }
 
   &__btn-text {
+    @include flex-center();
     text-align: center;
     @include font-segment-regular();
     @include font-look(rh(14), 157.14%, 0.02em);
@@ -32,7 +30,6 @@
 
   &__info {
     width: rw(337);
-    height: rh(114);
 
     margin: rh(25) 0 0 rw(10);
 

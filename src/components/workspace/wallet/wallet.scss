@@ -23,6 +23,7 @@ $panel_height: rh(600);
 
     @include background-image("../../../assets/images/browser-illo.svg");
     background-size: contain;
+    background-position: right;
   }
 
   &__panel {
@@ -35,6 +36,7 @@ $panel_height: rh(600);
 
     @include background-image("../../../assets/images/wallet.svg");
     background-size: contain;
+    background-position: right;
   }
 
   @include screen-tablet {
@@ -48,11 +50,15 @@ $panel_height: rh(600);
       height: rhl(285);
 
       margin: 1% 1% 0 0;
+
+      background-position: center;
     }
 
     &__panel {
       height: rhl(428);
       width: rwl(278);
+
+      background-position: center;
     }
   }
 }

@@ -63,14 +63,18 @@
 
   @include screen-tablet {
     & {
-      margin: 0;
+      width: 263px;
       height: 148px;
+
+      margin: 0;
+
       align-items: center;
       justify-content: center;
     }
 
     &__text {
       text-align: center;
+      margin: 0 0 16px 0;
     }
 
     &__email {

@@ -51,6 +51,7 @@
   @include screen-tablet {
 
     &__main {
+      @include flex-center();
       width: 91.24%;
       max-width: 91.24%;
     }

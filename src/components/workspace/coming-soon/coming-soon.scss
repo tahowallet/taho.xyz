@@ -14,14 +14,13 @@
     width: 119px;
     height: 26px;
 
+    padding: 2px 14px;
+
     border: 1px solid $trophy-gold;
     border-radius: 14px;
   }
 
   &__btn-text {
-    width: 91px;
-    height: 22px;
-
     text-align: center;
     @include font-segment-regular();
     @include font-look(14px, 22px, 0.02em);

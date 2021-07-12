@@ -26,6 +26,42 @@
         &:last-child{
             margin-right: 0;
         }
+
+        &_discord {
+            @include hovered-icon(
+                28px,
+                24.5px,
+                '../../assets/images/header/discord.svg',
+                '../../assets/images/header/discord-hover.svg',
+                '../../assets/images/header/discord-click.svg',
+                '../../assets/images/arrow-hover.svg',
+                '../../assets/images/arrow-click.svg'
+            );
+        }
+
+        &_twitter {
+            @include hovered-icon(
+                22.75px,
+                28px,
+                '../../assets/images/header/twitter.svg',
+                '../../assets/images/header/twitter-hover.svg',
+                '../../assets/images/header/twitter-click.svg',
+                '../../assets/images/arrow-hover.svg',
+                '../../assets/images/arrow-click.svg'
+            );
+        }
+
+        &_github {
+            @include hovered-icon(
+                27.240432739257812px,
+                28px,
+                '../../assets/images/header/github.svg',
+                '../../assets/images/header/github-hover.svg',
+                '../../assets/images/header/github-click.svg',
+                '../../assets/images/arrow-hover.svg',
+                '../../assets/images/arrow-click.svg'
+            );
+        }
     }
 
     .github-icon:hover, .github-icon:active {

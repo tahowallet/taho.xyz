@@ -11,6 +11,8 @@
   width: 403px;
   height: 109px;
 
+  margin: 0 0 0 10px;
+
   &__text {
     width: 263px;
     height: 44px;
@@ -44,6 +46,10 @@
     &::placeholder {
       color: $text-green;
     }
+
+    &:valid {
+      border-color: $trophy-gold-40;
+    }
   }
 
   &__btn {
@@ -57,13 +63,18 @@
 
   @include screen-tablet {
     & {
+      width: 263px;
       height: 148px;
+
+      margin: 0;
+
       align-items: center;
       justify-content: center;
     }
 
     &__text {
       text-align: center;
+      margin: 0 0 16px 0;
     }
 
     &__email {

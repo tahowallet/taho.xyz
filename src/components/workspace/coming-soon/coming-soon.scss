@@ -14,7 +14,7 @@
     width: rw(119);
     height: rh(26);
 
-    padding: 2px 14px;
+    padding: rh(2) rw(14);
 
     border: 1px solid $trophy-gold;
     border-radius: rh(14);
@@ -48,16 +48,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: rwl(259);
-      height: rhl(126);
     }
 
     &__btn {
+      width: rwl(119);
+      height: rhl(26);
       margin: 0 0 rhl(12) 0;
+      padding: rh(2) rw(14);
       align-self: center;
     }
 
+    &__btn-text {
+      @include font-look(rhl(14), 157.14%, 0.02em);
+    }
+
     &__info {
+      width: rwl(259);
+      height: rhl(88);
       margin: 0;
       text-align: center;
       @include font-look(rhl(40), 109.5%);

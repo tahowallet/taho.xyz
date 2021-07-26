@@ -23,6 +23,7 @@
     color: $trophy-gold;
     border: 1px solid $trophy-gold;
     border-radius: rh(14);
+    white-space: nowrap;
   }
 
   &__info {

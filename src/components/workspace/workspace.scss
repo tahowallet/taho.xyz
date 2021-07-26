@@ -3,7 +3,6 @@
 
 @mixin vertical-layout {
   & {
-    height: rhl(837);
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
     gap: 0px 0px;

@@ -42,10 +42,12 @@ $panel_height: rh(600);
   @include screen-tablet {
     & {
       width: rwl(363);
+      height: rhl(428);
     }
 
     &__browser {
       width: 100%;
+      height: rhl(285);
 
       margin: 1% 1% 0 0;
 
@@ -53,6 +55,7 @@ $panel_height: rh(600);
     }
 
     &__panel {
+      height: rhl(428);
       width: rwl(278);
 
       background-position: center;

@@ -3,35 +3,41 @@
 @import "/src/assets/styles/app.scss";
 
 .coming-soon {
+  width: 347px;
+  height: 156px;
+
   &__btn {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: rw(119);
-    height: rh(26);
+    width: 119px;
+    height: 26px;
+
+    padding: 2px 14px;
+
+    border: 1px solid $trophy-gold;
+    border-radius: 14px;
+
+    white-space: nowrap;
   }
 
   &__btn-text {
-    @include flex-center();
     text-align: center;
     @include font-segment-regular();
-    @include font-look(rh(14), 157.14%, 0.02em);
-
-    padding: rh(2) rw(14);
+    @include font-look(14px, 22px, 0.02em);
 
     color: $trophy-gold;
-    border: 1px solid $trophy-gold;
-    border-radius: rh(14);
   }
 
   &__info {
-    width: rw(337);
+    width: 337px;
+    height: 114px;
 
-    margin: rh(25) 0 0 rw(10);
+    margin: 25px 0 0 10px;
 
     @include font-quincy-cf();
-    @include font-look(rh(52), 109.5%);
+    @include font-look(52px, 109.5%);
 
     color: $text-light;
   }
@@ -42,33 +48,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
-      width: rwl(259);
-      height: rhl(126);
+      width: 259px;
+      height: 126px;
     }
 
     &__btn {
-      width: rwl(119);
-      height: rhl(26);
-
-      min-width: 119px;
-
-      margin: 0 0 rhl(12) 0;
+      margin: 0 0 12px 0;
       align-self: center;
     }
 
-    &__btn-text {
-      padding: rhl(2) rwl(14);
-      border-radius: rhl(14);
-      @include font-look(rhl(14), 157.14%, 0.02em);
-    }
-
     &__info {
-      width: rwl(259);
-      height: rhl(88);
       margin: 0;
       text-align: center;
-      @include font-look(rhl(40), 109.5%);
+      @include font-look(40px, 109.5%);
     }
   }
 }

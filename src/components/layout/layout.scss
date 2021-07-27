@@ -9,7 +9,8 @@
   align-items: center;
 
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  min-height: 1367px;
 
   background-color: $hunter-green;
 
@@ -17,8 +18,8 @@
     z-index: 0;
     position: absolute;
     width: 100%;
-    height: rh(763);
-    top: rh(409);
+    height: 61.15vh;
+    top: 30%;
 
     @include background-image("../../assets/images/main-bg.svg");
     background-size: 100%;
@@ -27,16 +28,15 @@
 
   &__header {
     z-index: 1;
-    width: rw(1196);
-    height: 100%;
-    margin: rh(77) auto rh(78) auto;
+    width: 83.95%;
+    margin: 77px auto 78px auto;
   }
 
   &__main {
     z-index: 1;
-    width: rw(1121);
-    max-width: rw(1121);
+    width: 82%;
     height: 100%;
+    max-width: 82%;
   }
 
   &__footer {
@@ -44,9 +44,8 @@
 
     @include flex-center();
 
-    width: rw(229);
-    height: 100%;
-    margin: rh(330) auto rh(61) auto;
+    width: 15.9%;
+    margin: 78px auto 61px auto;
   }
 
   @include screen-tablet {
@@ -58,16 +57,16 @@
     }
 
     &__header {
-      margin: rhl(71) auto rhl(95) auto;
+      margin: 71px auto 95px auto;
     }
 
     &__footer {
-      margin: rhl(330) auto rhl(81.5) auto;
+      margin: 330px auto 81.5px auto;
     }
 
     &__bgr {
-      height: rhl(558.76);
-      top: rhl(784);
+      height: 30.56vh;
+      top: 42.88%;
       background-size: cover;
     }
 

@@ -7,33 +7,3 @@ $text-green: #99A8A7 !default;
 $text-green-60: #667C7A !default;
 $text-green-40: #99A8A7 !default;
 $hunter-green: #002522 !default;
-
-$wc: calc(100vw / 1440);
-$hc: calc(100vh / 1367);
-
-$wcl: calc(100vw / 375);
-$hcl: calc(100vh / 1828);
-
-@function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
-    }
-  
-    @return $number;
-  }
-
-@function rh($height) {
-    @return strip-unit(calc(#{$height} * #{$hc}));
-}
-
-@function rw($width) {
-    @return strip-unit(calc(#{$width} * #{$wc}));
-}
-
-@function rhl($height) {
-    @return strip-unit(calc(#{$height} * #{$hcl}));
-}
-
-@function rwl($width) {
-    @return strip-unit(calc(#{$width} * #{$wcl}));
-}

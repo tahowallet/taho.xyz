@@ -9,33 +9,26 @@
   justify-content: center;
 
   width: 100%;
-  height: rh(141);
+  height: 141px;
 
   &__logo {
-    width: rw(29.54);
-    height: rh(24);
+    width: 29.54px;
+    height: 24px;
 
-    margin: 0 0 rh(18) 0;
+    margin: 0 0 18px 0;
 
     @include background-image("../../assets/images/footer/star.svg");
   }
 
   &__heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+    width: 159px;
+    height: 25px;
 
-    width: rw(159);
-    height: rh(25);
-
-    margin: 0 0 rh(22) 0;
+    margin: 0 0 22px 0;
 
     text-align: center;
-    white-space: nowrap;
-
     @include font-quincy-cf();
-    @include font-look(rh(24), 102.5%, 0.2em);
+    @include font-look(24px, 25px, 0.2em);
 
     text-transform: capitalize;
     font-feature-settings: "cpsp" on;
@@ -49,19 +42,19 @@
     align-items: center;
     justify-content: center;
 
-    margin: 0 0 rh(22) 0;
+    margin: 0 0 22px 0;
   }
 
   &__link {
     display: flex;
-    margin: 0 rw(30) 0 0;
+    margin: 0 30px 0 0;
     &:last-child {
       margin: 0;
     }
 
     text-align: center;
     @include font-quincy-cf();
-    @include font-look(rh(18), 102.5%);
+    @include font-look(18px, 102.5%);
     color: $text-green-40;
 
     &:hover {
@@ -75,11 +68,11 @@
   }
 
   &__sign {
-    width: rw(126);
-    height: rh(12);
+    width: 126px;
+    height: 12px;
     text-align: center;
     @include font-quincy-cf();
-    @include font-look(rh(12), 102.5%);
+    @include font-look(12px, 12.3px);
     color: $text-green-60;
   }
 
@@ -91,29 +84,27 @@
 
   @include screen-tablet {
     & {
-      width: rwl(186);
-      height: rhl(353.5);
+      height: 353.5px;
+      width: 186px;
     }
 
     &__heading {
-      width: rwl(186);
-      height: rhl(33);
-      margin: 0 0 rhl(55) 0;
-      @include font-look(rhl(32), 103.125%, 0.1em);
+      width: 186px;
+      height: 33px;
+      @include font-look(32px, 33px, 0.1em);
     }
 
     &__links {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 0 rhl(59.26) 0;
+      margin: 0 0 59.26px 0;
     }
 
     &__link {
       align-items: center;
       justify-content: center;
-      margin: 0 0 rhl(34.63) 0;
-
+      margin: 0 0 34.63px 0;
       &:last-child {
         margin: 0;
       }
@@ -177,30 +168,24 @@
     }
 
     &__discord {
-      margin-right: rwl(13.5);
+      margin-right: 13.5px;
     }
 
     &__twitter {
-      margin-right: rwl(10);
+      margin-right: 10px;
     }
 
     &__github {
-      margin-right: rwl(10);
+      margin-right: 10px;
     }
 
     &__sign {
-      width: rwl(147);
-      height: rhl(14);
+      width: 147px;
+      height: 14px;
 
-      @include font-look(rhl(14), 100%);
+      @include font-look(14px, 14px);
 
       margin: 0 0 81.5px 0;
-    }
-
-    &__logo {
-      width: rwl(29.54);
-      height: rhl(24);
-      margin: 0 0 rhl(21) 0;
     }
   }
 }

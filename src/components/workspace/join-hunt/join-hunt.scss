@@ -2,21 +2,23 @@
 @import "/src/assets/styles/variables";
 @import "/src/assets/styles/app.scss";
 
-$join-hunt: 'join-hunt';
-
-.#{$join-hunt} {
+.join-hunt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 
-  margin: 0 0 0 rw(10);
+  width: 403px;
+  height: 109px;
+
+  margin: 0 0 0 10px;
 
   &__text {
-    width: rw(263);
+    width: 263px;
+    height: 44px;
 
     @include font-segment-regular();
-    @include font-look(rh(18), 122%);
+    @include font-look(18px, 22px);
 
     color: $trophy-gold;
   }
@@ -29,11 +31,11 @@ $join-hunt: 'join-hunt';
   }
 
   &__form {
-    width: rw(234);
-    height: rh(42);
+    width: 234px;
+    height: 42px;
 
     @include font-quincy-cf();
-    @include font-look(rh(24), 102.5%);
+    @include font-look(24px, 24.6px);
 
     color: $text-light;
     background-color: transparent;
@@ -53,21 +55,17 @@ $join-hunt: 'join-hunt';
   &__btn {
     @include flex-center();
 
-    width: auto;
+    width: 155px;
+    height: 42px;
 
-    min-width: 155px;
-
-    margin: 0 0 0 rw(14);
-    padding: rh(12) rw(28.5);
-
-    text-align: center;
-    white-space: nowrap;
+    margin: 0 0 0 14px;
+    padding: 12px 28.5px;
   }
 
   @include screen-tablet {
     & {
-      width: rwl(263);
-      height: rhl(148);
+      width: 263px;
+      height: 148px;
 
       margin: 0;
 
@@ -76,30 +74,22 @@ $join-hunt: 'join-hunt';
     }
 
     &__text {
-      width: auto;
       text-align: center;
-      margin: 0 0 rhl(16) 0;
-      @include font-look(rhl(18), 122%);
+      margin: 0 0 16px 0;
     }
 
     &__email {
-      width: rwl(263);
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
 
-      .#{$join-hunt}__btn {
-        width: rwl(155);
-        height: rhl(42);
-        margin: rhl(12) 0 0 0;
-      }
+    &__form {
+      text-align: center;
+    }
 
-      .#{$join-hunt}__form {
-        width: rwl(186);
-        height: rhl(34);
-        @include font-look(rhl(24), 102.5%);
-        text-align: center;
-      }
+    &__btn {
+      margin: 12px 0 0 0;
     }
   }
 }

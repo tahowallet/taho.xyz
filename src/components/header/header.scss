@@ -1,16 +1,15 @@
 @import '/src/assets/styles/mixins';
 @import '/src/assets/styles/app.scss';
-@import '/src/assets/styles/variables';
 
 .header-section {
     @include flex-center();
 
     width: 100%;
-    height: rh(80);
+    height: 80px;
 
     &__logo {
-        width: rw(225.39);
-        height: inherit;
+        width: 226px;
+        height: 80px;
 
         margin-right: auto;
         @include background-image('../../assets/images/header/tally-logo.svg');
@@ -22,7 +21,7 @@
     }
 
     &__link {
-        margin-right: rw(35.5);
+        margin-right: 35.5px;
 
         &:last-child{
             margin-right: 0;
@@ -30,8 +29,8 @@
 
         &_discord {
             @include hovered-icon(
-                rh(28),
-                rw(24.5),
+                28px,
+                24.5px,
                 '../../assets/images/header/discord.svg',
                 '../../assets/images/header/discord-hover.svg',
                 '../../assets/images/header/discord-click.svg',
@@ -42,8 +41,8 @@
 
         &_twitter {
             @include hovered-icon(
-                rh(22.75),
-                rw(28),
+                22.75px,
+                28px,
                 '../../assets/images/header/twitter.svg',
                 '../../assets/images/header/twitter-hover.svg',
                 '../../assets/images/header/twitter-click.svg',
@@ -54,8 +53,8 @@
 
         &_github {
             @include hovered-icon(
-                rh(27.240432739257812),
-                rw(28),
+                27.240432739257812px,
+                28px,
                 '../../assets/images/header/github.svg',
                 '../../assets/images/header/github-hover.svg',
                 '../../assets/images/header/github-click.svg',
@@ -71,14 +70,7 @@
 
     @include screen-tablet {
 
-        & {
-            height: rhl(60)
-        }
-
         &__logo {
-            width: 45.06%;
-            height: rhl(60);
-            margin: 0;
             margin-left: auto;
             margin-right: auto;
         }

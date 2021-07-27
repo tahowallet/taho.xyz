@@ -1,9 +1,7 @@
 @import "../../assets/styles/mixins";
-@import "../../assets/styles/variables";
 
 @mixin vertical-layout {
   & {
-    height: rhl(837);
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
     gap: 0px 0px;
@@ -32,11 +30,10 @@
 .workspace-section {
   display: grid;
   grid-template-columns: 30.95% auto 55.84%;
-  grid-template-rows: min-content rh(63) min-content auto;
+  grid-template-rows: 26% 18.16% auto;
   gap: 0px 0px;
   grid-template-areas:
     "coming-soon coming-soon wallet"
-    "space2 space2 wallet"
     "join-hunt join-hunt wallet"
     "space space wallet";
 
@@ -50,6 +47,7 @@
 
   &__join-hunt {
     grid-area: join-hunt;
+    margin-top: 63px;
   }
 
   @include screen-tablet {

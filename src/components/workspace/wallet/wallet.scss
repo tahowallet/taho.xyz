@@ -1,11 +1,11 @@
 @import "../../../assets/styles/mixins";
 @import "../../../assets/styles/variables";
 
-$browser_width: rw(614.57);
-$browser_height: rh(397.94);
+$browser_width: 614.57px;
+$browser_height: 397.94px;
 
-$panel_width: rw(384);
-$panel_height: rh(600);
+$panel_width: 384px;
+$panel_height: 600px;
 
 .wallet {
   display: grid;
@@ -15,7 +15,7 @@ $panel_height: rh(600);
     width: $browser_width;
     height: $browser_height;
 
-    margin: rh(39) 0 0 0;
+    margin: 39px 0 0 0;
 
     z-index: 1;
     grid-row: 1;
@@ -23,7 +23,6 @@ $panel_height: rh(600);
 
     @include background-image("../../../assets/images/browser-illo.svg");
     background-size: contain;
-    background-position: right;
   }
 
   &__panel {
@@ -36,29 +35,24 @@ $panel_height: rh(600);
 
     @include background-image("../../../assets/images/wallet.svg");
     background-size: contain;
-    background-position: right;
   }
 
   @include screen-tablet {
     & {
-      width: rwl(363);
-      height: rhl(428);
+      width: 363px;
+      height: 428px;
     }
 
     &__browser {
       width: 100%;
-      height: rhl(285);
+      height: 285px;
 
       margin: 1% 1% 0 0;
-
-      background-position: center;
     }
 
     &__panel {
-      height: rhl(428);
-      width: rwl(278);
-
-      background-position: center;
+      height: 428px;
+      width: 278px;
     }
   }
 }

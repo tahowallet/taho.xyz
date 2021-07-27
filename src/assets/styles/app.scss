@@ -15,11 +15,11 @@
 
 .action-btn {
     @include font-quincy-cf();
-    @include font-look(rh(18), 102.5%);
+    @include font-look(18px, 18.45px);
 
     background-color: $trophy-gold;
     border: none;
-    border-radius: rh(24);
+    border-radius: 24px;
 
     &:hover {
         background-color: $trophy-gold-120;
@@ -28,13 +28,6 @@
 
     &:active {
         background-color: $trophy-gold-40;
-    }
-
-    @include screen-tablet {
-        & {
-            @include font-look(rhl(18), 102.5%);
-            border-radius: rhl(24);
-        }
     }
 }
 

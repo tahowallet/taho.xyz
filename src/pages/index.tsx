@@ -17,7 +17,7 @@ const IndexPage = () => {
         }
       }
     }
-  `);
+  `)
 
   return <Layout>
     <SEO title={data.site.siteMetadata?.title || `Title`} />

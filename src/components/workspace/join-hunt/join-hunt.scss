@@ -38,6 +38,7 @@ $join-hunt: 'join-hunt';
     color: $text-light;
     background-color: transparent;
     border: none;
+    border-radius: 0;
     outline: none;
     border-bottom: 1px solid $trophy-gold;
 
@@ -90,6 +91,7 @@ $join-hunt: 'join-hunt';
 
       .#{$join-hunt}__btn {
         width: rwl(155);
+        min-width: unset;
         height: rhl(42);
         margin: rhl(12) 0 0 0;
       }

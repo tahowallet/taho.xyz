@@ -11,6 +11,8 @@
   width: 100%;
   height: rh(141);
 
+  padding: 2.5rem 0 0 0;
+
   &__logo {
     width: rw(29.54);
     height: rh(24);
@@ -75,7 +77,6 @@
   }
 
   &__sign {
-    width: rw(126);
     height: rh(12);
     text-align: center;
     @include font-quincy-cf();
@@ -177,24 +178,25 @@
     }
 
     &__discord {
-      margin-right: rwl(13.5);
+      margin-right: 13.5px;
     }
 
     &__twitter {
-      margin-right: rwl(10);
+      margin-right: 10px;
     }
 
     &__github {
-      margin-right: rwl(10);
+      margin-right: 10px;
     }
 
     &__sign {
-      width: rwl(147);
       height: rhl(14);
 
       @include font-look(rhl(14), 100%);
 
       margin: 0 0 81.5px 0;
+
+      white-space: nowrap;
     }
 
     &__logo {

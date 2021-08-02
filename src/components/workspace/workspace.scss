@@ -39,10 +39,12 @@
 
   &__wallet {
     grid-area: wallet;
+    margin-top: -20px;
   }
 
   &__coming-soon {
     grid-area: coming-soon;
+    margin-top: 40px;
   }
 
   &__join-hunt {

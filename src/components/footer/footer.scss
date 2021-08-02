@@ -9,7 +9,6 @@
   justify-content: center;
 
   width: 100%;
-  height: 141px;
 
   &__logo {
     width: 29.54px;
@@ -83,11 +82,6 @@
   }
 
   @include screen-tablet {
-    & {
-      height: 353.5px;
-      width: 186px;
-    }
-
     &__heading {
       width: 186px;
       height: 33px;
@@ -184,8 +178,6 @@
       height: 14px;
 
       @include font-look(14px, 14px);
-
-      margin: 0 0 81.5px 0;
     }
   }
 }

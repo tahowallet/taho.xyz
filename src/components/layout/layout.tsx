@@ -15,16 +15,21 @@ import "./layout.scss";
 const Layout = ({ children }: any) => {
   return (
     <div className="shell">
-      <div className="shell__header"><Header></Header></div>
-      <div className="shell__main"><>{children}</></div>
-      <div className="shell__bgr"></div>
-      <div className="shell__footer"><Footer></Footer></div>
+      <div className="shell__header">
+        <Header></Header>
+      </div>
+      <div className="shell__main">
+        <>{children}</>
+      </div>
+      <div className="shell__footer">
+        <Footer></Footer>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

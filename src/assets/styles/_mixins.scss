@@ -1,0 +1,131 @@
+//#region Responsive
+
+// usage : @include screen-desktop {...}
+@mixin screen-large-desktop {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+// usage : @include screen-desktop {...}
+@mixin screen-desktop {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+// usage : @include screen-laptop-above {...}
+@mixin screen-laptop-above {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+// usage : @include screen-laptop {...}
+@mixin screen-laptop {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+// usage : @include screen-laptop-only {...}
+@mixin screen-laptop-only {
+  @media only screen and (min-width: 992px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+// usage : @include screen-tablet-above {...}
+@mixin screen-tablet-above {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+// usage : @include screen-tablet {...}
+@mixin screen-tablet {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+// usage : @include screen-mobile-above {...}
+@mixin screen-mobile-above {
+  @media only screen and (min-width: 767px) {
+    @content;
+  }
+}
+
+// usage : @include screen-mobile {...}
+@mixin screen-mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin screen-low-height {
+  @media only screen and (max-height: 610px) {
+    @content;
+  }
+}
+//#endregion Responsive
+
+//#region Flex
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-vert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+//#endregion Flex
+
+//#region Typography
+
+// usage : @include font-face(Roboto, "./assets/Roboto", normal, normal);
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path + ".eot");
+    src: url($path + ".eot?#iefix") format("embedded-opentype"),
+      url($path + ".woff") format("woff"),
+      url($path + ".ttf") format("truetype"),
+      url($path + ".svg##{$font-name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin font-look($font-size, $line-height, $letter-spacing: normal) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+//#endregion Typography
+
+//#region Common
+@mixin background-image($img) {
+  background-image: url("#{$img}");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+//#endregion Common

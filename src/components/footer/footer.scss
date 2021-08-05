@@ -1,0 +1,201 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/app.scss";
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  &__logo {
+    width: 29.54px;
+    height: 24px;
+
+    margin: 0 0 18px 0;
+
+    @include background-image("../../assets/images/footer/star.svg");
+  }
+
+  &__heading {
+    width: 159px;
+    height: 25px;
+
+    margin: 0 0 22px 0;
+
+    text-align: center;
+    @include font-quincy-cf();
+    @include font-look(24px, 25px, 0.2em);
+
+    text-transform: capitalize;
+    font-feature-settings: "cpsp" on;
+
+    color: $trophy-gold;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 22px 0;
+  }
+
+  &__link {
+    display: flex;
+    margin: 0 30px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+
+    text-align: center;
+    @include font-quincy-cf();
+    @include font-look(18px, 102.5%);
+    color: $text-green-40;
+
+    &:hover {
+      color: $trophy-gold;
+      cursor: pointer;
+    }
+    &:active {
+      color: $text-light;
+      cursor: pointer;
+    }
+  }
+
+  &__sign {
+    width: 126px;
+    height: 12px;
+    text-align: center;
+    @include font-quincy-cf();
+    @include font-look(12px, 12.3px);
+    color: $text-green-60;
+  }
+
+  &__discord,
+  &__twitter,
+  &__github {
+    display: none;
+  }
+
+  @include screen-tablet {
+    &__heading {
+      width: 186px;
+      height: 33px;
+      @include font-look(32px, 33px, 0.1em);
+    }
+
+    &__links {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 59.26px 0;
+    }
+
+    &__link {
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 34.63px 0;
+      &:last-child {
+        margin: 0;
+      }
+
+      &_discord {
+        &:hover {
+          .discord-icon {
+            @include background-image(
+              "../../assets/images/header/discord-hover.svg"
+            );
+          }
+        }
+        &:active {
+          .discord-icon {
+            @include background-image(
+              "../../assets/images/header/discord-click.svg"
+            );
+          }
+        }
+      }
+
+      &_twitter {
+        &:hover {
+          .twitter-icon {
+            @include background-image(
+              "../../assets/images/header/twitter-hover.svg"
+            );
+          }
+        }
+        &:active {
+          .twitter-icon {
+            @include background-image(
+              "../../assets/images/header/twitter-click.svg"
+            );
+          }
+        }
+      }
+
+      &_github {
+        &:hover {
+          .github-icon {
+            @include background-image(
+              "../../assets/images/header/github-hover.svg"
+            );
+          }
+        }
+        &:active {
+          .github-icon {
+            @include background-image(
+              "../../assets/images/header/github-click.svg"
+            );
+          }
+        }
+      }
+    }
+
+    &__discord,
+    &__twitter,
+    &__github {
+      display: flex;
+    }
+
+    &__discord {
+      margin-right: 13.5px;
+    }
+
+    &__twitter {
+      margin-right: 10px;
+    }
+
+    &__github {
+      margin-right: 10px;
+    }
+
+    &__sign {
+      width: 147px;
+      height: 14px;
+
+      @include font-look(14px, 14px);
+    }
+  }
+}
+
+.discord-icon {
+  height: 28px;
+  width: 24.5px;
+  @include background-image("../../assets/images/header/discord.svg");
+}
+
+.twitter-icon {
+  height: 22.75px;
+  width: 28px;
+  @include background-image("../../assets/images/header/twitter.svg");
+}
+
+.github-icon {
+  height: 27.240432739257812px;
+  width: 28px;
+  @include background-image("../../assets/images/header/github.svg");
+}

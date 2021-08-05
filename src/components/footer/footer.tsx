@@ -24,7 +24,7 @@ const Footer = ({}: any) => {
             <div>Github</div>
           </div>
         </div>
-        <div className="footer-section__sign">© 2021 | *A Thesis Build</div>
+        <div className="footer-section__sign">© 2021 | A <a href="https://thesis.co">Thesis*</a> Build</div>
       </div>
     </>
   );

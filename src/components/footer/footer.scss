@@ -73,6 +73,10 @@
     @include font-quincy-cf();
     @include font-look(12px, 12.3px);
     color: $text-green-60;
+
+    & > a {
+      color: $text-green-60;
+    }
   }
 
   &__discord,

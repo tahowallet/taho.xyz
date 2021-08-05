@@ -11,18 +11,18 @@ const Footer = ({}: any) => {
         </div>
         <div className="footer-section__heading">TALLY HO!</div>
         <div className="footer-section__links">
-          <div className="footer-section__link footer-section__link_discord">
+          <a href="https://chat.tally.cash" target="_blank" className="footer-section__link footer-section__link_discord">
             <div className="footer-section__discord discord-icon"></div>
-            <div>Discord</div>
-          </div>
-          <div className="footer-section__link footer-section__link_twitter">
+            Discord
+          </a>
+          <a href="https://twitter.com/tallycash" target="_blank" className="footer-section__link footer-section__link_twitter">
             <div className="footer-section__twitter twitter-icon"></div>
-            <div>Twitter</div>
-          </div>
-          <div className="footer-section__link footer-section__link_github">
+            Twitter
+          </a>
+          <a href="https://github.com/tallycash" target="_blank" className="footer-section__link footer-section__link_github">
             <div className="footer-section__github github-icon"></div>
-            <div>Github</div>
-          </div>
+            GitHub
+          </a>
         </div>
         <div className="footer-section__sign">© 2021 | A <a href="https://thesis.co">Thesis*</a> Build</div>
       </div>

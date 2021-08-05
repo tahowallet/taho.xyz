@@ -55,6 +55,7 @@
     @include font-quincy-cf();
     @include font-look(18px, 102.5%);
     color: $text-green-40;
+    text-decoration: none;
 
     &:hover {
       color: $trophy-gold;

@@ -8,8 +8,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 import "../../assets/styles/_variables.scss";
-import Footer from "../footer/footer";
-import Header from "../header/header";
+import Footer from "../footer";
+import Header from "../header";
 import "./layout.scss";
 
 const Layout = ({ children }: any) => {

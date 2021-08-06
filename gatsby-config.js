@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Tally — The community-owned Web3 wallet`,
     description: ``,
+    image: `https://tally.cash/Tally-Web3-Wallet-website.png`, // Twitter wants an absolute rather than relative url.
     author: `@thesis_co`,
   },
   plugins: [

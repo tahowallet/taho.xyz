@@ -33,7 +33,7 @@ $panel_height: 600px;
     grid-row: 1;
     grid-column: 1;
 
-    @include background-image("../../../assets/images/wallet.svg");
+    @include background-image("../../../assets/images/wallet.png");
     background-size: contain;
   }
 

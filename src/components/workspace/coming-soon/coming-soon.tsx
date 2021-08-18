@@ -8,7 +8,7 @@ const ComingSoon = ({ children }: any) => {
             <div className="coming-soon__btn">
                 <div className="coming-soon__btn-text">Coming soon</div>
             </div>
-            <div className="coming-soon__info">Community owned & operated wallet.</div>
+            <div className="coming-soon__info">The community owned & operated wallet.</div>
         </div>
     </>
 };

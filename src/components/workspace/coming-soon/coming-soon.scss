@@ -48,8 +48,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 259px;
-      height: 126px;
+      width: 320px;
+      height: 246px;
     }
 
     &__btn {
@@ -58,6 +58,7 @@
     }
 
     &__info {
+      width: unset;
       margin: 0;
       text-align: center;
       @include font-look(40px, 109.5%);

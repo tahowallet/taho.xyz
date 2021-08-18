@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Tally — Community owned & operated wallet.`,
+    title: `Tally — Community owned & operated wallet`,
     description: ``,
     image: `https://tally.cash/Tally-Web3-Wallet-website.png`, // Twitter wants an absolute rather than relative url.
     author: `@thesis_co`,
@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tally — Community owned & operated wallet.`,
+        name: `Tally — Community owned & operated wallet`,
         short_name: `Tally`,
         start_url: `/`,
         background_color: `#fbf9f2`,

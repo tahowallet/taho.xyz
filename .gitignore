@@ -109,3 +109,6 @@ dist
 # Netlify local directory
 .netlify
 .history/**
+
+# Linaria cache
+.linaria-cache

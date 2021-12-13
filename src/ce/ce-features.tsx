@@ -1,14 +1,24 @@
 import { CommunityEditionDonwloadCTA } from "ce/ce-download-cta";
 import { Link } from "gatsby";
-import { green120, textGreen40, textLight, trophyGold } from "layout/colors";
+import {
+  green120,
+  textGreen40,
+  textLight,
+  trophyGold,
+  trophyGold40,
+} from "layout/colors";
 import {
   featureGridClassName,
-  FeatureItem,
+  featureItemClassName,
   mainFeatureClassName,
 } from "layout/features-layout";
-import { quincyRegularFontFamily, segmentFontFamily } from "layout/fonts";
+import {
+  quincyRegularFontFamily,
+  quincyTextFontFamily,
+  segmentFontFamily,
+} from "layout/fonts";
 import { css, cx } from "linaria";
-import React from "react";
+import React, { ReactNode } from "react";
 
 export function CommunityEditionFeatures() {
   return (
@@ -99,6 +109,41 @@ export function CommunityEditionFeatures() {
         Check out <Link to="#TODO">Tally Docs</Link> for more info.
       </div>
       <CommunityEditionDonwloadCTA />
+    </div>
+  );
+}
+
+function FeatureItem({ iconSrc, body }: { iconSrc: string; body: ReactNode }) {
+  return (
+    <div
+      className={cx(
+        featureItemClassName,
+        css`
+          padding: 0.5rem;
+        `
+      )}
+    >
+      <img
+        className={css`
+          float: left;
+          width: 5rem;
+          height: 5rem;
+          margin: -1rem 1rem -0.25rem 0;
+        `}
+        src={iconSrc}
+      />
+      <p
+        className={css`
+          flex: 1;
+          margin: 1rem;
+          font-family: ${quincyTextFontFamily};
+          font-size: 24px;
+          color: ${trophyGold40};
+          text-align: right;
+        `}
+      >
+        {body}
+      </p>
     </div>
   );
 }

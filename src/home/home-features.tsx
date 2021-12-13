@@ -1,13 +1,23 @@
-import { textGreen40, textLight, trophyGold } from "layout/colors";
+import {
+  green120,
+  textGreen40,
+  textLight,
+  trophyGold,
+  trophyGold40,
+} from "layout/colors";
 import {
   featureGridClassName,
-  FeatureItem,
+  featureItemClassName,
   mainFeatureClassName,
 } from "layout/features-layout";
-import { quincyRegularFontFamily, segmentFontFamily } from "layout/fonts";
+import {
+  quincyRegularFontFamily,
+  quincyTextFontFamily,
+  segmentFontFamily,
+} from "layout/fonts";
 import { mediumScreenQuery } from "layout/layout";
-import { css } from "linaria";
-import React from "react";
+import { css, cx } from "linaria";
+import React, { ReactNode } from "react";
 
 export function HomeFeatures() {
   return (
@@ -17,9 +27,10 @@ export function HomeFeatures() {
         flex-flow: column;
         align-items: center;
         padding: 2rem;
+        background: ${green120};
 
         ${mediumScreenQuery} {
-          padding: 6rem 2rem;
+          padding: 12rem 2rem 6rem;
         }
       `}
     >
@@ -60,6 +71,14 @@ export function HomeFeatures() {
       </h2>
       <div className={featureGridClassName}>
         <div className={mainFeatureClassName}>
+          <img
+            className={css`
+              align-self: flex-start;
+              height: 6rem;
+              margin: 1rem;
+            `}
+            src={require("../home/features-main-chip.svg")}
+          />
           <h4
             className={css`
               margin: 1rem;
@@ -85,21 +104,55 @@ export function HomeFeatures() {
         </div>
         <FeatureItem
           body={<>Community-owned</>}
-          iconSrc={require("../ce/features/1-connect.svg" /* TOOO */)}
+          iconSrc={require("../home/features/1-community-owned.svg")}
         />
         <FeatureItem
           body={<>Governed by users</>}
-          iconSrc={require("../ce/features/1-connect.svg" /* TOOO */)}
+          iconSrc={require("../home/features/2-user-governed.svg")}
         />
         <FeatureItem
           body={<>Open source GPLv3</>}
-          iconSrc={require("../ce/features/1-connect.svg" /* TOOO */)}
+          iconSrc={require("../home/features/3-open-source.svg")}
         />
         <FeatureItem
           body={<>All profits go to community</>}
-          iconSrc={require("../ce/features/1-connect.svg" /* TOOO */)}
+          iconSrc={require("../home/features/4-community-profits.svg")}
         />
       </div>
+    </div>
+  );
+}
+
+function FeatureItem({ iconSrc, body }: { iconSrc: string; body: ReactNode }) {
+  return (
+    <div
+      className={cx(
+        featureItemClassName,
+        css`
+          padding: 0.5rem;
+        `
+      )}
+    >
+      <img
+        className={css`
+          float: left;
+          height: 2.5rem;
+          margin: 0.5rem 1rem;
+        `}
+        src={iconSrc}
+      />
+      <p
+        className={css`
+          flex: 1;
+          margin: 1rem;
+          font-family: ${quincyTextFontFamily};
+          font-size: 24px;
+          color: ${trophyGold40};
+          text-align: right;
+        `}
+      >
+        {body}
+      </p>
     </div>
   );
 }

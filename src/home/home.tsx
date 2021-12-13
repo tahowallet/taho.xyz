@@ -1,38 +1,57 @@
 import { Footer } from "common/footer";
 import { Header } from "common/header";
-import { NewsSection } from "common/news";
+import { NewsItem, NewsSection } from "common/news";
 import { Banner } from "home/banner";
-import { Headline } from "home/headline";
 import { HomeFeatures } from "home/home-features";
+import { HomeGetInvolved } from "home/home-get-involved";
 import { ProductHero } from "home/home-product-hero";
-import { green120 } from "layout/colors";
+import { hunterGreen } from "layout/colors";
 import { css } from "linaria";
 import React from "react";
 
 export function Home() {
   return (
-    <div
-      className={css`
-        display: flex;
-        flex-flow: column;
-        background: no-repeat 50% 60rem / auto 24rem
-            url(${require("../home/forest-background.svg")}),
-          no-repeat top left / contain
-            linear-gradient(
-              to bottom,
-              rgb(255 255 255 / 0) 48rem,
-              rgb(255 255 255 / 0.12) 80rem,
-              ${green120} 80rem
-            );
-      `}
-    >
+    <>
       <Header />
       <Banner />
-      <Headline />
       <ProductHero />
       <HomeFeatures />
-      <NewsSection />
+
+      <div
+        className={css`
+          display: flex;
+          flex-flow: column;
+          background: ${hunterGreen};
+          padding: 4rem 0;
+        `}
+      >
+        <NewsSection>
+          <NewsItem
+            to="#TODO"
+            title={<>What is Tally</>}
+            date={<>December 26, 2021</>}
+            body={<>A community-owned wallet for the open internet.</>}
+            main
+          />
+          <NewsItem
+            to="https://blog.tally.cash/tally-call-for-delegates/"
+            title={<>Call for Delegates</>}
+            date={<>December 26, 2021</>}
+            body={<>Tally is now accepting applications for DAO delegates.</>}
+          />
+          <NewsItem
+            to="https://blog.tally.cash/all-rights-reversed-tally-is-now-open-source/"
+            title={<>Open Source Announcement</>}
+            date={<>December 26, 2021</>}
+            body={
+              <>Tally is open source under GNU General Public License v3.</>
+            }
+          />
+        </NewsSection>
+      </div>
+
+      <HomeGetInvolved />
       <Footer />
-    </div>
+    </>
   );
 }

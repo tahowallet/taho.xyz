@@ -1,7 +1,7 @@
 import { actionButtonClassName } from "layout/action-button";
 import { mediumScreenQuery } from "layout/layout";
 import { css, cx } from "linaria";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const buttonClassName = css`
   display: flex;
@@ -15,6 +15,13 @@ const iconClassName = css`
 `;
 
 export function CommunityEditionDonwloadCTA() {
+  const [isBrave, setIsBrave] = useState(false);
+
+  useEffect(() => {
+    // https://github.com/brave/brave-browser/issues/10165
+    (navigator as any)?.brave?.isBrave().then(setIsBrave);
+  });
+
   return (
     <div
       className={css`
@@ -28,34 +35,31 @@ export function CommunityEditionDonwloadCTA() {
         }
       `}
     >
-      {
-        // https://github.com/brave/brave-browser/issues/10165#issuecomment-644949774
-        "brave" in navigator ? (
-          <a
-            className={cx(actionButtonClassName, buttonClassName)}
-            href="#TODO"
-            target="_blank"
-          >
-            <img
-              className={iconClassName}
-              src={require("../ce/icon-browser-brave.svg")}
-            />
-            Download for Brave
-          </a>
-        ) : (
-          <a
-            className={cx(actionButtonClassName, buttonClassName)}
-            href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
-            target="_blank"
-          >
-            <img
-              className={iconClassName}
-              src={require("../ce/icon-browser-chrome.svg")}
-            />
-            Download for Chrome
-          </a>
-        )
-      }{" "}
+      {isBrave ? (
+        <a
+          className={cx(actionButtonClassName, buttonClassName)}
+          href="#TODO"
+          target="_blank"
+        >
+          <img
+            className={iconClassName}
+            src={require("../ce/icon-browser-brave.svg")}
+          />
+          Download for Brave
+        </a>
+      ) : (
+        <a
+          className={cx(actionButtonClassName, buttonClassName)}
+          href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
+          target="_blank"
+        >
+          <img
+            className={iconClassName}
+            src={require("../ce/icon-browser-chrome.svg")}
+          />
+          Download for Chrome
+        </a>
+      )}{" "}
       <a
         className={cx(actionButtonClassName, buttonClassName)}
         href="#TODO"

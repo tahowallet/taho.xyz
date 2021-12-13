@@ -47,7 +47,7 @@ export function NewsSection({ children }: { children: ReactNode }) {
             flex-flow: column;
             justify-content: center;
             align-items: center;
-            min-height: 12rem;
+            min-height: 15rem;
             padding: 1.5rem;
             border: 1px solid #33514e;
             border-radius: 1rem;
@@ -133,7 +133,7 @@ export function NewsItem({
         css`
           display: flex;
           flex-flow: column;
-          min-height: 12rem;
+          min-height: 15rem;
           border: 1px solid #193330;
           border-radius: 1rem;
           padding: 1rem;

@@ -113,6 +113,7 @@ export function CommunityEditionDao() {
               className={css`
                 font-family: ${segmentFontFamily};
                 font-size: 18px;
+                line-height: 26px;
                 color: ${textGreen40};
               `}
             >

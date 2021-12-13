@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
 import { actionButtonClassName } from "layout/action-button";
-import { green120, textGreen20, textLight } from "layout/colors";
-import { segmentFontFamily, quincyRegularFontFamily } from "layout/fonts";
+import { green120, textLight } from "layout/colors";
+import { quincyRegularFontFamily } from "layout/fonts";
+import { mediumScreenQuery } from "layout/layout";
 import { css, cx } from "linaria";
 import React, { ReactNode } from "react";
-import { mediumScreenQuery } from "layout/layout";
 
 const buttonClassName = cx(
   actionButtonClassName,
@@ -21,6 +21,7 @@ export function HomeGetInvolved() {
         display: flex;
         flex-flow: column;
         background: ${green120};
+        margin-bottom: 32rem;
       `}
     >
       <div
@@ -40,7 +41,11 @@ export function HomeGetInvolved() {
           icon={<img src={require("../home/get-involved/1-github.svg")} />}
           title={<>Help us build Tally or fork us on GitHub</>}
           cta={
-            <Link className={buttonClassName} to="#TODO">
+            <Link
+              className={buttonClassName}
+              target="_blank"
+              to="https://github.com/tallycash/extension"
+            >
               Fork on GitHub
             </Link>
           }
@@ -49,7 +54,11 @@ export function HomeGetInvolved() {
           icon={<img src={require("../home/get-involved/2-discord.svg")} />}
           title={<>Join our Discord community ahead of the DAO launch</>}
           cta={
-            <Link className={buttonClassName} to="#TODO">
+            <Link
+              className={buttonClassName}
+              target="_blank"
+              to="https://chat.tally.cash/"
+            >
               Join Discord
             </Link>
           }
@@ -58,7 +67,11 @@ export function HomeGetInvolved() {
           icon={<img src={require("../home/get-involved/3-proposal.svg")} />}
           title={<>Make a proposal and help shape Tally’s future</>}
           cta={
-            <Link className={buttonClassName} to="#TODO">
+            <Link
+              className={buttonClassName}
+              target="_blank"
+              to="https://gov.tally.cash/"
+            >
               Governance Forum
             </Link>
           }
@@ -67,7 +80,11 @@ export function HomeGetInvolved() {
           icon={<img src={require("../home/get-involved/4-learn-more.svg")} />}
           title={<>Learn more about Tally</>}
           cta={
-            <Link className={buttonClassName} to="#TODO">
+            <Link
+              className={buttonClassName}
+              target="_blank"
+              to="https://docs.tally.cash/"
+            >
               Read the Docs
             </Link>
           }

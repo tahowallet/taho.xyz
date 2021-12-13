@@ -27,7 +27,7 @@ export function Home() {
       >
         <NewsSection>
           <NewsItem
-            to="#TODO"
+            to="https://blog.tally.cash/what-is-tally/"
             title={<>What is Tally</>}
             date={<>December 26, 2021</>}
             body={<>A community-owned wallet for the open internet.</>}

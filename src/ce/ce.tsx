@@ -33,7 +33,7 @@ export function CommunityEditionBody() {
           body={<>Tally is open source under GNU General Public License v3.</>}
         />
         <NewsItem
-          to="#TODO"
+          to="https://blog.tally.cash/how-to-migrate-to-tally/"
           title={<>How to Migrate to Tally</>}
           date={<>December 26, 2021</>}
           body={<>Migrate from MetaMask in 3 easy steps.</>}

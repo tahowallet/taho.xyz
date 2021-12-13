@@ -28,14 +28,39 @@ export function CommunityEditionDonwloadCTA() {
         }
       `}
     >
-      <a className={cx(actionButtonClassName, buttonClassName)} href="#TODO">
-        <img
-          className={iconClassName}
-          src={require("../ce/icon-browser-chrome.svg")}
-        />
-        Download for Chrome
-      </a>{" "}
-      <a className={cx(actionButtonClassName, buttonClassName)} href="#TODO">
+      {
+        // https://github.com/brave/brave-browser/issues/10165#issuecomment-644949774
+        "brave" in navigator ? (
+          <a
+            className={cx(actionButtonClassName, buttonClassName)}
+            href="#TODO"
+            target="_blank"
+          >
+            <img
+              className={iconClassName}
+              src={require("../ce/icon-browser-brave.svg")}
+            />
+            Download for Brave
+          </a>
+        ) : (
+          <a
+            className={cx(actionButtonClassName, buttonClassName)}
+            href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
+            target="_blank"
+          >
+            <img
+              className={iconClassName}
+              src={require("../ce/icon-browser-chrome.svg")}
+            />
+            Download for Chrome
+          </a>
+        )
+      }{" "}
+      <a
+        className={cx(actionButtonClassName, buttonClassName)}
+        href="#TODO"
+        target="_blank"
+      >
         <img
           className={iconClassName}
           src={require("../ce/icon-browser-firefox.svg")}

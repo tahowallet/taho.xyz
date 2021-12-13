@@ -99,7 +99,7 @@ export function HomeFeatures() {
             `}
           >
             It includes all the features you need for DeFi and Web3. And it’s
-            designed to enrich the community--not corporate shareholders.
+            designed to enrich the community—not corporate shareholders.
           </p>
         </div>
         <FeatureItem

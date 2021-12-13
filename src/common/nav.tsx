@@ -1,3 +1,4 @@
+import { headerClassName } from "common/header";
 import { Link } from "gatsby";
 import { textGreen40, trophyGold } from "layout/colors";
 import { segmentFontFamily } from "layout/fonts";
@@ -7,7 +8,7 @@ import React, { ReactNode } from "react";
 export function NavLinks() {
   return (
     <>
-      <NavLink to="/community-edition">Community edition</NavLink>
+      <NavLink to="/community-edition">Community Edition</NavLink>
       <NavLink blank to="https://gov.tally.cash/">
         Governance
       </NavLink>
@@ -20,7 +21,8 @@ export function NavLinks() {
       <span
         className={css`
           margin: 0 0.75rem;
-          font-size: 16px;
+          font-size: 20px;
+          font-weight: bold;
           vertical-align: middle;
           color: ${trophyGold};
         `}
@@ -33,16 +35,19 @@ export function NavLinks() {
         className={cx(
           socialLinkClassName,
           css`
-            width: 25px;
-            height: 28px;
-            background: url(${require("../common/social/discord.svg")});
+            width: 24px;
+            height: 24px;
+            background: no-repeat center / contain
+              url(${require("../common/social/discord.svg")});
 
             &:hover {
-              background: url(${require("../common/social/discord-hover.svg")});
+              background: no-repeat center / contain
+                url(${require("../common/social/discord-hover.svg")});
             }
 
             &:active {
-              background: url(${require("../common/social/discord-click.svg")});
+              background: no-repeat center / contain
+                url(${require("../common/social/discord-click.svg")});
             }
           `
         )}
@@ -55,14 +60,17 @@ export function NavLinks() {
           css`
             width: 28px;
             height: 24px;
-            background: url(${require("../common/social/twitter.svg")});
+            background: no-repeat center / contain
+              url(${require("../common/social/twitter.svg")});
 
             &:hover {
-              background: url(${require("../common/social/twitter-hover.svg")});
+              background: no-repeat center / contain
+                url(${require("../common/social/twitter-hover.svg")});
             }
 
             &:active {
-              background: url(${require("../common/social/twitter-click.svg")});
+              background: no-repeat center / contain
+                url(${require("../common/social/twitter-click.svg")});
             }
           `
         )}
@@ -75,14 +83,17 @@ export function NavLinks() {
           css`
             width: 28px;
             height: 28px;
-            background: url(${require("../common/social/github.svg")});
+            background: no-repeat center / contain
+              url(${require("../common/social/github.svg")});
 
             &:hover {
-              background: url(${require("../common/social/github-hover.svg")});
+              background: no-repeat center / contain
+                url(${require("../common/social/github-hover.svg")});
             }
 
             &:active {
-              background: url(${require("../common/social/github-click.svg")});
+              background: no-repeat center / contain
+                url(${require("../common/social/github-click.svg")});
             }
           `
         )}
@@ -132,7 +143,7 @@ function NavLink({
           }
         }
 
-        &.active {
+        .${headerClassName} &.active {
           color: ${trophyGold};
 
           &::after {
@@ -168,13 +179,15 @@ const socialLinkClassName = css`
 
   &:hover {
     &::before {
-      background: url(${require("../common/arrow-hover.svg")});
+      background: no-repeat center / contain
+        url(${require("../common/arrow-hover.svg")});
     }
   }
 
   &:active {
     &::before {
-      background: url(${require("../common/arrow-click.svg")});
+      background: no-repeat center / contain
+        url(${require("../common/arrow-click.svg")});
     }
   }
 `;

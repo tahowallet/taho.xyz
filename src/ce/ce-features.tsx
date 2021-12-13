@@ -106,7 +106,8 @@ export function CommunityEditionFeatures() {
           }
         `}
       >
-        Check out <Link to="#TODO">Tally Docs</Link> for more info.
+        Check out <Link to="https://docs.tally.cash/" target="_blank">Tally Docs</Link> for more
+        info.
       </div>
       <CommunityEditionDonwloadCTA />
     </div>

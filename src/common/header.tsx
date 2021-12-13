@@ -1,10 +1,11 @@
-
 import { NavLinks } from "common/nav";
 import { Link } from "gatsby";
 import { green120 } from "layout/colors";
 import { largeScreenQuery, mediumScreenQuery } from "layout/layout";
 import { css, cx } from "linaria";
 import React, { useState } from "react";
+
+export const headerClassName = "header";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,16 +51,19 @@ export function Header() {
           />
         </Link>
         <div
-          className={css`
-            display: none;
-            flex-flow: row;
-            align-items: center;
-            margin-left: auto;
+          className={cx(
+            headerClassName,
+            css`
+              display: none;
+              flex-flow: row;
+              align-items: center;
+              margin-left: auto;
 
-            ${largeScreenQuery} {
-              display: flex;
-            }
-          `}
+              ${largeScreenQuery} {
+                display: flex;
+              }
+            `
+          )}
         >
           <NavLinks />
         </div>

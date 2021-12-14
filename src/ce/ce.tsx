@@ -22,21 +22,23 @@ export function CommunityEditionBody() {
         <NewsItem
           to="https://blog.tally.cash/tally-call-for-delegates/"
           title={<>Call for Delegates for the Tally DAO</>}
-          date={<>December 26, 2021</>}
+          date={<>December 1, 2021</>}
           body={<>Tally is now accepting applications for DAO delegates.</>}
           main
         />
         <NewsItem
           to="https://blog.tally.cash/all-rights-reversed-tally-is-now-open-source/"
           title={<>Open Source Announcement</>}
-          date={<>December 26, 2021</>}
+          date={<>November 17, 2021</>}
           body={<>Tally is open source under GNU General Public License v3.</>}
         />
         <NewsItem
-          to="https://blog.tally.cash/how-to-migrate-to-tally/"
-          title={<>How to Migrate to Tally</>}
-          date={<>December 26, 2021</>}
-          body={<>Migrate from MetaMask in 3 easy steps.</>}
+          to="https://blog.tally.cash/how-to-try-tally/"
+          title={<>How to Try Tally</>}
+          date={<>December 15, 2021</>}
+          body={
+            <>The Community Edition includes everything you need for DeFi.</>
+          }
         />
       </NewsSection>
       <CommunityEditionFeatures />

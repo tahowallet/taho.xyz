@@ -2,6 +2,7 @@ import { CommunityEditionDonwloadCTA } from "ce/ce-download-cta";
 import { Link } from "gatsby";
 import {
   green120,
+  semanticError,
   textGreen40,
   textLight,
   trophyGold,
@@ -79,10 +80,10 @@ export function CommunityEditionFeatures() {
           body={<>Connect to your favorite dapps</>}
           iconSrc={require("../ce/features/1-connect.svg")}
         />
-        <FeatureItem
+        {/* <FeatureItem
           body={<>Swap assets inside your wallet</>}
           iconSrc={require("../ce/features/2-swap.svg")}
-        />
+        /> */}
         <FeatureItem
           body={<>Track your portfolio</>}
           iconSrc={require("../ce/features/3-portfolio.svg")}
@@ -91,6 +92,19 @@ export function CommunityEditionFeatures() {
           body={<>Add read-only accounts</>}
           iconSrc={require("../ce/features/4-read-only.svg")}
         />
+      </div>
+      <div
+        className={css`
+          margin: 2rem auto;
+          padding: 0.5rem 1.5rem;
+          border: 1px solid ${semanticError};
+          border-radius: 1rem;
+          font-family: ${segmentFontFamily};
+          font-size: 18px;
+          color: ${semanticError};
+        `}
+      >
+        Tally Community Edition is a work-in-progress! Test responsibly.
       </div>
       <div
         className={css`
@@ -106,8 +120,11 @@ export function CommunityEditionFeatures() {
           }
         `}
       >
-        Check out <Link to="https://docs.tally.cash/" target="_blank">Tally Docs</Link> for more
-        info.
+        Check out{" "}
+        <Link to="https://docs.tally.cash/" target="_blank">
+          Tally Docs
+        </Link>{" "}
+        for more info.
       </div>
       <CommunityEditionDonwloadCTA />
     </div>

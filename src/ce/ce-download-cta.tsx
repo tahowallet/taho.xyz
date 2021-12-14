@@ -15,12 +15,7 @@ const iconClassName = css`
 `;
 
 export function CommunityEditionDonwloadCTA() {
-  const [isBrave, setIsBrave] = useState(false);
-
-  useEffect(() => {
-    // https://github.com/brave/brave-browser/issues/10165
-    (navigator as any)?.brave?.isBrave().then(setIsBrave);
-  });
+  const isBrave = useIsBraveBrowser();
 
   return (
     <div
@@ -35,31 +30,35 @@ export function CommunityEditionDonwloadCTA() {
         }
       `}
     >
-      {isBrave ? (
-        <a
-          className={cx(actionButtonClassName, buttonClassName)}
-          href="#TODO"
-          target="_blank"
-        >
-          <img
-            className={iconClassName}
-            src={require("../ce/icon-browser-brave.svg")}
-          />
-          Download for Brave
-        </a>
-      ) : (
-        <a
-          className={cx(actionButtonClassName, buttonClassName)}
-          href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
-          target="_blank"
-        >
-          <img
-            className={iconClassName}
-            src={require("../ce/icon-browser-chrome.svg")}
-          />
-          Download for Chrome
-        </a>
-      )}{" "}
+      {false /* TODO: remove condition to show Chrome/Brave download */ && (
+        <>
+          {isBrave ? (
+            <a
+              className={cx(actionButtonClassName, buttonClassName)}
+              href="#TODO"
+              target="_blank"
+            >
+              <img
+                className={iconClassName}
+                src={require("../ce/icon-browser-brave.svg")}
+              />
+              Download for Brave
+            </a>
+          ) : (
+            <a
+              className={cx(actionButtonClassName, buttonClassName)}
+              href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
+              target="_blank"
+            >
+              <img
+                className={iconClassName}
+                src={require("../ce/icon-browser-chrome.svg")}
+              />
+              Download for Chrome
+            </a>
+          )}{" "}
+        </>
+      )}
       <a
         className={cx(actionButtonClassName, buttonClassName)}
         href="#TODO"
@@ -73,4 +72,15 @@ export function CommunityEditionDonwloadCTA() {
       </a>
     </div>
   );
+}
+
+function useIsBraveBrowser() {
+  const [isBrave, setIsBrave] = useState(false);
+
+  useEffect(() => {
+    // https://github.com/brave/brave-browser/issues/10165
+    (navigator as any)?.brave?.isBrave().then(setIsBrave);
+  });
+
+  return isBrave;
 }

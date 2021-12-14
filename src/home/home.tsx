@@ -29,20 +29,20 @@ export function Home() {
           <NewsItem
             to="https://blog.tally.cash/what-is-tally/"
             title={<>What is Tally</>}
-            date={<>December 26, 2021</>}
+            date={<>December 15, 2021</>}
             body={<>A community-owned wallet for the open internet.</>}
             main
           />
           <NewsItem
             to="https://blog.tally.cash/tally-call-for-delegates/"
             title={<>Call for Delegates</>}
-            date={<>December 26, 2021</>}
+            date={<>December 1, 2021</>}
             body={<>Tally is now accepting applications for DAO delegates.</>}
           />
           <NewsItem
             to="https://blog.tally.cash/all-rights-reversed-tally-is-now-open-source/"
             title={<>Open Source Announcement</>}
-            date={<>December 26, 2021</>}
+            date={<>November 17, 2021</>}
             body={
               <>Tally is open source under GNU General Public License v3.</>
             }

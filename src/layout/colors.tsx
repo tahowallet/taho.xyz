@@ -9,5 +9,7 @@ export const textGreen40 = "#99A8A7";
 export const textGreen20 = "#CCD3D3";
 
 export const semanticSuccess = "#22c480";
+export const semanticError = "#D64045";
+
 export const green120 = "#001413";
 export const green80 = "#33514E";

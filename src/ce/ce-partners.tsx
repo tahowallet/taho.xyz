@@ -35,6 +35,7 @@ export function CommunityEditionPartners() {
         className={css`
           display: flex;
           flex-flow: row wrap;
+          align-items: center;
           justify-content: space-evenly;
           width: 100%;
           max-width: 80rem;

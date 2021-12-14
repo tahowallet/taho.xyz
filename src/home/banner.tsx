@@ -104,6 +104,8 @@ export function Banner() {
           className={css`
             display: none;
             margin: 0.5rem 0;
+            font-size: 18px;
+            line-height: 24px;
             font-family: ${segmentFontFamily};
             color: ${trophyGold};
 

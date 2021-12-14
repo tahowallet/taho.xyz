@@ -1,21 +1,27 @@
-import { headerClassName } from "common/header";
+import { headerClassName, mobileMenuClassName } from "common/header";
 import { Link } from "gatsby";
 import { textGreen40, trophyGold } from "layout/colors";
 import { segmentFontFamily } from "layout/fonts";
 import { css, cx } from "linaria";
 import React, { ReactNode } from "react";
 
-export function NavLinks() {
+export function NavLinks({
+  onNavigate = () => {},
+}: {
+  onNavigate?: () => void;
+}) {
   return (
     <>
-      <NavLink to="/community-edition">Community Edition</NavLink>
-      <NavLink blank to="https://gov.tally.cash/">
+      <NavLink onNavigate={onNavigate} to="/community-edition">
+        Community Edition
+      </NavLink>
+      <NavLink onNavigate={onNavigate} blank to="https://gov.tally.cash/">
         Governance
       </NavLink>
-      <NavLink blank to="https://docs.tally.cash/">
+      <NavLink onNavigate={onNavigate} blank to="https://docs.tally.cash/">
         Docs
       </NavLink>
-      <NavLink blank to="https://blog.tally.cash/">
+      <NavLink onNavigate={onNavigate} blank to="https://blog.tally.cash/">
         Blog
       </NavLink>
       <span
@@ -25,6 +31,10 @@ export function NavLinks() {
           font-weight: bold;
           vertical-align: middle;
           color: ${trophyGold};
+
+          .${mobileMenuClassName} & {
+            display: none;
+          }
         `}
       >
         |
@@ -51,6 +61,7 @@ export function NavLinks() {
             }
           `
         )}
+        onClick={onNavigate}
       />
       <a
         href="https://twitter.com/tallycash"
@@ -74,6 +85,7 @@ export function NavLinks() {
             }
           `
         )}
+        onClick={onNavigate}
       />
       <a
         href="https://github.com/tallycash"
@@ -97,6 +109,7 @@ export function NavLinks() {
             }
           `
         )}
+        onClick={onNavigate}
       />
     </>
   );
@@ -106,10 +119,12 @@ function NavLink({
   children,
   to,
   blank,
+  onNavigate,
 }: {
   children: ReactNode;
   to: string;
   blank?: boolean;
+  onNavigate: () => void;
 }) {
   return (
     <Link
@@ -136,7 +151,7 @@ function NavLink({
           transition-duration: 200ms;
         }
 
-        &:hover {
+        .${headerClassName} &:hover {
           &::after {
             width: 1px;
             opacity: 1;
@@ -155,6 +170,7 @@ function NavLink({
       activeClassName="active"
       to={to}
       target={blank ? `_blank` : ``}
+      onClick={onNavigate}
     >
       {children}
     </Link>
@@ -162,8 +178,9 @@ function NavLink({
 }
 
 const socialLinkClassName = css`
-  display: inline-block;
+  display: block;
   position: relative;
+  flex: 0 0 auto;
   margin: 0 1rem;
   background-repeat: no-repeat;
 

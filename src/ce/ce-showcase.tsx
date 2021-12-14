@@ -31,7 +31,7 @@ export function CommunityEditionShowcase() {
             font-weight: normal;
             font-size: 64px;
             font-size: clamp(32px, 10vw, 64px);
-            line-height: 64px;
+            line-height: 100%;
             color: ${textLight};
             text-align: center;
           `}
@@ -48,7 +48,7 @@ export function CommunityEditionShowcase() {
             font-weight: normal;
             font-size: 24px;
             font-size: clamp(12px, 4vw, 24px);
-            line-height: 32px;
+            line-height: 133%;
             text-align: center;
             color: ${trophyGold};
           `}

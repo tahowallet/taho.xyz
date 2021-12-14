@@ -26,5 +26,13 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-linaria`,
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "1",
+        matomoUrl: "https://tallycash.matomo.cloud",
+        siteUrl: "https://tally.cash",
+      },
+    },
   ],
 };

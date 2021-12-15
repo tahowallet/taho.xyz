@@ -21,7 +21,7 @@ export function CommunityEditionDonwloadCTA() {
     <div
       className={css`
         display: flex;
-        margin: 0 auto;
+        margin: 1rem auto;
         padding: 0.5rem;
         flex-flow: column;
 

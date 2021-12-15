@@ -12,7 +12,7 @@ export function Footer() {
         display: flex;
         flex-flow: column;
         align-items: center;
-        padding: 12rem 0 8rem;
+        padding: 0 0 4rem;
       `}
     >
       <img width="86" height="65" src={require("../common/footer-logo.svg")} />
@@ -53,6 +53,7 @@ export function Footer() {
             text-decoration: none;
             color: inherit;
           `}
+          target="_blank"
           to="https://thesis.co/"
         >
           Thesis

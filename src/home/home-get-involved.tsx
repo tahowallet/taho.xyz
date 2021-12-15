@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import { actionButtonClassName } from "layout/action-button";
 import { green120, textLight } from "layout/colors";
 import { quincyRegularFontFamily } from "layout/fonts";
-import { mediumScreenQuery } from "layout/layout";
+import { mediumScreenQuery, largeScreenQuery } from "layout/layout";
 import { css, cx } from "linaria";
 import React, { ReactNode } from "react";
 
@@ -21,7 +21,6 @@ export function HomeGetInvolved() {
         display: flex;
         flex-flow: column;
         background: ${green120};
-        margin-bottom: 32rem;
       `}
     >
       <div

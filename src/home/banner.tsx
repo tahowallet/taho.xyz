@@ -14,18 +14,20 @@ export function Banner() {
         display: flex;
         flex-flow: row;
         width: calc(100% - 4rem);
-        max-width: 80rem;
-        margin: 2rem auto;
+        max-width: 70rem;
+        margin: 0 auto;
         border-radius: 2rem;
         border: 1px solid ${trophyGold};
         background: no-repeat left -16rem center / 40rem auto url(${require("../home/banner-background.svg")});
 
         ${mediumScreenQuery} {
+          width: calc(100% - 12rem);
+          margin: 2rem auto;
           background: no-repeat left -22rem center / 60rem auto url(${require("../home/banner-background.svg")});
-          width: calc(100% - 8rem);
         }
 
         ${largeScreenQuery} {
+          margin: 4rem auto;
           background: no-repeat left -15rem center / 60rem auto url(${require("../home/banner-background.svg")});
         }
       `}

@@ -8,9 +8,11 @@ export const featureGridClassName = css`
   display: grid;
   grid: auto-flow / auto;
   gap: 2rem;
+  max-width: 60rem;
   margin: 1rem auto;
 
   ${largeScreenQuery} {
+    max-width: unset;
     padding: 4rem;
     grid: repeat(4, 1fr) / 30rem 28rem;
   }

@@ -13,6 +13,7 @@ export function CommunityEditionGetInvolved() {
         display: flex;
         flex-flow: column;
         padding: 4rem 0;
+        margin-bottom: -30vw;
       `}
     >
       <h3

@@ -62,7 +62,7 @@ export function CommunityEditionShowcase() {
         <img
           className={css`
             display: none;
-            margin: 2rem auto -8rem;
+            margin: 1rem auto -8rem;
             box-shadow: rgb(0 0 0 / 0.5) 0 4rem 2rem 1rem;
 
             ${mediumScreenQuery} {

@@ -1,4 +1,3 @@
-import { Footer } from "common/footer";
 import { Header } from "common/header";
 import { NewsItem, NewsSection } from "common/news";
 import { Banner } from "home/banner";
@@ -51,7 +50,6 @@ export function Home() {
       </div>
 
       <HomeGetInvolved />
-      <Footer />
     </>
   );
 }

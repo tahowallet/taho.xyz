@@ -1,6 +1,6 @@
 import { green120, textLight } from "layout/colors";
 import { quincyRegularFontFamily } from "layout/fonts";
-import { mediumScreenQuery } from "layout/layout";
+import { mediumScreenQuery, largeScreenQuery } from "layout/layout";
 import { css } from "linaria";
 import React from "react";
 
@@ -10,7 +10,7 @@ export function ProductHero() {
       className={css`
         display: flex;
         flex-flow: column;
-        padding: 12rem 0 0rem;
+        padding: 2rem 0;
         background: no-repeat bottom / auto 24rem
             url(${require("../home/forest-background.svg")}),
           no-repeat top left / contain
@@ -20,50 +20,29 @@ export function ProductHero() {
               rgb(255 255 255 / 0.12) 48rem,
               ${green120} 80rem
             );
+
+        ${mediumScreenQuery} {
+          padding: 6rem 0 0;
+        }
       `}
     >
       <div
         className={css`
           display: flex;
-          flex-flow: row;
+          flex-flow: column;
+          align-items: center;
           max-width: 60rem;
           margin: 0 auto;
+
+          ${mediumScreenQuery} {
+            flex-flow: row-reverse;
+            align-items: stretch;
+          }
         `}
       >
-        <div
-          className={css`
-            display: none;
-            position: relative;
-            margin: 0 4rem;
-
-            ${mediumScreenQuery} {
-              display: unset;
-            }
-          `}
-        >
-          <img
-            className={css`
-              position: absolute;
-              top: -4rem;
-              right: -2rem;
-              z-index: -1;
-            `}
-            width="880"
-            height="658"
-            src={require("../home/product-hero-browser.svg")}
-          />
-          <img
-            className={css`
-              border-radius: 1rem;
-              box-shadow: rgb(0 0 0 / 0.2) 0 0 1rem 0.5rem;
-            `}
-            width="384"
-            height="600"
-            src={require("../common/product-hero.svg")}
-          />
-        </div>
         <h1
           className={css`
+            margin: 2rem 0;
             padding: 0 2rem;
             font-family: ${quincyRegularFontFamily};
             font-size: min(64px, 8vw);
@@ -72,7 +51,7 @@ export function ProductHero() {
             color: ${textLight};
 
             ${mediumScreenQuery} {
-              margin: 4rem 0;
+              margin: 8rem 2rem;
             }
           `}
         >
@@ -80,6 +59,36 @@ export function ProductHero() {
           <br />
           by its users.
         </h1>
+
+        <div
+          className={css`
+            position: relative;
+            margin: 4rem 2rem 0;
+          `}
+        >
+          <img
+            className={css`
+              position: absolute;
+              top: -4rem;
+              right: -1.5rem;
+              z-index: -1;
+            `}
+            width="613"
+            height="658"
+            src={require("../home/product-hero-browser.svg")}
+          />
+          <img
+            className={css`
+              max-width: calc(100vw - 6rem);
+              height: auto;
+              border-radius: 1rem;
+              box-shadow: rgb(0 0 0 / 0.2) 0 0 1rem 0.5rem;
+            `}
+            width="384"
+            height="600"
+            src={require("../common/product-hero.svg")}
+          />
+        </div>
       </div>
     </div>
   );

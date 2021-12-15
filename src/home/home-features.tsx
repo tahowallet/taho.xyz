@@ -115,7 +115,7 @@ export function HomeFeatures() {
           iconSrc={require("../home/features/3-open-source.svg")}
         />
         <FeatureItem
-          body={<>All profits go to community</>}
+          body={<>All profits go to the community</>}
           iconSrc={require("../home/features/4-community-profits.svg")}
         />
       </div>

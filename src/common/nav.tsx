@@ -27,7 +27,7 @@ export function NavLinks({
       <span
         className={css`
           margin: 0 0.75rem;
-          font-size: 20px;
+          font-size: 22px;
           font-weight: bold;
           vertical-align: middle;
           color: ${trophyGold};

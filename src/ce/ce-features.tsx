@@ -20,6 +20,7 @@ import {
 } from "layout/fonts";
 import { css, cx } from "linaria";
 import React, { ReactNode } from "react";
+import { largeScreenQuery } from "layout/layout";
 
 export function CommunityEditionFeatures() {
   return (
@@ -71,9 +72,9 @@ export function CommunityEditionFeatures() {
               color: ${textGreen40};
             `}
           >
-            Is your sneak preview of the Tally wallet. It’s easy to import from
-            MetaMask and includes everything you need for DeFi. It’s our
-            community’s first draft at making the best possible Web3 wallet.
+            Welcome to your sneak preview of the Tally wallet. It’s easy to
+            import from MetaMask and includes everything you need for DeFi. It’s
+            our community’s first draft at making the best possible Web3 wallet.
           </p>
         </div>
         <FeatureItem
@@ -95,6 +96,8 @@ export function CommunityEditionFeatures() {
       </div>
       <div
         className={css`
+          display: flex;
+          align-items: center;
           margin: 2rem auto;
           padding: 0.5rem 1.5rem;
           border: 1px solid ${semanticError};
@@ -102,8 +105,21 @@ export function CommunityEditionFeatures() {
           font-family: ${segmentFontFamily};
           font-size: 18px;
           color: ${semanticError};
+          background: ${green120};
+
+          ${largeScreenQuery} {
+            margin: -2.5rem auto 6rem;
+          }
         `}
       >
+        <img
+          className={css`
+            margin: 0 0.25rem;
+          `}
+          width="24"
+          height="24"
+          src={require("../ce/icon-warning.svg")}
+        />
         Tally Community Edition is a work-in-progress! Test responsibly.
       </div>
       <div

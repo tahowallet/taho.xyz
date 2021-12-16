@@ -31,12 +31,14 @@ export function ProductHero() {
           display: flex;
           flex-flow: column;
           align-items: center;
-          max-width: 60rem;
+          width: 100%;
+          max-width: 75rem;
           margin: 0 auto;
 
           ${mediumScreenQuery} {
             flex-flow: row-reverse;
             align-items: stretch;
+            justify-content: flex-start;
           }
         `}
       >
@@ -52,6 +54,7 @@ export function ProductHero() {
 
             ${mediumScreenQuery} {
               margin: 8rem 2rem;
+              max-width: 28rem;
             }
           `}
         >

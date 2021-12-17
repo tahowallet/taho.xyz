@@ -18,7 +18,7 @@ module.exports = {
         background_color: `#fbf9f2`,
         theme_color: `#fbf9f2`,
         display: `minimal-ui`,
-        icon: `src/tally-fav.png`, // This path is relative to the root of the site.
+        icon: `src/common/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

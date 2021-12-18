@@ -47,7 +47,7 @@ export function Footer() {
           color: ${textGreen60};
         `}
       >
-        © 2021 &nbsp;|&nbsp; *A{" "}
+        © {new Date().getFullYear()} &nbsp;|&nbsp; *A{" "}
         <Link
           className={css`
             text-decoration: none;

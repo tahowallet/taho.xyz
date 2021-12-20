@@ -1,22 +1,13 @@
 import { actionButtonClassName } from "layout/action-button";
 import { mediumScreenQuery } from "layout/layout";
 import { css, cx } from "linaria";
-import React, { useEffect, useState } from "react";
+import React, { ReactNode } from "react";
 
-const buttonClassName = css`
-  display: flex;
-  align-items: center;
-  margin: 0.5rem;
-`;
-
-const iconClassName = css`
-  margin: -0.5rem;
-  margin-right: 1rem;
-`;
-
-export function CommunityEditionDonwloadCTA() {
-  const isBrave = useIsBraveBrowser();
-
+export function CommunityEditionDonwloadCTA({
+  downloadButtons,
+}: {
+  downloadButtons: ReactNode;
+}) {
   return (
     <div
       className={css`
@@ -30,57 +21,66 @@ export function CommunityEditionDonwloadCTA() {
         }
       `}
     >
-      {false /* TODO: remove condition to show Chrome/Brave download */ && (
-        <>
-          {isBrave ? (
-            <a
-              className={cx(actionButtonClassName, buttonClassName)}
-              href="#TODO"
-              target="_blank"
-            >
-              <img
-                className={iconClassName}
-                src={require("../ce/icon-browser-brave.svg")}
-              />
-              Download for Brave
-            </a>
-          ) : (
-            <a
-              className={cx(actionButtonClassName, buttonClassName)}
-              href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
-              target="_blank"
-            >
-              <img
-                className={iconClassName}
-                src={require("../ce/icon-browser-chrome.svg")}
-              />
-              Download for Chrome
-            </a>
-          )}{" "}
-        </>
-      )}
-      <a
-        className={cx(actionButtonClassName, buttonClassName)}
-        href="#TODO"
-        target="_blank"
-      >
-        <img
-          className={iconClassName}
-          src={require("../ce/icon-browser-firefox.svg")}
-        />
-        Download for Firefox
-      </a>
+      {downloadButtons}
     </div>
   );
 }
 
-function useIsBraveBrowser() {
-  const [isBrave, setIsBrave] = useState(false);
-
-  useEffect(() => {
-    // https://github.com/brave/brave-browser/issues/10165
-    (navigator as any)?.brave?.isBrave().then(setIsBrave);
-  });
-
-  return isBrave;
+export function CommunityEditionDownloadButton({
+  href,
+  imageSrc,
+  text,
+}: {
+  href: string;
+  imageSrc: string;
+  text: ReactNode;
+}) {
+  return (
+    <a
+      className={cx(actionButtonClassName, buttonClassName)}
+      href={href}
+      target="_blank"
+    >
+      <img className={iconClassName} src={imageSrc} />
+      {text}
+    </a>
+  );
 }
+
+export const ceDownloadButtons: Record<
+  "chrome" | "brave" | "firefox",
+  ReactNode
+> = {
+  brave: (
+    <CommunityEditionDownloadButton
+      href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
+      text={<>Download for Brave</>}
+      imageSrc={require("../ce/icon-browser-brave.svg")}
+    />
+  ),
+  chrome: (
+    <CommunityEditionDownloadButton
+      href="https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd"
+      text={<>Download for Chrome</>}
+      imageSrc={require("../ce/icon-browser-chrome.svg")}
+    />
+  ),
+  firefox: (
+    <CommunityEditionDownloadButton
+      href="https://tally.cash/firefox-download"
+      text={<>Download for Firefox</>}
+      imageSrc={require("../ce/icon-browser-firefox.svg")}
+    />
+  ),
+};
+
+const buttonClassName = css`
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+`;
+
+const iconClassName = css`
+  margin: -0.5rem;
+  margin-right: 1rem;
+`;

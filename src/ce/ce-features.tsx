@@ -18,11 +18,15 @@ import {
   quincyTextFontFamily,
   segmentFontFamily,
 } from "layout/fonts";
+import { largeScreenQuery } from "layout/layout";
 import { css, cx } from "linaria";
 import React, { ReactNode } from "react";
-import { largeScreenQuery } from "layout/layout";
 
-export function CommunityEditionFeatures() {
+export function CommunityEditionFeatures({
+  downloadButtons,
+}: {
+  downloadButtons: ReactNode;
+}) {
   return (
     <div
       className={css`
@@ -142,7 +146,7 @@ export function CommunityEditionFeatures() {
         </Link>{" "}
         for more info.
       </div>
-      <CommunityEditionDonwloadCTA />
+      <CommunityEditionDonwloadCTA downloadButtons={downloadButtons} />
     </div>
   );
 }

@@ -5,9 +5,13 @@ import { CommunityEditionPartners } from "ce/ce-partners";
 import { CommunityEditionShowcase } from "ce/ce-showcase";
 import { NewsItem, NewsSection } from "common/news";
 import { css } from "linaria";
-import React from "react";
+import React, { ReactNode } from "react";
 
-export function CommunityEditionBody() {
+export function CommunityEditionBody({
+  downloadButtons,
+}: {
+  downloadButtons: ReactNode;
+}) {
   return (
     <div
       className={css`
@@ -15,7 +19,7 @@ export function CommunityEditionBody() {
         flex-flow: column;
       `}
     >
-      <CommunityEditionShowcase />
+      <CommunityEditionShowcase downloadButtons={downloadButtons} />
       <CommunityEditionDao />
       <NewsSection>
         <NewsItem
@@ -40,7 +44,7 @@ export function CommunityEditionBody() {
           }
         />
       </NewsSection>
-      <CommunityEditionFeatures />
+      <CommunityEditionFeatures downloadButtons={downloadButtons} />
       <CommunityEditionPartners />
       <CommunityEditionGetInvolved />
     </div>

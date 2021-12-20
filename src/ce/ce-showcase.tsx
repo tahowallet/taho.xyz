@@ -4,9 +4,13 @@ import { textLight, trophyGold } from "layout/colors";
 import { quincyRegularFontFamily, segmentFontFamily } from "layout/fonts";
 import { mediumScreenQuery } from "layout/layout";
 import { css } from "linaria";
-import React from "react";
+import React, { ReactNode } from "react";
 
-export function CommunityEditionShowcase() {
+export function CommunityEditionShowcase({
+  downloadButtons,
+}: {
+  downloadButtons: ReactNode;
+}) {
   return (
     <div
       className={css`
@@ -58,7 +62,7 @@ export function CommunityEditionShowcase() {
           owned alternative to MetaMask.
         </h3>
 
-        <CommunityEditionDonwloadCTA />
+        <CommunityEditionDonwloadCTA downloadButtons={downloadButtons} />
         <img
           className={css`
             display: none;

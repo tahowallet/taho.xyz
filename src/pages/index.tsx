@@ -1,28 +1,24 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Workspace from "../components/workspace/workspace"
-
-import 'normalize.css'
-import '../components/layout.css'
-import '../components/layout-theme.scss';
+import { graphql, useStaticQuery } from "gatsby";
+import { Home } from "home/home";
+import { Layout } from "layout/layout";
+import React from "react";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query TitleQuery {
+    query TitleQuery2 {
       site {
         siteMetadata {
           title
         }
       }
     }
-  `)
+  `);
 
-  return <Layout>
-    <SEO title={data.site.siteMetadata?.title || `Title`} />
-    <Workspace></Workspace>
-  </Layout>
-}
+  return (
+    <Layout title={data.site.siteMetadata?.title || `Title`}>
+      <Home />
+    </Layout>
+  );
+};
 
-export default IndexPage
+export default IndexPage;

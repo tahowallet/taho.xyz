@@ -11,11 +11,9 @@ const Page = () => {
     <Layout title="Community Edition">
       <CommunityEditionBody
         downloadButtons={
-          false
-            ? isBrave /* TODO: remove condition to show buttons for Brave/Chrome */
-              ? [ceDownloadButtons.brave, ceDownloadButtons.firefox]
-              : [ceDownloadButtons.chrome, ceDownloadButtons.firefox]
-            : [ceDownloadButtons.firefox]
+          isBrave
+            ? [ceDownloadButtons.brave, ceDownloadButtons.firefox]
+            : [ceDownloadButtons.chrome, ceDownloadButtons.firefox]
         }
       />
     </Layout>

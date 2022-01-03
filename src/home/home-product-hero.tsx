@@ -11,7 +11,7 @@ export function ProductHero() {
         display: flex;
         flex-flow: column;
         padding: 2rem 0;
-        background: no-repeat bottom / auto 24rem
+        background: no-repeat bottom / max(100vw, 120rem) auto
             url(${require("../home/forest-background.svg")}),
           no-repeat top left / contain
             linear-gradient(

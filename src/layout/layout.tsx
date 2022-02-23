@@ -24,12 +24,12 @@ export function Layout({
           flex-flow: column;
           padding-bottom: 40vw;
           background: no-repeat bottom center / 100% auto
-            url(${require("../common/footer-background.svg")});
+              url(${require("../common/footer-background.svg")}),
+            ${hunterGreen};
 
           :global() {
             html {
               height: 100vh;
-              background-color: ${hunterGreen};
             }
 
             * {

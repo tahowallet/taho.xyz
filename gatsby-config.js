@@ -26,6 +26,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-linaria`,
+    `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-plugin-matomo",
       options: {

@@ -1,6 +1,6 @@
 import { NavLinks } from "common/nav";
 import { Link } from "gatsby";
-import { textGreen40, textGreen60 } from "layout/colors";
+import { textGreen40, textGreen60, hunterGreen } from "layout/colors";
 import { quincyRegularFontFamily } from "layout/fonts";
 import { css } from "linaria";
 import React from "react";
@@ -13,6 +13,7 @@ export function Footer() {
         flex-flow: column;
         align-items: center;
         padding: 0 0 4rem;
+        background: ${hunterGreen};
       `}
     >
       <img width="86" height="65" src={require("../common/footer-logo.svg")} />

@@ -1,5 +1,7 @@
 import LegalLayout from "../layout/legal-layout.tsx";
-export default LegalLayout;
+export default ({ children }) => (
+  <LegalLayout title="Privacy Policy">{children}</LegalLayout>
+);
 
 # Privacy Policy
 
@@ -13,21 +15,21 @@ Some pages on our websites may contain links to third-party websites. We do not 
 
 We cover a lot of ground in this privacy policy. Use the links below to navigate to later sections of the privacy policy of interest to you.
 
-- [_Controller_](#Controller)
-- [_What information we collect about you_](#WhatInfoWeCollect)
-- [_Children&#39;s_ _Data_](#ChidrensData)
-- [_How we collect personal information about you_](#HowWeCollectInfo)
-- [_Cookies and automatic data collection technologies_](#CookiesAndAutoDataCollection)
-- [_How we use your personal information_](#HowWeUseYourInfo)
-- [_Disclosure of Your Information_](#DisclosureOfYourInfo)
-- [_Third Party Links_](#ThirdPartyLinks)
-- [_Retention_](#Retention)
-- [_Your Rights and Choices_](#YourRightsAndChoices)
-- [_International Transfers_](#InternationalTransfers)
-- [_Data Security_](#DataSecurity)
-- [_Your California Privacy Rights_](#YourCaliforniaPrivacyRights)
-- [_Changes to Our Privacy Policy_](#ChangesToOurPrivacyPolicy)
-- [_Contact Us_](#ContactUs)
+2. [Controller](#Controller)
+3. [What information we collect about you](#WhatInfoWeCollect)
+4. [Children&#39;s Data](#ChidrensData)
+5. [How we collect personal information about you](#HowWeCollectInfo)
+6. [Cookies and automatic data collection technologies](#CookiesAndAutoDataCollection)
+7. [How we use your personal information](#HowWeUseYourInfo)
+8. [Disclosure of Your Information](#DisclosureOfYourInfo)
+9. [Third Party Links](#ThirdPartyLinks)
+10. [Retention](#Retention)
+11. [Your Rights and Choices](#YourRightsAndChoices)
+12. [International Transfers](#InternationalTransfers)
+13. [Data Security](#DataSecurity)
+14. [Your California Privacy Rights](#YourCaliforniaPrivacyRights)
+15. [Changes to Our Privacy Policy](#ChangesToOurPrivacyPolicy)
+16. [Contact Us](#ContactUs)
 
 <h2 id="Controller">2. Controller</h2>
 
@@ -52,7 +54,7 @@ By using Tally Wallet and its smart contracts, you acknowledge that the posting 
 
 <h2 id="ChidrensData">4. Children&#39;s Data</h2>
 
-We do not target our websites to minors, and we do not knowingly collect personal information from children under 18. If you are under 18, do not use or provide any information on this website. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 18 please contact us using our contact information under [_Contact Us_](#ContactUs).
+We do not target our websites to minors, and we do not knowingly collect personal information from children under 18. If you are under 18, do not use or provide any information on this website. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 18 please contact us using our contact information under [Contact Us](#ContactUs).
 
 <h2 id="HowWeCollectInfo">5. How we collect your information</h2>
 
@@ -75,8 +77,8 @@ Our websites may use automatic data collection technologies to distinguish you f
 
 The technologies we use for this automatic data collection may include:
 
-- **Cookies (or browser cookies).** A cookie is a small file placed on the hard drive of your computer. For information about managing browser settings to refuse cookies, see [_Your Rights and Choices_](#YourRightsAndChoices).
-- **Web Beacons, Pixel Tags, Clear Gifs.** Our website pages, advertisements, and emails may contain small transparent embedded images or objects known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit us, for example, to count website page visitors or email readers, or to compile other similar statistics such as recording website content popularity or verifying system and server integrity. For information about managing web beacons, see [_Your Rights and Choices_](#YourRightsAndChoices).
+- **Cookies (or browser cookies).** A cookie is a small file placed on the hard drive of your computer. For information about managing browser settings to refuse cookies, see [Your Rights and Choices](#YourRightsAndChoices).
+- **Web Beacons, Pixel Tags, Clear Gifs.** Our website pages, advertisements, and emails may contain small transparent embedded images or objects known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit us, for example, to count website page visitors or email readers, or to compile other similar statistics such as recording website content popularity or verifying system and server integrity. For information about managing web beacons, see [Your Rights and Choices](#YourRightsAndChoices).
 
 We do not respond to or honor “do not track” (a/k/a DNT) signals or similar mechanisms transmitted by web browsers.
 
@@ -237,9 +239,9 @@ We will take reasonable steps to avoid collecting personal information that is n
 Your rights may vary depending on where you are located. We have created mechanisms to provide you with the following control over your information.
 
 - **Marketing**. If you do not want us to use your email address or other contact information to promote or recommend our own products and services, or third parties&#39; products or services, you can opt-out by checking the relevant box located on the form where we collect your contact information or, if presented with the option to opt-in, do not opt-in. You may also opt-out of further marketing communications by replying to any promotional email we have sent you or following the opt-out links on that message.
-- **Accessing, Updating and Deleting Your Information.** You can contact us as set forth in the [_Contact Us_](#ContactUs) section below to request access to, correction of, or deletion of personal information that you have provided to us. We may not accommodate a request to change information if we believe the change would violate any law or legal requirement or negatively affect the information&#39;s accuracy. We cannot delete personal information, if any, that has been posted to the Ethereum blockchain through your use of a smart contract on our Network.
+- **Accessing, Updating and Deleting Your Information.** You can contact us as set forth in the [Contact Us](#ContactUs) section below to request access to, correction of, or deletion of personal information that you have provided to us. We may not accommodate a request to change information if we believe the change would violate any law or legal requirement or negatively affect the information&#39;s accuracy. We cannot delete personal information, if any, that has been posted to the Ethereum blockchain through your use of a smart contract on our Network.
 - **Cookies and Automatic Data Collection Technologies**. You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. However, if you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly.
-- **California Residents**. If you are a California resident, you may have additional personal rights and choices with regard to your personal information. Please see [_Your California Privacy Rights_](#YourCaliforniaPrivacyRights) for more information. California&#39;s “Shine the Light” law (Civil Code Section § 1798.83) permits users of our website that are California residents to request certain information regarding our disclosure of personal information to third parties for their direct marketing purposes. At this time, we do not engage in this type of disclosure.
+- **California Residents**. If you are a California resident, you may have additional personal rights and choices with regard to your personal information. Please see [Your California Privacy Rights](#YourCaliforniaPrivacyRights) for more information. California&#39;s “Shine the Light” law (Civil Code Section § 1798.83) permits users of our website that are California residents to request certain information regarding our disclosure of personal information to third parties for their direct marketing purposes. At this time, we do not engage in this type of disclosure.
 - **EU Residents.** If you are a resident of the European Union, you have the right to:
   - request access to your personal data, commonly known as a “data subject access request”, which allows you to receive a copy of the personal data we hold about you and to check that we are lawfully processing it.
   - Request a correction of the personal data that we hold about you. This enables you to have any incomplete or inaccurate data we hold about you corrected, though we may need to verify the accuracy of the new data you provide to us. You acknowledge we cannot correct data that has been posted to a public blockchain.

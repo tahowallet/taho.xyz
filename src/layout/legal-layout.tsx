@@ -42,12 +42,12 @@ export default function LegalLayout({
           h1 {
             text-align: center;
             font-size: 64px;
-            margin: 1rem 0 2rem;
+            margin: 1rem 0;
           }
 
           h1 + p {
             text-align: center;
-            margin: 2rem 0 4rem;
+            margin: 1rem 0 4rem;
             font-size: 14px;
           }
 

@@ -40,7 +40,7 @@ export function CommunityEditionShowcase({
             text-align: center;
           `}
         >
-          Get the Tally
+          Get the Tally Wallet
           <br />
           Community Edition
         </h1>

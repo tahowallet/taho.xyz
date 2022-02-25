@@ -1,7 +1,11 @@
 import LegalLayout from "../layout/legal-layout.tsx";
-export default LegalLayout;
+export default ({ children }) => (
+  <LegalLayout title="Privacy Notice for California Residents">
+    {children}
+  </LegalLayout>
+);
 
-## Privacy Notice for California Residents
+# Privacy Notice for California Residents
 
 **Effective Date**: February 21, 2022
 

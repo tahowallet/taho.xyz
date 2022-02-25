@@ -59,7 +59,17 @@ export function Footer() {
         >
           Thesis
         </Link>{" "}
-        Build
+        Build &nbsp;|&nbsp;{" "}
+        <Link
+          className={css`
+            text-decoration: none;
+            color: inherit;
+          `}
+          target="_blank"
+          to="/privacy"
+        >
+          Privacy policy
+        </Link>
       </div>
     </div>
   );

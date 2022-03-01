@@ -24,6 +24,9 @@ export function NavLinks({
       <NavLink onNavigate={onNavigate} blank to="https://blog.tally.cash/">
         Blog
       </NavLink>
+      <NavLink onNavigate={onNavigate} blank to="https://boards.greenhouse.io/tallywallet/">
+        Jobs
+      </NavLink>
       <span
         className={css`
           margin: 0 0.75rem;

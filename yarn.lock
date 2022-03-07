@@ -9096,6 +9096,11 @@ gatsby-plugin-react-helmet@^3.10.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+gatsby-plugin-reddit-pixel@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-reddit-pixel/-/gatsby-plugin-reddit-pixel-1.0.1.tgz#4a32f71e22da56f633d7352382a236db2e9c2f88"
+  integrity sha512-ELOut7InJkOhbG5gy1isyF9y1pEMkt2GWhpYsKGGEZ+OC7rOntV93SKFvaRwodoy2riC1MJg9FxLS43JWe9j4g==
+
 gatsby-plugin-sharp@^2.14.1:
   version "2.14.1"
   resolved "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.14.1.tgz"

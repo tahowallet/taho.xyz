@@ -28,6 +28,10 @@ module.exports = {
     `gatsby-plugin-linaria`,
     `gatsby-plugin-mdx`,
     {
+      resolve: `gatsby-plugin-reddit-pixel`,
+      options: { pixelId: "t2_gmdocv2j" },
+    },
+    {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: "1",

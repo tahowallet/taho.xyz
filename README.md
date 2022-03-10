@@ -1,6 +1,6 @@
 # tally.cash
 
-The primary website for Tally, the community-owned Web3 wallet.
+The primary website for Tally Ho, the community-owned Web3 wallet.
 
 ## Local development
 

@@ -64,7 +64,7 @@ export function CommunityEditionDao() {
               text-align: center;
             `}
           >
-            The Tally DAO
+            The Tally Ho DAO
           </h2>
         </div>
         <div
@@ -117,8 +117,8 @@ export function CommunityEditionDao() {
                 color: ${textGreen40};
               `}
             >
-              Tally is the first Web3 wallet that’s owned by its users, not a
-              corporation. Join the pack on Discord before the Tally DAO
+              Tally Ho! The first Web3 wallet that’s owned by its users, not a
+              corporation. Join the pack on Discord before the Tally Ho DAO
               launches.
             </p>
             <img
@@ -149,7 +149,7 @@ export function CommunityEditionDao() {
               )}
               href="https://chat.tally.cash/"
             >
-              Join the Tally Discord
+              Join the Tally Ho Discord
             </a>
           </div>
           <img

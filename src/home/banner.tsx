@@ -100,7 +100,7 @@ export function Banner() {
             color: ${textLight};
           `}
         >
-          Tally’s Community Edition is now live.
+          Tally Ho Community Edition is now live.
         </h3>
         <p
           className={css`
@@ -116,9 +116,9 @@ export function Banner() {
             }
           `}
         >
-          Be one of the first to experience Tally.
+          Be one of the first to experience Tally Ho.
           <br />
-          Available for Chrome, Brave, and Firefox.
+          Available for {/* TODO: Chrome, Brave, and */} Firefox.
         </p>
         <Link
           className={cx(

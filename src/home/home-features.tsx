@@ -88,7 +88,7 @@ export function HomeFeatures() {
               color: ${textLight};
             `}
           >
-            Tally is the first Web3 wallet that’s owned by its users.
+            Tally Ho is the first Web3 wallet that’s owned by its users.
           </h4>
           <p
             className={css`

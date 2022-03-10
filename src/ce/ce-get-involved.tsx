@@ -25,7 +25,7 @@ export function CommunityEditionGetInvolved() {
           text-align: center;
         `}
       >
-        Let’s Build Tally Together
+        Let’s Build Tally Ho Together
       </h3>
       <div
         className={css`
@@ -53,7 +53,7 @@ export function CommunityEditionGetInvolved() {
           title={<>For Developers</>}
           body={
             <>
-              Want to contribute? Tally is 100% open source under GPL v3. Let’s
+              Want to contribute? Tally Ho is 100% open source under GPL v3. Let’s
               build the next great wallet together.
             </>
           }

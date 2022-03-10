@@ -27,7 +27,7 @@ export function Home() {
         <NewsSection>
           <NewsItem
             to="https://blog.tally.cash/what-is-tally/"
-            title={<>What is Tally</>}
+            title={<>What is Tally Ho</>}
             date={<>December 15, 2021</>}
             body={<>A community-owned wallet for the open internet.</>}
             main
@@ -36,14 +36,14 @@ export function Home() {
             to="https://blog.tally.cash/tally-call-for-delegates/"
             title={<>Call for Delegates</>}
             date={<>December 1, 2021</>}
-            body={<>Tally is now accepting applications for DAO delegates.</>}
+            body={<>Tally Ho is now accepting applications for DAO delegates.</>}
           />
           <NewsItem
             to="https://blog.tally.cash/all-rights-reversed-tally-is-now-open-source/"
             title={<>Open Source Announcement</>}
             date={<>November 17, 2021</>}
             body={
-              <>Tally is open source under GNU General Public License v3.</>
+              <>Tally Ho is open source under GNU General Public License v3.</>
             }
           />
         </NewsSection>

@@ -66,7 +66,7 @@ export function CommunityEditionFeatures({
               color: ${textLight};
             `}
           >
-            The Tally Community&nbsp;Edition
+            The Tally Ho Community&nbsp;Edition
           </h4>
           <p
             className={css`
@@ -76,7 +76,7 @@ export function CommunityEditionFeatures({
               color: ${textGreen40};
             `}
           >
-            Welcome to your sneak preview of the Tally wallet. It’s easy to
+            Welcome to your sneak preview of the Tally Ho wallet. It’s easy to
             import from MetaMask and includes everything you need for DeFi. It’s
             our community’s first draft at making the best possible Web3 wallet.
           </p>
@@ -124,7 +124,7 @@ export function CommunityEditionFeatures({
           height="24"
           src={require("../ce/icon-warning.svg")}
         />
-        Tally Community Edition is a work-in-progress! Test responsibly.
+        Tally Ho Community Edition is a work-in-progress! Test responsibly.
       </div>
       <div
         className={css`
@@ -142,7 +142,7 @@ export function CommunityEditionFeatures({
       >
         Check out{" "}
         <Link to="https://docs.tally.cash/" target="_blank">
-          Tally Docs
+          Tally Ho Docs
         </Link>{" "}
         for more info.
       </div>

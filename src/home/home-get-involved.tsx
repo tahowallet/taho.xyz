@@ -38,7 +38,7 @@ export function HomeGetInvolved() {
       >
         <Item
           icon={<img src={require("../home/get-involved/1-github.svg")} />}
-          title={<>Help us build Tally or fork us on GitHub</>}
+          title={<>Help us build Tally Ho or fork us on GitHub</>}
           cta={
             <Link
               className={buttonClassName}
@@ -64,7 +64,7 @@ export function HomeGetInvolved() {
         />
         <Item
           icon={<img src={require("../home/get-involved/3-proposal.svg")} />}
-          title={<>Make a proposal and help shape Tally’s future</>}
+          title={<>Make a proposal and help shape Tally Ho’s future</>}
           cta={
             <Link
               className={buttonClassName}
@@ -77,7 +77,7 @@ export function HomeGetInvolved() {
         />
         <Item
           icon={<img src={require("../home/get-involved/4-learn-more.svg")} />}
-          title={<>Learn more about Tally</>}
+          title={<>Learn more about Tally Ho</>}
           cta={
             <Link
               className={buttonClassName}

@@ -12,8 +12,8 @@ const Page = () => {
       <CommunityEditionBody
         downloadButtons={
           isBrave
-            ? [/* TODO: ceDownloadButtons.brave, */ ceDownloadButtons.firefox]
-            : [/* TODO: ceDownloadButtons.chrome, */ ceDownloadButtons.firefox]
+            ? [ceDownloadButtons.brave, ceDownloadButtons.firefox]
+            : [ceDownloadButtons.chrome, ceDownloadButtons.firefox]
         }
       />
     </Layout>

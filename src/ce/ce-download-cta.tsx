@@ -48,7 +48,7 @@ export function CommunityEditionDownloadButton({
 }
 
 export const ceDownloadButtons: Record<
-  "chrome" | "brave" | "firefox",
+  "chrome" | "brave",// | "firefox",
   ReactNode
 > = {
   brave: (
@@ -65,13 +65,13 @@ export const ceDownloadButtons: Record<
       imageSrc={require("../ce/icon-browser-chrome.svg")}
     />
   ),
-  firefox: (
-    <CommunityEditionDownloadButton
-      href="https://addons.mozilla.org/en-US/firefox/addon/tally/"
-      text={<>Download for Firefox</>}
-      imageSrc={require("../ce/icon-browser-firefox.svg")}
-    />
-  ),
+  // firefox: (
+  //   <CommunityEditionDownloadButton
+  //     href="https://addons.mozilla.org/en-US/firefox/addon/tally/"
+  //     text={<>Download for Firefox</>}
+  //     imageSrc={require("../ce/icon-browser-firefox.svg")}
+  //   />
+  // ),
 };
 
 const buttonClassName = css`

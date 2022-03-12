@@ -118,7 +118,7 @@ export function Banner() {
         >
           Be one of the first to experience Tally Ho.
           <br />
-          Available for {/* TODO: Chrome, Brave, and */} Firefox.
+          Available for Chrome, Brave, and Firefox.
         </p>
         <Link
           className={cx(

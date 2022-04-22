@@ -67,7 +67,7 @@ export const ceDownloadButtons: Record<
   ),
   firefox: (
     <CommunityEditionDownloadButton
-      href="/tally_ho_pre_release_channel-0.13.0-fx.xpi"
+      href="/tally_ho_pre_release_channel-0.13.1-fx.xpi"
       text={<>Download for Firefox</>}
       imageSrc={require("../ce/icon-browser-firefox.svg")}
     />

@@ -12,9 +12,6 @@ export function NavLinks({
 }) {
   return (
     <>
-      <NavLink onNavigate={onNavigate} to="/community-edition">
-        Community Edition
-      </NavLink>
       <NavLink onNavigate={onNavigate} blank to="https://gov.tally.cash/">
         Governance
       </NavLink>

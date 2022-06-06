@@ -40,9 +40,7 @@ export function CommunityEditionShowcase({
             text-align: center;
           `}
         >
-          Tally Ho!
-          <br />
-          Community Edition
+          A wallet built for users, by users.
         </h1>
         <h3
           className={css`
@@ -57,9 +55,7 @@ export function CommunityEditionShowcase({
             color: ${trophyGold};
           `}
         >
-          Be one of the first to try the community
-          <br />
-          owned alternative to MetaMask.
+          Try the community owned alternative to MetaMask.
         </h3>
 
         <CommunityEditionDonwloadCTA downloadButtons={downloadButtons} />

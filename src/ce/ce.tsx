@@ -23,24 +23,24 @@ export function CommunityEditionBody({
       <CommunityEditionDao />
       <NewsSection>
         <NewsItem
-          to="https://blog.tally.cash/tally-call-for-delegates/"
-          title={<>Call for Delegates for the Tally Ho DAO</>}
-          date={<>December 1, 2021</>}
-          body={<>Tally Ho is now accepting applications for DAO delegates.</>}
+          to="https://blog.tally.cash/least-authority-keyring-audit-gives-tally-ho-high-marks/"
+          title={<>Least Authority Keyring Audit Gives Tally Ho High Marks</>}
+          date={<>April 14, 2022</>}
+          body={<>The Tally Ho team is proud to share the results of a security audit performed by Least Authority. .</>}
           main
         />
         <NewsItem
           to="https://blog.tally.cash/all-rights-reversed-tally-is-now-open-source/"
-          title={<>Open Source Announcement</>}
-          date={<>November 17, 2021</>}
-          body={<>Tally Ho is open source under GNU General Public License v3.</>}
+          title={<>Tally Ho Now Supports Unstoppable Domains</>}
+          date={<>May 17, 2022</>}
+          body={<>We’re excited to announce Tally Ho’s partnership with Unstoppable Domains (UNS). Tally Ho users can now use UNS domains to send and receive with a single, easily-readable name.</>}
         />
         <NewsItem
           to="https://blog.tally.cash/how-to-try-tally/"
-          title={<>How to Try Tally Ho</>}
-          date={<>December 15, 2021</>}
+          title={<>A Ledger Integration You Can Love</>}
+          date={<>March 23, 2021</>}
           body={
-            <>The Community Edition includes everything you need for DeFi.</>
+            <>We’re excited to announce that you can now use your Ledger with Tally Ho!</>
           }
         />
       </NewsSection>

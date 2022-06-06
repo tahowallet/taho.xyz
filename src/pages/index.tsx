@@ -1,9 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { Home } from "home/home";
+import { CommunityEditionBody } from "ce/ce";
+import { ceDownloadButtons } from "ce/ce-download-cta";
+import { useIsBraveBrowser } from "common/brave-browser";
 import { Layout } from "layout/layout";
 import React from "react";
 
-const IndexPage = () => {
+const Page = () => {
+  const isBrave = useIsBraveBrowser();
+
   const data = useStaticQuery(graphql`
     query TitleQuery2 {
       site {
@@ -16,9 +20,15 @@ const IndexPage = () => {
 
   return (
     <Layout title={data.site.siteMetadata?.title || `Title`}>
-      <Home />
+      <CommunityEditionBody
+        downloadButtons={
+          isBrave
+            ? [ceDownloadButtons.brave, ceDownloadButtons.firefox]
+            : [ceDownloadButtons.chrome, ceDownloadButtons.firefox]
+        }
+      />
     </Layout>
   );
 };
 
-export default IndexPage;
+export default Page;

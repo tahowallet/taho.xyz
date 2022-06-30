@@ -1,0 +1,24 @@
+<svg width="1198" height="623" viewBox="0 0 1198 623" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="mask0_2257_62896" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1198" height="624">
+    <path
+      d="M1198 597.4C1198 606.361 1198 610.841 1196.26 614.264C1194.72 617.274 1192.27 619.722 1189.26 621.256C1185.84 623 1181.36 623 1172.4 623L25.6 623C16.6392 623 12.1587 623 8.73621 621.256C5.72559 619.722 3.27783 617.275 1.7439 614.264C-1.06295e-06 610.841 -1.45464e-06 606.361 -2.23802e-06 597.4L-5.22264e-05 25.6001C-5.30097e-05 16.6393 -5.34014e-05 12.1589 1.74384 8.73625C3.27778 5.72569 5.72553 3.278 8.73615 1.744C12.1586 0.00010367 16.6391 0.000103278 25.5999 0.000102494L1172.4 2.23802e-06C1181.36 1.45464e-06 1185.84 1.06295e-06 1189.26 1.7439C1192.27 3.27789 1194.72 5.72559 1196.26 8.73615C1198 12.1588 1198 16.6392 1198 25.6L1198 597.4Z"
+      fill="url(#paint0_radial_2257_62896)" />
+  </mask>
+  <g mask="url(#mask0_2257_62896)">
+    <g opacity="0.2">
+      <circle cx="436" cy="312" r="678" stroke="#EF9C32" stroke-width="2" />
+      <circle cx="436" cy="312" r="502.117" stroke="#EF9C32" stroke-width="2" />
+      <circle cx="436" cy="312" r="363.113" stroke="#EF9C32" stroke-width="2" />
+      <circle cx="436.001" cy="312" r="215.598" stroke="#EF9C32" stroke-width="2" />
+      <circle cx="436" cy="312" r="109" stroke="#EF9C32" stroke-width="2" />
+    </g>
+  </g>
+  <defs>
+    <radialGradient id="paint0_radial_2257_62896" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(836.5 322.5) rotate(180) scale(400.5 770.143)">
+      <stop stop-color="#C4C4C4" stop-opacity="0" />
+      <stop offset="0.206139" stop-color="#C4C4C4" stop-opacity="0" />
+      <stop offset="1" stop-color="#C4C4C4" />
+    </radialGradient>
+  </defs>
+</svg>

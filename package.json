@@ -23,6 +23,9 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
+    "@browser-logos/brave": "^3.0.13",
+    "@browser-logos/chrome": "^2.0.0",
+    "@browser-logos/firefox": "^3.0.9",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "babel-preset-gatsby": "1",

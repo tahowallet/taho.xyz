@@ -14,17 +14,23 @@ import {
   semanticSuccess,
   trophyGold,
   green80,
+  green40,
+  green60,
 } from "shared/styles/color-palette";
 
 /* Colors organized by usage (to reduce mistakes and improve refactorings) */
 
 export const titleDarkHunterGreen = hunterGreen;
+export const titleDarkGold120 = gold120;
 
 export const bodyDarkGrey80 = grey80;
 export const bodyDarkGrey60 = grey60;
+export const bodyDarkGreen40 = green40;
+export const bodyDarkGreen60 = green60;
 export const bodyDarkGreen80 = green80;
 export const bodyDarkGreen95 = green95;
 export const bodyDarkGreen120 = green120;
+export const bodyDarkHunterGreen = hunterGreen;
 export const bodyDarkGold120 = gold120;
 
 export const linkDarkTrophyGold = trophyGold;
@@ -46,8 +52,10 @@ export const cardBackgroundGold60 = gold60;
 export const cardBackgroundGreen20 = green20;
 export const cardBackgroundGold5 = gold5;
 export const cardBackgroundGold20 = gold20;
+export const cardBackgroundOffWhite = offWhite;
 
 export const borderDarkTrophyGold = trophyGold;
 export const borderDarkGold120 = gold120;
 export const borderDarkGrey80 = grey80;
 export const borderDarkGold80 = gold80;
+export const borderDarkGreen20 = green20;

@@ -21,8 +21,13 @@ export const h1Quincy72 = quincy72;
 export const h2Quincy48 = quincy48;
 export const h3Quincy36 = quincy36;
 export const quoteQuincy32 = quincy32;
+
 export const showcaseQuincy144 = quincy144;
+export const showcaseQuincy72 = quincy72;
+
 export const buttonLabelQuincy18 = quincyBold18;
 export const pillLabelSegment14 = segment14;
+
+export const textLabelQuincy18 = quincyBold18;
 
 export const labelLetterSpacing = `0.02em`;

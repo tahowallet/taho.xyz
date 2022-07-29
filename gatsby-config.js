@@ -35,5 +35,11 @@ module.exports = {
         siteUrl: "https://tally.cash",
       },
     },
+    {
+      resolve: `gatsby-plugin-twitter-pixel`,
+      options: {
+        pixelId: 'o9kgt',
+      },
+    },
   ],
 };

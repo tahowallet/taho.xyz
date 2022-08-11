@@ -86,10 +86,10 @@ export const signManifesto = functions.https.onCall(
 export const claimDiscordRole = functions.https.onCall(
   async ({
     token,
-    discordTag,
+    discordToken,
   }: {
     token: SignedMessage;
-    discordTag: string;
+    discordToken: string;
   }) => {
     const address = await verifyToken(token);
 
@@ -99,16 +99,14 @@ export const claimDiscordRole = functions.https.onCall(
       throw new Error("Manifesto not signed");
     }
 
-    const users = await new Promise<Array<{ user?: { id: string } }>>(
+    const { user } = await new Promise<{ user?: { id: string } }>(
       (resolve, reject) => {
         const request = https.request(
-          `https://discord.com/api/v10/guilds/${discordGuildId}/members/search?query=${encodeURIComponent(
-            discordTag
-          )}`,
+          "https://discord.com/api/v10/oauth2/@me",
           {
             method: "GET",
             headers: {
-              Authorization: `Bot ${discordBotAuthToken}`,
+              Authorization: `Bearer ${discordToken}`,
             },
           },
           (response) => {
@@ -133,7 +131,7 @@ export const claimDiscordRole = functions.https.onCall(
       }
     );
 
-    const discordUserId = users[0]?.user?.id;
+    const discordUserId = user?.id;
     if (!discordUserId) throw new Error("user not found");
 
     await new Promise((resolve, reject) => {
@@ -178,11 +176,16 @@ async function verifyToken(token: SignedMessage) {
     throw new Error("Wrong chain");
   }
 
-  if (verified.domain !== "tally.cash") {
+  if (!["tally.cash", "localhost:8000"].includes(verified.domain)) {
     throw new Error("Wrong domain");
   }
 
-  if (verified.uri !== "https://tally.cash/manifesto") {
+  if (
+    [
+      "https://tally.cash/manifesto",
+      "https://localhost:8000/manifesto",
+    ].includes(verified.uri)
+  ) {
     throw new Error("Wrong URI");
   }
 

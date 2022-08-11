@@ -7,9 +7,9 @@ export function useEthereumAccount(
     | undefined
 ) {
   const { data, error, isLoading, mutate } = useMutation(
-    ["signer", ethereum?.isTally],
+    ["signer", !!ethereum],
     async () => {
-      if (!ethereum?.isTally) throw new Error();
+      if (!ethereum) throw new Error();
 
       const provider = new ethers.providers.Web3Provider(ethereum);
 

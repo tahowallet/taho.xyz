@@ -72,7 +72,7 @@ export function SigntureCount() {
           color: ${buttonLabelHunterGreen};
         `}
       >
-        Sign petition
+        Sign pledge
       </a>
     </div>
   );

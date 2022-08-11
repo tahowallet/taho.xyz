@@ -48,7 +48,7 @@ export function ManifestoPanel() {
     signatureIsLoading,
   } = useManifestoSign(account, token, userData);
 
-  const hasTally = ethereum?.isTally ?? false;
+  const hasTally = (ethereum?.isTally ?? false) || !!ethereum; // FIXME: temporarily allow other wallets
   const hasSigned = !!(userData?.hasSigned || signature);
   const canSIWE = account && !tokenIsLoading;
   const canSign = userData && !signatureIsLoading && !hasSigned;
@@ -176,7 +176,9 @@ export function ManifestoPanel() {
                 </button>
               )}
               {tokenError && <Message>Log-in failed</Message>}
-              {userError && <Message>Cannot connect to our server.</Message>}
+              {token && userError && (
+                <Message>Cannot connect to our server.</Message>
+              )}
             </Step>
 
             <Step index={3} isDone={hasSigned}>
@@ -202,7 +204,7 @@ export function ManifestoPanel() {
                   `}
                   disabled={!canSign}
                 >
-                  Sign petition
+                  Sign pledge
                 </button>
               )}
               {signatureError && <Message>Error while signing.</Message>}

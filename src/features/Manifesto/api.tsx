@@ -33,6 +33,6 @@ export const signManifesto = httpsCallable<
 >(getFunctions(), "signManifesto");
 
 export const claimDiscordRole = httpsCallable<
-  { token: SiweToken; discordTag: string },
+  { token: SiweToken; discordToken: string },
   {}
 >(getFunctions(), "claimDiscordRole");

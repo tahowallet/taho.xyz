@@ -13,7 +13,10 @@ export const segment24 = `400 ${size(24)} / 1.33 ${segmentFontFamily}`;
 export const segment32 = `400 ${size(32)} / 1.33 ${segmentFontFamily}`;
 
 export const quincyBold18 = `700 ${size(18)} / 1 ${quincyRegularFontFamily}`;
+export const quincyBold24 = `700 ${size(24)} / 1 ${quincyRegularFontFamily}`;
+export const quincyBold48 = `700 ${size(48)} / 1 ${quincyRegularFontFamily};`;
 
+export const quincy24 = `400 ${size(24)} / 1.1 ${quincyRegularFontFamily};`;
 export const quincy32 = `400 ${size(32)} / 1.1 ${quincyRegularFontFamily};`;
 export const quincy36 = `400 ${size(36)} / 1.1 ${quincyRegularFontFamily};`;
 export const quincy48 = `400 ${size(48)} / 1.1 ${quincyRegularFontFamily};`;

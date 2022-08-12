@@ -1,8 +1,8 @@
 import { css } from "linaria";
-import React from "react";
+import React, { ReactNode } from "react";
 import {
   bodyDarkHunterGreen,
-  titleDarkGold120,
+  titleDarkGreen80,
   titleDarkHunterGreen,
 } from "shared/styles/colors";
 import {
@@ -29,9 +29,7 @@ export function ManifestoBody() {
           font: ${h1Quincy72};
         `}
       >
-        Dear web3,
-        <br />
-        what do you believe in?
+        Dear web3...
       </h1>
       <div
         className={css`
@@ -39,7 +37,7 @@ export function ManifestoBody() {
 
           h3 {
             font: ${h3Quincy36};
-            color: ${titleDarkGold120};
+            color: ${titleDarkGreen80};
             margin: 4rem 0 2rem;
           }
 
@@ -50,44 +48,146 @@ export function ManifestoBody() {
           }
         `}
       >
-        <h3>It hasn&rsquo;t been an easy few months for web3.</h3>
+        <h3>What do you believe in?</h3>
         <p>
-          The market is washing out bad actors with worse motives and the
-          aftershocks are far from over. Friends and family who used to ask you
-          to explain web3 now ask: “Are you okay?”
+          Look past the headlines and you&rsquo;ll see something remarkable
+          unfolding. Web3 is cleansing itself: washing out bad actors and
+          clearing space for the community-powered internet. Let&rsquo;s use
+          this time to get back to basics and remind ourselves why we&rsquo;re
+          here.
         </p>
+        <p>Why is the Tally Ho community here? It&rsquo;s simple:</p>
+
+        <h3>
+          Your web3 wallet isn&rsquo;t decentralized.
+          <br />
+          But it should be.
+        </h3>
         <p>
-          Fortunately, the truly decentralized projects are the most
-          resilient—communities with the deepest roots won&rsquo;t be washed
-          away in the storm.
+          The trusty tools we use to connect to each other—simple, unassuming
+          web3 wallets—are controlled by web2 monoliths. Take a look at the
+          wallet in your browser and ask: Who&rsquo;s getting rich from this?
+          Who&rsquo;s monitoring me? Can they block my access to the open
+          internet?
         </p>
+        <h3>Our community is building the web3 wallet you deserve.</h3>
         <p>
-          It&rsquo;s time to get back to basics. To call foul on scams when we
-          see them. To tackle the hard problems and create a community-owned
-          alternative for every part of the digital experience.
-        </p>
-        <p>
-          So what problem is *this* community focused on? It&rsquo;s simple:
-        </p>
-        <h3>Your decentralized web3 wallet isn't actually decentralized.</h3>
-        <p>
-          Its creators can revoke your access because of where you live. They
-          can abandon open source with impunity. And no matter how many monopoly
-          profits they generate, you&rsquo;ll never see a cent. We&rsquo;ve
-          gotten so busy decentralizing everything under the sun that we failed
-          to see what was right in front of us. The trusty tools we use to hold
-          our new wealth—simple, unassuming web3 wallets—are controlled by web2
-          monoliths: publicly traded corporations, mercenary startups, and mega
-          unicorns pimping your daily usage out for their next multi-billion
-          dollar fundraise.
-        </p>
-        <h3>The Tally Ho community is building the wallet you deserves.</h3>
-        <p>
-          Tally Ho is open source, built for everyone, and governed by a DAO.
-          Instead of concentrating wealth, it circulates value among the people
-          who generate it.
+          Can you imagine a web3 wallet that actually has web3 values? A wallet
+          that&rsquo;s available anywhere on earth? That can finance itself? A
+          wallet that&rsquo;s not beholden to shareholders… because it&rsquo;s
+          directly accountable to you? We&rsquo;ll, that&rsquo;s what
+          we&rsquo;re building.
         </p>
       </div>
+      <hr
+        className={css`
+          height: 1rem;
+          border: none;
+          margin: 4.5rem -0.25rem;
+          background: left / auto no-repeat url(./hr.svg);
+        `}
+      />
+      <h1
+        className={css`
+          margin: 2rem 0;
+          color: ${titleDarkHunterGreen};
+          font: ${h1Quincy72};
+        `}
+      >
+        Community Values
+      </h1>
+      <p
+        className={css`
+          font: ${bodySmallSegment18};
+          color: ${bodyDarkHunterGreen};
+          margin: 2rem 0;
+        `}
+      >
+        Below are the values baked into every line of Tally Ho&rsquo;s codebase.
+        Our community pledge is that you can expect every update in years and
+        decades to be built around these values:
+      </p>
+      <ul
+        className={css`
+          display: flex;
+          flex-flow: column;
+          gap: 2rem;
+          margin: 0;
+          padding: 2rem 0;
+        `}
+      >
+        <Value
+          iconSrc={require("./icon-1-accessible.svg")}
+          title={<>Accessible to everyone</>}
+          body={
+            <>
+              You should have access to web3 systems—no matter where you live.
+            </>
+          }
+        />
+        <Value
+          iconSrc={require("./icon-2-oss.svg")}
+          title={<>100% open source</>}
+          body={
+            <>
+              All code should be 100% open source—for anyone to copy, fork, or
+              remix.
+            </>
+          }
+        />
+        <Value
+          iconSrc={require("./icon-3-community.svg")}
+          title={<>Fully owned by the community</>}
+          body={
+            <>Value must flow to the community, rather than a few insiders.</>
+          }
+        />
+      </ul>
     </div>
+  );
+}
+function Value({
+  title,
+  body,
+  iconSrc,
+}: {
+  title: ReactNode;
+  body: ReactNode;
+  iconSrc: string;
+}) {
+  return (
+    <li
+      className={css`
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      `}
+    >
+      <img height={64} width={64} src={iconSrc} alt="" />
+      <div
+        className={css`
+          display: flex;
+          flex-flow: column;
+          gap: 0.5rem;
+        `}
+      >
+        <h3
+          className={css`
+            font: ${h3Quincy36};
+            color: #11a165;
+          `}
+        >
+          {title}
+        </h3>
+        <p
+          className={css`
+            font: ${bodySmallSegment18};
+            color: ${bodyDarkHunterGreen};
+          `}
+        >
+          {body}
+        </p>
+      </div>
+    </li>
   );
 }

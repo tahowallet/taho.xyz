@@ -19,7 +19,7 @@ export function ManifestoSignedPanel({ token }: { token: SiweToken }) {
         display: flex;
         flex-flow: column;
         gap: 4rem;
-        margin: 4rem 0;
+        margin: 4rem;
       `}
     >
       <Step

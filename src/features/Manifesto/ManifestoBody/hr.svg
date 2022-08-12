@@ -1,0 +1,9 @@
+<svg width="721" height="12" viewBox="0 0 721 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.5">
+    <line x1="9" y1="5.5" x2="721" y2="5.5" stroke="#0D2321" />
+    <rect x="5.65625" y="0.707107" width="7" height="7" transform="rotate(45 5.65625 0.707107)" fill="#0D2321"
+      stroke="#0D2321" />
+    <line x1="17" y1="2.5" x2="44" y2="2.5" stroke="#0D2321" />
+    <line x1="25" y1="8.5" x2="62" y2="8.5" stroke="#0D2321" />
+  </g>
+</svg>

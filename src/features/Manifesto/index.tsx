@@ -1,15 +1,12 @@
-import { DaoValues } from "features/Dao/Values";
 import { Footer } from "features/Footer";
 import { Header } from "features/Header";
 import { css } from "linaria";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import SEO from "shared/seo";
-import {
-  cardBackgroundOffWhite,
-  sectionBackgroundTrophyGold,
-} from "shared/styles/colors";
+import { sectionBackgroundOffWhite } from "shared/styles/colors";
 import { sectionNarrowWidth } from "shared/styles/lengths";
+import { tileBoxShadow } from "shared/styles/shadows";
 import { ManifestoBody } from "./ManifestoBody";
 import { ManifestoHeaderCta } from "./ManifestoHeaderCta";
 import { ManifestoPanel } from "./ManifestoPanel";
@@ -31,33 +28,57 @@ export function Manifesto() {
 
         <div
           className={css`
-            padding: 2rem 0 6rem;
+            display: flex;
+            flex-flow: column;
+            width: ${sectionNarrowWidth};
+            border-radius: 1rem;
+            margin: 0 auto 24rem;
           `}
         >
-          <ManifestoHeaderCta />
-          <ManifestoBody />
-        </div>
-
-        <div
-          className={css`
-            background: ${sectionBackgroundTrophyGold};
-            padding: 0 0 8rem;
-            margin: 0 0 12rem;
-          `}
-        >
-          <DaoValues />
           <div
-            id="sign"
             className={css`
-              max-width: ${sectionNarrowWidth};
-              min-height: 40rem;
-              margin: 0 auto;
-              padding: 4rem;
-              border-radius: 1rem;
-              background: ${cardBackgroundOffWhite};
+              height: 24rem;
+              margin: 0 -4rem;
+              background: bottom 4rem center / contain no-repeat url(./bg.png);
+            `}
+          />
+          <div
+            className={css`
+              position: sticky;
+              top: 1.5rem;
+              z-index: 1;
+              margin: -4rem;
             `}
           >
-            <ManifestoPanel />
+            <ManifestoHeaderCta />
+          </div>
+          <div
+            className={css`
+              box-shadow: ${tileBoxShadow};
+              border-radius: 1rem;
+              padding: 6rem 0 0;
+            `}
+          >
+            <div
+              className={css`
+                padding: 0 6rem;
+              `}
+            >
+              <ManifestoBody />
+            </div>
+
+            <div
+              className={css`
+                border-radius: 0 0 1rem 1rem;
+                background: top -4rem center / auto no-repeat url(./ManifestoHeaderCta/bg.svg),
+                  ${sectionBackgroundOffWhite};
+                padding: 4.5rem 0;
+                min-height: 40rem;
+              `}
+              id="sign"
+            >
+              <ManifestoPanel />
+            </div>
           </div>
         </div>
 

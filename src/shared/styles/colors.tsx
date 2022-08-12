@@ -21,7 +21,7 @@ import {
 /* Colors organized by usage (to reduce mistakes and improve refactorings) */
 
 export const titleDarkHunterGreen = hunterGreen;
-export const titleDarkGold120 = gold120;
+export const titleDarkGreen80 = green80;
 
 export const bodyDarkGrey80 = grey80;
 export const bodyDarkGrey60 = grey60;

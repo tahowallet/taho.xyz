@@ -1,14 +1,9 @@
 import { ethers } from "ethers";
 import { useMutation } from "react-query";
 
-export function useEthereumAccount(
-  ethereum:
-    | (ethers.providers.ExternalProvider & { isTally?: boolean | undefined })
-    | undefined
-) {
+export function useEthereumAccount() {
   const { data, error, isLoading, mutate } = useMutation(
-    ["signer", !!ethereum],
-    async () => {
+    async ({ ethereum }: { ethereum: ethers.providers.ExternalProvider }) => {
       if (!ethereum) throw new Error();
 
       const provider = new ethers.providers.Web3Provider(ethereum);

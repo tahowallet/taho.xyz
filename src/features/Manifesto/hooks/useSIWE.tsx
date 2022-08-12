@@ -2,12 +2,9 @@ import { Account } from "features/Manifesto/types";
 import { useMutation } from "react-query";
 import { SiweMessage } from "siwe";
 
-export function useSIWE(account: Account | undefined) {
+export function useSIWE() {
   const { mutate, data, error, isLoading } = useMutation(
-    ["token", account?.address],
-    async () => {
-      if (!account) throw new Error();
-
+    async (account: Account) => {
       const siwe = new SiweMessage({
         domain: window.location.host,
         address: account.address,

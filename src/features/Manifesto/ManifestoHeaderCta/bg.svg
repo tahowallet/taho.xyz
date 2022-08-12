@@ -2,7 +2,7 @@
   <mask id="mask0_2257_60523" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-6" y="56" width="236" height="316">
     <rect x="-6" y="56" width="236" height="316" rx="24" fill="#FEFEFC" />
   </mask>
-  <g mask="url(#mask0_2257_60523)">
+  <g>
     <circle opacity="0.4" cx="112" cy="112" r="33.5" stroke="#21C580" />
     <circle opacity="0.15" cx="112" cy="112" r="80.5" stroke="#21C580" />
     <circle opacity="0.05" cx="112" cy="112" r="111.5" stroke="#21C580" />

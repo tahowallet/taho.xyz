@@ -1,10 +1,10 @@
-import { Account } from "features/Manifesto/types";
+import { Account, SiweAccount } from "features/Manifesto/types";
 import { useMutation } from "react-query";
 import { SiweMessage } from "siwe";
 
 export function useSIWE() {
   const { mutate, data, error, isLoading } = useMutation(
-    async (account: Account) => {
+    async (account: Account): Promise<SiweAccount> => {
       const siwe = new SiweMessage({
         domain: window.location.host,
         address: account.address,
@@ -18,14 +18,14 @@ export function useSIWE() {
       const message = siwe.prepareMessage();
       const signature = await account.signer.signMessage(message);
 
-      return { message, signature };
+      return { ...account, token: { message, signature } };
     },
     { retry: false }
   );
 
   return {
     signInWithEthereum: mutate,
-    token: data,
+    siweAccount: data,
     tokenError: error,
     tokenIsLoading: isLoading,
   };

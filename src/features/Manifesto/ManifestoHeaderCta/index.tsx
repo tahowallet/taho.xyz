@@ -26,6 +26,7 @@ export function ManifestoHeaderCta() {
   return (
     <div
       className={css`
+        z-index: 1;
         display: flex;
         align-items: center;
         gap: 2rem;
@@ -93,13 +94,6 @@ export function ManifestoHeaderCta() {
           color: ${buttonLabelHunterGreen};
           box-shadow: ${buttonShadow};
         `}
-        onClick={(event) => {
-          document.getElementById("sign")?.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-          });
-          event.preventDefault();
-        }}
       >
         Sign now
       </a>

@@ -31,14 +31,13 @@ export function Manifesto() {
             display: flex;
             flex-flow: column;
             width: ${sectionNarrowWidth};
-            border-radius: 1rem;
-            margin: 0 auto 24rem;
+            margin: 0 auto;
           `}
         >
           <div
             className={css`
               height: 24rem;
-              margin: 0 -4rem;
+              margin: 0 -4rem -5.5rem;
               background: bottom 4rem center / contain no-repeat url(./bg.png);
             `}
           />
@@ -47,7 +46,7 @@ export function Manifesto() {
               position: sticky;
               top: 1.5rem;
               z-index: 1;
-              margin: -4rem;
+              margin: 1.5rem -4rem 24rem;
             `}
           >
             <ManifestoHeaderCta />
@@ -55,31 +54,23 @@ export function Manifesto() {
           <div
             className={css`
               box-shadow: ${tileBoxShadow};
-              border-radius: 1rem;
-              padding: 6rem 0 0;
+              padding: 6rem 6rem 0;
+              margin: -28rem 0 0;
             `}
           >
-            <div
-              className={css`
-                padding: 0 6rem;
-              `}
-            >
-              <ManifestoBody />
-            </div>
-
-            <div
-              className={css`
-                border-radius: 0 0 1rem 1rem;
-                background: top -4rem center / auto no-repeat url(./ManifestoHeaderCta/bg.svg),
-                  ${sectionBackgroundOffWhite};
-                padding: 4.5rem 0;
-                min-height: 40rem;
-              `}
-              id="sign"
-            >
-              <ManifestoPanel />
-            </div>
+            <ManifestoBody />
           </div>
+        </div>
+        <div
+          className={css`
+            width: ${sectionNarrowWidth};
+            margin: 0 auto 24rem;
+            border-radius: 0 0 1rem 1rem;
+            background: ${sectionBackgroundOffWhite};
+          `}
+          id="sign"
+        >
+          <ManifestoPanel />
         </div>
 
         <Footer />

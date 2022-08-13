@@ -1,23 +1,15 @@
-import { signManifesto, UserData } from "features/Manifesto/api";
-import { Account, SiweToken } from "features/Manifesto/types";
+import { signManifesto } from "features/Manifesto/api";
+import { FullAccount } from "features/Manifesto/types";
 import { useMutation, useQueryClient } from "react-query";
 
 export function useManifestoSign() {
   const queryClient = useQueryClient();
   const { mutate, data, error, isLoading } = useMutation(
-    async ({
-      account,
-      token,
-      userData,
-    }: {
-      account: Account;
-      token: SiweToken;
-      userData: UserData;
-    }) => {
+    async ({ account }: { account: FullAccount }) => {
       const signature = await account.signer.signMessage(
-        userData.manifestoMessage
+        account.data.manifestoMessage
       );
-      await signManifesto({ token, signature });
+      await signManifesto({ token: account.token, signature });
       queryClient.invalidateQueries(["stats"]);
       return signature;
     },

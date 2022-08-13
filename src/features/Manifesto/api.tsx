@@ -34,5 +34,5 @@ export const signManifesto = httpsCallable<
 
 export const claimDiscordRole = httpsCallable<
   { token: SiweToken; discordToken: string },
-  {}
+  { user: { id: string; username: string; discriminator: string } }
 >(getFunctions(), "claimDiscordRole");

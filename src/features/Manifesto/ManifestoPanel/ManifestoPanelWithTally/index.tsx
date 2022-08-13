@@ -1,25 +1,30 @@
 import { ethers } from "ethers";
+import { ManifestoPanelLayout } from "features/Manifesto/ManifestoPanel/ManifestoPanelLayout";
 import { css } from "linaria";
 import React, { ReactNode } from "react";
 import {
+  bodyDarkGreen60,
   buttonBackgroundSemanticSuccess,
   buttonLabelHunterGreen,
 } from "shared/styles/colors";
-import { buttonLabelQuincy18, textLabelQuincy18 } from "shared/styles/fonts";
+import {
+  bodySmallSegment18,
+  buttonLabelQuincy18,
+  textLabelQuincy18,
+} from "shared/styles/fonts";
 import {
   buttonBlockPadding,
   buttonBorderRadius,
   buttonInlinePadding,
 } from "shared/styles/lengths";
 import { buttonShadow } from "shared/styles/shadows";
-import { useEthereumAccount } from "../hooks/useEthereumAccount";
-import { useManifestoSign } from "../hooks/useManifestoSign";
-import { useSIWE } from "../hooks/useSIWE";
-import { useUserData } from "../hooks/useUserData";
-import { CTAText } from "./CTAText";
-import { ManifestoSignedPanel } from "./ManifestoSignedPanel";
-import { Message } from "./Message";
-import { Title } from "./Title";
+import { useEthereumAccount } from "../../hooks/useEthereumAccount";
+import { useManifestoSign } from "../../hooks/useManifestoSign";
+import { useSIWE } from "../../hooks/useSIWE";
+import { useUserData } from "../../hooks/useUserData";
+import { CTAText } from "../CTAText";
+import { ManifestoPanelSigned } from "../ManifestoPanelSigned";
+import { Message } from "../Message";
 
 export function ManifestoPanelWithTally({
   ethereum,
@@ -32,8 +37,13 @@ export function ManifestoPanelWithTally({
     accountError,
     accountIsLoading,
   } = useEthereumAccount();
-  const { signInWithEthereum, token, tokenError, tokenIsLoading } = useSIWE();
-  const { userData, userError, userIsLoading } = useUserData(token);
+  const {
+    signInWithEthereum,
+    siweAccount,
+    tokenError,
+    tokenIsLoading,
+  } = useSIWE();
+  const { fullAccount, userError, userIsLoading } = useUserData(siweAccount);
   const {
     signManifesto,
     signature,
@@ -41,12 +51,16 @@ export function ManifestoPanelWithTally({
     signatureIsLoading,
   } = useManifestoSign();
 
-  const hasSigned = !!(userData?.hasSigned || signature);
+  const hasSigned = !!(fullAccount?.data?.hasSigned || signature);
 
-  if (!hasSigned || !token) {
+  if (!hasSigned || !fullAccount) {
     return (
-      <>
-        <Title>Are you in?</Title>
+      <ManifestoPanelLayout
+        icon={
+          <img width="36" height="36" src={require("../icon-sign.svg")} alt="" />
+        }
+        title={<>Are you in?</>}
+      >
         <CTAText>
           Sign this with your Tally Ho! wallet to show you&rsquo;re onboard.
         </CTAText>
@@ -74,8 +88,8 @@ export function ManifestoPanelWithTally({
             {accountError && <Message>Error while connecting wallet.</Message>}
           </Step>
 
-          <Step index={2} isDone={!!userData}>
-            {userData ? (
+          <Step index={2} isDone={!!fullAccount}>
+            {fullAccount ? (
               <Message>Signed in with Ethereum</Message>
             ) : tokenIsLoading ? (
               <Message>Waiting for log in.</Message>
@@ -93,7 +107,7 @@ export function ManifestoPanelWithTally({
               </StepButton>
             )}
             {tokenError && <Message>Log-in failed</Message>}
-            {token && userError && (
+            {siweAccount && userError && (
               <Message>Cannot connect to our server.</Message>
             )}
           </Step>
@@ -103,10 +117,10 @@ export function ManifestoPanelWithTally({
               <Message>Signing...</Message>
             ) : (
               <StepButton
-                disabled={!userData || signatureIsLoading}
+                disabled={!fullAccount || signatureIsLoading}
                 onClick={() => {
-                  if (!userData || !token || !account) return;
-                  signManifesto({ account, token, userData });
+                  if (!fullAccount) return;
+                  signManifesto({ account: fullAccount });
                 }}
               >
                 Sign pledge
@@ -115,20 +129,24 @@ export function ManifestoPanelWithTally({
             {signatureError && <Message>Error while signing.</Message>}
           </Step>
         </StepContainer>
-      </>
+        <p
+          className={css`
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: auto auto 3rem;
+            font: ${bodySmallSegment18};
+            color: ${bodyDarkGreen60};
+          `}
+        >
+          <img width="30" height="30" alt="" src={require("./gasless.svg")} />
+          gasless transaction
+        </p>
+      </ManifestoPanelLayout>
     );
   }
 
-  return (
-    <>
-      <Title>
-        🎉 🌭
-        <br />
-        Wohoooo! Glad our values are aligned!
-      </Title>
-      <ManifestoSignedPanel token={token} />
-    </>
-  );
+  return <ManifestoPanelSigned account={fullAccount} />;
 }
 
 function StepContainer({ children }: { children: ReactNode }) {
@@ -139,7 +157,7 @@ function StepContainer({ children }: { children: ReactNode }) {
         grid: auto / 1fr 1fr 1fr;
         justify-items: center;
         gap: 2rem;
-        margin: 4rem;
+        margin: 0 4rem;
       `}
     >
       {children}

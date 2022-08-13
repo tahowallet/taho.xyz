@@ -39,6 +39,7 @@ export const bodyLightGold5 = gold5;
 export const bodyLightOffWhite = offWhite;
 
 export const buttonLabelHunterGreen = hunterGreen;
+export const buttonLabelLightOffWhite = offWhite;
 
 export const buttonBackgroundSemanticSuccess = semanticSuccess;
 export const buttonBackgroundTrophyGold = trophyGold;

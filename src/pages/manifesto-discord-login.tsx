@@ -1,4 +1,4 @@
-import { discordLoginChannel } from "features/Manifesto/ManifestoPanel/ManifestoSignedPanel/discord-login";
+import { discordLoginChannel } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/discord-login";
 import { useEffect } from "react";
 
 export default function ManifestoDiscordLogin() {

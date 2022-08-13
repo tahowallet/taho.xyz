@@ -1,22 +1,16 @@
 import { ethers } from "ethers";
 import { DownloadCta } from "features/Download/Cta";
-import { Support } from "features/Manifesto/ManifestoPanel/Support";
+import { ManifestoPanelLayout } from "features/Manifesto/ManifestoPanel/ManifestoPanelLayout";
 import { css } from "linaria";
 import React, { useState } from "react";
 import {
   buttonBackgroundSemanticSuccess,
   buttonLabelHunterGreen,
 } from "shared/styles/colors";
-import { buttonLabelQuincy18, buttonLabelQuincy24, labelLetterSpacing } from "shared/styles/fonts";
-import {
-  buttonBlockPadding,
-  buttonBorderRadius,
-  buttonInlinePadding,
-} from "shared/styles/lengths";
+import { buttonLabelQuincy24, labelLetterSpacing } from "shared/styles/fonts";
 import { buttonShadow } from "shared/styles/shadows";
 import { CTAText } from "./CTAText";
 import { ManifestoPanelWithTally } from "./ManifestoPanelWithTally";
-import { Title } from "./Title";
 
 export function ManifestoPanel() {
   const [isStarted, setStarted] = useState(false);
@@ -29,9 +23,13 @@ export function ManifestoPanel() {
 
   if (!isStarted) {
     return (
-      <>
-        <Title>Are you in?</Title>
-        <Support>Receive a special discord role + a surprise later</Support>
+      <ManifestoPanelLayout
+        icon={
+          <img width="36" height="36" src={require("./icon-sign.svg")} alt="" />
+        }
+        title={<>Are you in?</>}
+        support={<>Receive a special discord role + a surprise later</>}
+      >
         <div
           className={css`
             display: flex;
@@ -39,7 +37,8 @@ export function ManifestoPanel() {
             align-items: center;
             min-height: 20rem;
             padding-bottom: 1.75rem;
-            background: calc(50% + 0.5rem) 100% / contain no-repeat url(./intro.png);
+            background: calc(50% + 0.5rem) 100% / contain no-repeat
+              url(./intro.png);
           `}
         >
           <button
@@ -61,7 +60,7 @@ export function ManifestoPanel() {
             Sign now
           </button>
         </div>
-      </>
+      </ManifestoPanelLayout>
     );
   }
 
@@ -69,13 +68,15 @@ export function ManifestoPanel() {
     return <ManifestoPanelWithTally ethereum={tally} />;
   } else {
     return (
-      <>
-        <Title>Are you in?</Title>
+      <ManifestoPanelLayout
+      icon={
+        <img width="36" height="36" src={require("./icon-sign.svg")} alt="" />
+      } title={<>Are you in?</>}>
         <CTAText>
           Download Tally Ho! wallet and sign this to show you&rsquo;re onboard.
         </CTAText>
         <DownloadCta />
-      </>
+      </ManifestoPanelLayout>
     );
   }
 }

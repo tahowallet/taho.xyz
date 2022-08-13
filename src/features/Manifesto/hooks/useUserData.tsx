@@ -1,20 +1,20 @@
 import { getUser } from "features/Manifesto/api";
-import { SiweToken } from "features/Manifesto/types";
+import { FullAccount, SiweAccount } from "features/Manifesto/types";
 import { useQuery } from "react-query";
 
-export function useUserData(token: SiweToken | undefined) {
+export function useUserData(account: SiweAccount | undefined) {
   const { data, error, isLoading } = useQuery(
-    ["user", token],
-    async () => {
-      if (!token) throw new Error();
-      const result = await getUser({ token });
-      return result.data;
+    ["user", account?.token],
+    async (): Promise<FullAccount> => {
+      if (!account) throw new Error();
+      const result = await getUser({ token: account.token });
+      return { ...account, data: result.data };
     },
     { refetchOnWindowFocus: false, retry: false }
   );
   return {
-    userData: data,
-    userError: token && error,
+    fullAccount: data,
+    userError: account && error,
     userIsLoading: isLoading,
   };
 }

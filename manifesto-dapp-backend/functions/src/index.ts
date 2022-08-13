@@ -131,12 +131,11 @@ export const claimDiscordRole = functions.https.onCall(
       }
     );
 
-    const discordUserId = user?.id;
-    if (!discordUserId) throw new Error("user not found");
+    if (!user) throw new Error("user not found");
 
     await new Promise((resolve, reject) => {
       const request = https.request(
-        `https://discord.com/api/v10/guilds/${discordGuildId}/members/${discordUserId}/roles/${discordRoleId}`,
+        `https://discord.com/api/v10/guilds/${discordGuildId}/members/${user.id}/roles/${discordRoleId}`,
         {
           method: "PUT",
           headers: {
@@ -158,7 +157,7 @@ export const claimDiscordRole = functions.https.onCall(
       request.end();
     });
 
-    return discordUserId;
+    return { user };
   }
 );
 

@@ -41,9 +41,9 @@ export const getUser = functions.https.onCall(
     const address = await verifyToken(token);
 
     const snapshot = await addressCollection.doc(address).get();
-    const hasSigned = snapshot.data()?.signedManifesto !== undefined;
+    const signedMessage = snapshot.data()?.signedManifesto ?? null;
 
-    return { manifestoMessage, hasSigned };
+    return { manifestoMessage, signedMessage };
   }
 );
 

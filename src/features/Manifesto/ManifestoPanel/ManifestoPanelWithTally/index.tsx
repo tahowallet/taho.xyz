@@ -46,18 +46,24 @@ export function ManifestoPanelWithTally({
   const { fullAccount, userError, userIsLoading } = useUserData(siweAccount);
   const {
     signManifesto,
-    signature,
+    signedMessage: sessionSignedMessage,
     signatureError,
     signatureIsLoading,
   } = useManifestoSign();
 
-  const hasSigned = !!(fullAccount?.data?.hasSigned || signature);
+  const signedMessage =
+    fullAccount?.data?.signedMessage ?? sessionSignedMessage ?? null;
 
-  if (!hasSigned || !fullAccount) {
+  if (!signedMessage || !fullAccount) {
     return (
       <ManifestoPanelLayout
         icon={
-          <img width="36" height="36" src={require("../icon-sign.svg")} alt="" />
+          <img
+            width="36"
+            height="36"
+            src={require("../icon-sign.svg")}
+            alt=""
+          />
         }
         title={<>Are you in?</>}
       >
@@ -112,8 +118,8 @@ export function ManifestoPanelWithTally({
             )}
           </Step>
 
-          <Step index={3} isDone={hasSigned}>
-            {hasSigned ? null : signatureIsLoading ? (
+          <Step index={3} isDone={!!signedMessage}>
+            {signedMessage ? null : signatureIsLoading ? (
               <Message>Signing...</Message>
             ) : (
               <StepButton
@@ -146,7 +152,9 @@ export function ManifestoPanelWithTally({
     );
   }
 
-  return <ManifestoPanelSigned account={fullAccount} />;
+  return (
+    <ManifestoPanelSigned account={fullAccount} signedMessage={signedMessage} />
+  );
 }
 
 function StepContainer({ children }: { children: ReactNode }) {

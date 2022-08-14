@@ -36,11 +36,11 @@ export function DownloadCta() {
         logoSrc={require("@browser-logos/chrome/chrome.svg")}
         href={chromeDownloadHref}
       />
-      <Option
+      {/* <Option
         name="Firefox"
         logoSrc={require("@browser-logos/firefox/firefox.svg")}
         href={firefoxDownloadHref}
-      />
+      /> */}
       <Option
         name="Brave"
         logoSrc={require("@browser-logos/brave/brave.svg")}

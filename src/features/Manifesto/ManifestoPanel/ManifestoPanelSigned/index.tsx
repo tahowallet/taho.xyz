@@ -1,5 +1,6 @@
 import { ManifestoPanelLayout } from "features/Manifesto/ManifestoPanel/ManifestoPanelLayout";
-import { FullAccount } from "features/Manifesto/types";
+import { openTwitterTweetIntent } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/twitter";
+import { FullAccount, SiweToken } from "features/Manifesto/types";
 import { css } from "linaria";
 import React, { useState } from "react";
 import {
@@ -21,10 +22,15 @@ import {
 import { buttonShadow } from "shared/styles/shadows";
 import { AfterSignStep } from "./AfterSignStep";
 import { ClaimDiscordRole } from "./ClaimDiscordRole";
-import { shareOnTwitter } from "./twitter-share";
 import { TwitterLogo } from "./TwitterLogo";
 
-export function ManifestoPanelSigned({ account }: { account: FullAccount }) {
+export function ManifestoPanelSigned({
+  account,
+  signedMessage,
+}: {
+  account: FullAccount;
+  signedMessage: SiweToken;
+}) {
   const [hasTweeted, setHasTweeted] = useState(false);
 
   if (!hasTweeted) {
@@ -66,6 +72,8 @@ export function ManifestoPanelSigned({ account }: { account: FullAccount }) {
             onShareBegin={() => {
               setHasTweeted(true);
             }}
+            account={account}
+            signedMessage={signedMessage}
           />
         </div>
         <button
@@ -144,7 +152,7 @@ export function ManifestoPanelSigned({ account }: { account: FullAccount }) {
           title={<TwitterLogo />}
           subTitle={<>Share your values on Twitter</>}
         >
-          <TwitterShareButton />
+          <TwitterShareButton account={account} signedMessage={signedMessage} />
         </AfterSignStep>
         <hr
           className={css`
@@ -171,8 +179,12 @@ export function ManifestoPanelSigned({ account }: { account: FullAccount }) {
 
 function TwitterShareButton({
   onShareBegin = () => {},
+  account,
+  signedMessage,
 }: {
   onShareBegin?: () => void;
+  account: FullAccount;
+  signedMessage: SiweToken;
 }) {
   return (
     <button
@@ -188,7 +200,17 @@ function TwitterShareButton({
         cursor: pointer;
       `}
       onClick={() => {
-        shareOnTwitter();
+        openTwitterTweetIntent({
+          text: [
+            `I signed the Tally Ho! pledge!`,
+            ``,
+            `My address: ${account.address}`,
+            ``,
+            // TODO: create and link a page with message + address + signature.
+            `#tally`,
+          ].join(`\n`),
+          url: `${location.origin}${location.pathname}`,
+        });
         onShareBegin();
       }}
     >

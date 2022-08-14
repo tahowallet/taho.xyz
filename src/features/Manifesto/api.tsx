@@ -14,7 +14,7 @@ if (window.location.host.startsWith("localhost:")) {
 
 export interface UserData {
   manifestoMessage: string;
-  hasSigned: boolean;
+  signedMessage: SiweToken | null;
 }
 
 export const getStats = httpsCallable<{}, { signatureCount: number }>(

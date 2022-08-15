@@ -1,1 +1,3 @@
-export const discordLoginChannel = new BroadcastChannel("discord-login");
+export function getDiscordLoginBroadcastChannel() {
+  return new BroadcastChannel("discord-login");
+}

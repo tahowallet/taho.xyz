@@ -175,7 +175,12 @@ async function verifyToken(token: SignedMessage) {
     throw new Error("Wrong chain");
   }
 
-  if (!["tally.cash", "localhost:8000"].includes(verified.domain)) {
+  if (
+    !["tally.cash", "localhost:8000"].includes(verified.domain) ||
+    !(
+      verified.domain.startsWith("tally") && verified.domain.endsWith("web.app")
+    )
+  ) {
     throw new Error("Wrong domain");
   }
 

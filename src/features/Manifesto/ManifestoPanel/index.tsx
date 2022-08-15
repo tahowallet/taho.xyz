@@ -22,7 +22,7 @@ export function ManifestoPanel() {
         }).ethereum
       : undefined;
 
-  const tally = (ethereum?.isTally ?? false) || true ? ethereum : undefined; // FIXME: temporarily allow other wallets
+  const tally = ethereum?.isTally ?? false ? ethereum : undefined;
 
   if (!isStarted) {
     return (

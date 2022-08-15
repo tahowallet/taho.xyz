@@ -23,7 +23,7 @@ import {
 } from "shared/styles/lengths";
 import { buttonShadow } from "shared/styles/shadows";
 import { claimDiscordRole } from "../../api";
-import { discordLoginChannel } from "./discord-login";
+import { getDiscordLoginBroadcastChannel } from "./discord-login";
 
 export function ClaimDiscordRole({ account }: { account: FullAccount }) {
   const [discordToken, setDiscordToken] = useState("");
@@ -38,9 +38,10 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
       if (token) mutate({ discordToken: token });
     };
 
-    discordLoginChannel.addEventListener("message", onDiscordLogin);
+    const channel = getDiscordLoginBroadcastChannel();
+    channel.addEventListener("message", onDiscordLogin);
     return () => {
-      discordLoginChannel.removeEventListener("message", onDiscordLogin);
+      channel.removeEventListener("message", onDiscordLogin);
     };
   }, []);
 

@@ -15,9 +15,12 @@ import { ManifestoPanelWithTally } from "./ManifestoPanelWithTally";
 export function ManifestoPanel() {
   const [isStarted, setStarted] = useState(false);
 
-  const ethereum = (window as {
-    ethereum?: ethers.providers.ExternalProvider & { isTally?: boolean };
-  }).ethereum;
+  const ethereum =
+    typeof window === "object"
+      ? (window as {
+          ethereum?: ethers.providers.ExternalProvider & { isTally?: boolean };
+        }).ethereum
+      : undefined;
 
   const tally = (ethereum?.isTally ?? false) || true ? ethereum : undefined; // FIXME: temporarily allow other wallets
 

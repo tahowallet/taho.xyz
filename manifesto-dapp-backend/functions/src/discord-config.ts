@@ -1,5 +1,5 @@
-export const discordAppId = "TODO: get app id from Discord Developers website";
+export const discordAppId = "1008427467918295044";
 export const discordBotAuthToken =
   "TODO: create Discord app Bot and copy token (from Discord developers)";
-export const discordGuildId = "TODO: copy Guild (Server) ID from Discord App (enable Developer mode first)";
-export const discordRoleId = "TODO: copy Role ID from Discord App (enable Developer mode first)";
+export const discordGuildId = "1008426910633689128";
+export const discordRoleId = "1008428165049360515";

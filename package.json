@@ -40,6 +40,7 @@
     "gatsby-plugin-offline": "^3.10.0",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^2.14.1",
+    "gatsby-plugin-twitter-pixel": "^2.0.2",
     "gatsby-plugin-typescript": "^2.12.0",
     "gatsby-transformer-sharp": "^2.12.0",
     "linaria": "^2.2.0",

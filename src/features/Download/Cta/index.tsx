@@ -35,6 +35,10 @@ export function DownloadCta() {
         name="Chrome"
         logoSrc={require("@browser-logos/chrome/chrome.svg")}
         href={chromeDownloadHref}
+        twtrTrackPidParams={[
+          "o9l8i",
+          { tw_sale_amount: 0, tw_order_quantity: 0 },
+        ]}
       />
       {/* <Option
         name="Firefox"
@@ -45,6 +49,10 @@ export function DownloadCta() {
         name="Brave"
         logoSrc={require("@browser-logos/brave/brave.svg")}
         href={chromeDownloadHref}
+        twtrTrackPidParams={[
+          "o9l8i",
+          { tw_sale_amount: 0, tw_order_quantity: 0 },
+        ]}
       />
     </div>
   );
@@ -54,10 +62,18 @@ function Option({
   name,
   logoSrc,
   href,
+  twtrTrackPidParams,
 }: {
   name: ReactNode;
   logoSrc: string;
   href: string;
+  twtrTrackPidParams: [
+    string,
+    {
+      tw_sale_amount: number;
+      tw_order_quantity: number;
+    }
+  ];
 }) {
   return (
     <a
@@ -68,6 +84,14 @@ function Option({
       `}
       target="_blank"
       href={href}
+      onClick={() => {
+        if (
+          typeof window !== "undefined" &&
+          typeof window.twttr !== "undefined"
+        ) {
+          window.twttr.conversion.trackPid(...twtrTrackPidParams);
+        }
+      }}
     >
       <img
         className={css`

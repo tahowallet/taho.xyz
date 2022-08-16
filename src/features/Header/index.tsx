@@ -53,7 +53,7 @@ export function Header() {
             }
           `}
           activeClassName="active"
-          to="/download"
+          to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd"
         >
           Download
         </Link>

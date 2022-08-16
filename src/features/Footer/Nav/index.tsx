@@ -46,7 +46,7 @@ export function FooterNav() {
       >
         <NavLink to="/security">Security</NavLink>
         <NavLink to="/dao">DAO</NavLink>
-        <NavLink to="/download">Download</NavLink>
+        <NavLink to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd">Download</NavLink>
         <NavLink blank to="https://gov.tally.cash/">
           Governance
         </NavLink>

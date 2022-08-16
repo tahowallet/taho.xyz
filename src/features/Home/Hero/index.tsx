@@ -89,7 +89,7 @@ export function HomeProductHero() {
               color: ${buttonLabelHunterGreen};
               margin: 1rem 0;
             `}
-            to="/https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd"
+            to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd"
           >
             Download Now
           </Link>

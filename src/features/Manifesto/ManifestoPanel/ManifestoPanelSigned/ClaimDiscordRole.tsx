@@ -9,7 +9,9 @@ import { useMutation } from "react-query";
 import {
   bodyDarkGreen40,
   bodyDarkGreen60,
+  borderDarkTrophyGold,
   buttonLabelLightOffWhite,
+  linkDarkTrophyGold,
 } from "shared/styles/colors";
 import {
   bodySmallSegment18,
@@ -24,6 +26,10 @@ import {
 import { buttonShadow } from "shared/styles/shadows";
 import { claimDiscordRole } from "../../api";
 import { getDiscordLoginBroadcastChannel } from "./discord-login";
+import { bodyDarkGrey80 } from "shared/styles/colors";
+import { NavLink } from "features/Header/NavLink";
+import { Link } from "gatsby";
+import { segmentFontFamily } from "shared/styles/font-families";
 
 export function ClaimDiscordRole({ account }: { account: FullAccount }) {
   const [discordToken, setDiscordToken] = useState("");
@@ -59,7 +65,10 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
       title={<DiscordLogo />}
       subTitle={
         !data && !isLoading ? (
-          <>Sign-in with Discord to receive a special role in our community</>
+          <>
+            Claim your 🔏 Verified Signer role to get full, verified access to
+            our Discord.
+          </>
         ) : null
       }
     >
@@ -113,7 +122,39 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
               color: ${bodyDarkGreen60};
             `}
           >
-            🌭 Get full access to all the hot parts of our discord!
+            You'll need to
+            <Link
+              className={css`
+                position: relative;
+                color: inherit;
+                font: inherit
+                text-decoration: none;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -0.75rem;
+                  left: 0;
+                  right: 0;
+                  margin: 0 auto;
+                  border: 1px solid ${borderDarkTrophyGold};
+                  border-radius: 2px;
+                  width: 0;
+                  opacity: 0;
+                  transition-property: width, opacity;
+                  transition-duration: 200ms;
+                }
+
+                &:hover {
+                  color: ${linkDarkTrophyGold};
+                }
+              `}
+              to="https://chat.tally.cash/"
+              target="_blank"
+            >
+              join our Discord ↗︎︎︎
+            </Link>
+            first.
           </p>
         </>
       )}

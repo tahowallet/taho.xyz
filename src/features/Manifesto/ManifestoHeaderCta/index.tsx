@@ -47,7 +47,7 @@ export function ManifestoHeaderCta() {
             color: ${titleDarkHunterGreen};
           `}
         >
-          Sign our Community Pledge
+          Sign the Tally Ho Community Pledge
         </h2>
         <p
           className={css`
@@ -55,7 +55,7 @@ export function ManifestoHeaderCta() {
             color: ${bodyDarkGreen40};
           `}
         >
-          Receive access to Discord channels and future surprises
+          Sign to join our community & be eligible for future surprises 👀
         </p>
       </div>
       <div
@@ -81,7 +81,7 @@ export function ManifestoHeaderCta() {
             color: ${bodyDarkGreen40};
           `}
         >
-          signatures
+          Signatures
         </span>
       </div>
       <a
@@ -95,7 +95,7 @@ export function ManifestoHeaderCta() {
           box-shadow: ${buttonShadow};
         `}
       >
-        Sign now
+        Sign Now
       </a>
     </div>
   );

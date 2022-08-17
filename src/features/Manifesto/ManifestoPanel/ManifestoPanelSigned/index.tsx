@@ -65,7 +65,7 @@ export function ManifestoPanelSigned({
                 color: ${bodyDarkGreen60};
               `}
             >
-              Post on twitter to prove that you signed this
+              Tweet your signature to be eligible for future surprises.
             </p>
           </div>
           <TwitterShareButton
@@ -107,11 +107,11 @@ export function ManifestoPanelSigned({
           🎉
         </span>
       }
-      title={<>Wohoooo! Welcome to the pack!</>}
+      title={<>Wohoooo! Welcome to the community!</>}
       support={
         <>
-          Now you can tweet your signature for a prize and get a private Discord
-          role 👇
+          You can now tweet your signature and claim the special 🔏Verified
+          Signer role in our Discord! 👇
         </>
       }
       topRight={
@@ -150,7 +150,9 @@ export function ManifestoPanelSigned({
       >
         <AfterSignStep
           title={<TwitterLogo />}
-          subTitle={<>Share your values on Twitter</>}
+          subTitle={
+            <>Tweet your signature to be eligible for future surprises.</>
+          }
         >
           <TwitterShareButton account={account} signedMessage={signedMessage} />
         </AfterSignStep>
@@ -171,7 +173,8 @@ export function ManifestoPanelSigned({
           text-align: center;
         `}
       >
-        Twitter and Discord accounts will not be linked to your ethereum address
+        Your Twitter and Discord accounts will NOT be linked to your Ethereum
+        address.
       </p>
     </ManifestoPanelLayout>
   );

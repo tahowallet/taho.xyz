@@ -67,9 +67,7 @@ export function ManifestoPanelWithTally({
         }
         title={<>Are you in?</>}
       >
-        <CTAText>
-          Sign this with your Tally Ho! wallet to show you&rsquo;re onboard.
-        </CTAText>
+        <CTAText>Sign the Tally Ho Community Pledge in 3 easy steps.</CTAText>
         <StepContainer>
           <Step index={1} isDone={!!account}>
             {account ? (

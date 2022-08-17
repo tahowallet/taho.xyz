@@ -31,7 +31,7 @@ export function ManifestoPanel() {
           <img width="36" height="36" src={require("./icon-sign.svg")} alt="" />
         }
         title={<>Are you in?</>}
-        support={<>Receive a special discord role + a surprise later</>}
+        support={<>Good things come to those who sign 🙌"</>}
       >
         <div
           className={css`
@@ -61,7 +61,7 @@ export function ManifestoPanel() {
               setStarted(true);
             }}
           >
-            Sign now
+            Sign Now
           </button>
         </div>
       </ManifestoPanelLayout>
@@ -78,9 +78,7 @@ export function ManifestoPanel() {
         }
         title={<>Are you in?</>}
       >
-        <CTAText>
-          Download Tally Ho! wallet and sign this to show you&rsquo;re onboard.
-        </CTAText>
+        <CTAText>Download Tally Ho to sign our Community Pledge.</CTAText>
         <div
           className={css`
             display: flex;

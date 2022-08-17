@@ -202,14 +202,12 @@ function TwitterShareButton({
       onClick={() => {
         openTwitterTweetIntent({
           text: [
-            `I signed the Tally Ho! pledge!`,
+            `I am a happy doggo @tallycash #doggo`,
             ``,
-            `My address: ${account.address}`,
+            `sig: ${signedMessage.signature}`,
             ``,
-            // TODO: create and link a page with message + address + signature.
-            `#tally`,
           ].join(`\n`),
-          url: `${location.origin}${location.pathname}`,
+          url: `https://twitter.com/TallyCash/status/1428070907566755844`,
         });
         onShareBegin();
       }}

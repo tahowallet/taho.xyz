@@ -26,10 +26,7 @@ import {
 import { buttonShadow } from "shared/styles/shadows";
 import { claimDiscordRole } from "../../api";
 import { getDiscordLoginBroadcastChannel } from "./discord-login";
-import { bodyDarkGrey80 } from "shared/styles/colors";
-import { NavLink } from "features/Header/NavLink";
 import { Link } from "gatsby";
-import { segmentFontFamily } from "shared/styles/font-families";
 
 export function ClaimDiscordRole({ account }: { account: FullAccount }) {
   const [discordToken, setDiscordToken] = useState("");
@@ -127,6 +124,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
               className={css`
                 position: relative;
                 color: inherit;
+                margin: 0 0.5rem;
                 font: inherit
                 text-decoration: none;
 

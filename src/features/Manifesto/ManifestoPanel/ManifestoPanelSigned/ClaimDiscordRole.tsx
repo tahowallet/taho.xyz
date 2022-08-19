@@ -102,7 +102,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
                 [
                   `toolbar=no`,
                   `menubar=no`,
-                  `width=600`,
+                  `width=850`,
                   `height=700`,
                   `top=${(window.innerHeight / 2 - 400).toFixed()}`,
                   `left=${(window.innerWidth / 2 - 300).toFixed()}`,

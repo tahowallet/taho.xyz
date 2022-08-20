@@ -22,32 +22,32 @@ export function ManifestoBody() {
         padding: 0 ${sectionInlinePadding};
       `}
     >
-      <h1
-        className={css`
-          margin: 2rem 0;
-          color: ${titleDarkHunterGreen};
-          font: ${h1Quincy72};
-        `}
-      >
-        Dear web3,
-      </h1>
       <div
         className={css`
           max-width: 42rem;
 
-          h3 {
+          & > h3 {
             font: ${h3Quincy36};
             color: ${titleDarkGreen80};
             margin: 4rem 0 2rem;
           }
 
-          p {
+          & > p {
             font: ${bodySmallSegment18};
             color: ${bodyDarkHunterGreen};
             margin: 2rem 0;
           }
         `}
       >
+        <h1
+          className={css`
+            margin: 2rem 0;
+            color: ${titleDarkHunterGreen};
+            font: ${h1Quincy72};
+          `}
+        >
+          Dear Web3,
+        </h1>
         <h3>
           It doesn&#8217;t matter what you read or listen to. These days,
           everyone is talking about Web3.
@@ -63,7 +63,7 @@ export function ManifestoBody() {
         <p>Why is the Tally Ho community here? It&rsquo;s simple:</p>
 
         <h3>
-          Your web3 wallet isn&rsquo;t decentralized.
+          Your Web3 wallet isn&rsquo;t decentralized.
           <br />
           But it should be.
         </h3>
@@ -84,82 +84,82 @@ export function ManifestoBody() {
           corporation? Turns out you don&#8217;t have to simply imagine it.
           You&#8217;ve found it right here.
         </p>
+        <hr
+          className={css`
+            height: 1rem;
+            border: none;
+            margin: 4.5rem -0.25rem;
+            background: left / auto no-repeat url(./hr.svg);
+          `}
+        />
+        <h1
+          className={css`
+            margin: 2rem 0;
+            color: ${titleDarkHunterGreen};
+            font: ${h1Quincy72};
+          `}
+        >
+          Community Values
+        </h1>
+        <p
+          className={css`
+            font: ${bodySmallSegment18};
+            color: ${bodyDarkHunterGreen};
+            margin: 2rem 0;
+          `}
+        >
+          Our community is not just building a Web3 wallet that works.
+          We&#8217;re building a Web3 wallet that we believe in. That means:
+        </p>
+        <ul
+          className={css`
+            display: flex;
+            flex-flow: column;
+            gap: 2rem;
+            margin: 0;
+            padding: 2rem 0;
+          `}
+        >
+          <Value
+            iconSrc={require("./icon-1-accessible.svg")}
+            title={<>Access for everyone</>}
+            body={
+              <>
+                You should have direct access to Web3&#8212;no matter where you
+                live.
+              </>
+            }
+          />
+          <Value
+            iconSrc={require("./icon-2-oss.svg")}
+            title={<>Radical transparency</>}
+            body={
+              <>
+                All code should be 100% open source&#8212;for you to copy, fork,
+                or remix.
+              </>
+            }
+          />
+          <Value
+            iconSrc={require("./icon-3-community.svg")}
+            title={<>Full community ownership</>}
+            body={
+              <>
+                Value must flow transparently to you and the community&#8212;not
+                corporate insiders.&#10;
+              </>
+            }
+          />
+        </ul>
+        <p>
+          These are your rights as a citizen of Web3, and we&#8217;ve built you
+          a wallet to help defend them.
+        </p>
+        <p>
+          If you&#8217;d like to join our community, sign this Community Pledge
+          with your Tally Ho wallet.
+        </p>
       </div>
-      <hr
-        className={css`
-          height: 1rem;
-          border: none;
-          margin: 4.5rem -0.25rem;
-          background: left / auto no-repeat url(./hr.svg);
-        `}
-      />
-      <h1
-        className={css`
-          margin: 2rem 0;
-          color: ${titleDarkHunterGreen};
-          font: ${h1Quincy72};
-        `}
-      >
-        Community Values
-      </h1>
-      <p
-        className={css`
-          font: ${bodySmallSegment18};
-          color: ${bodyDarkHunterGreen};
-          margin: 2rem 0;
-        `}
-      >
-        Our community is not just building a Web3 wallet that works. We&#8217;re
-        building a Web3 wallet that we believe in. That means:
-      </p>
-      <ul
-        className={css`
-          display: flex;
-          flex-flow: column;
-          gap: 2rem;
-          margin: 0;
-          padding: 2rem 0;
-        `}
-      >
-        <Value
-          iconSrc={require("./icon-1-accessible.svg")}
-          title={<>Access for everyone</>}
-          body={
-            <>
-              You should have direct access to Web3&#8212;no matter where you
-              live.
-            </>
-          }
-        />
-        <Value
-          iconSrc={require("./icon-2-oss.svg")}
-          title={<>Radical transparency</>}
-          body={
-            <>
-              All code should be 100% open source&#8212;for you to copy, fork,
-              or remix.
-            </>
-          }
-        />
-        <Value
-          iconSrc={require("./icon-3-community.svg")}
-          title={<>Full community ownership</>}
-          body={
-            <>
-              Value must flow transparently to you and the community&#8212;not
-              corporate insiders.&#10;
-            </>
-          }
-        />
-      </ul>
-      <p>
-        These are your rights as a citizen of Web3, and we&#8217;ve built you a
-        wallet to help defend them.
-      </p>
-      <p>
-        If you&#8217;d like to join our community, sign this Community Pledge
-        with your Tally Ho wallet.
-      </p>
     </div>
   );
 }

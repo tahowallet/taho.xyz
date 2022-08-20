@@ -110,7 +110,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
               );
             }}
           >
-            Sign in with Discord
+            Sign-In with Discord
           </button>
           <p
             className={css`

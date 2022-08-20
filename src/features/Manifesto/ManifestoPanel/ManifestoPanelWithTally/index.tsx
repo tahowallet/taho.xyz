@@ -98,9 +98,9 @@ export function ManifestoPanelWithTally({
             {fullAccount ? (
               <Message>Signed in with Ethereum</Message>
             ) : tokenIsLoading ? (
-              <Message>Waiting for log in.</Message>
+              <Message>Waiting for sign-in.</Message>
             ) : userIsLoading ? (
-              <Message>Logging in...</Message>
+              <Message>Signing in...</Message>
             ) : (
               <StepButton
                 disabled={!account || tokenIsLoading}
@@ -109,7 +109,7 @@ export function ManifestoPanelWithTally({
                   signInWithEthereum(account);
                 }}
               >
-                Sign in with Ethereum
+                Sign-In with Ethereum
               </StepButton>
             )}
             {tokenError && <Message isError>Log-in failed</Message>}
@@ -129,7 +129,7 @@ export function ManifestoPanelWithTally({
                   signManifesto({ account: fullAccount });
                 }}
               >
-                Sign pledge
+                Sign Pledge
               </StepButton>
             )}
             {signatureError && <Message isError>Error while signing.</Message>}

@@ -31,7 +31,7 @@ export function ManifestoPanel() {
           <img width="36" height="36" src={require("./icon-sign.svg")} alt="" />
         }
         title={<>Are you in?</>}
-        support={<>Good things come to those who sign 🙌"</>}
+        support={<>Good things come to those who sign 🙌</>}
       >
         <div
           className={css`

@@ -22,7 +22,7 @@ export function Manifesto() {
           flex-flow: column;
         `}
       >
-        <SEO title="Dear web3, what do you believe in?" />
+        <SEO title="Dear Web3, what do you believe in?" />
 
         <Header />
 

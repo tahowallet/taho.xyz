@@ -1,12 +1,12 @@
 export const manifestoMessage = `
-Tally Ho Community Values:
+Tally Ho Community Pledge:
 
 1. Access for everyone
-You should have direct access to web3 — no matter where you live.
+You should have direct access to Web3, no matter where you live.
 
 2. Radical transparency
-All code should be 100% open source — for you to copy, fork, or remix.
+All code should be 100% open source for you to copy, fork, or remix.
 
 3. Full community ownership
-Value must flow transparently to you and the community — not insiders.
+Value should flow transparently to you and the community, not corporate insiders.
 `.trim();

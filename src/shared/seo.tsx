@@ -6,15 +6,16 @@ function SEO({
   lang = `en`,
   meta = [],
   title,
+  metaImage = `https://tally.cash/cover.png`,
 }: {
   description?: string;
   lang?: string;
   meta?: any[];
   title?: string;
+  metaImage?: string;
 }) {
   const metaTitle = title ?? `Tally Ho — The community owned & operated wallet`;
   const metaDescription = description ?? ``;
-  const metaImage = `https://tally.cash/Tally-Web3-Wallet-website.png`;
 
   return (
     <Helmet

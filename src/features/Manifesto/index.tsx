@@ -22,7 +22,13 @@ export function Manifesto() {
           flex-flow: column;
         `}
       >
-        <SEO title="Dear Web3, what do you believe in?" />
+        <SEO
+          title="Tally Ho Community Pledge"
+          description={
+            "Sign to join our community & be eligible for future surprises"
+          }
+          metaImage="https://tally.cash/web3pledge-cover.png"
+        />
 
         <Header />
 

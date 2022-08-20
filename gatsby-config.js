@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Tally Ho — The community owned & operated wallet`,
     description: ``,
-    image: `https://tally.cash/Tally-Web3-Wallet-website.png`, // Twitter wants an absolute rather than relative url.
+    image: `https://tally.cash/cover.png`, // Twitter wants an absolute rather than relative url.
     author: `@thesis_co`,
   },
   plugins: [

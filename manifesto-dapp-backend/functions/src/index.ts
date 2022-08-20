@@ -186,8 +186,8 @@ async function verifyToken(token: SignedMessage) {
 
   if (
     [
-      "https://tally.cash/manifesto",
-      "https://localhost:8000/manifesto",
+      "https://tally.cash/web3pledge",
+      "https://localhost:8000/web3pledge",
     ].includes(verified.uri)
   ) {
     throw new Error("Wrong URI");

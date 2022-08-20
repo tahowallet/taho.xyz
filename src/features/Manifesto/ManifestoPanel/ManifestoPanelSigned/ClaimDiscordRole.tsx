@@ -3,6 +3,7 @@ import { discordClientId } from "features/Manifesto/ManifestoPanel/ManifestoPane
 import { DiscordLogo } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/DiscordLogo";
 import { Message } from "features/Manifesto/ManifestoPanel/Message";
 import { FullAccount } from "features/Manifesto/types";
+import { Link } from "gatsby";
 import { css } from "linaria";
 import React, { useEffect, useRef, useState } from "react";
 import { useMutation } from "react-query";
@@ -26,7 +27,6 @@ import {
 import { buttonShadow } from "shared/styles/shadows";
 import { claimDiscordRole } from "../../api";
 import { getDiscordLoginBroadcastChannel } from "./discord-login";
-import { Link } from "gatsby";
 
 export function ClaimDiscordRole({ account }: { account: FullAccount }) {
   const [discordToken, setDiscordToken] = useState("");
@@ -125,7 +125,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
                 position: relative;
                 color: inherit;
                 margin: 0 0.5rem;
-                font: inherit
+                font: inherit;
                 text-decoration: none;
 
                 &::after {
@@ -157,7 +157,9 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
         </>
       )}
       {discordToken && isLoading && <Message>Promoting user...</Message>}
-      {discordToken && error && <Message isError>Something went wrong.</Message>}
+      {discordToken && error && (
+        <Message isError>Something went wrong.</Message>
+      )}
       {discordToken && data && (
         <Message>
           Discord user{" "}

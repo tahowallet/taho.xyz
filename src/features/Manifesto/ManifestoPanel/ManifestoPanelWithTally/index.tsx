@@ -89,7 +89,9 @@ export function ManifestoPanelWithTally({
                 Connect with Tally Ho!
               </StepButton>
             )}
-            {accountError && <Message>Error while connecting wallet.</Message>}
+            {accountError && (
+              <Message isError>Error while connecting wallet.</Message>
+            )}
           </Step>
 
           <Step index={2} isDone={!!fullAccount}>
@@ -110,9 +112,9 @@ export function ManifestoPanelWithTally({
                 Sign in with Ethereum
               </StepButton>
             )}
-            {tokenError && <Message>Log-in failed</Message>}
+            {tokenError && <Message isError>Log-in failed</Message>}
             {siweAccount && userError && (
-              <Message>Cannot connect to our server.</Message>
+              <Message isError>Cannot connect to our server.</Message>
             )}
           </Step>
 
@@ -130,7 +132,7 @@ export function ManifestoPanelWithTally({
                 Sign pledge
               </StepButton>
             )}
-            {signatureError && <Message>Error while signing.</Message>}
+            {signatureError && <Message isError>Error while signing.</Message>}
           </Step>
         </StepContainer>
         <p

@@ -157,7 +157,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
         </>
       )}
       {discordToken && isLoading && <Message>Promoting user...</Message>}
-      {discordToken && error && <Message>Something went wrong.</Message>}
+      {discordToken && error && <Message isError>Something went wrong.</Message>}
       {discordToken && data && (
         <Message>
           Discord user{" "}

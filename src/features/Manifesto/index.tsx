@@ -1,5 +1,6 @@
 import { Footer } from "features/Footer";
 import { Header } from "features/Header";
+import { SignatureList } from "features/Manifesto/SignatureList";
 import { css } from "linaria";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -70,13 +71,22 @@ export function Manifesto() {
         <div
           className={css`
             width: ${sectionNarrowWidth};
-            margin: 0 auto 24rem;
+            margin: 0 auto;
             border-radius: 0 0 1rem 1rem;
             background: ${sectionBackgroundOffWhite};
+            box-shadow: ${tileBoxShadow};
           `}
           id="sign"
         >
           <ManifestoPanel />
+        </div>
+
+        <div
+          className={css`
+            margin: 8rem 0 24rem;
+          `}
+        >
+          <SignatureList />
         </div>
 
         <Footer />

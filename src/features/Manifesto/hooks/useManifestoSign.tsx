@@ -10,6 +10,7 @@ export function useManifestoSign() {
       const signature = await account.signer.signMessage(message);
       await signManifesto({ token: account.token, signature });
       queryClient.invalidateQueries(["stats"]);
+      queryClient.invalidateQueries(["signatures"]);
       return { signature, message };
     },
     { retry: false }

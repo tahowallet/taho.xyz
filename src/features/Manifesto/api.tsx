@@ -12,6 +12,13 @@ export interface UserData {
   signedMessage: SiweToken | null;
 }
 
+export interface SignatureData {
+  index: number;
+  address: string;
+  signature: string;
+  timestampUnixMillis: number;
+}
+
 if (typeof window === "object") {
   initializeApp(firebaseConfig);
   if (window.location.host.startsWith("localhost:")) {
@@ -26,6 +33,18 @@ function excludeSsr<T>(getter: () => T) {
 
 export const getStats = excludeSsr(() =>
   httpsCallable<{}, { signatureCount: number }>(getFunctions(), "getStats")
+);
+
+export interface SignatureListSlice {
+  totalCount: number;
+  items: SignatureData[];
+}
+
+export const listSignatures = excludeSsr(() =>
+  httpsCallable<{ before?: number | null; limit: number }, SignatureListSlice>(
+    getFunctions(),
+    "listSignatures"
+  )
 );
 
 export const getUser = excludeSsr(() =>

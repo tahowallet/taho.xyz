@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import * as firebase from "firebase-admin";
+import * as firestore from "firebase-admin/firestore";
 import * as functions from "firebase-functions";
 import * as https from "https";
 import { SiweMessage } from "siwe";
@@ -13,6 +14,8 @@ import { manifestoMessage } from "./manifesto";
 interface SignedMessage {
   message: string;
   signature: string;
+  timestamp: firestore.Timestamp;
+  index: number;
 }
 
 interface UserData {
@@ -21,11 +24,11 @@ interface UserData {
 
 firebase.initializeApp();
 
-const addressCollection: firebase.firestore.CollectionReference<UserData> = firebase
+const addressCollection: firestore.CollectionReference<UserData> = firebase
   .firestore()
   .collection("address");
 
-const statsDoc: firebase.firestore.DocumentReference<{
+const statsDoc: firestore.DocumentReference<{
   signatureCount?: number;
 }> = firebase.firestore().collection("site").doc("main");
 
@@ -35,6 +38,53 @@ export const getStats = functions.https.onCall(async () => {
 
   return { signatureCount };
 });
+
+const maxLimit = 200;
+
+export const listSignatures = functions.https.onCall(
+  async ({
+    before = null,
+    limit,
+  }: {
+    before?: number | null;
+    limit: number;
+  }) => {
+    if (typeof limit !== "number" || limit > maxLimit) {
+      throw new Error("invalid limit");
+    }
+
+    const stats = await statsDoc.get();
+    const totalCount = stats.data()?.signatureCount ?? 0;
+
+    const signatureIndexFieldPath = new firestore.FieldPath(
+      "signedManifesto",
+      "index"
+    );
+
+    const snapshot = await addressCollection
+      .where(signatureIndexFieldPath, "<", before ?? 1e9)
+      .orderBy(signatureIndexFieldPath, "desc")
+      .limit(limit)
+      .get();
+
+    const items = snapshot.docs.flatMap((doc) => {
+      const address = doc.id;
+      const data = doc.data();
+      if (!data.signedManifesto) return [];
+      const { index, signature, timestamp } = data.signedManifesto;
+      return [
+        {
+          index,
+          address,
+          signature,
+          timestampUnixMillis: timestamp.toMillis(),
+        },
+      ];
+    });
+
+    return { totalCount, items };
+  }
+);
 
 export const getUser = functions.https.onCall(
   async ({ token }: { token: SignedMessage }) => {
@@ -60,26 +110,7 @@ export const signManifesto = functions.https.onCall(
       throw new Error("Signer != logged in address");
     }
 
-    const addressDoc = addressCollection.doc(address);
-
-    await firebase.firestore().runTransaction(async (txn) => {
-      const addressDocSnapshot = await txn.get(addressDoc);
-      if (addressDocSnapshot.data()?.signedManifesto) return;
-
-      const statsSnapshot = await txn.get(statsDoc);
-
-      txn.set(
-        addressDoc,
-        { signedManifesto: { message: manifestoMessage, signature } },
-        { merge: true }
-      );
-
-      txn.set(
-        statsDoc,
-        { signatureCount: (statsSnapshot.data()?.signatureCount ?? 0) + 1 },
-        { merge: true }
-      );
-    });
+    await storeSignature(address, signature);
   }
 );
 
@@ -160,6 +191,33 @@ export const claimDiscordRole = functions.https.onCall(
     return { user };
   }
 );
+
+async function storeSignature(address: string, signature: string) {
+  const addressDoc = addressCollection.doc(address);
+  await firebase.firestore().runTransaction(async (txn) => {
+    const userSnapshot = await txn.get(addressDoc);
+    const userData = userSnapshot.data();
+    if (userData?.signedManifesto?.timestamp) return;
+
+    const statsSnapshot = await txn.get(statsDoc);
+    const signatureCount = statsSnapshot.data()?.signatureCount ?? 0;
+
+    txn.set(
+      addressDoc,
+      {
+        signedManifesto: {
+          message: manifestoMessage,
+          signature,
+          index: signatureCount,
+          timestamp: firestore.FieldValue.serverTimestamp(),
+        },
+      },
+      { merge: true }
+    );
+
+    txn.set(statsDoc, { signatureCount: signatureCount + 1 }, { merge: true });
+  });
+}
 
 async function verifyToken(token: SignedMessage) {
   const { message, signature } = token;

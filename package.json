@@ -29,6 +29,7 @@
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "babel-preset-gatsby": "1",
+    "dayjs": "^1.11.5",
     "ethers": "^5.6.9",
     "firebase": "^9.9.0",
     "gatsby": "^2.32.8",

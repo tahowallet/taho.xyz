@@ -55,7 +55,7 @@ export function ManifestoHeaderCta() {
             color: ${bodyDarkGreen40};
           `}
         >
-          Sign to join our community & be eligible for future surprises 👀
+          Sign to join our community &amp; be eligible for future surprises 👀
         </p>
       </div>
       <div

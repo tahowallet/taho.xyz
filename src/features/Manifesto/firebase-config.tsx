@@ -1,9 +1,8 @@
-// TODO: replace this JSON with the one provided by Firebase for the Web app.
 export const firebaseConfig = {
-  apiKey: "AIzaSyDPjFWHXWMEVHL7Bf-AMWLQVSJCWpB_S2k",
-  authDomain: "tally-dev-0.firebaseapp.com",
-  projectId: "tally-dev-0",
-  storageBucket: "tally-dev-0.appspot.com",
-  messagingSenderId: "923152079345",
-  appId: "1:923152079345:web:3ed820b6f8f36026848c50",
+  apiKey: process.env.GATSBY_FIREBASE_API_KEY,
+  authDomain: process.env.GATSBY_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.GATSBY_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.GATSBY_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.GATSBY_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.GATSBY_FIREBASE_APP_I,
 };

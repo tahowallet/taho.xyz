@@ -7,7 +7,9 @@
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
+    "deploy:dev": "firebase use dev && firebase deploy --only functions && echo '\n\tyou are on DEV now\n'",
+    "deploy:stg": "firebase use stg && firebase deploy --only functions && echo '\n\tyou are on STG now\n'",
+    "deploy:prd": "firebase use prd && firebase deploy --only functions && echo '\n\tyou are on PRD now\n'",
     "logs": "firebase functions:log"
   },
   "engines": {

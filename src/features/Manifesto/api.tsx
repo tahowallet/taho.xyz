@@ -21,7 +21,7 @@ export interface SignatureData {
 
 if (typeof window === "object") {
   initializeApp(firebaseConfig);
-  if (window.location.host.startsWith("localhost:")) {
+  if (process.env.GATSBY_USE_FIREBASE_EMULATOR === "true") {
     connectFunctionsEmulator(getFunctions(), "localhost", 5001);
   }
 }

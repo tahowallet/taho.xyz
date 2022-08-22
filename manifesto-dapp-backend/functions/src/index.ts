@@ -4,11 +4,6 @@ import * as firestore from "firebase-admin/firestore";
 import * as functions from "firebase-functions";
 import * as https from "https";
 import { SiweMessage } from "siwe";
-import {
-  discordBotAuthToken,
-  discordGuildId,
-  discordRoleId,
-} from "./discord-config";
 import { manifestoMessage } from "./manifesto";
 
 interface SignedMessage {
@@ -114,83 +109,103 @@ export const signManifesto = functions.https.onCall(
   }
 );
 
-export const claimDiscordRole = functions.https.onCall(
-  async ({
-    token,
-    discordToken,
-  }: {
-    token: SignedMessage;
-    discordToken: string;
-  }) => {
-    const address = await verifyToken(token);
+export const claimDiscordRole = functions
+  .runWith({ secrets: ["DISCORD_APP_AUTH_TOKEN"] })
+  .https.onCall(
+    async ({
+      token,
+      discordToken,
+    }: {
+      token: SignedMessage;
+      discordToken: string;
+    }) => {
+      const address = await verifyToken(token);
 
-    const doc = await addressCollection.doc(address).get();
+      const doc = await addressCollection.doc(address).get();
 
-    if (!doc.data()?.signedManifesto) {
-      throw new Error("Manifesto not signed");
-    }
+      if (!doc.data()?.signedManifesto) {
+        throw new Error("Manifesto not signed");
+      }
 
-    const { user } = await new Promise<{ user?: { id: string } }>(
-      (resolve, reject) => {
+      const { user } = await new Promise<{ user?: { id: string } }>(
+        (resolve, reject) => {
+          const request = https.request(
+            "https://discord.com/api/v10/oauth2/@me",
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${discordToken}`,
+              },
+            },
+            (response) => {
+              const chunks: Buffer[] = [];
+              if (response.statusCode !== 200) {
+                reject(
+                  "Unexpected status code when getting user data:" +
+                    response.statusCode
+                );
+                response.on("data", (data) => console.warn(data.toString()));
+              } else {
+                response.on("data", (data) => {
+                  chunks.push(data);
+                });
+                response.on("end", () => {
+                  resolve(JSON.parse(Buffer.concat(chunks).toString()));
+                });
+              }
+            }
+          );
+
+          request.on("error", reject);
+
+          request.end();
+        }
+      );
+
+      if (!user) throw new Error("user not found");
+
+      await new Promise((resolve, reject) => {
+        console.log(
+          "---- auth token",
+          `_${process.env.DISCORD_APP_AUTH_TOKEN}_`,
+          "--- guild id",
+          `_${process.env.DISCORD_GUILD_ID}_`,
+          "--- role id",
+          `_${process.env.DISCORD_ROLE_ID}_`,
+          "--- user id",
+          `_${user.id}_`,
+          "--- discord url",
+          `https://discord.com/api/v10/guilds/${process.env.DISCORD_GUILD_ID}/members/${user.id}/roles/${process.env.DISCORD_ROLE_ID}`
+        );
         const request = https.request(
-          "https://discord.com/api/v10/oauth2/@me",
+          `https://discord.com/api/v10/guilds/${process.env.DISCORD_GUILD_ID}/members/${user.id}/roles/${process.env.DISCORD_ROLE_ID}`,
           {
-            method: "GET",
+            method: "PUT",
             headers: {
-              Authorization: `Bearer ${discordToken}`,
+              Authorization: `Bot ${process.env.DISCORD_APP_AUTH_TOKEN}`,
             },
           },
           (response) => {
-            const chunks: Buffer[] = [];
-            if (response.statusCode !== 200) {
-              reject(`Unexpected status code: ${response.statusCode}`);
-              response.on("data", (data) => console.warn(data.toString()));
+            if (response.statusCode === 204) {
+              resolve(undefined);
             } else {
-              response.on("data", (data) => {
-                chunks.push(data);
-              });
-              response.on("end", () => {
-                resolve(JSON.parse(Buffer.concat(chunks).toString()));
-              });
+              reject(
+                "Unexpected status code when assigning role:" +
+                  response.statusCode
+              );
             }
+            response.on("data", (data) => console.warn(data.toString()));
           }
         );
 
         request.on("error", reject);
 
         request.end();
-      }
-    );
+      });
 
-    if (!user) throw new Error("user not found");
-
-    await new Promise((resolve, reject) => {
-      const request = https.request(
-        `https://discord.com/api/v10/guilds/${discordGuildId}/members/${user.id}/roles/${discordRoleId}`,
-        {
-          method: "PUT",
-          headers: {
-            Authorization: `Bot ${discordBotAuthToken}`,
-          },
-        },
-        (response) => {
-          if (response.statusCode === 204) {
-            resolve(undefined);
-          } else {
-            reject(`Unexpected status code: ${response.statusCode}`);
-          }
-          response.on("data", (data) => console.warn(data.toString()));
-        }
-      );
-
-      request.on("error", reject);
-
-      request.end();
-    });
-
-    return { user };
-  }
-);
+      return { user };
+    }
+  );
 
 async function storeSignature(address: string, signature: string) {
   const addressDoc = addressCollection.doc(address);

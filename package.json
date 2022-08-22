@@ -15,9 +15,13 @@
     "gastby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
+    "develop": "TARGET_ENV='dev' gatsby develop",
+    "start": "TARGET_ENV='dev' gatsby develop",
+    "start:stg": "TARGET_ENV='stg' gatsby develop",
+    "start:prd": "TARGET_ENV='prd' gatsby develop",
+    "build": "TARGET_ENV='dev' gatsby build",
+    "build:stg": "TARGET_ENV='stg' gatsby build",
+    "build:prd": "TARGET_ENV='prd' gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""

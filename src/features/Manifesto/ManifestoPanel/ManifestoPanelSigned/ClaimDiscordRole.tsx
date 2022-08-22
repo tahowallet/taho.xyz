@@ -1,5 +1,4 @@
 import { AfterSignStep } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/AfterSignStep";
-import { discordClientId } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/discord-config";
 import { DiscordLogo } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/DiscordLogo";
 import { Message } from "features/Manifesto/ManifestoPanel/Message";
 import { FullAccount } from "features/Manifesto/types";
@@ -89,7 +88,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
                 `https://discord.com/api/oauth2/authorize?${new URLSearchParams(
                   {
                     response_type: "token",
-                    client_id: discordClientId,
+                    client_id: process.env.GATSBY_DISCORD_APP_ID,
                     state: oauthStateRef.current,
                     scope: "identify",
                     redirect_uri: new URL(

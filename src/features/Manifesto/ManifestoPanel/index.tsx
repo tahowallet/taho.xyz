@@ -38,11 +38,9 @@ export function ManifestoPanel() {
             display: flex;
             flex-flow: column-reverse;
             align-items: center;
-            min-height: 20rem;
-            margin-top: 4rem;
+            min-height: 25rem;
             padding-bottom: 1.75rem;
-            background: calc(50% + 0.5rem) 100% / contain no-repeat
-              url(./intro.png);
+            background: center top 1px / 40rem auto no-repeat url(./intro.png);
           `}
         >
           <button

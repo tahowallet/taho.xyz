@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "dev": "tally-dev-0",
+    "prd": "tally-prd",
+    "stg": "tally-stg"
+  },
+  "targets": {},
+  "etags": {}
+}

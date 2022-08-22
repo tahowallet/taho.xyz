@@ -1,6 +1,6 @@
 [build]
   environment = { NODE_VERSION = "14.15.3" }
-  command = "yarn build"
+  command = "yarn build:prd"
   functions = "functions"
   publish = "./public/"
 

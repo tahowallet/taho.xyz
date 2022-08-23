@@ -37,7 +37,16 @@ export function ManifestoPanelSigned({
     return (
       <ManifestoPanelLayout
         icon={
-          <img width="44" height="44" src={require("./icon-gift.svg")} alt="" />
+          <img
+            className={css`
+              width: 2.75rem;
+              height: 2.75rem;
+            `}
+            width="44"
+            height="44"
+            src={require("./icon-gift.svg")}
+            alt=""
+          />
         }
         title={<>Don&rsquo;t forget about the surprise gift!</>}
       >
@@ -137,15 +146,24 @@ export function ManifestoPanelSigned({
       <div
         className={css`
           background: bottom / 100% no-repeat url(./hero.png);
-          min-height: 32rem;
+          aspect-ratio: 2 / 1;
+          margin: 0 -2rem;
         `}
       />
       <div
         className={css`
           display: grid;
-          grid: auto / 1fr 1rem 1fr;
+          grid: auto 0 auto / auto;
           gap: 2rem;
-          margin: 4rem;
+          justify-items: center;
+          align-content: center;
+          width: 100%;
+          min-height: 24rem;
+          padding: 2rem 0;
+
+          @media (min-width: 32rem) {
+            grid: auto / 1fr 1rem 1fr;
+          }
         `}
       >
         <AfterSignStep
@@ -159,8 +177,12 @@ export function ManifestoPanelSigned({
         <hr
           className={css`
             border: none;
-            background: top / auto no-repeat url(divider.svg);
-            min-height: 18rem;
+            width: 100%;
+            height: 100%;
+
+            @media (min-width: 32rem) {
+              background: top / 0.5rem auto no-repeat url(divider.svg);
+            }
           `}
         />
         <ClaimDiscordRole account={account} />
@@ -205,12 +227,11 @@ function TwitterShareButton({
       onClick={() => {
         openTwitterTweetIntent({
           text: [
-            `I am a happy doggo @tallycash #doggo`,
+            `I’m in. 👋 @tallycash #defendWeb3`,
+            `signed: ${signedMessage.signature}`,
             ``,
-            `sig: ${signedMessage.signature}`,
-            ``,
+            `https://twitter.com/TallyCash/status/1561739484600774656`,
           ].join(`\n`),
-          url: `https://twitter.com/TallyCash/status/1428070907566755844`,
         });
         onShareBegin();
       }}

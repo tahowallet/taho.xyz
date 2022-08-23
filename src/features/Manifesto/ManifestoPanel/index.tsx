@@ -18,8 +18,8 @@ export function ManifestoPanel() {
   const ethereum =
     typeof window === "object"
       ? (window as {
-          ethereum?: ethers.providers.ExternalProvider & { isTally?: boolean };
-        }).ethereum
+          tally?: ethers.providers.ExternalProvider & { isTally?: boolean };
+        }).tally
       : undefined;
 
   const tally = ethereum?.isTally ?? false ? ethereum : undefined;
@@ -28,7 +28,16 @@ export function ManifestoPanel() {
     return (
       <ManifestoPanelLayout
         icon={
-          <img width="36" height="36" src={require("./icon-sign.svg")} alt="" />
+          <img
+            className={css`
+              width: 2.25rem;
+              height: 2.25rem;
+            `}
+            width="36"
+            height="36"
+            src={require("./icon-sign.svg")}
+            alt=""
+          />
         }
         title={<>Are you in?</>}
         support={<>Good things come to those who sign 🙌</>}
@@ -72,7 +81,16 @@ export function ManifestoPanel() {
     return (
       <ManifestoPanelLayout
         icon={
-          <img width="36" height="36" src={require("./icon-sign.svg")} alt="" />
+          <img
+            className={css`
+              width: 2.25rem;
+              height: 2.25rem;
+            `}
+            width="36"
+            height="36"
+            src={require("./icon-sign.svg")}
+            alt=""
+          />
         }
         title={<>Are you in?</>}
       >

@@ -26,7 +26,7 @@ export function AfterSignStep({
         align-items: center;
         gap: 2rem;
         text-align: center;
-        padding: 2rem 3rem;
+        max-width: 20rem;
       `}
     >
       <div

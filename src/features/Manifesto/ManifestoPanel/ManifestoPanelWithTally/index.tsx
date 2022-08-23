@@ -59,6 +59,10 @@ export function ManifestoPanelWithTally({
       <ManifestoPanelLayout
         icon={
           <img
+            className={css`
+              width: 2.25rem;
+              height: 2.25rem;
+            `}
             width="36"
             height="36"
             src={require("../icon-sign.svg")}
@@ -112,7 +116,11 @@ export function ManifestoPanelWithTally({
                 Sign-In with Ethereum
               </StepButton>
             )}
-            {tokenError && <Message isError>Log-in failed</Message>}
+            {tokenError && (
+              <Message isError>
+                Sign-in failed. Make sure you've set your Network to Ethereum.
+              </Message>
+            )}
             {siweAccount && userError && (
               <Message isError>Cannot connect to our server.</Message>
             )}
@@ -162,10 +170,14 @@ function StepContainer({ children }: { children: ReactNode }) {
     <div
       className={css`
         display: grid;
-        grid: auto / 1fr 1fr 1fr;
+        grid: auto auto auto / auto;
         justify-items: center;
         gap: 2rem;
         margin: 0 4rem;
+
+        @media (min-width: 36rem) {
+          grid: auto / 1fr 1fr 1fr;
+        }
       `}
     >
       {children}
@@ -189,6 +201,7 @@ function Step({
         flex-flow: column;
         align-items: center;
         gap: 1rem;
+        min-height: 10rem;
       `}
     >
       <span

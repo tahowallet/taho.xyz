@@ -6,7 +6,10 @@ import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import SEO from "shared/seo";
 import { sectionBackgroundOffWhite } from "shared/styles/colors";
-import { sectionNarrowWidth } from "shared/styles/lengths";
+import {
+  sectionInlinePadding,
+  sectionNarrowWidth,
+} from "shared/styles/lengths";
 import { tileBoxShadow } from "shared/styles/shadows";
 import { ManifestoBody } from "./ManifestoBody";
 import { ManifestoHeaderCta } from "./ManifestoHeaderCta";
@@ -37,32 +40,47 @@ export function Manifesto() {
           className={css`
             display: flex;
             flex-flow: column;
-            width: ${sectionNarrowWidth};
-            margin: 0 auto;
           `}
         >
           <div
             className={css`
-              height: 24rem;
-              margin: 0 -4rem -5.5rem;
-              background: bottom 4rem center / contain no-repeat url(./bg.png);
+              display: flex;
+              flex-flow: column;
+              width: 100%;
+              max-width: 68rem;
+              margin: 0 auto;
             `}
-          />
+          >
+            <div
+              className={css`
+                aspect-ratio: 3 / 1;
+                margin: 0 4rem -1.5rem;
+                background: bottom center / contain no-repeat url(./bg.png);
+              `}
+            />
+          </div>
           <div
             className={css`
               position: sticky;
               top: 1.5rem;
               z-index: 1;
-              margin: 1.5rem -4rem 24rem;
+              width: 100%;
+              max-width: 72rem;
+              margin: 1.5rem auto 24rem;
+              padding: 0 2rem;
             `}
           >
             <ManifestoHeaderCta />
           </div>
           <div
             className={css`
+              display: flex;
+              flex-flow: column;
+              width: 100%;
+              max-width: ${sectionNarrowWidth};
+              margin: -28rem auto 0;
               box-shadow: ${tileBoxShadow};
-              padding: 6rem 6rem 0;
-              margin: -28rem 0 0;
+              padding: 6rem 0 0;
             `}
           >
             <ManifestoBody />
@@ -70,7 +88,8 @@ export function Manifesto() {
         </div>
         <div
           className={css`
-            width: ${sectionNarrowWidth};
+            width: 100%;
+            max-width: ${sectionNarrowWidth};
             margin: 0 auto;
             border-radius: 0 0 1rem 1rem;
             background: ${sectionBackgroundOffWhite};
@@ -84,6 +103,7 @@ export function Manifesto() {
         <div
           className={css`
             margin: 8rem 0 24rem;
+            padding: 0 ${sectionInlinePadding};
           `}
         >
           <SignatureList />

@@ -1,3 +1,4 @@
+import { FirebaseError } from "@firebase/util";
 import { AfterSignStep } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/AfterSignStep";
 import { DiscordLogo } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/DiscordLogo";
 import { Message } from "features/Manifesto/ManifestoPanel/Message";
@@ -60,7 +61,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
     <AfterSignStep
       title={<DiscordLogo />}
       subTitle={
-        !data && !isLoading ? (
+        !data && !isLoading && !error ? (
           <>
             Claim your 🔏 Verified Signer role to get full, verified access to
             our Discord.
@@ -68,7 +69,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
         ) : null
       }
     >
-      {!data && !isLoading && (
+      {!data && !isLoading && !error && (
         <>
           <button
             className={css`
@@ -157,7 +158,9 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
       )}
       {discordToken && isLoading && <Message>Promoting user...</Message>}
       {discordToken && error && (
-        <Message isError>Something went wrong.</Message>
+        <Message isError>
+          {(error as { details?: string }).details ?? "Something went wrong."}
+        </Message>
       )}
       {discordToken && data && (
         <Message>

@@ -163,10 +163,6 @@ export const claimDiscordRole = functions
                   chunks.push(data);
                 });
                 response.on("end", async () => {
-                  await addressCollection
-                    .doc(address)
-                    .update({ claimedRole: true });
-
                   resolve(JSON.parse(Buffer.concat(chunks).toString()));
                 });
               }
@@ -202,8 +198,12 @@ export const claimDiscordRole = functions
               Authorization: `Bot ${process.env.DISCORD_APP_AUTH_TOKEN}`,
             },
           },
-          (response) => {
+          async (response) => {
             if (response.statusCode === 204) {
+              await addressCollection
+                .doc(address)
+                .update({ claimedRole: true });
+
               resolve(undefined);
             } else {
               reject(

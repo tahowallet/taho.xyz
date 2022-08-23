@@ -18,8 +18,8 @@ export function ManifestoPanel() {
   const ethereum =
     typeof window === "object"
       ? (window as {
-          ethereum?: ethers.providers.ExternalProvider & { isTally?: boolean };
-        }).ethereum
+          tally?: ethers.providers.ExternalProvider & { isTally?: boolean };
+        }).tally
       : undefined;
 
   const tally = ethereum?.isTally ?? false ? ethereum : undefined;

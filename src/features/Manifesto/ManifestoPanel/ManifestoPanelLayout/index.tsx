@@ -3,8 +3,8 @@ import React, { ReactNode } from "react";
 import { bodyDarkGreen60 } from "shared/styles/colors";
 import { bodySmallSegment18, h3Quincy36 } from "shared/styles/fonts";
 import {
-  sectionBodyNarrowWidth,
   sectionBodyWideWidth,
+  sectionInlinePadding,
 } from "shared/styles/lengths";
 
 export function ManifestoPanelLayout({
@@ -26,8 +26,8 @@ export function ManifestoPanelLayout({
         display: flex;
         flex-flow: column;
         position: relative;
-        background: top -4rem center / auto no-repeat url(./bg.svg);
-        padding: 6.75rem 0 0;
+        background: top -4rem center / 14rem auto no-repeat url(./bg.svg);
+        padding: 6.75rem ${sectionInlinePadding} 0;
         min-height: 38rem;
       `}
     >

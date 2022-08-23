@@ -31,16 +31,19 @@ export function ManifestoHeaderCta() {
         align-items: center;
         gap: 2rem;
         width: 100%;
-        min-height: 6rem;
-        border-radius: 100rem;
-        padding-left: 10rem;
-        padding-right: 2rem;
-        background: left -4rem center / auto no-repeat url("./bg.svg"),
+        border-radius: 3rem;
+        padding: 0 2rem 0 7rem;
+        background: left -4rem top -4rem / 14rem auto no-repeat url("./bg.svg"),
           ${cardBackgroundOffWhite};
         box-shadow: ${tileBoxShadow};
       `}
     >
-      <div>
+      <div
+        className={css`
+          flex: 1 1 auto;
+          margin: 1rem 0;
+        `}
+      >
         <h2
           className={css`
             font: ${h4Quincy24};
@@ -60,43 +63,56 @@ export function ManifestoHeaderCta() {
       </div>
       <div
         className={css`
-          flex: 1;
+          flex: 1 1 auto;
           display: flex;
-          flex-flow: column;
+          flex-flow: row wrap;
           align-items: center;
+          justify-content: center;
+          gap: 1rem 2rem;
+          margin: 1rem 0;
         `}
       >
-        <span
+        <div
           className={css`
-            font: ${showcaseQuincyBold48};
-            color: ${bodyDarkGreen120};
-            margin-bottom: -0.5rem;
+            flex: 1;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
           `}
         >
-          <SignatureCount />
-        </span>
-        <span
+          <span
+            className={css`
+              font: ${showcaseQuincyBold48};
+              color: ${bodyDarkGreen120};
+              margin-bottom: -0.5rem;
+            `}
+          >
+            <SignatureCount />
+          </span>
+          <span
+            className={css`
+              font: ${bodySmallSegment18};
+              color: ${bodyDarkGreen40};
+            `}
+          >
+            Signatures
+          </span>
+        </div>
+        <a
+          href="#sign"
           className={css`
-            font: ${bodySmallSegment18};
-            color: ${bodyDarkGreen40};
+            flex: 0 0 auto;
+            background: ${buttonBackgroundSemanticSuccess};
+            padding: ${buttonBlockPadding} ${buttonInlinePadding};
+            border-radius: ${buttonBorderRadius};
+            font: ${buttonLabelQuincy18};
+            color: ${buttonLabelHunterGreen};
+            box-shadow: ${buttonShadow};
           `}
         >
-          Signatures
-        </span>
+          Sign Now
+        </a>
       </div>
-      <a
-        href="#sign"
-        className={css`
-          background: ${buttonBackgroundSemanticSuccess};
-          padding: ${buttonBlockPadding} ${buttonInlinePadding};
-          border-radius: ${buttonBorderRadius};
-          font: ${buttonLabelQuincy18};
-          color: ${buttonLabelHunterGreen};
-          box-shadow: ${buttonShadow};
-        `}
-      >
-        Sign Now
-      </a>
     </div>
   );
 }

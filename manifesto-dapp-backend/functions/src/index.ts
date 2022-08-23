@@ -15,6 +15,7 @@ interface SignedMessage {
 
 interface UserData {
   signedManifesto?: SignedMessage;
+  claimedRole?: boolean;
 }
 
 firebase.initializeApp();
@@ -124,7 +125,19 @@ export const claimDiscordRole = functions
       const doc = await addressCollection.doc(address).get();
 
       if (!doc.data()?.signedManifesto) {
-        throw new Error("Manifesto not signed");
+        throw new functions.https.HttpsError(
+          "not-found",
+          "Manifesto not signed",
+          "Manifesto not signed" // react-query swallows the message, but keeps the detail prop
+        );
+      }
+
+      if (doc.data()?.claimedRole) {
+        throw new functions.https.HttpsError(
+          "already-exists",
+          "This address has already claimed a discord role!",
+          "This address has already claimed a discord role!" // react-query swallows the message, but keeps the detail prop
+        );
       }
 
       const { user } = await new Promise<{ user?: { id: string } }>(
@@ -149,7 +162,11 @@ export const claimDiscordRole = functions
                 response.on("data", (data) => {
                   chunks.push(data);
                 });
-                response.on("end", () => {
+                response.on("end", async () => {
+                  await addressCollection
+                    .doc(address)
+                    .update({ claimedRole: true });
+
                   resolve(JSON.parse(Buffer.concat(chunks).toString()));
                 });
               }
@@ -226,6 +243,7 @@ async function storeSignature(address: string, signature: string) {
           index: signatureCount,
           timestamp: firestore.FieldValue.serverTimestamp(),
         },
+        claimedRole: false,
       },
       { merge: true }
     );

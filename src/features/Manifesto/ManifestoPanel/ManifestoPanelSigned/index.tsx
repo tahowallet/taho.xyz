@@ -205,12 +205,11 @@ function TwitterShareButton({
       onClick={() => {
         openTwitterTweetIntent({
           text: [
-            `I am a happy doggo @tallycash #doggo`,
+            `I’m in. 👋 @tallycash #defendWeb3`,
+            `signed: ${signedMessage.signature}`,
             ``,
-            `sig: ${signedMessage.signature}`,
-            ``,
+            `https://twitter.com/TallyCash/status/1561739484600774656`,
           ].join(`\n`),
-          url: `https://twitter.com/TallyCash/status/1428070907566755844`,
         });
         onShareBegin();
       }}

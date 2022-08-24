@@ -13,60 +13,63 @@ export function SignatureListPage({ before }: { before: number | null }) {
   if (!data) return null;
 
   return (
-    <table
-      className={css`
-        border-collapse: collapse;
-        table-layout: fixed;
-        width: 100%;
-      `}
-    >
-      <tbody>
-        {data.items.map(({ address, signature, timestampUnixMillis }) => (
-          <tr
-            className={css`
-              border-top: 1px solid ${green20};
+    <div>
+      {data.items.map(({ address, signature, timestampUnixMillis }) => (
+        <div
+          className={css`
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid ${green20};
+            padding: 1rem 0;
+
+            &:last-child {
               border-bottom: 1px solid ${green20};
+            }
+          `}
+        >
+          <div
+            className={css`
+              width: 3rem;
             `}
           >
-            <td
+            <img
               className={css`
-                display: flex;
-                align-items: center;
-                padding: 1rem 0;
-                gap: 1rem;
-                font: ${bodySmallSegment18};
-                color: ${bodyDarkHunterGreen};
+                width: 3rem;
+                height: 3rem;
+                border-radius: 1.5rem;
               `}
-            >
-              <div
-                className={css`
-                  width: 3rem;
-                `}
-              >
-                <img
-                  className={css`
-                    width: 3rem;
-                    height: 3rem;
-                    border-radius: 1.5rem;
-                  `}
-                  src={`https://effigy.im/a/${address}.png`}
-                />
-              </div>
-              <AddressDisplay address={address} />
-            </td>
-            <td
-              className={css`
-                text-align: right;
-                padding: 1rem 0;
-                font: ${bodySmallSegment18};
-                color: ${bodyDarkGreen60};
-              `}
-            >
-              {dayjs(timestampUnixMillis).fromNow()}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+              src={`https://effigy.im/a/${address}.png`}
+            />
+          </div>
+          <div
+            className={css`
+              display: flex;
+              flex: 1 1 0;
+              align-items: center;
+              min-width: 0;
+              padding: 1rem 0;
+              gap: 1rem;
+              font: ${bodySmallSegment18};
+              color: ${bodyDarkHunterGreen};
+              word-break: break-all;
+            `}
+          >
+            <AddressDisplay address={address} />
+          </div>
+          <div
+            className={css`
+              flex: 0 0 auto;
+              text-align: right;
+              padding: 1rem 0;
+              font: ${bodySmallSegment18};
+              color: ${bodyDarkGreen60};
+            `}
+          >
+            {dayjs(timestampUnixMillis).fromNow()}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

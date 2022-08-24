@@ -85,16 +85,42 @@ export function HomeFeatures() {
       >
         <div
           className={css`
-            grid-column: 1 / -1;
-            background: ${tileLightGradient};
-            padding: 10rem 2rem;
-
-            @media (min-width: 40rem) {
-              background: bottom right / contain no-repeat
-                  url("feature-1-swap.png"),
-                ${tileLightGradient};
-              padding-right: calc(32rem);
+            background: bottom/ contain no-repeat url("feature-0-nft.png"),
+              ${tileLightGradient};
+            padding: 3.5rem 1rem 24rem;
+          `}
+        >
+          <Feature
+            title={
+              <>
+                A beautiful
+                <br />
+                NFT gallery.
+              </>
             }
+          >
+            For all your Ethereum
+            <br />
+            and Polygon NFTs.
+          </Feature>
+        </div>
+        <div
+          className={css`
+            background: bottom right / contain no-repeat
+                url("feature-3-ledger.svg"),
+              ${tileLightGradient};
+            padding: 3.5rem 1rem 24rem;
+          `}
+        >
+          <Feature title={<>Ledger support that actually works.</>}>
+            Brought to you by a community of developers that listens to users.
+          </Feature>
+        </div>
+        <div
+          className={css`
+            background: bottom / contain no-repeat url("feature-1-swap.png"),
+              ${tileLightGradient};
+            padding: 3.5rem 1rem 24rem;
           `}
         >
           <Feature title={<>Way cheaper swaps.</>}>
@@ -106,23 +132,13 @@ export function HomeFeatures() {
           className={css`
             background: bottom / contain no-repeat url("feature-2-oss.svg"),
               ${tileLightGradient};
-            padding: 6rem 1rem 20rem;
+            padding: 3.5rem 1rem 24rem;
           `}
         >
           <Feature title={<>Nothing to hide.</>}>
-            Tally Ho is 100% open source.
-          </Feature>
-        </div>
-        <div
-          className={css`
-            background: bottom right / contain no-repeat
-                url("feature-3-ledger.svg"),
-              ${tileLightGradient};
-            padding: 6rem 1rem 20rem;
-          `}
-        >
-          <Feature title={<>Ledger support that actually works.</>}>
-            Brought to you by a community of developers that listens to users.
+            Tally Ho is
+            <br />
+            100% open source.
           </Feature>
         </div>
         <div
@@ -142,7 +158,8 @@ export function HomeFeatures() {
           `}
         >
           <Feature title={<>Owned by a community, not a conglomerate.</>}>
-            All wallet fees go to the Tally Ho community.
+            We believe web3 should be accessible to everyone &amp; owned by
+            users just like you.
           </Feature>
         </div>
         <div
@@ -158,9 +175,9 @@ export function HomeFeatures() {
             padding: 2rem;
           `}
         >
-          <ComingSoon>L2 Support</ComingSoon>
+          <ComingSoon>Optimism &amp; Arbitrum</ComingSoon>
+          <ComingSoon>Social Recovery</ComingSoon>
           <ComingSoon>More EVM Chains</ComingSoon>
-          <ComingSoon>NFT Gallery</ComingSoon>
         </div>
       </div>
       <div
@@ -226,7 +243,7 @@ function Feature({
       </h2>
       <p
         className={css`
-          max-width: 24rem;
+          max-width: 30rem;
           margin: 0 auto;
         `}
       >
@@ -253,7 +270,7 @@ function ComingSoon({ children }: { children: ReactNode }) {
           font: ${pillLabelSegment14};
           letter-spacing: 0.02em;
           background: #ecd2b0;
-          color: ${bodyDarkGrey60};
+          color: ${bodyDarkGold120};
         `}
       >
         Coming soon

@@ -1,17 +1,16 @@
 import { Link } from "gatsby";
 import { css } from "linaria";
 import React from "react";
+import { semanticSuccess30 } from "shared/styles/color-palette";
 import {
-  bodyDarkGrey80,
   buttonBackgroundSemanticSuccess,
   buttonLabelHunterGreen,
   sectionBackgroundGold20,
 } from "shared/styles/colors";
 import {
-  bodyNormalSegment24,
   buttonLabelQuincy18,
+  h2Quincy48,
   labelLetterSpacing,
-  titleQuincy80,
 } from "shared/styles/fonts";
 import {
   buttonBlockPadding,
@@ -19,14 +18,14 @@ import {
   buttonInlinePadding,
   sectionInlinePadding,
   sectionWideWidth,
-  subtitleBlockMargin,
 } from "shared/styles/lengths";
 import { buttonShadow } from "shared/styles/shadows";
 
-export function HomeProductHero() {
+export function HomeCommunityPledge() {
   return (
     <div
       className={css`
+        width: 100%;
         max-width: ${sectionWideWidth};
         padding: 0 ${sectionInlinePadding};
         margin: 0 auto;
@@ -34,50 +33,31 @@ export function HomeProductHero() {
     >
       <div
         className={css`
-          background: top 20px left 22px / auto no-repeat
-              url("background-buttons.svg"),
-            bottom -1px center / 100% auto no-repeat url("background-trees.svg"),
-            bottom / cover url("background-sunburst.svg"),
-            ${sectionBackgroundGold20};
+          background: ${semanticSuccess30};
           border-radius: 1rem;
 
           @media (min-width: 48rem) {
-            background: top 20px left 22px / auto no-repeat
-                url("background-buttons.svg"),
-              bottom -1px center / 100% auto no-repeat url("background-trees.svg"),
-              top right / auto 46rem no-repeat url("illo.png"),
-              bottom / cover url("background-sunburst.svg"),
-              ${sectionBackgroundGold20};
+            background: bottom right / auto 24rem no-repeat url("hero.png")
+              ${semanticSuccess30};
           }
         `}
       >
         <div
           className={css`
-            padding: 7.5rem 5rem 10rem;
+            padding: 5rem;
           `}
         >
-          <h1
+          <h2
             className={css`
-              font: ${titleQuincy80};
+              font: ${h2Quincy48};
               margin: 0;
             `}
           >
-            The wallet
+            Sign the
             <br />
-            web3 deserves.
-          </h1>
-          <p
-            className={css`
-              margin: ${subtitleBlockMargin} auto;
-              font: ${bodyNormalSegment24};
-              color: ${bodyDarkGrey80};
-            `}
-          >
-            Tally Ho is the first wallet
-            <br />
-            owned by its users.
-          </p>
-          <Link
+            Community Pledge.
+          </h2>
+          <a
             className={css`
               display: inline-block;
               padding: ${buttonBlockPadding} ${buttonInlinePadding};
@@ -89,10 +69,11 @@ export function HomeProductHero() {
               color: ${buttonLabelHunterGreen};
               margin: 1rem 0;
             `}
-            to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd"
+            href="/web3pledge"
+            target="_blank"
           >
-            Download Now
-          </Link>
+            Sign now
+          </a>
         </div>
       </div>
     </div>

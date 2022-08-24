@@ -18,6 +18,7 @@ import {
   buttonInlinePadding,
 } from "shared/styles/lengths";
 import { buttonShadow } from "shared/styles/shadows";
+import { TallyWindowProvider } from "..";
 import { useEthereumAccount } from "../../hooks/useEthereumAccount";
 import { useManifestoSign } from "../../hooks/useManifestoSign";
 import { useSIWE } from "../../hooks/useSIWE";
@@ -27,16 +28,12 @@ import { ManifestoPanelSigned } from "../ManifestoPanelSigned";
 import { Message } from "../Message";
 
 export function ManifestoPanelWithTally({
-  ethereum,
+  account,
+  accountError,
 }: {
-  ethereum: ethers.providers.ExternalProvider;
+  account: { signer: ethers.providers.JsonRpcSigner; address: string };
+  accountError: unknown;
 }) {
-  const {
-    connectWallet,
-    account,
-    accountError,
-    accountIsLoading,
-  } = useEthereumAccount();
   const {
     signInWithEthereum,
     siweAccount,
@@ -74,7 +71,7 @@ export function ManifestoPanelWithTally({
         <CTAText>Sign the Tally Ho Community Pledge in 3 easy steps.</CTAText>
         <StepContainer>
           <Step index={1} isDone={!!account}>
-            {account ? (
+            {account && (
               <Message>
                 Connected with
                 <br />
@@ -82,16 +79,6 @@ export function ManifestoPanelWithTally({
                   {account.address.slice(0, 6)}...{account.address.slice(-4)}
                 </strong>
               </Message>
-            ) : accountIsLoading ? (
-              <Message>Waiting for wallet...</Message>
-            ) : (
-              <StepButton
-                onClick={() => {
-                  connectWallet({ ethereum });
-                }}
-              >
-                Connect with Tally Ho!
-              </StepButton>
             )}
             {accountError && (
               <Message isError>Error while connecting wallet.</Message>

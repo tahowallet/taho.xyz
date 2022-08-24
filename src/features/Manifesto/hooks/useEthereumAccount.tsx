@@ -1,12 +1,13 @@
 import { ethers } from "ethers";
 import { useMutation } from "react-query";
+import { TallyWindowProvider } from "../ManifestoPanel";
 
 export function useEthereumAccount() {
   const { data, error, isLoading, mutate } = useMutation(
-    async ({ ethereum }: { ethereum: ethers.providers.ExternalProvider }) => {
-      if (!ethereum) throw new Error();
+    async (tally: TallyWindowProvider) => {
+      if (!tally) throw new Error();
 
-      const provider = new ethers.providers.Web3Provider(ethereum);
+      const provider = new ethers.providers.Web3Provider(tally);
 
       try {
         await provider.send("eth_requestAccounts", []);

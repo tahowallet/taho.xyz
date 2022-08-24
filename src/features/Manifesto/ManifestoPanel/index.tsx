@@ -9,14 +9,16 @@ import {
 } from "shared/styles/colors";
 import { buttonLabelQuincy24, labelLetterSpacing } from "shared/styles/fonts";
 import { buttonShadow } from "shared/styles/shadows";
+import { EventEmitter } from "stream";
 import { useEthereumAccount } from "../hooks/useEthereumAccount";
 import { CTAText } from "./CTAText";
 import { ManifestoPanelWithTally } from "./ManifestoPanelWithTally";
 
-export type TallyWindowProvider = ethers.providers.ExternalProvider & {
-  isTally?: boolean;
-  selectedAddress?: string;
-};
+export type TallyWindowProvider = ethers.providers.ExternalProvider &
+  EventEmitter & {
+    isTally?: boolean;
+    selectedAddress?: string;
+  };
 
 export function ManifestoPanel() {
   const tallyWindowProvider =
@@ -38,6 +40,14 @@ export function ManifestoPanel() {
   }, [tally]);
 
   if (tally) {
+    tally.on("accountsChanged", (accountArray) => {
+      // let's reload the page if the user changes account in the wallet
+      if (accountArray.length) {
+        debugger;
+        window.location.reload();
+      }
+    });
+
     if (!account) {
       return (
         <ManifestoPanelLayout

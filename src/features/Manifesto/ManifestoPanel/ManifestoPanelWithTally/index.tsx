@@ -117,9 +117,10 @@ export function ManifestoPanelWithTally({
               </StepButton>
             )}
             {tokenError && (
-              <Message isError>
-                Sign-in failed. Make sure you've set your Network to Ethereum.
-              </Message>
+              // <Message isError>
+              //   Sign-in failed. Make sure you've set your Network to Ethereum.
+              // </Message>
+              <pre>{JSON.stringify(tokenError)}</pre>
             )}
             {siweAccount && userError && (
               <Message isError>Cannot connect to our server.</Message>

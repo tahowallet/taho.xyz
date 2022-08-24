@@ -2,6 +2,7 @@ import { DownloadCta } from "features/Download/Cta";
 import { DownloadHeader } from "features/Download/Header";
 import { Footer, footerSeparatorBackground } from "features/Footer";
 import { Header } from "features/Header";
+import { HomeCommunityPledge } from "features/Home/CommunityPledge";
 import { HomeFeatures } from "features/Home/Features";
 import { HomeProductHero } from "features/Home/Hero";
 import { HomePolygonBanner } from "features/Home/PolygonBanner";
@@ -31,16 +32,32 @@ export function Home() {
 
       <div
         className={css`
-          background: bottom / 100% auto no-repeat url("separator-wave.svg"),
-            ${sectionBackgroundGold5};
-          padding: 6rem 0;
+          display: flex;
+          flex-flow: column;
         `}
       >
-        <HomeProductHero />
-        <div id="download">
-          <HomeTryIt />
-          <DownloadCta />
+        <div
+          className={css`
+            padding: 6rem 0;
+            background: ${sectionBackgroundGold5};
+          `}
+        >
+          <HomeProductHero />
+          <div id="download">
+            <HomeTryIt />
+            <DownloadCta />
+          </div>
         </div>
+
+        <HomeCommunityPledge />
+
+        <div
+          className={css`
+            aspect-ratio: 1440 / 74;
+            margin-top: -4rem;
+            background: bottom / 100% auto no-repeat url("separator-wave.svg");
+          `}
+        />
       </div>
 
       <div

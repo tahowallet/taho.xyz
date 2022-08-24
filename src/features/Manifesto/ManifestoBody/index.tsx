@@ -2,6 +2,7 @@ import { css } from "linaria";
 import React, { ReactNode } from "react";
 import {
   bodyDarkHunterGreen,
+  linkDarkTrophyGold,
   titleDarkGreen80,
   titleDarkHunterGreen,
 } from "shared/styles/colors";
@@ -33,6 +34,10 @@ export function ManifestoBody() {
           font: ${bodySmallSegment18};
           color: ${bodyDarkHunterGreen};
           margin: 2rem 0;
+
+          & > a {
+            color: ${linkDarkTrophyGold};
+          }
         }
       `}
     >

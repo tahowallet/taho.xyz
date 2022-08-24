@@ -49,7 +49,11 @@ export function Home() {
           </div>
         </div>
 
-        <HomeCommunityPledge />
+        {
+          /* TODO: enable link to Web3 Community Pledge here */ false && (
+            <HomeCommunityPledge />
+          )
+        }
 
         <div
           className={css`

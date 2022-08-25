@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import { DownloadCta } from "features/Download/Cta";
 import { ManifestoPanelLayout } from "features/Manifesto/ManifestoPanel/ManifestoPanelLayout";
 import { css } from "linaria";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   buttonBackgroundSemanticSuccess,
   buttonLabelHunterGreen,
@@ -20,6 +20,8 @@ export type TallyWindowProvider = ethers.providers.ExternalProvider &
     selectedAddress?: string;
   };
 
+let timer: NodeJS.Timeout | undefined;
+
 export function ManifestoPanel() {
   const tallyWindowProvider =
     typeof window === "object"
@@ -33,6 +35,9 @@ export function ManifestoPanel() {
 
   const { connectWallet, account, accountError } = useEthereumAccount();
 
+  const isPageInConnectedMode = useRef(false);
+  const oldAddress = useRef("asdf");
+
   useEffect(() => {
     if (tally) {
       connectWallet(tally);
@@ -40,12 +45,47 @@ export function ManifestoPanel() {
   }, [tally]);
 
   if (tally) {
-    tally.on("accountsChanged", (accountArray) => {
+    tally.on("accountsChanged", ([address]) => {
       // let's reload the page if the user changes account in the wallet
-      if (accountArray.length) {
-        debugger;
-        window.location.reload();
+      console.log(
+        "--- debug oldAddress: ",
+        oldAddress.current,
+        "address",
+        address,
+        "selectedAddress",
+        tally.selectedAddress,
+        "ispageinselected",
+        isPageInConnectedMode
+      );
+
+      if (timer) {
+        clearTimeout(timer);
       }
+
+      timer = setTimeout(() => {
+        console.log("--- debug timer run ---");
+        timer = undefined;
+        if (!isPageInConnectedMode.current && address) {
+          isPageInConnectedMode.current = true;
+          window.location.reload();
+        }
+      }, 100);
+
+      // else if (isPageInConnectedMode.current && !address) {
+      //   isPageInConnectedMode.current = false;
+      //   window.location.reload();
+      // }
+
+      // if (isPageInConnectedMode) {
+      //   if (address && oldAddress.current !== address) {
+      //     oldAddress.current = address;
+      //     window.location.reload();
+      //   } else if (!address) {
+      //   }
+      // } else if (!isPageInConnectedMode && address) {
+      //   oldAddress.current = address;
+      //   window.location.reload();
+      // }
     });
 
     if (!account) {

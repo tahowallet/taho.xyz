@@ -110,7 +110,7 @@ export function ManifestoPanelWithTally({
                 disabled={!account || tokenIsLoading}
                 onClick={() => {
                   if (!account) throw new Error();
-                  signInWithEthereum(account);
+                  signInWithEthereum();
                 }}
               >
                 Sign-In with Ethereum
@@ -122,7 +122,10 @@ export function ManifestoPanelWithTally({
               </Message>
             )}
             {siweAccount && userError && (
-              <Message isError>Cannot connect to our server.</Message>
+              <Message isError>
+                {(userError as { details?: string }).details ??
+                  "Cannot connect to our server."}
+              </Message>
             )}
           </Step>
 

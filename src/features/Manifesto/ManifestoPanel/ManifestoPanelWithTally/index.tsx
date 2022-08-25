@@ -122,7 +122,10 @@ export function ManifestoPanelWithTally({
               </Message>
             )}
             {siweAccount && userError && (
-              <Message isError>Cannot connect to our server.</Message>
+              <Message isError>
+                {(userError as { details?: string }).details ??
+                  "Cannot connect to our server."}
+              </Message>
             )}
           </Step>
 

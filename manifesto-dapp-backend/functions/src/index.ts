@@ -2,6 +2,7 @@ import { ethers } from "ethers";
 import * as firebase from "firebase-admin";
 import * as firestore from "firebase-admin/firestore";
 import * as functions from "firebase-functions";
+import { HttpsError } from "firebase-functions/v1/https";
 import * as https from "https";
 import { SiweMessage } from "siwe";
 import { manifestoMessage } from "./manifesto";
@@ -125,7 +126,7 @@ export const claimDiscordRole = functions
       const doc = await addressCollection.doc(address).get();
 
       if (!doc.data()?.signedManifesto) {
-        throw new functions.https.HttpsError(
+        throw new HttpsError(
           "not-found",
           "Manifesto not signed",
           "Manifesto not signed" // react-query swallows the message, but keeps the detail prop
@@ -133,7 +134,7 @@ export const claimDiscordRole = functions
       }
 
       if (doc.data()?.claimedRole) {
-        throw new functions.https.HttpsError(
+        throw new HttpsError(
           "already-exists",
           "This address has already claimed a discord role!",
           "This address has already claimed a discord role!" // react-query swallows the message, but keeps the detail prop
@@ -256,14 +257,23 @@ async function verifyToken(token: SignedMessage) {
   const { message, signature } = token;
   const ttlMillis = 24 * 60 * 60 * 1000; // One day
 
-  const verified = await new SiweMessage(message).validate(signature);
+  let verified;
+  try {
+    verified = await new SiweMessage(message).validate(signature);
+  } catch (e) {
+    throw new HttpsError(
+      "invalid-argument",
+      (e as Error).message,
+      (e as Error).message
+    );
+  }
 
   if (new Date(verified.nonce).getTime() + ttlMillis < Date.now()) {
-    throw new Error("Expired nonce");
+    throw new HttpsError("invalid-argument", "Expired nonce", "Expired nonce");
   }
 
   if (verified.chainId !== 1) {
-    throw new Error("Wrong chain");
+    throw new HttpsError("invalid-argument", "Wrong chain", "Wrong chain");
   }
 
   if (
@@ -272,7 +282,7 @@ async function verifyToken(token: SignedMessage) {
       verified.domain.startsWith("tally") && verified.domain.endsWith("web.app")
     )
   ) {
-    throw new Error("Wrong domain");
+    throw new HttpsError("invalid-argument", "Wrong domain", "Wrong domain");
   }
 
   if (
@@ -281,7 +291,7 @@ async function verifyToken(token: SignedMessage) {
       "https://localhost:8000/web3pledge",
     ].includes(verified.uri)
   ) {
-    throw new Error("Wrong URI");
+    throw new HttpsError("invalid-argument", "Wrong URI", "Wrong URI");
   }
 
   return verified.address;

@@ -1,13 +1,26 @@
+import { ethers } from "ethers";
 import { Account, SiweAccount } from "features/Manifesto/types";
 import { useMutation } from "react-query";
 import { SiweMessage } from "siwe";
 
 export function useSIWE() {
   const { mutate, data, error, isLoading } = useMutation(
-    async (account: Account): Promise<SiweAccount> => {
+    async (): Promise<SiweAccount> => {
+      const tallyWindowProvider = (window as any)?.tally;
+
+      if (!tallyWindowProvider || !tallyWindowProvider.isTally) {
+        throw new Error(
+          "We don't have window.tally or it's not a tally provider"
+        );
+      }
+
+      const provider = new ethers.providers.Web3Provider(tallyWindowProvider);
+      const signer = provider.getSigner();
+      const address = await signer.getAddress();
+
       const siwe = new SiweMessage({
         domain: window.location.host,
-        address: account.address,
+        address: address,
         statement: "Sign in",
         uri: window.location.origin,
         version: "1",
@@ -16,9 +29,9 @@ export function useSIWE() {
       });
 
       const message = siwe.prepareMessage();
-      const signature = await account.signer.signMessage(message);
+      const signature = await signer.signMessage(message);
 
-      return { ...account, token: { message, signature } };
+      return { address, signer, token: { message, signature } };
     },
     { retry: false }
   );

@@ -110,7 +110,7 @@ export function ManifestoPanelWithTally({
                 disabled={!account || tokenIsLoading}
                 onClick={() => {
                   if (!account) throw new Error();
-                  signInWithEthereum(account);
+                  signInWithEthereum();
                 }}
               >
                 Sign-In with Ethereum

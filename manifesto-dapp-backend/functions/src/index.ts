@@ -17,6 +17,7 @@ interface SignedMessage {
 interface UserData {
   signedManifesto?: SignedMessage;
   claimedRole?: boolean;
+  galxeImported?: boolean;
 }
 
 firebase.initializeApp();
@@ -245,6 +246,7 @@ async function storeSignature(address: string, signature: string) {
           timestamp: firestore.FieldValue.serverTimestamp(),
         },
         claimedRole: false,
+        galxeImported: false,
       },
       { merge: true }
     );

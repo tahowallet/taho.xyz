@@ -6,6 +6,7 @@ import { HttpsError } from "firebase-functions/v1/https";
 import * as https from "https";
 import { SiweMessage } from "siwe";
 import { manifestoMessage } from "./manifesto";
+import axios from "axios";
 
 interface SignedMessage {
   message: string;
@@ -296,3 +297,65 @@ async function verifyToken(token: SignedMessage) {
 
   return verified.address;
 }
+
+export const appendAddressesToGalxeCredential = functions
+  .runWith({
+    secrets: ["GALXE_ACCESS_TOKEN"],
+  })
+  .pubsub.schedule("every 5 minutes")
+  .onRun(async () => {
+    const snapshot = await addressCollection
+      .where("galxeImported", "==", false)
+      .get();
+
+    const addresses: string[] = [];
+    snapshot.forEach(async (dataSnapshot) => {
+      addresses.push(dataSnapshot.id);
+      await dataSnapshot.ref.update({ galxeImported: true });
+    });
+
+    console.log("number of addresses: ", addresses.length);
+
+    const chunkSize = 2000;
+    for (let i = 0; i < addresses.length; i += chunkSize) {
+      const chunk = addresses.slice(i, i + chunkSize);
+
+      try {
+        // TODO: refactor to native post and remove axsios dep
+        await axios.post(
+          "https://graphigo.prd.galaxy.eco/query",
+          {
+            operationName: "credentialItems",
+            query: `
+      mutation credentialItems($credId: ID!, $operation: Operation!, $items: [String!]!)
+        {
+          credentialItems(input: {
+            credId: $credId
+            operation: $operation
+            items: $items
+          })
+          {
+            name
+          }
+        }
+      `,
+            variables: {
+              // Make sure this is string type as int might cause overflow
+              credId: process.env.GALXE_CREDENTIAL,
+              operation: "APPEND",
+              items: chunk,
+            },
+          },
+          {
+            headers: {
+              "access-token": process.env.GALXE_ACCESS_TOKEN ?? "",
+            },
+          }
+        );
+
+        console.log("batch ", i);
+      } catch (e) {
+        console.log("error ", e);
+      }
+    }
+  });

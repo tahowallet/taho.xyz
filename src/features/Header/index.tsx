@@ -38,7 +38,7 @@ export function Header() {
           />
         </Link>
         <Link
-          className={css`
+          className={"matomo_download " + css`
             position: relative;
             margin: 0 0.75rem;
             color: inherit;

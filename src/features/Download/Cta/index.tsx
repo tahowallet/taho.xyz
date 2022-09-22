@@ -21,7 +21,7 @@ const firefoxDownloadHref = "/tally_ho_pre_release_channel-0.13.1-fx.xpi";
 export function DownloadCta() {
   return (
     <div
-      className={css`
+      className={"matomo_download " + css`
         padding: 3rem 0;
         display: flex;
         flex-flow: row wrap;

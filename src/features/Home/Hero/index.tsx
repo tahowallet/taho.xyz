@@ -78,7 +78,7 @@ export function HomeProductHero() {
             owned by its users.
           </p>
           <Link
-            className={css`
+            className={"matomo_download " + css`
               display: inline-block;
               padding: ${buttonBlockPadding} ${buttonInlinePadding};
               border-radius: ${buttonBorderRadius};

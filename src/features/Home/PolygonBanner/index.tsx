@@ -23,7 +23,7 @@ export function HomePolygonBanner() {
           padding-left: 4rem;
         `}
       >
-        Optimism & Arbitrum support coming soon.
+        Arbitrum support coming soon.
       </div>
     </div>
   );

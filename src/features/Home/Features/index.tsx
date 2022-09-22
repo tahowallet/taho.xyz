@@ -99,9 +99,9 @@ export function HomeFeatures() {
               </>
             }
           >
-            For all your Ethereum
+            For all your Ethereum, Polygon,
             <br />
-            and Polygon NFTs.
+            and Optimism NFTs.
           </Feature>
         </div>
         <div
@@ -175,7 +175,7 @@ export function HomeFeatures() {
             padding: 2rem;
           `}
         >
-          <ComingSoon>Optimism &amp; Arbitrum</ComingSoon>
+          <ComingSoon>Arbitrum</ComingSoon>
           <ComingSoon>Social Recovery</ComingSoon>
           <ComingSoon>More EVM Chains</ComingSoon>
         </div>

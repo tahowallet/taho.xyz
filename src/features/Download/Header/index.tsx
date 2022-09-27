@@ -8,6 +8,22 @@ import {
   subtitleBlockMargin,
 } from "shared/styles/lengths";
 
+// Check UUID test
+import {v4 as uuidv4} from 'uuid';
+
+var retrievedUUID = localStorage.getItem('testUUID');
+
+if (retrievedUUID) {
+  console.log('retrieved UUID: ', retrievedUUID);
+}
+
+if (retrievedUUID === null)
+{
+  let myuuid = uuidv4();
+  localStorage.setItem('testUUID', myuuid);
+  console.log('new UUID set: ', myuuid);
+}
+
 export function DownloadHeader() {
   return (
     <div

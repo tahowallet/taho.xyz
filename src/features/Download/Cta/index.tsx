@@ -17,8 +17,10 @@ import {
 const chromeDownloadHref =
   "https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd";
 const firefoxDownloadHref = "/tally_ho_pre_release_channel-0.13.1-fx.xpi";
+import { posthogEvent } from "shared/analytics/posthog";
 
 export function DownloadCta() {
+  posthogEvent("Wallet Downloaded");
   return (
     <div
       className={"matomo_download " + css`

@@ -43,28 +43,15 @@ export function Download() {
         <div
           className={css`
             display: none;
-            background: top 1.25rem left 1.375rem / auto 0.75rem no-repeat
-                url("background-buttons.svg"),
-              bottom / cover url("background-sunburst.svg"),
-              ${cardBackgroundGold20};
-            margin-top: 6rem;
-            padding: 4rem 0 0;
-            border-radius: 1rem;
+            background: top / cover url("bg.png");
+            height: 26rem;
+            margin-top: 3rem;
 
             @media (min-width: 52rem) {
               display: block;
             }
           `}
-        >
-          <div
-            className={css`
-              height: 40rem;
-              margin-top: -12rem;
-              background: bottom / 100% auto no-repeat url("mask-trees.svg"),
-                bottom -12rem center / calc(100% - 4rem) auto no-repeat url("illo.png");
-            `}
-          />
-        </div>
+        />
       </div>
 
       <p

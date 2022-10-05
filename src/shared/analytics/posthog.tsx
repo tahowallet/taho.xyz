@@ -1,5 +1,7 @@
 import {v4 as uuidv4} from 'uuid';
 
+export const POSTHOG_API_KEY = process.env.POSTHOG_API_KEY
+
 var retrievedUUID = localStorage.getItem('UUID');
 
 interface HogEventProp {
@@ -55,7 +57,7 @@ export async function createEvent(eventName:string): Promise<HogResponse> {
       body: JSON.stringify({
         // this is a safe public write only api key
         // roll this key for demo
-        api_key: "phc_VzveyNxrn2xyiKDYn7XjrgaqELGeUilDZGiBVh6jNmh",
+        api_key: POSTHOG_API_KEY,
         event: posthogEvent,
         properties: {
           distinct_id: retrievedUUID,

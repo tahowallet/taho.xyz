@@ -1,6 +1,6 @@
 import {v4 as uuidv4} from 'uuid';
 
-var retrievedUUID = localStorage.getItem('testUUID');
+var retrievedUUID = localStorage.getItem('UUID');
 
 interface HogEventProp {
   distinct_id: string
@@ -38,7 +38,7 @@ export function posthogEvent(eventName:string) {
     if (retrievedUUID === null)
     {
       let myuuid = uuidv4();
-      localStorage.setItem('testUUID', myuuid);
+      localStorage.setItem('UUID', myuuid);
       document.cookie = "UUID=" + myuuid;
       console.log('new UUID set: ', myuuid);
       createEvent(eventName)
@@ -59,8 +59,9 @@ export async function createEvent(eventName:string): Promise<HogResponse> {
         event: posthogEvent,
         properties: {
           distinct_id: retrievedUUID,
-          data:  "This is a test to storing event data into posthog",
-          $lib: "http://localhost:8001/download",
+          data:  "TThis adds posthog events to Tally website",
+          current_url: window.location.href,
+          $lib: window.location.href,
         },
       }),
       headers: {

@@ -9,8 +9,10 @@ import {
 } from "shared/styles/lengths";
 import { posthogEvent } from "shared/analytics/posthog";
 
-window.onload = function pageLoad() {
-  posthogEvent("Download page visited")
+export const onClientEntry = () => {
+  window.onload = function pageLoad() {
+    posthogEvent("Download page visited")
+  }
 }
 
 export function DownloadHeader() {

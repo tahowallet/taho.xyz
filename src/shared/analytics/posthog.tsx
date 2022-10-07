@@ -1,6 +1,6 @@
 import {v4 as uuidv4} from 'uuid';
 
-export const { POSTHOG_API_KEY } = process.env.POSTHOG_API_KEY
+export const POSTHOG_API_KEY = process.env.POSTHOG_API_KEY
 
 const retrievedUUID = typeof window !== 'undefined' ? localStorage.getItem('UUID') : null
 

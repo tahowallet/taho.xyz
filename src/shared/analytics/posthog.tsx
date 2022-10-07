@@ -1,8 +1,8 @@
 import {v4 as uuidv4} from 'uuid';
 
-export const POSTHOG_API_KEY = process.env.POSTHOG_API_KEY
+export const { POSTHOG_API_KEY } = process.env.POSTHOG_API_KEY
 
-var retrievedUUID = localStorage.getItem('UUID');
+const retrievedUUID = typeof window !== 'undefined' ? localStorage.getItem('UUID') : null
 
 interface HogEventProp {
   distinct_id: string
@@ -21,17 +21,9 @@ type HogResponse = {
   data: string
 }
 
-function getCookie(name)
- {
-   var re = new RegExp(name + "=([^;]+)");
-   var value = re.exec(document.cookie);
-   return (value != null) ? unescape(value[1]) : null;
- }
-
 export function posthogEvent(eventName:string) {
     //log to check if UUID is already present
     if (retrievedUUID) {
-      console.log('retrieved UUID: ', retrievedUUID);
       document.cookie = "UUID=" + retrievedUUID;
       createEvent(eventName)
     }
@@ -42,7 +34,6 @@ export function posthogEvent(eventName:string) {
       let myuuid = uuidv4();
       localStorage.setItem('UUID', myuuid);
       document.cookie = "UUID=" + myuuid;
-      console.log('new UUID set: ', myuuid);
       createEvent(eventName)
     }
 }
@@ -77,8 +68,6 @@ export async function createEvent(eventName:string): Promise<HogResponse> {
     }
     const result = (await response.json()) as HogResponse
     // eslint-disable-next-line no-console
-    console.log("data: ", JSON.stringify(result, null, 4))
-    console.log("UUID from cookie:", getCookie("UUID"))
 
     return result
   } catch (error) {

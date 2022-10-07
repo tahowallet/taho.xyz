@@ -22,6 +22,7 @@ type HogResponse = {
 }
 
 export function posthogEvent(eventName:string) {
+  if (typeof window !== 'undefined') {
     //log to check if UUID is already present
     if (retrievedUUID) {
       document.cookie = "UUID=" + retrievedUUID;
@@ -36,6 +37,7 @@ export function posthogEvent(eventName:string) {
       document.cookie = "UUID=" + myuuid;
       createEvent(eventName)
     }
+  }
 }
 
 export async function createEvent(eventName:string): Promise<HogResponse> {

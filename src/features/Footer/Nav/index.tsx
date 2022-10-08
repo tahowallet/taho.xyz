@@ -13,14 +13,18 @@ export function FooterNav() {
   return (
     <div
       className={css`
-        text-align: center;
-      
         @media (min-width: 52rem) {
           text-align: center;
           display: flex;
           flex-direction: row;
           justify-content: center;
         }
+        
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin: 2rem;
       `}
     >
       <Link to="/">

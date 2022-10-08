@@ -13,7 +13,7 @@ export function FooterNav() {
   return (
     <div
       className={css`
-        @media (min-width: 52rem) {
+        @media (min-width: 1024px) {
           text-align: center;
           display: flex;
           flex-direction: row;

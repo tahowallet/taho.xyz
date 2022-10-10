@@ -1,15 +1,11 @@
-import { mobileMenuClassName } from "features/Header";
 import { Link } from "gatsby";
 import { css } from "linaria";
 import React, { CSSProperties, ReactNode } from "react";
-import { green40 } from "shared/styles/color-palette";
 import {
-  bodyDarkGrey60,
   borderDarkTrophyGold,
-  linkDarkTrophyGold,
+  titleDarkHunterGreen
 } from "shared/styles/colors";
 import {
-  quincyRegularFontFamily,
   segmentFontFamily,
 } from "shared/styles/font-families";
 
@@ -17,21 +13,23 @@ export function FooterNav() {
   return (
     <div
       className={css`
+        @media (min-width: 1024px) {
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+        
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin: 2rem;
       `}
     >
       <Link to="/">
-        <img width="168" height="127" src={require("./logo.svg")} />
-        <div
-          className={css`
-            margin: 1rem 0;
-            font: 400 24px ${quincyRegularFontFamily};
-            letter-spacing: 0.2em;
-            color: ${green40};
-          `}
-        >
-          TALLY HO!
-        </div>
+        <img width="168" height="127" src={require("./logo.svg")} 
+        />
       </Link>
       <div
         className={css`
@@ -40,8 +38,8 @@ export function FooterNav() {
           gap: 2rem 0;
           align-items: center;
           justify-content: center;
-          margin: 2rem;
-          color: ${bodyDarkGrey60};
+          margin: 2rem 2rem 2rem 0;
+          color: ${titleDarkHunterGreen};
         `}
       >
         <NavLink to="/security">Security</NavLink>
@@ -59,17 +57,6 @@ export function FooterNav() {
         <NavLink blank to="https://boards.greenhouse.io/tallywallet/">
           Jobs
         </NavLink>
-        <span
-          className={css`
-            margin: 0 0.75rem;
-            font-size: 22px;
-            font-weight: bold;
-            vertical-align: middle;
-            color: ${linkDarkTrophyGold};
-          `}
-        >
-          |
-        </span>
         <SocialLink
           href="https://chat.tally.cash"
           icon={{

@@ -1,4 +1,5 @@
 import { FooterNav } from "features/Footer/Nav";
+import { Sponsor } from "./Sponsor";
 import { Link } from "gatsby";
 import { css } from "linaria";
 import React from "react";
@@ -16,8 +17,10 @@ export function Footer() {
       `}
     >
       <FooterNav />
+      <Sponsor />
       <div
         className={css`
+          margin: 2rem;
           padding: 0 0 6rem;
           font-family: ${quincyRegularFontFamily};
           font-size: 12px;

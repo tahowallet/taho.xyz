@@ -16,13 +16,14 @@ import {
   subtitleBlockMargin,
   sectionBodyNarrowWidth,
 } from "shared/styles/lengths";
+import { posthogEvent } from "shared/analytics/posthog";
 
 export function Download() {
+  posthogEvent("Download page visited");
   return (
     <>
       <SEO />
       <Header />
-
       <div
         className={css`
           max-width: ${sectionWideWidth};

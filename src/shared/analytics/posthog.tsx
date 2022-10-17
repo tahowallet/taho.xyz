@@ -9,7 +9,9 @@ export function posthogEvent(eventName:string) {
   if (typeof window !== 'undefined') {
     //log to check if UUID is already present
     if (retrievedUUID) {
-      document.cookie = "UUID=" + retrievedUUID
+      var date = new Date;
+      date.setDate(date.getDate() + 30);
+      document.cookie = "UUID=" + retrievedUUID + ";expires=" + date
 
       fetch("https://app.posthog.com/capture/", {
         method: "POST",
@@ -37,7 +39,10 @@ export function posthogEvent(eventName:string) {
     {
       let setUUID = uuidv4();
       localStorage.setItem('UUID', setUUID)
-      document.cookie = "UUID=" + setUUID
+
+      var date = new Date;
+      date.setDate(date.getDate() + 30);
+      document.cookie = "UUID=" + setUUID + ";expires=" + date
 
       fetch("https://app.posthog.com/capture/", {
         method: "POST",

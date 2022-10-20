@@ -5,7 +5,6 @@ import { Header } from "features/Header";
 import { HomeCommunityPledge } from "features/Home/CommunityPledge";
 import { HomeFeatures } from "features/Home/Features";
 import { HomeProductHero } from "features/Home/Hero";
-import { HomePolygonBanner } from "features/Home/PolygonBanner";
 import { HomeTryIt } from "features/Home/TryIt";
 import { Subscribe } from "features/Subscribe";
 import { css } from "linaria";
@@ -28,7 +27,6 @@ export function Home() {
       <SEO />
 
       <Header />
-      <HomePolygonBanner />
 
       <div
         className={css`

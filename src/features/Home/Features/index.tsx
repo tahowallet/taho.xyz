@@ -101,7 +101,7 @@ export function HomeFeatures() {
           >
             For all your Ethereum, Polygon,
             <br />
-            and Optimism NFTs.
+            Optimism and Arbitrum NFTs.
           </Feature>
         </div>
         <div
@@ -175,7 +175,7 @@ export function HomeFeatures() {
             padding: 2rem;
           `}
         >
-          <ComingSoon>Arbitrum</ComingSoon>
+          <ComingSoon>Custom RPC</ComingSoon>
           <ComingSoon>Social Recovery</ComingSoon>
           <ComingSoon>More EVM Chains</ComingSoon>
         </div>

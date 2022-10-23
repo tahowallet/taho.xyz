@@ -1,4 +1,4 @@
-# tally.cash
+# tallyho.cash
 
 The primary website for Tally Ho, the community-owned web3 wallet.
 

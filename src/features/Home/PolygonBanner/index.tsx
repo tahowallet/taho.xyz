@@ -4,7 +4,7 @@ import { bodyDarkGreen120, cardBackgroundGold60 } from "shared/styles/colors";
 import { bodySmallSegment18 } from "shared/styles/fonts";
 import { sectionInlinePadding } from "shared/styles/lengths";
 
-export function HomePolygonBanner() {
+export function HomeBanner({ text }: { text: string }) {
   return (
     <div
       className={css`
@@ -23,7 +23,7 @@ export function HomePolygonBanner() {
           padding-left: 4rem;
         `}
       >
-        Arbitrum support coming soon.
+        {text}
       </div>
     </div>
   );

@@ -147,7 +147,7 @@ export function ClaimDiscordRole({ account }: { account: FullAccount }) {
                   color: ${linkDarkTrophyGold};
                 }
               `}
-              to="https://chat.tally.cash/"
+              to="https://chat.tallyho.org/"
               target="_blank"
             >
               join our Discord ↗︎︎︎

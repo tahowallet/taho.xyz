@@ -73,7 +73,7 @@ export function DaoHero() {
               background-color: ${buttonBackgroundSemanticSuccess};
               margin: 4rem 0;
             `}
-            href="https://chat.tally.cash"
+            href="https://chat.tallyho.org"
             target="_blank"
           >
             Join Discord

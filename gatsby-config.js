@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Tally Ho — The community owned & operated wallet`,
     description: ``,
-    image: `https://tally.cash/cover.png`, // Twitter wants an absolute rather than relative url.
+    image: `https://tallyho.org/cover.png`, // Twitter wants an absolute rather than relative url.
     author: `@thesis_co`,
   },
   plugins: [
@@ -36,7 +36,7 @@ module.exports = {
       options: {
         siteId: "1",
         matomoUrl: "https://tallycash.matomo.cloud",
-        siteUrl: "https://tally.cash",
+        siteUrl: "https://tallyho.org",
       },
     },
     {

@@ -1,10 +1,10 @@
 {
-  "name": "tally.cash",
+  "name": "tallyho.org",
   "version": "1.0.0",
   "private": true,
-  "description": "tally.cash",
-  "author": "Matt Luongo <mhluongo@gmail.com>",
-  "repository": "git@github.com:thesis/tally.cash.git",
+  "description": "tallyho.org",
+  "author": "Tally Ho Doggos <doggos@tallyho.org>",
+  "repository": "git@github.com:thesis/tallyho.org.git",
   "license": "MIT",
   "keywords": [
     "ethereum",

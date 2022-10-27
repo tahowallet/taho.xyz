@@ -98,7 +98,7 @@ export function DaoTimeline() {
               <Event date="September 2021">First Community POAPs created</Event>
               <Event
                 date="December 2021"
-                href="https://gov.tally.cash/t/tally-ho-delegate-applications/18"
+                href="https://gov.tallyho.org/t/tally-ho-delegate-applications/18"
               >
                 Call for DAO Delegates (still open!)
               </Event>
@@ -116,7 +116,7 @@ export function DaoTimeline() {
               </Event>
               <Event
                 date="May 2022"
-                href="https://gov.tally.cash/t/tally-ho-dao-structure-proposal/455"
+                href="https://gov.tallyho.org/t/tally-ho-dao-structure-proposal/455"
               >
                 DAO Structure Proposed
               </Event>

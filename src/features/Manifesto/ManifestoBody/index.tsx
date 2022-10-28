@@ -96,7 +96,7 @@ export function ManifestoBody() {
         Now imagine a community-owned wallet that actually embodies and protects
         Web3 values—a wallet that&rsquo;s available to anyone, anywhere on
         Earth, that can finance itself,{" "}
-        <a href="https://tally.cash/dao/" target="_blank">
+        <a href="https://tallyho.org/dao/" target="_blank">
           that&rsquo;s governed by a DAO
         </a>
         , and that&rsquo;s accountable to you, not some faceless corporation.

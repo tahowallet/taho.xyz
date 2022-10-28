@@ -45,7 +45,7 @@ export function FooterNav() {
         <NavLink to="/security">Security</NavLink>
         <NavLink to="/dao">DAO</NavLink>
         <NavLink to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd">Download</NavLink>
-        <NavLink blank to="https://gov.tally.cash/">
+        <NavLink blank to="https://gov.tallyho.org/">
           Governance
         </NavLink>
         <NavLink blank to="https://docs.tally.cash/">
@@ -58,7 +58,7 @@ export function FooterNav() {
           Jobs
         </NavLink>
         <SocialLink
-          href="https://chat.tally.cash"
+          href="https://chat.tallyho.org"
           icon={{
             width: `24px`,
             height: `24px`,

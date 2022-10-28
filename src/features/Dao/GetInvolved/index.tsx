@@ -71,14 +71,14 @@ export function DaoGetInvolved() {
       >
         <Option
           iconSrc={require("./option-1-discord.svg")}
-          href="https://chat.tally.cash/"
+          href="https://chat.tallyho.org/"
           title="Discord"
         >
           The best way to get started and join the community.
         </Option>
         <Option
           iconSrc={require("./option-2-gov.svg")}
-          href="https://gov.tally.cash/"
+          href="https://gov.tallyho.org/"
           title="Governance Forum"
         >
           Our governance forum. A place for sharing governance ideas and

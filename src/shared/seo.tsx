@@ -6,7 +6,7 @@ function SEO({
   lang = `en`,
   meta = [],
   title,
-  metaImage = `https://tally.cash/cover.png`,
+  metaImage = `https://tallyho.org/cover.png`,
 }: {
   description?: string;
   lang?: string;

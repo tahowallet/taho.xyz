@@ -31,6 +31,7 @@ css`
       margin: 0 auto;
       margin-bottom: 60px;
       padding: 0 30px;
+      text-align: center;
     }
     .banner p {
       color: ${bodyDarkGreen40};

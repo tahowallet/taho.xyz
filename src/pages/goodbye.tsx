@@ -29,14 +29,14 @@ css`
       font-size: 48px;
       font-weight: normal;
       margin: 0 auto;
-      margin-bottom: 60px;
+      margin-bottom: 24px;
       padding: 0 30px;
       text-align: center;
     }
     .banner p {
       color: ${bodyDarkGreen40};
-      font-size: 21px;
-      margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 12px;
       padding: 0 20px;
       text-align: center;
     }

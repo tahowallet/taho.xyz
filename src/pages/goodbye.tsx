@@ -37,6 +37,8 @@ css`
       color: ${bodyDarkGreen40};
       font-size: 21px;
       margin-bottom: 20px;
+      padding: 0 20px;
+      text-align: center;
     }
     .banner a {
       float: left;

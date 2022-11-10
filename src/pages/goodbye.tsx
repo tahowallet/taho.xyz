@@ -61,7 +61,8 @@ const Goodbye = () => (
       <div className="branding"/>
       <h1>We’re sorry to see you go 🙁</h1>
       {/* Drop typeform code here */}
-      <p>Keep in touch</p>
+      <p>It didn't work out this time, but you can still stay plugged in with our community!</p>
+      <p>Follow us for news on improvements and new features.</p><br/><br/>
       <div className="social-container">
         <SocialIcon
           href="https://chat.tallyho.org"

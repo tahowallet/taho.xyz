@@ -83,7 +83,7 @@ export function SecurityAudits() {
               auditor={<>Least Authority</>}
               date={<>November 2021</>}
               detail={<>Wallet keyring</>}
-              href="https://leastauthority.com/blog/audit-of-tally-browser-extension-wallet-key-handling-for-ylvis-llc/"
+              href="https://leastauthority.com/static/publications/LeastAuthority-YLVIS_LLC_Tally_Browser_Extension_Wallet_Key_Handling_Final_Audit_Report.pdf"
             />
             <Audit
               auditor={<>Code Arena</>}

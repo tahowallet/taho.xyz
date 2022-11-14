@@ -203,7 +203,7 @@ export function HomeFeatures() {
             justify-content: center;
           `}
         >
-          {Array.from({ length: 18 }).map((unused, i) => (
+          {Array.from({ length: 19 }).map((unused, i) => (
             <div
               className={css`
                 width: 16rem;

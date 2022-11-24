@@ -66,7 +66,7 @@ export function Subscribe() {
               text-align: center;
             `}
           >
-            Sign up for our newsletter on the latest updates about Tally Ho.
+            Get the alpha on Tally Ho.
           </p>
         </div>
         <form

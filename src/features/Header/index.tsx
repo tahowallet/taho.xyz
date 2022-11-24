@@ -70,9 +70,8 @@ export function Header() {
             }
           `}
         >
-          <NavLink to="/">Wallet</NavLink>
-          <NavLink to="/security">Security</NavLink>
-          <NavLink to="/dao">DAO</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/web3pledge">Web3 Pledge</NavLink>
           <NavLink blank to="https://tally-ho.upvoty.com/?__force">
             Roadmap
           </NavLink>

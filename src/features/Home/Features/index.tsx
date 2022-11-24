@@ -53,7 +53,7 @@ export function HomeFeatures() {
       >
         Tally Ho makes it safe and easy to connect to DeFi and web3.
         <br />
-        It&rsquo;s got everything you need from MetaMask, plus lots more to
+        It has everything you need from MetaMask, plus lots more to
         love:
       </p>
       <div
@@ -99,7 +99,7 @@ export function HomeFeatures() {
               </>
             }
           >
-            For all your Ethereum, Polygon,
+            View all your Ethereum, Polygon,
             <br />
             Optimism and Arbitrum NFTs.
           </Feature>
@@ -124,7 +124,7 @@ export function HomeFeatures() {
           `}
         >
           <Feature title={<>Way cheaper swaps.</>}>
-            Tally Ho Swaps are half the price of other wallets. And there are no
+            Tally Ho Swaps are half the price of other wallets, and there are no
             hidden fees.
           </Feature>
         </div>

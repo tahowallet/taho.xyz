@@ -7,6 +7,7 @@ import { HomeFeatures } from "features/Home/Features";
 import { HomeProductHero } from "features/Home/Hero";
 import { HomeTryIt } from "features/Home/TryIt";
 import { Subscribe } from "features/Subscribe";
+import { Link } from "gatsby";
 import { css } from "linaria";
 import React from "react";
 import SEO from "shared/seo";
@@ -15,6 +16,7 @@ import {
   sectionBackgroundGold5,
   sectionBackgroundOffWhite,
 } from "shared/styles/colors";
+import { HomeBanner } from "./HomeBanner";
 
 export function Home() {
   return (
@@ -27,6 +29,22 @@ export function Home() {
       <SEO />
 
       <Header />
+      <HomeBanner>
+        <div
+          className={css`
+            & > span {
+              margin-right: 8px;
+            }
+
+            & > a {
+              text-decoration: underline;
+            }
+          `}
+        >
+          <span>We've updated our Privacy Policy.</span>
+          <Link to="/privacy">Read it here.</Link>
+        </div>
+      </HomeBanner>
 
       <div
         className={css`

@@ -67,8 +67,11 @@ css`
 
 const Goodbye = ({ location }: { location: { search: string } }) => {
   const params = new URLSearchParams(location.search);
-  // @ts-expect-error We have the posthog plugin installed and configured which initializes window.posthog
-  window.posthog.capture("Uninstall", { distinct_id: params.get("uuid") });
+
+  if (typeof window !== "undefined" && typeof window.posthog !== "undefined") {
+    window.posthog.capture("Uninstall", { distinct_id: params.get("uuid") });
+  }
+
   return (
     <div className="container">
       <div className="banner">

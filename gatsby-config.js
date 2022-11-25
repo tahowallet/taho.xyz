@@ -45,5 +45,22 @@ module.exports = {
         pixelId: "o9kgt",
       },
     },
+    {
+      resolve: `gatsby-plugin-posthog`,
+      options: {
+        // Specify the API key for your Posthog Project (required)
+        apiKey: "phc_VzveyNxrn2xyiKDYn7XjrgaqELGeUilDZGiBVh6jNmh",
+        // Specify the app host if self-hosting (optional, default: https://app.posthog.com)
+        apiHost: "https://app.posthog.com",
+        // Puts tracking script in the head instead of the body (optional, default: true)
+        head: true,
+        // Enable posthog analytics tracking during development (optional, default: false)
+        isEnabledDevMode: true,
+        // Pass custom variables to posthog.init() (optional)
+        initOptions: {
+          persistence: "localStorage",
+        },
+      },
+    },
   ],
 };

@@ -43,6 +43,7 @@
     "gatsby-plugin-matomo": "^0.11.0",
     "gatsby-plugin-mdx": "2",
     "gatsby-plugin-offline": "^3.10.0",
+    "gatsby-plugin-posthog": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-plugin-twitter-pixel": "^2.0.2",

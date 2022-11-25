@@ -1,3 +1,4 @@
 interface Window {
-    twttr: any
-  }
+  twttr: any;
+  posthog: any;
+}

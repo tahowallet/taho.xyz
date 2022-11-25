@@ -59,6 +59,9 @@ module.exports = {
         // Pass custom variables to posthog.init() (optional)
         initOptions: {
           persistence: "localStorage",
+          autocapture: false,
+          capture_pageview: false,
+          disable_session_recording: true,
         },
       },
     },

@@ -68,7 +68,7 @@ export function FooterNav() {
           }}
         />
         <SocialLink
-          href="https://twitter.com/tallycash"
+          href="https://twitter.com/TallyHoOfficial"
           icon={{
             width: `28px`,
             height: `24px`,

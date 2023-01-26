@@ -88,7 +88,7 @@ export function SecurityFeatures() {
             </>
           }
           cta={
-            <Cta href="https://github.com/tallycash/extension">
+            <Cta href="https://github.com/tallyhowallet/extension">
               View on Github
             </Cta>
           }

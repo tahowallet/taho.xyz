@@ -48,8 +48,8 @@ export function FooterNav() {
         <NavLink blank to="https://gov.tallyho.org/">
           Governance
         </NavLink>
-        <NavLink blank to="https://docs.tally.cash/">
-          Docs
+        <NavLink blank to="https://tallyhowallet.notion.site/Tally-Ho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5">
+          FAQ
         </NavLink>
         <NavLink blank to="https://blog.tally.cash/">
           Blog
@@ -78,7 +78,7 @@ export function FooterNav() {
           }}
         />
         <SocialLink
-          href="https://github.com/tallycash/extension"
+          href="https://github.com/tallyhowallet/extension"
           icon={{
             width: `28px`,
             height: `28px`,

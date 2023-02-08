@@ -5,6 +5,7 @@ import { Header } from "features/Header";
 import { HomeCommunityPledge } from "features/Home/CommunityPledge";
 import { HomeFeatures } from "features/Home/Features";
 import { HomeProductHero } from "features/Home/Hero";
+import { HomeBanner } from "./PolygonBanner";
 import { HomeTryIt } from "features/Home/TryIt";
 import { Subscribe } from "features/Subscribe";
 import { css } from "linaria";
@@ -40,6 +41,7 @@ export function Home() {
             background: ${sectionBackgroundGold5};
           `}
         >
+          <HomeBanner />
           <HomeProductHero />
           <div id="download">
             <HomeTryIt />

@@ -23,8 +23,7 @@ export function HomeBanner({ text }: { text: string }) {
           padding-left: 4rem;
         `}
       >
-        {"We've updated our Privacy Policy. Read it"}
-        <a href="https://tallyho.org/privacy/"> <u>here</u>.</a>
+        {text}
       </div>
     </div>
   );

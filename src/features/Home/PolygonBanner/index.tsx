@@ -4,7 +4,7 @@ import { bodyDarkGreen120, cardBackgroundGold60 } from "shared/styles/colors";
 import { bodySmallSegment18 } from "shared/styles/fonts";
 import { sectionInlinePadding } from "shared/styles/lengths";
 
-export function HomeBanner({ text }: { text: string }) {
+export function HomeBanner() {
   return (
     <div
       className={css`

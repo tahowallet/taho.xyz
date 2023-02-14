@@ -35,13 +35,13 @@ export function Home() {
           flex-flow: column;
         `}
       >
+        <HomeBanner />
         <div
           className={css`
             padding: 6rem 0;
             background: ${sectionBackgroundGold5};
           `}
         >
-          <HomeBanner />
           <HomeProductHero />
           <div id="download">
             <HomeTryIt />

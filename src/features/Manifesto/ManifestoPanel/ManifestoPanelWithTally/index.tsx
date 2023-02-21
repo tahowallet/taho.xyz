@@ -71,7 +71,7 @@ export function ManifestoPanelWithTally({
         }
         title={<>Are you in?</>}
       >
-        <CTAText>Sign the Tally Ho Community Pledge in 3 easy steps.</CTAText>
+        <CTAText>Sign the Taho Community Pledge in 3 easy steps.</CTAText>
         <StepContainer>
           <Step index={1} isDone={!!account}>
             {account ? (
@@ -90,7 +90,7 @@ export function ManifestoPanelWithTally({
                   connectWallet({ ethereum });
                 }}
               >
-                Connect with Tally Ho!
+                Connect with Taho!
               </StepButton>
             )}
             {accountError && (

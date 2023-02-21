@@ -27,7 +27,7 @@ export function Manifesto() {
         `}
       >
         <SEO
-          title="Tally Ho Community Pledge"
+          title="Taho Community Pledge"
           description={
             "Sign to join our community & be eligible for future surprises"
           }

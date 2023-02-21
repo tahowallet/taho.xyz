@@ -1,9 +1,9 @@
 {
-  "name": "tallyho.org",
+  "name": "taho.xyz",
   "version": "1.0.0",
   "private": true,
-  "description": "tallyho.org",
-  "author": "Tally Ho Doggos <doggos@tallyho.org>",
+  "description": "taho.xyz",
+  "author": "Taho <doggos@tallyho.org>",
   "repository": "git@github.com:thesis/tallyho.org.git",
   "license": "MIT",
   "keywords": [

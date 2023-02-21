@@ -37,14 +37,14 @@ export function DaoTestimonials() {
           authorHeadline="Kevin Owocki"
           authorSupport="Gitcoin co-founder"
         >
-          “We&rsquo;re excited to see Tally Ho&rsquo;s leadership make public
+          “We&rsquo;re excited to see Taho&rsquo;s leadership make public
           goods funding a top priority from their DAO&rsquo;s inception.”
         </Testimonial>
         <Testimonial
           authorIconSrc={require("./testimonial-icon-2-bankless.png")}
           authorHeadline="BanklessDAO"
         >
-          “Tally Ho has been hard at work designing a DAO structure that is
+          “Taho has been hard at work designing a DAO structure that is
           strong but nimble, and focuses on maximizing autonomy and agency while
           following a clear, scalable roadmap.”
         </Testimonial>

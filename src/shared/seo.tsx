@@ -14,7 +14,7 @@ function SEO({
   title?: string;
   metaImage?: string;
 }) {
-  const metaTitle = title ?? `Tally Ho — The community owned & operated wallet`;
+  const metaTitle = title ?? `Taho — The community owned & operated wallet`;
   const metaDescription = description ?? ``;
 
   return (

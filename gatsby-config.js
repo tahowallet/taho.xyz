@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Tally Ho — The community owned & operated wallet`,
+    title: `Taho — The community owned & operated wallet`,
     description: ``,
     image: `https://tallyho.org/cover.png`, // Twitter wants an absolute rather than relative url.
     author: `@thesis_co`,
@@ -16,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tally Ho — The community owned & operated wallet`,
-        short_name: `Tally Ho`,
+        name: `Taho — The community owned & operated wallet`,
+        short_name: `Taho`,
         start_url: `/`,
         background_color: `#fbf9f2`,
         theme_color: `#fbf9f2`,

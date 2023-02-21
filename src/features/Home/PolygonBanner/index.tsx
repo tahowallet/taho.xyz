@@ -23,8 +23,8 @@ export function HomeBanner() {
           padding-left: 4rem;
         `}
       >
-        {"We've updated our Privacy Policy. Read it"}
-        <a href="https://tallyho.org/privacy/"> <u>here</u>.</a>
+        {"Tally Ho is now Taho. "}
+        <a href="https://blog.taho.xyz/rename-announcement/"> <u>Learn more</u>.</a>
       </div>
     </div>
   );

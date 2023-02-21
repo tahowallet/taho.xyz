@@ -49,7 +49,7 @@ export function SecurityFeatures() {
             color: ${bodyDarkGold120};
           `}
         >
-          Tally Ho combines bulletproof security and top-to-bottom transparency
+          Taho combines bulletproof security and top-to-bottom transparency
           so you can explore web3 without having to worry.
         </p>
       </div>
@@ -75,7 +75,7 @@ export function SecurityFeatures() {
           }
           iconSrc={require("./feature-1-keys.svg")}
         >
-          Tally Ho is 100% self-custodial. Your private keys are secured on your
+          Taho is 100% self-custodial. Your private keys are secured on your
           computer and never leave your device.
         </Feature>
         <Feature
@@ -106,7 +106,7 @@ export function SecurityFeatures() {
           }
           cta={<Cta href="/privacy">View our Privacy Policy</Cta>}
         >
-          No personal info is required to sign up, and Tally Ho never tracks
+          No personal info is required to sign up, and Taho never tracks
           your activity or addresses.
         </Feature>
         <Feature
@@ -119,7 +119,7 @@ export function SecurityFeatures() {
             </>
           }
         >
-          Tally Ho has undergone review from the premiere security firms in
+          Taho has undergone review from the premiere security firms in
           web3.
         </Feature>
       </div>

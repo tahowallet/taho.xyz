@@ -51,7 +51,7 @@ export function HomeFeatures() {
           color: ${bodyDarkGrey80};
         `}
       >
-        Tally Ho makes it safe and easy to connect to DeFi and web3.
+        Taho makes it safe and easy to connect to DeFi and web3.
         <br />
         It has everything you need from MetaMask, plus lots more to
         love:
@@ -124,7 +124,7 @@ export function HomeFeatures() {
           `}
         >
           <Feature title={<>Way cheaper swaps.</>}>
-            Tally Ho Swaps are half the price of other wallets, and there are no
+            Taho Swaps are half the price of other wallets, and there are no
             hidden fees.
           </Feature>
         </div>
@@ -136,7 +136,7 @@ export function HomeFeatures() {
           `}
         >
           <Feature title={<>Nothing to hide.</>}>
-            Tally Ho is
+            Taho is
             <br />
             100% open source.
           </Feature>

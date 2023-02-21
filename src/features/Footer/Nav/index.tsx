@@ -44,21 +44,21 @@ export function FooterNav() {
       >
         <NavLink to="/security">Security</NavLink>
         <NavLink to="/dao">DAO</NavLink>
-        <NavLink to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd">Download</NavLink>
+        <NavLink to="https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd">Download</NavLink>
         <NavLink blank to="https://gov.tallyho.org/">
           Governance
         </NavLink>
-        <NavLink blank to="https://tallyhowallet.notion.site/Tally-Ho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5">
+        <NavLink blank to="https://tahowallet.notion.site/Tally-Ho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5">
           FAQ
         </NavLink>
-        <NavLink blank to="https://blog.tally.cash/">
+        <NavLink blank to="https://blog.taho.xyz/">
           Blog
         </NavLink>
         <NavLink blank to="https://boards.greenhouse.io/tallywallet/">
           Jobs
         </NavLink>
         <SocialLink
-          href="https://chat.tallyho.org"
+          href="https://chat.taho.org"
           icon={{
             width: `24px`,
             height: `24px`,
@@ -68,7 +68,7 @@ export function FooterNav() {
           }}
         />
         <SocialLink
-          href="https://twitter.com/TallyHoOfficial"
+          href="https://twitter.com/taho_xyz"
           icon={{
             width: `28px`,
             height: `24px`,

@@ -97,7 +97,7 @@ export function DaoGetInvolved() {
           href="https://github.com/tallyhowallet/extension"
           title="Github"
         >
-          Tally Ho&rsquo;s code is 100% free and open source. Check out our{" "}
+          Taho&rsquo;s code is 100% free and open source. Check out our{" "}
           &lsquo;good first issue&rsquo; tag to get started.
         </Option>
       </div>

@@ -73,9 +73,7 @@ export function HomeProductHero() {
               color: ${bodyDarkGrey80};
             `}
           >
-            Tally Ho is the first wallet
-            <br />
-            owned by its users.
+            Taho is the first community-owned web3 wallet
           </p>
           <Link
             className={"matomo_download " + css`

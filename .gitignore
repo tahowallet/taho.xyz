@@ -112,3 +112,6 @@ dist
 
 # Linaria cache
 .linaria-cache
+
+# Mac system files
+.DS_Store

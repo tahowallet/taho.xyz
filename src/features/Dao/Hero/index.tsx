@@ -49,7 +49,7 @@ export function DaoHero() {
               color: ${titleDarkHunterGreen};
             `}
           >
-            The Tally Ho
+            The Taho
             <br />
             DAO is forming.
           </h1>

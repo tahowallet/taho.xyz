@@ -53,7 +53,7 @@ export function Header() {
             }
           `}
           activeClassName="active"
-          to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd"
+          to="https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd"
         >
           Download
         </Link>
@@ -75,8 +75,11 @@ export function Header() {
           <NavLink blank to="https://tally-ho.upvoty.com/?__force">
             Roadmap
           </NavLink>
-          <NavLink blank to="https://blog.tally.cash/">
+          <NavLink blank to="https://blog.taho.xyz/">
             Blog
+          </NavLink>
+          <NavLink blank to="https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5">
+            FAQ
           </NavLink>
         </div>
       </div>

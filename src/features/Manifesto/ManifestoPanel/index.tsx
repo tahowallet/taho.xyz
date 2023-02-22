@@ -94,7 +94,7 @@ export function ManifestoPanel() {
         }
         title={<>Are you in?</>}
       >
-        <CTAText>Download Tally Ho to sign our Community Pledge.</CTAText>
+        <CTAText>Download Taho to sign our Community Pledge.</CTAText>
         <div
           className={css`
             display: flex;

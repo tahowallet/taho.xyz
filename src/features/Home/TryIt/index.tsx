@@ -24,7 +24,7 @@ export function HomeTryIt() {
           font: ${h1Quincy72};
         `}
       >
-        Try Tally Ho now
+        Try Taho now
       </h1>
       <p
         className={css`

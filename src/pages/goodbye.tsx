@@ -65,7 +65,7 @@ css`
   }
 `;
 
-const Goodbye = ({ location }: { location: { search: string } }) => {
+const Goodbye = () => {
   const params = new URLSearchParams(location.search);
 
   if (typeof window !== "undefined" && typeof window.posthog !== "undefined") {
@@ -97,7 +97,7 @@ const Goodbye = ({ location }: { location: { search: string } }) => {
             }}
           />
           <SocialIcon
-            href="https://twitter.com/tallycash"
+            href="https://twitter.com/TallyHoOfficial"
             icon={{
               width: `28px`,
               height: `24px`,

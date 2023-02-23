@@ -100,8 +100,8 @@ export function ManifestoBody() {
           that&rsquo;s governed by a DAO
         </a>
         , and that&rsquo;s accountable to you, not some faceless corporation.
-        Well, that&rsquo;s Taho: a Web3 wallet for everyone, built to
-        safeguard your assets and your rights.
+        Well, that&rsquo;s Taho: a Web3 wallet for everyone, built to safeguard
+        your assets and your rights.
       </p>
       <hr
         className={css`

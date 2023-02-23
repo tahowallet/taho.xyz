@@ -14,9 +14,9 @@ import {
   sectionInlinePadding,
 } from "shared/styles/lengths";
 
-import chromeLogo from "@browser-logos/chrome/chrome.svg"
-import braveLogo from "@browser-logos/brave/brave.svg"
-import firefoxLogo from "@browser-logos/firefox/firefox.svg"
+import chromeLogo from "@browser-logos/chrome/chrome.svg";
+import braveLogo from "@browser-logos/brave/brave.svg";
+import firefoxLogo from "@browser-logos/firefox/firefox.svg";
 
 const chromeDownloadHref =
   "https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd";
@@ -25,15 +25,18 @@ const firefoxDownloadHref = "/tally_ho_pre_release_channel-0.13.1-fx.xpi";
 export function DownloadCta() {
   return (
     <div
-      className={"matomo_download " + css`
-        padding: 3rem 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        max-width: ${sectionNarrowWidth};
-        margin: 0 auto;
-        padding: 0 ${sectionInlinePadding};
-      `}
+      className={
+        "matomo_download " +
+        css`
+          padding: 3rem 0;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+          max-width: ${sectionNarrowWidth};
+          margin: 0 auto;
+          padding: 0 ${sectionInlinePadding};
+        `
+      }
     >
       <Option
         name="Chrome"

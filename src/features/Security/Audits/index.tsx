@@ -75,7 +75,10 @@ export function SecurityAudits() {
               auditor={<>Open Zeppelin</>}
               date={<>August 2020</>}
               detail={
-                <>Early prototype versions of Tally Swaps, Earn, and token contracts</>
+                <>
+                  Early prototype versions of Tally Swaps, Earn, and token
+                  contracts
+                </>
               }
               href="/OpenZeppelin_Audit_Report.pdf"
             />

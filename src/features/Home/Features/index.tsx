@@ -53,8 +53,7 @@ export function HomeFeatures() {
       >
         Taho makes it safe and easy to connect to DeFi and web3.
         <br />
-        It has everything you need from MetaMask, plus lots more to
-        love:
+        It has everything you need from MetaMask, plus lots more to love:
       </p>
       <div
         className={css`

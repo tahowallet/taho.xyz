@@ -1,13 +1,7 @@
 import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
-import {
-  bodyDarkGreen60,
-  bodyDarkGreen80
-} from "shared/styles/colors";
-import {
-  bodyNormalSegment24,
-  bodySmallSegment18
-} from "shared/styles/fonts";
+import { bodyDarkGreen60, bodyDarkGreen80 } from "shared/styles/colors";
+import { bodyNormalSegment24, bodySmallSegment18 } from "shared/styles/fonts";
 
 export function AfterSignStep({
   title,

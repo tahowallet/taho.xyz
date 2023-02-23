@@ -9,7 +9,7 @@ import {
   buttonBorderRadius,
   buttonInlinePadding,
 } from "shared/styles/lengths";
-import logo from "./logo.svg"
+import logo from "./logo.svg";
 
 export function Header() {
   return (
@@ -39,20 +39,23 @@ export function Header() {
           />
         </Link>
         <Link
-          className={"matomo_download " + css`
-            position: relative;
-            margin: 0 0.75rem;
-            color: inherit;
-            padding: ${buttonBlockPadding} ${buttonInlinePadding};
-            border-radius: ${buttonBorderRadius};
-            background: ${buttonBackgroundTrophyGold};
-            font: ${buttonLabelQuincy18};
-            text-decoration: none;
+          className={
+            "matomo_download " +
+            css`
+              position: relative;
+              margin: 0 0.75rem;
+              color: inherit;
+              padding: ${buttonBlockPadding} ${buttonInlinePadding};
+              border-radius: ${buttonBorderRadius};
+              background: ${buttonBackgroundTrophyGold};
+              font: ${buttonLabelQuincy18};
+              text-decoration: none;
 
-            @media (min-width: 48rem) {
-              order: 1;
-            }
-          `}
+              @media (min-width: 48rem) {
+                order: 1;
+              }
+            `
+          }
           activeClassName="active"
           to="https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd"
         >
@@ -79,7 +82,10 @@ export function Header() {
           <NavLink blank to="https://blog.taho.xyz/">
             Blog
           </NavLink>
-          <NavLink blank to="https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5">
+          <NavLink
+            blank
+            to="https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5"
+          >
             FAQ
           </NavLink>
         </div>

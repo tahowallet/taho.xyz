@@ -13,7 +13,12 @@ export function DiscordLogo() {
         color: #4d60ea;
       `}
     >
-      <img width="24" height="24" src={require("./icon-discord.svg").default} alt="" />
+      <img
+        width="24"
+        height="24"
+        src={require("./icon-discord.svg").default}
+        alt=""
+      />
       Discord
     </div>
   );

@@ -156,7 +156,12 @@ export function ManifestoPanelWithTally({
             color: ${bodyDarkGreen60};
           `}
         >
-          <img width="30" height="30" alt="" src={require("./gasless.svg").default} />
+          <img
+            width="30"
+            height="30"
+            alt=""
+            src={require("./gasless.svg").default}
+          />
           gasless transaction
         </p>
       </ManifestoPanelLayout>

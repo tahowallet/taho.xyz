@@ -22,10 +22,10 @@ import {
   sectionWideWidth,
 } from "shared/styles/lengths";
 
-import option1Discord from "./option-1-discord.svg"
-import option2Gov from "./option-2-gov.svg"
-import option3Workspace from "./option-3-workspace.svg"
-import option4Github from "./option-4-github.svg"
+import option1Discord from "./option-1-discord.svg";
+import option2Gov from "./option-2-gov.svg";
+import option3Workspace from "./option-3-workspace.svg";
+import option4Github from "./option-4-github.svg";
 
 export function DaoGetInvolved() {
   return (

@@ -10,8 +10,8 @@ import {
 import { bodyNormalSegment24, quoteQuincy32 } from "shared/styles/fonts";
 import { sectionInlinePadding, sectionWideWidth } from "shared/styles/lengths";
 
-import testimonialIcon1Gitcoin from "./testimonial-icon-1-gitcoin.svg"
-import testimonialIcon2Bankless from "./testimonial-icon-2-bankless.png"
+import testimonialIcon1Gitcoin from "./testimonial-icon-1-gitcoin.svg";
+import testimonialIcon2Bankless from "./testimonial-icon-2-bankless.png";
 
 export function DaoTestimonials() {
   return (
@@ -40,15 +40,15 @@ export function DaoTestimonials() {
           authorHeadline="Kevin Owocki"
           authorSupport="Gitcoin co-founder"
         >
-          “We&rsquo;re excited to see Taho&rsquo;s leadership make public
-          goods funding a top priority from their DAO&rsquo;s inception.”
+          “We&rsquo;re excited to see Taho&rsquo;s leadership make public goods
+          funding a top priority from their DAO&rsquo;s inception.”
         </Testimonial>
         <Testimonial
           authorIconSrc={testimonialIcon2Bankless}
           authorHeadline="BanklessDAO"
         >
-          “Taho has been hard at work designing a DAO structure that is
-          strong but nimble, and focuses on maximizing autonomy and agency while
+          “Taho has been hard at work designing a DAO structure that is strong
+          but nimble, and focuses on maximizing autonomy and agency while
           following a clear, scalable roadmap.”
         </Testimonial>
       </div>

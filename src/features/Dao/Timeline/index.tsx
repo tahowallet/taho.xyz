@@ -54,8 +54,8 @@ export function DaoTimeline() {
             color: ${bodyDarkGrey80};
           `}
         >
-          Taho&rsquo;s community has been building in public for over a
-          year. <br />
+          Taho&rsquo;s community has been building in public for over a year.{" "}
+          <br />
           The on-chain DAO will launch in 2022.
         </p>
       </div>

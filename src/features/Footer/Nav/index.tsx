@@ -3,22 +3,20 @@ import { css } from "@linaria/core";
 import React, { CSSProperties, ReactNode } from "react";
 import {
   borderDarkTrophyGold,
-  titleDarkHunterGreen
+  titleDarkHunterGreen,
 } from "shared/styles/colors";
-import {
-  segmentFontFamily,
-} from "shared/styles/font-families";
+import { segmentFontFamily } from "shared/styles/font-families";
 
-import logo from "./logo.svg"
-import discord from "./social-icons/discord.svg"
-import discordHover from "./social-icons/discord-hover.svg"
-import discordClick from "./social-icons/discord-click.svg"
-import twitter from "./social-icons/twitter.svg"
-import twitterHover from "./social-icons/twitter-hover.svg"
-import twitterClick from "./social-icons/twitter-click.svg"
-import github from "./social-icons/github.svg"
-import githubHover from "./social-icons/github-hover.svg"
-import githubClick from "./social-icons/github-click.svg"
+import logo from "./logo.svg";
+import discord from "./social-icons/discord.svg";
+import discordHover from "./social-icons/discord-hover.svg";
+import discordClick from "./social-icons/discord-click.svg";
+import twitter from "./social-icons/twitter.svg";
+import twitterHover from "./social-icons/twitter-hover.svg";
+import twitterClick from "./social-icons/twitter-click.svg";
+import github from "./social-icons/github.svg";
+import githubHover from "./social-icons/github-hover.svg";
+import githubClick from "./social-icons/github-click.svg";
 
 export function FooterNav() {
   return (
@@ -30,7 +28,7 @@ export function FooterNav() {
           flex-direction: row;
           justify-content: center;
         }
-        
+
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -39,8 +37,7 @@ export function FooterNav() {
       `}
     >
       <Link to="/">
-        <img width="168" height="127" src={require("./logo.svg").default} 
-        />
+        <img width="168" height="127" src={require("./logo.svg").default} />
       </Link>
       <div
         className={css`
@@ -55,11 +52,16 @@ export function FooterNav() {
       >
         <NavLink to="/security">Security</NavLink>
         <NavLink to="/dao">DAO</NavLink>
-        <NavLink to="https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd">Download</NavLink>
+        <NavLink to="https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd">
+          Download
+        </NavLink>
         <NavLink blank to="https://gov.tallyho.org/">
           Governance
         </NavLink>
-        <NavLink blank to="https://tahowallet.notion.site/Tally-Ho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5">
+        <NavLink
+          blank
+          to="https://tahowallet.notion.site/Tally-Ho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5"
+        >
           FAQ
         </NavLink>
         <NavLink blank to="https://blog.taho.xyz/">

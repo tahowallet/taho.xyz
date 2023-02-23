@@ -280,7 +280,9 @@ async function verifyToken(token: SignedMessage) {
   }
 
   if (
-    !["tallyho.org","tally.cash", "taho.xyz", "localhost:8000"].includes(verified.domain) &&
+    !["tallyho.org", "tally.cash", "taho.xyz", "localhost:8000"].includes(
+      verified.domain
+    ) &&
     !verified.domain.endsWith("tally-cash.netlify.app")
   ) {
     throw new HttpsError("invalid-argument", "Wrong domain", "Wrong domain");

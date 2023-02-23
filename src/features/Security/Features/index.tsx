@@ -49,8 +49,8 @@ export function SecurityFeatures() {
             color: ${bodyDarkGold120};
           `}
         >
-          Taho combines bulletproof security and top-to-bottom transparency
-          so you can explore web3 without having to worry.
+          Taho combines bulletproof security and top-to-bottom transparency so
+          you can explore web3 without having to worry.
         </p>
       </div>
       <div
@@ -106,8 +106,8 @@ export function SecurityFeatures() {
           }
           cta={<Cta href="/privacy">View our Privacy Policy</Cta>}
         >
-          No personal info is required to sign up, and Taho never tracks
-          your activity or addresses.
+          No personal info is required to sign up, and Taho never tracks your
+          activity or addresses.
         </Feature>
         <Feature
           iconsrc={require("./feature-4-audited.svg").default}
@@ -119,8 +119,7 @@ export function SecurityFeatures() {
             </>
           }
         >
-          Taho has undergone review from the premiere security firms in
-          web3.
+          Taho has undergone review from the premiere security firms in web3.
         </Feature>
       </div>
     </div>

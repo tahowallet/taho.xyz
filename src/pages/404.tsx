@@ -36,57 +36,56 @@ import { buttonShadow, tileBoxShadow } from "shared/styles/shadows";
 
 export function NotFoundPage() {
   return (
-  <>
-    <SEO />
+    <>
+      <SEO />
 
-    <Header />
-  <div
-    className={css`
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      color: #000;
-      background: ${sectionBackgroundGold5};
-    `}
-  >
-
-    <div
-      className={css`
-        background: ${footerSeparatorBackground},
-          ${sectionBackgroundOffWhite};
-          padding: 12rem 0 18rem;
-          border-radius: 20px;
-          margin-top: 30px;
-          text-align:center;
+      <Header />
+      <div
+        className={css`
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
           width: 100%;
-      `}
-    >
-    <h1
-      className={css`
-        color: ${titleDarkHunterGreen};
-        font: ${h1Quincy72};
-      `}
-    >
-    404: Not Found
-    </h1>
-    <p
-      className={css`
-        max-width: 32rem;
-        margin: ${subtitleBlockMargin} auto;
-        font: ${bodyNormalSegment24};
-        color: ${bodyDarkGold120};
-      `}
-    >
-      You just hit a route that doesn&#39;t exist... the sadness.
-    </p>
-    </div>
+          color: #000;
+          background: ${sectionBackgroundGold5};
+        `}
+      >
+        <div
+          className={css`
+            background: ${footerSeparatorBackground},
+              ${sectionBackgroundOffWhite};
+            padding: 12rem 0 18rem;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: center;
+            width: 100%;
+          `}
+        >
+          <h1
+            className={css`
+              color: ${titleDarkHunterGreen};
+              font: ${h1Quincy72};
+            `}
+          >
+            404: Not Found
+          </h1>
+          <p
+            className={css`
+              max-width: 32rem;
+              margin: ${subtitleBlockMargin} auto;
+              font: ${bodyNormalSegment24};
+              color: ${bodyDarkGold120};
+            `}
+          >
+            You just hit a route that doesn&#39;t exist... the sadness.
+          </p>
+        </div>
 
-    <Footer />
-  </div>
-  </>
+        <Footer />
+      </div>
+    </>
   );
 }
 

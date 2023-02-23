@@ -76,17 +76,20 @@ export function HomeProductHero() {
             Taho is the first community-owned web3 wallet
           </p>
           <Link
-            className={"matomo_download " + css`
-              display: inline-block;
-              padding: ${buttonBlockPadding} ${buttonInlinePadding};
-              border-radius: ${buttonBorderRadius};
-              font: ${buttonLabelQuincy18};
-              letter-spacing: ${labelLetterSpacing};
-              box-shadow: ${buttonShadow};
-              background: ${buttonBackgroundSemanticSuccess};
-              color: ${buttonLabelHunterGreen};
-              margin: 1rem 0;
-            `}
+            className={
+              "matomo_download " +
+              css`
+                display: inline-block;
+                padding: ${buttonBlockPadding} ${buttonInlinePadding};
+                border-radius: ${buttonBorderRadius};
+                font: ${buttonLabelQuincy18};
+                letter-spacing: ${labelLetterSpacing};
+                box-shadow: ${buttonShadow};
+                background: ${buttonBackgroundSemanticSuccess};
+                color: ${buttonLabelHunterGreen};
+                margin: 1rem 0;
+              `
+            }
             to="https://chrome.google.com/webstore/detail/tally-ho/eajafomhmkipbjmfmhebemolkcicgfmd"
           >
             Download Now

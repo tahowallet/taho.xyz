@@ -24,7 +24,10 @@ export function HomeBanner() {
         `}
       >
         {"Tally Ho is now Taho. "}
-        <a href="https://blog.taho.xyz/rename-announcement/"> <u>Learn more</u>.</a>
+        <a href="https://blog.taho.xyz/rename-announcement/">
+          {" "}
+          <u>Learn more</u>.
+        </a>
       </div>
     </div>
   );

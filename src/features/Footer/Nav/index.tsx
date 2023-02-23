@@ -78,7 +78,7 @@ export function FooterNav() {
           }}
         />
         <SocialLink
-          href="https://github.com/tallyhowallet/extension"
+          href="https://github.com/tahowallet/extension"
           icon={{
             width: `28px`,
             height: `28px`,

@@ -36,11 +36,6 @@ export function Footer() {
         <Link target="_blank" to="/privacy">
           Privacy policy
         </Link>
-        <p>
-          The Taho Wallet is not affiliated with dAppHero and/or the Tally
-          voting dashboard and blockchain governance platform at
-          <i>withtally.com</i>.
-        </p>
       </div>
     </div>
   );

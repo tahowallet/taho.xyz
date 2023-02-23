@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import { bodyLightGold5, bodyDarkHunterGreen, bodyDarkGreen40 } from "shared/styles/colors";
 import { segmentFontFamily, quincyRegularFontFamily } from "shared/styles/font-families";

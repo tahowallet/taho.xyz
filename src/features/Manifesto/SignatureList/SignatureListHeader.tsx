@@ -1,5 +1,5 @@
 import { SignatureListSlice } from "features/Manifesto/api";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import {
   bodyDarkGreen120,

@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import {
   bodyDarkGold120,
@@ -214,7 +214,7 @@ export function HomeFeatures() {
                   height: 6rem;
                 `}
                 key={i}
-                src={require(`./supporters/supporter-${i + 1}.svg`)}
+                src={require(`./supporters/supporter-${i + 1}.svg`).default}
               />
             </div>
           ))}

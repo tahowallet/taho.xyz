@@ -25,10 +25,14 @@ module.exports = {
         icon: `src/shared/favicon.svg`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    "gatsby-plugin-typescript",
     `gatsby-plugin-linaria`,
     `gatsby-plugin-mdx`,
     {

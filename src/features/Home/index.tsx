@@ -8,7 +8,7 @@ import { HomeProductHero } from "features/Home/Hero";
 import { HomeBanner } from "./PolygonBanner";
 import { HomeTryIt } from "features/Home/TryIt";
 import { Subscribe } from "features/Subscribe";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import SEO from "shared/seo";
 import {

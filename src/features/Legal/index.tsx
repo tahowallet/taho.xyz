@@ -1,6 +1,6 @@
 import { Footer } from "features/Footer";
 import { Header } from "features/Header";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import { green20, trophyGold } from "shared/styles/color-palette";
 import { bodyDarkGrey80, titleDarkHunterGreen } from "shared/styles/colors";

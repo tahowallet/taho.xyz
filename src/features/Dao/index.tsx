@@ -6,7 +6,7 @@ import { DaoValues } from "features/Dao/Values";
 import { Footer, footerSeparatorBackground } from "features/Footer";
 import { Header } from "features/Header";
 import { Subscribe } from "features/Subscribe";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import SEO from "shared/seo";
 import { sectionBackgroundOffWhite } from "shared/styles/colors";

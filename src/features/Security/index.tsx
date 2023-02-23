@@ -4,7 +4,7 @@ import { Footer, footerSeparatorBackground } from "features/Footer";
 import { Header } from "features/Header";
 import { SecurityAudits } from "features/Security/Audits";
 import { SecurityFeatures } from "features/Security/Features";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import SEO from "shared/seo";
 import {

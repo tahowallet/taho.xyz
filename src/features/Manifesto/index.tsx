@@ -1,7 +1,7 @@
 import { Footer } from "features/Footer";
 import { Header } from "features/Header";
 import { SignatureList } from "features/Manifesto/SignatureList";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import SEO from "shared/seo";

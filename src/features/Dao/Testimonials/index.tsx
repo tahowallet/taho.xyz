@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import {
   bodyDarkGold120,
@@ -9,6 +9,9 @@ import {
 } from "shared/styles/colors";
 import { bodyNormalSegment24, quoteQuincy32 } from "shared/styles/fonts";
 import { sectionInlinePadding, sectionWideWidth } from "shared/styles/lengths";
+
+import testimonialIcon1Gitcoin from "./testimonial-icon-1-gitcoin.svg"
+import testimonialIcon2Bankless from "./testimonial-icon-2-bankless.png"
 
 export function DaoTestimonials() {
   return (
@@ -33,7 +36,7 @@ export function DaoTestimonials() {
         `}
       >
         <Testimonial
-          authorIconSrc={require("./testimonial-icon-1-gitcoin.svg")}
+          authorIconSrc={testimonialIcon1Gitcoin}
           authorHeadline="Kevin Owocki"
           authorSupport="Gitcoin co-founder"
         >
@@ -41,7 +44,7 @@ export function DaoTestimonials() {
           goods funding a top priority from their DAO&rsquo;s inception.”
         </Testimonial>
         <Testimonial
-          authorIconSrc={require("./testimonial-icon-2-bankless.png")}
+          authorIconSrc={testimonialIcon2Bankless}
           authorHeadline="BanklessDAO"
         >
           “Taho has been hard at work designing a DAO structure that is

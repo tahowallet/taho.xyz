@@ -1,9 +1,12 @@
 import { Link } from "gatsby";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { CSSProperties, ReactNode } from "react";
 import {
     quincyRegularFontFamily,
   } from "shared/styles/font-families";
+
+import alchemy from "./alchemy.svg"
+import starMini from "./star-mini.svg"
 
 export function Sponsor() {
     return (
@@ -19,11 +22,11 @@ export function Sponsor() {
       `}
     >
       <Link to="https://www.alchemy.com">
-        <img width="170px" height="25px" src={require("./alchemy.svg")} 
+        <img width="170px" height="25px" src={alchemy}
         />
       </Link>
         <div>
-            <img width="32px" height="30px" src={require("./star-mini.svg")}
+            <img width="32px" height="30px" src={starMini}
             />
         </div>       
         <div className={css`

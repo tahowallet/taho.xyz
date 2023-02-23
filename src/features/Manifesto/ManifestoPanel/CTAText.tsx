@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import { titleDarkHunterGreen } from "shared/styles/colors";
 import { h3Quincy36 } from "shared/styles/fonts";

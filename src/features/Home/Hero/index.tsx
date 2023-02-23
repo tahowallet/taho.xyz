@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import {
   bodyDarkGrey80,

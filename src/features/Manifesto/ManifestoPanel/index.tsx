@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { DownloadCta } from "features/Download/Cta";
 import { ManifestoPanelLayout } from "features/Manifesto/ManifestoPanel/ManifestoPanelLayout";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { useState } from "react";
 import {
   buttonBackgroundSemanticSuccess,
@@ -35,7 +35,7 @@ export function ManifestoPanel() {
             `}
             width="36"
             height="36"
-            src={require("./icon-sign.svg")}
+            src={require("./icon-sign.svg").default}
             alt=""
           />
         }
@@ -88,7 +88,7 @@ export function ManifestoPanel() {
             `}
             width="36"
             height="36"
-            src={require("./icon-sign.svg")}
+            src={require("./icon-sign.svg").default}
             alt=""
           />
         }

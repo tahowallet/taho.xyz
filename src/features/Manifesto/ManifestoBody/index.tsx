@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import {
   bodyDarkHunterGreen,
@@ -140,14 +140,14 @@ export function ManifestoBody() {
         `}
       >
         <Value
-          iconSrc={require("./icon-1-accessible.svg")}
+          iconSrc={require("./icon-1-accessible.svg").default}
           title={<>Access for everyone</>}
           body={
             <>You should have direct access to Web3—no matter where you live.</>
           }
         />
         <Value
-          iconSrc={require("./icon-2-oss.svg")}
+          iconSrc={require("./icon-2-oss.svg").default}
           title={<>Radical transparency</>}
           body={
             <>
@@ -157,7 +157,7 @@ export function ManifestoBody() {
           }
         />
         <Value
-          iconSrc={require("./icon-3-community.svg")}
+          iconSrc={require("./icon-3-community.svg").default}
           title={<>Full community ownership</>}
           body={
             <>

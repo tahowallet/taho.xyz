@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { CSSProperties, ReactNode } from "react";
 import {
   bodyDarkGold120,
@@ -73,13 +73,13 @@ export function SecurityFeatures() {
               your crypto.
             </>
           }
-          iconSrc={require("./feature-1-keys.svg")}
+          iconsrc={require("./feature-1-keys.svg").default}
         >
           Taho is 100% self-custodial. Your private keys are secured on your
           computer and never leave your device.
         </Feature>
         <Feature
-          iconSrc={require("./feature-2-oss.svg")}
+          iconsrc={require("./feature-2-oss.svg").default}
           title={
             <>
               Nothing
@@ -88,7 +88,7 @@ export function SecurityFeatures() {
             </>
           }
           cta={
-            <Cta href="https://github.com/tallyhowallet/extension">
+            <Cta href="https://github.com/tahowallet/extension">
               View on Github
             </Cta>
           }
@@ -96,7 +96,7 @@ export function SecurityFeatures() {
           Our code is 100% open source and can be verified by anyone.
         </Feature>
         <Feature
-          iconSrc={require("./feature-3-privacy.svg")}
+          iconsrc={require("./feature-3-privacy.svg").default}
           title={
             <>
               Your privacy
@@ -110,7 +110,7 @@ export function SecurityFeatures() {
           your activity or addresses.
         </Feature>
         <Feature
-          iconSrc={require("./feature-4-audited.svg")}
+          iconsrc={require("./feature-4-audited.svg").default}
           title={
             <>
               Independently

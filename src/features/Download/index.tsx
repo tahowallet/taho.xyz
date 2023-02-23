@@ -1,7 +1,7 @@
 import { DownloadCta } from "features/Download/Cta";
 import { Footer } from "features/Footer";
 import { Header } from "features/Header";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import SEO from "shared/seo";
 import {

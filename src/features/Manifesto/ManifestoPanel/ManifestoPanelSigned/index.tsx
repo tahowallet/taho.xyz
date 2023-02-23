@@ -1,7 +1,7 @@
 import { ManifestoPanelLayout } from "features/Manifesto/ManifestoPanel/ManifestoPanelLayout";
 import { openTwitterTweetIntent } from "features/Manifesto/ManifestoPanel/ManifestoPanelSigned/twitter";
 import { FullAccount, SiweToken } from "features/Manifesto/types";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { useState } from "react";
 import {
   bodyDarkGreen40,
@@ -44,7 +44,7 @@ export function ManifestoPanelSigned({
             `}
             width="44"
             height="44"
-            src={require("./icon-gift.svg")}
+            src={require("./icon-gift.svg").default}
             alt=""
           />
         }
@@ -136,7 +136,7 @@ export function ManifestoPanelSigned({
           <img
             width="24"
             height="24"
-            src={require("./icon-connected.svg")}
+            src={require("./icon-connected.svg").default}
             alt=""
           />
           {account.address.slice(0, 6)}...{account.address.slice(-4)}

@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import { bodyDarkGreen120, cardBackgroundGold60 } from "shared/styles/colors";
 import { bodySmallSegment18 } from "shared/styles/fonts";

@@ -1,6 +1,6 @@
 import { NavLink } from "features/Header/NavLink";
 import { Link } from "gatsby";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import { buttonBackgroundTrophyGold } from "shared/styles/colors";
 import { buttonLabelQuincy18 } from "shared/styles/fonts";
@@ -9,6 +9,7 @@ import {
   buttonBorderRadius,
   buttonInlinePadding,
 } from "shared/styles/lengths";
+import logo from "./logo.svg"
 
 export function Header() {
   return (
@@ -34,7 +35,7 @@ export function Header() {
             `}
             width="226"
             height="80"
-            src={require("./logo.svg")}
+            src={logo}
           />
         </Link>
         <Link

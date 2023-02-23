@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import {
   bodyDarkGrey80,
@@ -13,6 +13,10 @@ import {
   sectionNarrowWidth,
   sectionInlinePadding,
 } from "shared/styles/lengths";
+
+import chromeLogo from "@browser-logos/chrome/chrome.svg"
+import braveLogo from "@browser-logos/brave/brave.svg"
+import firefoxLogo from "@browser-logos/firefox/firefox.svg"
 
 const chromeDownloadHref =
   "https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd";
@@ -33,7 +37,7 @@ export function DownloadCta() {
     >
       <Option
         name="Chrome"
-        logoSrc={require("@browser-logos/chrome/chrome.svg")}
+        logoSrc={chromeLogo}
         href={chromeDownloadHref}
         twtrTrackPidParams={[
           "o9l8i",
@@ -42,12 +46,12 @@ export function DownloadCta() {
       />
       {/* <Option
         name="Firefox"
-        logoSrc={require("@browser-logos/firefox/firefox.svg")}
+        logoSrc={firefoxLogo}
         href={firefoxDownloadHref}
       /> */}
       <Option
         name="Brave"
-        logoSrc={require("@browser-logos/brave/brave.svg")}
+        logoSrc={braveLogo}
         href={chromeDownloadHref}
         twtrTrackPidParams={[
           "o9l8i",

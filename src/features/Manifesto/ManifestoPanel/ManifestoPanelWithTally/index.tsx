@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { ManifestoPanelLayout } from "features/Manifesto/ManifestoPanel/ManifestoPanelLayout";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import {
   bodyDarkGreen60,
@@ -65,7 +65,7 @@ export function ManifestoPanelWithTally({
             `}
             width="36"
             height="36"
-            src={require("../icon-sign.svg")}
+            src={require("../icon-sign.svg").default}
             alt=""
           />
         }
@@ -156,7 +156,7 @@ export function ManifestoPanelWithTally({
             color: ${bodyDarkGreen60};
           `}
         >
-          <img width="30" height="30" alt="" src={require("./gasless.svg")} />
+          <img width="30" height="30" alt="" src={require("./gasless.svg").default} />
           gasless transaction
         </p>
       </ManifestoPanelLayout>

@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import { borderDarkTrophyGold, linkDarkTrophyGold } from "shared/styles/colors";
 import { segmentFontFamily } from "shared/styles/font-families";

@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import { green20 } from "shared/styles/color-palette";
 import { bodyDarkGreen60, bodyDarkHunterGreen } from "shared/styles/colors";

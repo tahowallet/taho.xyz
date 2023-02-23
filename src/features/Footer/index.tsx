@@ -1,7 +1,7 @@
 import { FooterNav } from "features/Footer/Nav";
 import { Sponsor } from "./Sponsor";
 import { Link } from "gatsby";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import { green60 } from "shared/styles/color-palette";
 import { sectionBackgroundGold5 } from "shared/styles/colors";

@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import { sectionBackgroundGold5 } from "shared/styles/colors";
 
 css`

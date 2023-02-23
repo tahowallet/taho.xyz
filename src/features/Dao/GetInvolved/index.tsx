@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { ReactNode } from "react";
 import {
   bodyDarkGreen120,
@@ -21,6 +21,11 @@ import {
   subtitleBlockMargin,
   sectionWideWidth,
 } from "shared/styles/lengths";
+
+import option1Discord from "./option-1-discord.svg"
+import option2Gov from "./option-2-gov.svg"
+import option3Workspace from "./option-3-workspace.svg"
+import option4Github from "./option-4-github.svg"
 
 export function DaoGetInvolved() {
   return (
@@ -70,14 +75,14 @@ export function DaoGetInvolved() {
         `}
       >
         <Option
-          iconSrc={require("./option-1-discord.svg")}
+          iconSrc={option1Discord}
           href="https://chat.tallyho.org/"
           title="Discord"
         >
           The best way to get started and join the community.
         </Option>
         <Option
-          iconSrc={require("./option-2-gov.svg")}
+          iconSrc={option2Gov}
           href="https://gov.tallyho.org/"
           title="Governance Forum"
         >
@@ -85,16 +90,16 @@ export function DaoGetInvolved() {
           long-form thoughts.
         </Option>
         <Option
-          iconSrc={require("./option-3-workspace.svg")}
-          href="https://tallyhowallet.notion.site/"
+          iconSrc={option3Workspace}
+          href="https://notion.taho.xyz/"
           title="Community Workspace"
         >
           The community calendar, plus an overview of all our active working
           groups.
         </Option>
         <Option
-          iconSrc={require("./option-4-github.svg")}
-          href="https://github.com/tallyhowallet/extension"
+          iconSrc={option4Github}
+          href="https://github.com/tahowallet/extension"
           title="Github"
         >
           Taho&rsquo;s code is 100% free and open source. Check out our{" "}

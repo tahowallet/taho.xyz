@@ -1,4 +1,4 @@
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React from "react";
 import { Header } from "features/Header";
 import { DownloadCta } from "features/Download/Cta";

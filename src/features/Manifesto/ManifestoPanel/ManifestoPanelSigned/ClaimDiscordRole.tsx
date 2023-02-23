@@ -4,7 +4,7 @@ import { DiscordLogo } from "features/Manifesto/ManifestoPanel/ManifestoPanelSig
 import { Message } from "features/Manifesto/ManifestoPanel/Message";
 import { FullAccount } from "features/Manifesto/types";
 import { Link } from "gatsby";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { useEffect, useRef, useState } from "react";
 import { useMutation } from "react-query";
 import {

@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import { css } from "linaria";
+import { css } from "@linaria/core";
 import React, { CSSProperties, ReactNode } from "react";
 import {
   borderDarkTrophyGold,
@@ -8,6 +8,17 @@ import {
 import {
   segmentFontFamily,
 } from "shared/styles/font-families";
+
+import logo from "./logo.svg"
+import discord from "./social-icons/discord.svg"
+import discordHover from "./social-icons/discord-hover.svg"
+import discordClick from "./social-icons/discord-click.svg"
+import twitter from "./social-icons/twitter.svg"
+import twitterHover from "./social-icons/twitter-hover.svg"
+import twitterClick from "./social-icons/twitter-click.svg"
+import github from "./social-icons/github.svg"
+import githubHover from "./social-icons/github-hover.svg"
+import githubClick from "./social-icons/github-click.svg"
 
 export function FooterNav() {
   return (
@@ -28,7 +39,7 @@ export function FooterNav() {
       `}
     >
       <Link to="/">
-        <img width="168" height="127" src={require("./logo.svg")} 
+        <img width="168" height="127" src={require("./logo.svg").default} 
         />
       </Link>
       <div
@@ -62,9 +73,9 @@ export function FooterNav() {
           icon={{
             width: `24px`,
             height: `24px`,
-            src: `url(${require("./social-icons/discord.svg")})`,
-            hoverSrc: `url(${require("./social-icons/discord-hover.svg")})`,
-            activeSrc: `url(${require("./social-icons/discord-click.svg")})`,
+            src: `url(${discord})`,
+            hoverSrc: `url(${discordHover})`,
+            activeSrc: `url(${discordClick})`,
           }}
         />
         <SocialLink
@@ -72,19 +83,19 @@ export function FooterNav() {
           icon={{
             width: `28px`,
             height: `24px`,
-            src: `url(${require("./social-icons/twitter.svg")})`,
-            hoverSrc: `url(${require("./social-icons/twitter-hover.svg")})`,
-            activeSrc: `url(${require("./social-icons/twitter-click.svg")})`,
+            src: `url(${twitter})`,
+            hoverSrc: `url(${twitterHover})`,
+            activeSrc: `url(${twitterClick})`,
           }}
         />
         <SocialLink
-          href="https://github.com/tallyhowallet/extension"
+          href="https://github.com/tahowallet/extension"
           icon={{
             width: `28px`,
             height: `28px`,
-            src: `url(${require("./social-icons/github.svg")})`,
-            hoverSrc: `url(${require("./social-icons/github-hover.svg")})`,
-            activeSrc: `url(${require("./social-icons/github-click.svg")})`,
+            src: `url(${github})`,
+            hoverSrc: `url(${githubHover})`,
+            activeSrc: `url(${githubClick})`,
           }}
         />
       </div>

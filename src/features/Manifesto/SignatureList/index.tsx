@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { listSignatures, SignatureListSlice } from "features/Manifesto/api";
-import { css, cx } from "linaria";
+import { css, cx } from "@linaria/core";
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { green40, hunterGreen, offWhite } from "shared/styles/color-palette";

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "taho.xyz",
-  "author": "Taho <doggos@tallyho.org>",
-  "repository": "git@github.com:thesis/tallyho.org.git",
+  "author": "Taho <doggos@taho.xyz>",
+  "repository": "git@github.com:tahowallet/taho.xyz",
   "license": "MIT",
   "keywords": [
     "ethereum",
@@ -43,6 +43,7 @@
     "gatsby-plugin-matomo": "^0.11.0",
     "gatsby-plugin-mdx": "2",
     "gatsby-plugin-offline": "^3.10.0",
+    "gatsby-plugin-posthog": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-plugin-twitter-pixel": "^2.0.2",

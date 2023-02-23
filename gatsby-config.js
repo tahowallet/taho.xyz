@@ -49,5 +49,17 @@ module.exports = {
         pixelId: "o9kgt",
       },
     },
+    {
+      resolve: `gatsby-plugin-posthog`,
+      options: {
+        apiKey: "phc_VzveyNxrn2xyiKDYn7XjrgaqELGeUilDZGiBVh6jNmh",
+        initOptions: {
+          persistence: "localStorage",
+          autocapture: false,
+          capture_pageview: false,
+          disable_session_recording: true,
+        },
+      },
+    },
   ],
 };

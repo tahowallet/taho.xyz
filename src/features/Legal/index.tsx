@@ -73,6 +73,9 @@ export default function Legal({
           td > ul {
             padding-left: 1rem;
           }
+          strong {
+            font-weight: 900;
+          }
         `}
       >
         {children}

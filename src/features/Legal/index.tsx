@@ -74,7 +74,7 @@ export default function Legal({
             padding-left: 1rem;
           }
           strong {
-            font-weight: 900;
+            color: ${titleDarkHunterGreen};
           }
         `}
       >

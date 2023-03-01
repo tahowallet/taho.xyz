@@ -58,7 +58,7 @@ export function FooterNav() {
           Jobs
         </NavLink>
         <SocialLink
-          href="https://chat.taho.org"
+          href="https://chat.taho.xyz"
           icon={{
             width: `24px`,
             height: `24px`,

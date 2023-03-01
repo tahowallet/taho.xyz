@@ -49,6 +49,9 @@ export default function Legal({
             margin: 4rem 0 2rem;
             font-size: 36px;
           }
+          li {
+            margin-top: 0.5rem;
+          }
 
           li::marker {
             content: "· ";

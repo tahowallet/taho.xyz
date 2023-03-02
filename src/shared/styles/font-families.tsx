@@ -1,4 +1,5 @@
 export const segmentFontFamily = "Segment-Regular";
+export const segmentBoldFontFamily = "Segment-Bold";
 export const quincyRegularFontFamily = "QuincyCF-Regular";
 export const quincyTextFontFamily = "QuincyCF-Text";
 

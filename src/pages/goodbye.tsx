@@ -80,13 +80,12 @@ function Goodbye() {
     <div className="container">
       <div className="banner">
         <div className="branding" />
-        <h1>We’re sorry to see you go 🙁</h1>
+        <h1>We’re sorry to see you go...</h1>
         {/* Drop typeform code here */}
         <p>
-          It didn't work out this time, but you can still stay plugged in with
-          our community!
+          It didn't work out this time, but you can still keep in touch!
         </p>
-        <p>Follow us for news on improvements and new features.</p>
+        <p>To get updates on new features and improvements, follow us on Discord or Twitter.</p>
         <br />
         <br />
         <div className="social-container">

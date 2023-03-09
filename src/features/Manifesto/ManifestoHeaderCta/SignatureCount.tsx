@@ -12,5 +12,5 @@ export function SignatureCount() {
     { retry: false, refetchInterval: 60000 }
   );
 
-  return <>{data?.signatureCount ?? <>&nbsp;</>}</>;
+  return <>{data?.signatureCount.toLocaleString() ?? <>&nbsp;</>}</>;
 }

@@ -72,6 +72,8 @@ function Goodbye() {
     if (window.posthog !== undefined) {
       window.posthog.capture("Uninstall", { distinct_id: params.get("uuid") });
     }
+
+    document.title = 'Goodbye';
   }, []);
 
   return (

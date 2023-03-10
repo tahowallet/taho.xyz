@@ -15,7 +15,7 @@ function SEO({
   metaImage?: string;
 }) {
   const metaTitle = title ?? `Taho — The community owned & operated wallet`;
-  const metaDescription = description ?? `Taho is the first web3 wallet built by and for the community We're 100% open source, all in-wallet revenue flows back to users, and, unlike other crypto wallets, we never limit access to your assets, no matter where you live. `;
+  const metaDescription = description ?? `Taho is the first web3 wallet built by and for the community. We're 100% open source, all in-wallet revenue flows back to users, and, unlike other crypto wallets, we never limit access to your assets, no matter where you live. `;
 
   return (
     <Helmet

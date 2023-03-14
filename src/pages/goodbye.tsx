@@ -1,24 +1,23 @@
+import { Widget } from "@typeform/embed-react";
 import { css } from "linaria";
-import React, { useEffect } from "react";
+import React, { CSSProperties, useEffect } from "react";
+import { bgGradient } from "shared/styles/bg-gradients";
 import {
   bodyLightGold5,
-  bodyDarkHunterGreen,
-  bodyDarkGreen40,
+  bodyDarkGreen20,
 } from "shared/styles/colors";
 import {
   segmentFontFamily,
-  quincyRegularFontFamily,
+  quincyTextFontFamily,
 } from "shared/styles/font-families";
 
 css`
   :global() {
+    ${bgGradient}
+
     .container {
       height: 100vh;
       scroll-behavior: smooth;
-      background: ${bodyDarkHunterGreen} url("../shared/images/bg-dark.png")
-        no-repeat;
-      background-size: cover;
-      background-position: center bottom;
       font-size: max(10px, min(1.25vw, 16px));
       font-family: ${segmentFontFamily};
     }
@@ -30,23 +29,29 @@ css`
       height: 100%;
       width: 100%;
       color: ${bodyLightGold5};
+      position: relative;
     }
     .banner h1 {
-      color: #e1953a;
-      font-family: ${quincyRegularFontFamily};
-      font-size: 48px;
-      font-weight: normal;
-      margin: 0 auto;
-      margin-bottom: 24px;
-      padding: 0 30px;
+      color: #D6EAE9;
+      font-family: ${quincyTextFontFamily};
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 42px;
       text-align: center;
+      margin: 8px 0;
     }
     .banner p {
-      color: ${bodyDarkGreen40};
-      font-size: 18px;
-      margin-bottom: 12px;
-      padding: 0 20px;
+      color: ${bodyDarkGreen20};
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
       text-align: center;
+      width: 430px;
+    }
+    .banner p span{
+      color: #D6EAE9;
     }
     .banner a {
       float: left;
@@ -56,11 +61,18 @@ css`
       background-size: 100%;
       width: 300px;
       height: 100px;
-      margin-top: 80px;
+      margin-top: 30px;
     }
     .social-container {
       max-width: 200px;
       text-align: center;
+    }
+    .form {
+      margin: 23px 0 32px;
+      width: 599px;
+      height: 620px;
+      overflow: hidden;
+      background: #082C29;
     }
   }
 `;
@@ -78,15 +90,17 @@ function Goodbye() {
 
   return (
     <div className="container">
+      <div className="cover gradient-1" />
+      <div className="cover gradient-2" />
+      <div className="cover gradient-3" />
       <div className="banner">
         <div className="branding" />
-        <h1>We’re sorry to see you go...</h1>
-        {/* Drop typeform code here */}
+        <h1>We’re sorry to see you go</h1>
         <p>
-          It didn't work out this time, but you can still keep in touch!
+          Help us build the wallet <span>YOU</span> deserve by answering these two questions?
         </p>
-        <p>To get updates on new features and improvements, follow us on Discord or Twitter.</p>
-        <br />
+        <Widget id="iEZWGXuv" className="form" hideFooter hideHeaders />
+        <p>Follow us for news on improvements and new features.</p>
         <br />
         <div className="social-container">
           <SocialIcon
@@ -145,7 +159,7 @@ function SocialIcon({
         display: block;
         position: relative;
         flex: 0 0 auto;
-        margin: 0 1rem;
+        margin: 0 0.75rem;
         background-repeat: no-repeat;
         width: 28px;
         height: 28px;

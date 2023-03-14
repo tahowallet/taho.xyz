@@ -25,6 +25,7 @@ export const titleDarkGreen80 = green80;
 
 export const bodyDarkGrey80 = grey80;
 export const bodyDarkGrey60 = grey60;
+export const bodyDarkGreen20 = green20;
 export const bodyDarkGreen40 = green40;
 export const bodyDarkGreen60 = green60;
 export const bodyDarkGreen80 = green80;

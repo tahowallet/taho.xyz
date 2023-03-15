@@ -100,7 +100,7 @@ function Goodbye() {
         <p>
           Help us build the wallet <span>YOU</span> deserve by answering these two questions?
         </p>
-        <Widget id="iEZWGXuv" className="form" hideFooter hideHeaders />
+        <Widget id="iEZWGXuv" className="form" />
         <p>Follow us for news on improvements and new features.</p>
         <br />
         <div className="social-container">

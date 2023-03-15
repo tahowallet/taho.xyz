@@ -39,7 +39,7 @@ css`
       font-size: 36px;
       line-height: 42px;
       text-align: center;
-      margin: 8px 0;
+      margin: 0.5rem 0;
     }
     .banner p {
       color: ${bodyDarkGreen20};
@@ -57,18 +57,18 @@ css`
       float: left;
     }
     .branding {
-      background: url("../shared/images/logo-dark.svg") no-repeat;
+      background: url("../shared/favicon.svg") no-repeat;
       background-size: 100%;
-      width: 300px;
-      height: 100px;
-      margin-top: 30px;
+      width: 78.46px;
+      height: 80px;
+      margin-top: 2rem;
     }
     .social-container {
       max-width: 200px;
       text-align: center;
     }
     .form {
-      margin: 23px 0 32px;
+      margin: 1rem 0 2rem;
       width: 599px;
       height: 620px;
       overflow: hidden;
@@ -94,6 +94,7 @@ function Goodbye() {
       <div className="cover gradient-2" />
       <div className="cover gradient-3" />
       <div className="banner">
+        {/* TODO change to gif  */}
         <div className="branding" />
         <h1>We’re sorry to see you go</h1>
         <p>
@@ -159,7 +160,7 @@ function SocialIcon({
         display: block;
         position: relative;
         flex: 0 0 auto;
-        margin: 0 0.75rem;
+        margin: 0 1rem;
         background-repeat: no-repeat;
         width: 28px;
         height: 28px;

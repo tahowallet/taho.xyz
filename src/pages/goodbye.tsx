@@ -69,8 +69,8 @@ css`
     }
     .form {
       margin: 1rem 0 2rem;
-      width: 599px;
-      height: 620px;
+      width: 536px;
+      min-height: 580px
       overflow: hidden;
       background: #082C29;
     }

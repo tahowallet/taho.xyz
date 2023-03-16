@@ -1,4 +1,5 @@
 import { css } from "linaria";
+import { withPrefix } from "gatsby";
 import React, { ReactNode } from "react";
 import {
   bodyDarkGold120,
@@ -214,7 +215,7 @@ export function HomeFeatures() {
                   height: 6rem;
                 `}
                 key={i}
-                src={require(`./supporters/supporter-${i + 1}.svg`)}
+                src={withPrefix(`images/supporters/supporter-${i + 1}.svg`)}
               />
             </div>
           ))}

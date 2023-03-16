@@ -34,7 +34,7 @@ export function Header() {
             `}
             width="226"
             height="80"
-            src={require("./logo.svg")}
+            src={"/images/logo.svg"}
           />
         </Link>
         <Link

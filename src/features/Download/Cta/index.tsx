@@ -33,7 +33,7 @@ export function DownloadCta() {
     >
       <Option
         name="Chrome"
-        logoSrc={require("@browser-logos/chrome/chrome.svg")}
+        logoSrc={"/images/chrome.svg"}
         href={chromeDownloadHref}
         twtrTrackPidParams={[
           "o9l8i",
@@ -47,7 +47,7 @@ export function DownloadCta() {
       /> */}
       <Option
         name="Brave"
-        logoSrc={require("@browser-logos/brave/brave.svg")}
+        logoSrc={"/images/brave.svg"}
         href={chromeDownloadHref}
         twtrTrackPidParams={[
           "o9l8i",

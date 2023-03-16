@@ -19,7 +19,7 @@ export function FooterNav() {
           flex-direction: row;
           justify-content: center;
         }
-        
+
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -28,7 +28,7 @@ export function FooterNav() {
       `}
     >
       <Link to="/">
-        <img width="168" height="127" src={require("./logo.svg")} 
+        <img width="168" height="127" src={"images/logo.svg"} 
         />
       </Link>
       <div

@@ -1,6 +1,6 @@
 import { Widget } from "@typeform/embed-react";
 import { css } from "linaria";
-import React, { CSSProperties, useEffect } from "react";
+import React, { CSSProperties, useEffect, useRef, useState } from "react";
 import { bgGradient } from "shared/styles/bg-gradients";
 import {
   bodyLightGold5,
@@ -57,11 +57,11 @@ css`
       float: left;
     }
     .branding {
-      background: url("../shared/favicon.svg") no-repeat;
+      background: url("../shared/images/logo.svg") no-repeat;
       background-size: 100%;
-      width: 78.46px;
-      height: 80px;
-      margin-top: 2rem;
+      width: 104px;
+      min-height: 80px;
+      margin-top: 30px;
     }
     .social-container {
       max-width: 200px;
@@ -78,6 +78,9 @@ css`
 `;
 
 function Goodbye() {
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  const [height, setMaxHeight] = useState<string | undefined>()
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
 
@@ -88,13 +91,18 @@ function Goodbye() {
     document.title = 'Goodbye';
   }, []);
 
+  useEffect(() => {
+    if (containerRef.current) {
+      setMaxHeight(`${containerRef.current.scrollHeight}px`)
+    }
+  }, [containerRef?.current?.scrollHeight])
+
   return (
-    <div className="container">
-      <div className="cover gradient-1" />
-      <div className="cover gradient-2" />
-      <div className="cover gradient-3" />
+    <div ref={containerRef} className="container">
+      <div className="cover gradient-1" style={{ height }} />
+      <div className="cover gradient-2" style={{ height }} />
+      <div className="cover gradient-3" style={{ height }} />
       <div className="banner">
-        {/* TODO change to gif  */}
         <div className="branding" />
         <h1>We’re sorry to see you go</h1>
         <p>

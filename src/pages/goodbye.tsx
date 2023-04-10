@@ -94,7 +94,7 @@ function Goodbye() {
 
   useEffect(() => {
     if (containerRef.current) {
-      setMaxHeight(`${containerRef.current.scrollHeight + 0}px`)
+      setMaxHeight(`${containerRef.current.scrollHeight}px`)
     }
   }, [containerRef?.current?.scrollHeight])
 

@@ -66,6 +66,7 @@ css`
     .social-container {
       max-width: 200px;
       text-align: center;
+      padding-bottom: 32px;
     }
     .form {
       margin: 1rem 0 2rem;

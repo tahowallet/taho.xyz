@@ -66,6 +66,7 @@ css`
     .social-container {
       max-width: 200px;
       text-align: center;
+      padding-bottom: 32px;
     }
     .form {
       margin: 1rem 0 2rem;
@@ -93,7 +94,7 @@ function Goodbye() {
 
   useEffect(() => {
     if (containerRef.current) {
-      setMaxHeight(`${containerRef.current.scrollHeight}px`)
+      setMaxHeight(`${containerRef.current.scrollHeight + 0}px`)
     }
   }, [containerRef?.current?.scrollHeight])
 

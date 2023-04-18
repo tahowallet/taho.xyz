@@ -280,7 +280,7 @@ async function verifyToken(token: SignedMessage) {
   }
 
   if (
-    !["tallyho.org","tally.cash", "localhost:8000"].includes(verified.domain) &&
+    !["tallyho.org","tally.cash", "taho.xyz", "localhost:8000"].includes(verified.domain) &&
     !verified.domain.endsWith("tally-cash.netlify.app")
   ) {
     throw new HttpsError("invalid-argument", "Wrong domain", "Wrong domain");
@@ -289,6 +289,7 @@ async function verifyToken(token: SignedMessage) {
   if (
     [
       "https://tallyho.org/web3pledge",
+      "https://taho.xyz/web3pledge",
       "https://tally.cash/web3pledge",
       "https://localhost:8000/web3pledge",
     ].includes(verified.uri)

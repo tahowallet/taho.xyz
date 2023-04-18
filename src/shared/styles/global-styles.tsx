@@ -40,5 +40,12 @@ css`
       font-weight: normal;
       font-style: normal;
     }
+
+    @font-face {
+      font-family: "Segment-Bold";
+      src: url("../fonts/segment-bold/segment-bold.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+    }
   }
 `;

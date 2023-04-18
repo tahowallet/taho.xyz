@@ -54,7 +54,7 @@ export function DaoTimeline() {
             color: ${bodyDarkGrey80};
           `}
         >
-          Tally Ho&rsquo;s community has been building in public for over a
+          Taho&rsquo;s community has been building in public for over a
           year. <br />
           The on-chain DAO will launch in 2022.
         </p>
@@ -87,12 +87,12 @@ export function DaoTimeline() {
             `}
           >
             <tbody>
-              <Event date="January 2021">Development begins on Tally Ho</Event>
+              <Event date="January 2021">Development begins on Taho</Event>
               <Event
                 date="August 2021"
                 href="https://blog.tally.cash/a-community-owned-wallet-for-the-new-internet/"
               >
-                Tally Ho is Publicly Announced
+                Taho is Publicly Announced
               </Event>
               <Event date="August 2021">First Community Call</Event>
               <Event date="September 2021">First Community POAPs created</Event>
@@ -106,7 +106,7 @@ export function DaoTimeline() {
                 date="February 2022"
                 href="https://blog.tally.cash/tally-wallet-plans-first-gitcoin-aqueduct-to-automate-public-goods-funding-ecosystem-building/"
               >
-                Tally Ho Commits 2.5% of Token Supply to Gitcoin Aqueduct
+                Taho Commits 2.5% of Token Supply to Gitcoin Aqueduct
               </Event>
               <Event
                 date="March 2022"

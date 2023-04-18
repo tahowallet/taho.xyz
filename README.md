@@ -1,6 +1,8 @@
 # tallyho.org
 
+
 The primary website for Tally Ho (formerly known as Tallyho.cash), the community-owned web3 wallet.
+
 
 ## Local development
 

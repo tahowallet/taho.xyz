@@ -91,7 +91,7 @@ export function ManifestoBody() {
         </a>
         ” You&rsquo;ll be surprised by what you find out.
       </p>
-      <h3>Tally Ho is building the wallet we deserve.</h3>
+      <h3>Taho is building the wallet we deserve.</h3>
       <p>
         Now imagine a community-owned wallet that actually embodies and protects
         Web3 values—a wallet that&rsquo;s available to anyone, anywhere on
@@ -100,7 +100,7 @@ export function ManifestoBody() {
           that&rsquo;s governed by a DAO
         </a>
         , and that&rsquo;s accountable to you, not some faceless corporation.
-        Well, that&rsquo;s Tally Ho: a Web3 wallet for everyone, built to
+        Well, that&rsquo;s Taho: a Web3 wallet for everyone, built to
         safeguard your assets and your rights.
       </p>
       <hr
@@ -171,7 +171,7 @@ export function ManifestoBody() {
       <p>
         <strong>
           These are your rights as a citizen of Web3. If you believe in them,
-          sign this Community Pledge with your Tally Ho wallet.
+          sign this Community Pledge with your Taho wallet.
         </strong>{" "}
         It&rsquo;s the best way to show support ahead of our DAO launch and it's
         the first step in becoming a verified member of our community.

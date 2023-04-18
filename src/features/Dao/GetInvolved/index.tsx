@@ -94,10 +94,10 @@ export function DaoGetInvolved() {
         </Option>
         <Option
           iconSrc={require("./option-4-github.svg")}
-          href="https://github.com/tallyhowallet/extension"
+          href="https://github.com/tahowallet/extension"
           title="Github"
         >
-          Tally Ho&rsquo;s code is 100% free and open source. Check out our{" "}
+          Taho&rsquo;s code is 100% free and open source. Check out our{" "}
           &lsquo;good first issue&rsquo; tag to get started.
         </Option>
       </div>

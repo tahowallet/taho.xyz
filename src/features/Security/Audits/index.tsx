@@ -46,7 +46,7 @@ export function SecurityAudits() {
             color: ${bodyDarkGrey80};
           `}
         >
-          The Tally Ho extension and smart contracts have been reviewed by the
+          The Taho extension and smart contracts have been reviewed by the
           industry&rsquo;s most respected security auditors.
         </p>
       </div>

@@ -4,7 +4,7 @@ import { css } from "linaria";
 import React, { ReactNode } from "react";
 import { green20, trophyGold } from "shared/styles/color-palette";
 import { bodyDarkGrey80, titleDarkHunterGreen } from "shared/styles/colors";
-import { segmentFontFamily } from "shared/styles/font-families";
+import { segmentBoldFontFamily, segmentFontFamily } from "shared/styles/font-families";
 
 export default function Legal({
   children,
@@ -49,6 +49,9 @@ export default function Legal({
             margin: 4rem 0 2rem;
             font-size: 36px;
           }
+          li {
+            margin-top: 0.5rem;
+          }
 
           li::marker {
             content: "· ";
@@ -72,6 +75,9 @@ export default function Legal({
 
           td > ul {
             padding-left: 1rem;
+          }
+          strong {
+            font-family: ${segmentBoldFontFamily};
           }
         `}
       >

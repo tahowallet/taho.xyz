@@ -66,7 +66,7 @@ export function Subscribe() {
               text-align: center;
             `}
           >
-            Get the alpha on Tally Ho.
+            Get the alpha on Taho.
           </p>
         </div>
         <form

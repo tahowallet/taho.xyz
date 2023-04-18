@@ -38,7 +38,7 @@ export function Download() {
             color: ${titleDarkHunterGreen};
           `}
         >
-          Download Tally Ho!
+          Download Taho!
         </h1>
         <div
           className={css`

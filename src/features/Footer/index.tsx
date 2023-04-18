@@ -28,7 +28,7 @@ export function Footer() {
           text-align: center;
         `}
       >
-        © {new Date().getFullYear()} Tally Ho! &nbsp;|&nbsp; *A{" "}
+        © {new Date().getFullYear()} Taho &nbsp;|&nbsp; *A{" "}
         <Link target="_blank" to="https://thesis.co/">
           Thesis
         </Link>{" "}
@@ -36,11 +36,6 @@ export function Footer() {
         <Link target="_blank" to="/privacy">
           Privacy policy
         </Link>
-        <p>
-          The Tally Ho Wallet is not affiliated with dAppHero and/or the Tally
-          voting dashboard and blockchain governance platform at
-          <i>withtally.com</i>.
-        </p>
       </div>
     </div>
   );

@@ -227,10 +227,10 @@ function TwitterShareButton({
       onClick={() => {
         openTwitterTweetIntent({
           text: [
-            `I’m in. 👋 @TallyHoOfficial #defendWeb3`,
+            `I’m in. 👋 @taho_xyz #defendWeb3`,
             `signed: ${signedMessage.signature}`,
             ``,
-            `https://twitter.com/TallyHoOfficial/status/1561739484600774656`,
+            `https://twitter.com/taho_xyz/status/1561739484600774656`,
           ].join(`\n`),
         });
         onShareBegin();

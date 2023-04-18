@@ -50,7 +50,7 @@ export function ManifestoHeaderCta() {
             color: ${titleDarkHunterGreen};
           `}
         >
-          Sign the Tally Ho Community Pledge
+          Sign the Taho Community Pledge
         </h2>
         <p
           className={css`

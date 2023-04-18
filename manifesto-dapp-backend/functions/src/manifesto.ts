@@ -1,5 +1,5 @@
 export const manifestoMessage = `
-Tally Ho Community Pledge:
+Taho Community Pledge:
 
 1. Access for everyone
 You should have direct access to Web3, no matter where you live.

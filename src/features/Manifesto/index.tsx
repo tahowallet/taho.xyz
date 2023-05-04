@@ -31,7 +31,7 @@ export function Manifesto() {
           description={
             "Sign to join our community & be eligible for future surprises"
           }
-          metaImage="https://tallyho.org/web3pledge-cover.png"
+          metaImage="https://taho.xyz/web3pledge-cover.png"
         />
 
         <Header />

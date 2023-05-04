@@ -90,7 +90,7 @@ export function DaoTimeline() {
               <Event date="January 2021">Development begins on Taho</Event>
               <Event
                 date="August 2021"
-                href="https://blog.tally.cash/a-community-owned-wallet-for-the-new-internet/"
+                href="https://blog.taho.xyz/a-community-owned-wallet-for-the-new-internet/"
               >
                 Taho is Publicly Announced
               </Event>
@@ -98,25 +98,25 @@ export function DaoTimeline() {
               <Event date="September 2021">First Community POAPs created</Event>
               <Event
                 date="December 2021"
-                href="https://gov.tallyho.org/t/tally-ho-delegate-applications/18"
+                href="https://gov.taho.xyz/t/tally-ho-delegate-applications/18"
               >
                 Call for DAO Delegates (still open!)
               </Event>
               <Event
                 date="February 2022"
-                href="https://blog.tally.cash/tally-wallet-plans-first-gitcoin-aqueduct-to-automate-public-goods-funding-ecosystem-building/"
+                href="https://blog.taho.xyz/tally-wallet-plans-first-gitcoin-aqueduct-to-automate-public-goods-funding-ecosystem-building/"
               >
                 Taho Commits 2.5% of Token Supply to Gitcoin Aqueduct
               </Event>
               <Event
                 date="March 2022"
-                href="https://blog.tally.cash/community-multisig-deployed/"
+                href="https://blog.taho.xyz/community-multisig-deployed/"
               >
                 Community Multisig Deployed
               </Event>
               <Event
                 date="May 2022"
-                href="https://gov.tallyho.org/t/tally-ho-dao-structure-proposal/455"
+                href="https://gov.taho.xyz/t/tally-ho-dao-structure-proposal/455"
               >
                 DAO Structure Proposed
               </Event>

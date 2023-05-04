@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Taho — The community owned & operated wallet`,
     description: ``,
-    image: `https://tallyho.org/cover.png`, // Twitter wants an absolute rather than relative url.
+    image: `https://taho.xyz/cover.png`, // Twitter wants an absolute rather than relative url.
     author: `@thesis_co`,
   },
   plugins: [

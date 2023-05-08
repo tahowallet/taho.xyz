@@ -1,4 +1,4 @@
-# tallyho.cash
+# taho.xyz
 
 The primary website for Taho, the community-owned web3 wallet.
 

@@ -15,7 +15,7 @@ import {
 } from "shared/styles/lengths";
 
 const chromeDownloadHref =
-  "https://chrome.google.com/webstore/detail/tally/eajafomhmkipbjmfmhebemolkcicgfmd";
+  "https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd";
 const firefoxDownloadHref = "/tally_ho_pre_release_channel-0.13.1-fx.xpi";
 
 export function DownloadCta() {

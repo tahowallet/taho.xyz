@@ -175,9 +175,9 @@ export function HomeFeatures() {
             padding: 2rem;
           `}
         >
-          <ComingSoon>Custom RPC</ComingSoon>
+          <ComingSoon>MEV Kickbacks</ComingSoon>
+          <ComingSoon>Leaderboard</ComingSoon>
           <ComingSoon>Social Recovery</ComingSoon>
-          <ComingSoon>More EVM Chains</ComingSoon>
         </div>
       </div>
       <div

@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Layer, Stage, Text } from "react-konva";
+import { Image, Layer, Stage, Text } from "react-konva";
 import Map, { MAP_POSITION } from "./Map";
 import { Vector2d } from "konva/lib/types";
+import Gif from "./Gif";
+import MapZones from "./MapZones";
 
 export default function Dapp() {
   const [scale, setScale] = useState(0.5);
@@ -34,6 +36,10 @@ export default function Dapp() {
 
   return (
     <div>
+      <div>
+        <button onClick={onZoomOut}>Zoom out</button>
+        <button onClick={onZoomIn}>Zoom in</button>
+      </div>
       <Stage
         draggable
         dragBoundFunc={onDrag}
@@ -43,13 +49,10 @@ export default function Dapp() {
       >
         <Layer>
           <Map />
-          <Text text="Hello" x={100} y={100} fontSize={100} />
+          <Gif src="/dapp_meme.gif" x={2000} y={2000} />
+          <MapZones />
         </Layer>
       </Stage>
-      <div>
-        <button onClick={onZoomOut}>Zoom out</button>
-        <button onClick={onZoomIn}>Zoom in</button>
-      </div>
     </div>
   );
 }

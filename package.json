@@ -50,6 +50,7 @@
     "gatsby-plugin-twitter-pixel": "^2.0.2",
     "gatsby-plugin-typescript": "^2.12.0",
     "gatsby-transformer-sharp": "^2.12.0",
+    "gifler": "^0.1.0",
     "konva": "^9.2.0",
     "linaria": "^2.2.0",
     "normalize.css": "^8.0.1",

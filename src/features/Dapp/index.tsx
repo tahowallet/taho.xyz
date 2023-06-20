@@ -4,6 +4,7 @@ import Map, { MAP_POSITION } from "./Map";
 import { Vector2d } from "konva/lib/types";
 import Gif from "./Gif";
 import MapZones from "./MapZones";
+import Img from "./Img";
 
 export default function Dapp() {
   const [scale, setScale] = useState(0.5);
@@ -49,8 +50,9 @@ export default function Dapp() {
       >
         <Layer>
           <Map />
-          <Gif src="/dapp_meme.gif" x={2000} y={2000} />
           <MapZones />
+          <Gif src="/dapp_meme.gif" x={2000} y={2000} />
+          <Img src="/dapp_building.png" x={600} y={300} scale={0.7}/>
         </Layer>
       </Stage>
     </div>

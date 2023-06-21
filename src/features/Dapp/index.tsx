@@ -5,13 +5,24 @@ import { Vector2d } from "konva/lib/types";
 import Gif from "./Gif";
 import MapZones from "./MapZones";
 import Img from "./Img";
+import { isBrowser } from "shared/utils";
+
+const getDimensions = () => {
+  if (isBrowser) {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+  return {
+    width: 0,
+    height: 0,
+  };
+};
 
 export default function Dapp() {
   const [scale, setScale] = useState(0.5);
-  const [stageDimensions, setStageDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const [stageDimensions, setStageDimensions] = useState(() => getDimensions());
 
   const onDrag = (position: Vector2d) => ({
     x: position.x > MAP_POSITION.start.x ? MAP_POSITION.start.x : position.x,
@@ -24,15 +35,14 @@ export default function Dapp() {
     setScale((prevScale) => (prevScale < 0.7 ? prevScale + 0.1 : prevScale));
 
   const handleResize = useCallback(() => {
-    setStageDimensions({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+    setStageDimensions(getDimensions());
   }, []);
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (isBrowser) {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, [handleResize]);
 
   return (
@@ -41,20 +51,22 @@ export default function Dapp() {
         <button onClick={onZoomOut}>Zoom out</button>
         <button onClick={onZoomIn}>Zoom in</button>
       </div>
-      <Stage
-        draggable
-        dragBoundFunc={onDrag}
-        scale={{ x: scale, y: scale }}
-        width={stageDimensions.width}
-        height={stageDimensions.height}
-      >
-        <Layer>
-          <Map />
-          <MapZones />
-          <Gif src="/dapp_meme.gif" x={2000} y={2000} />
-          <Img src="/dapp_building.png" x={600} y={300} scale={0.7}/>
-        </Layer>
-      </Stage>
+      {isBrowser && (
+        <Stage
+          draggable
+          dragBoundFunc={onDrag}
+          scale={{ x: scale, y: scale }}
+          width={stageDimensions.width}
+          height={stageDimensions.height}
+        >
+          <Layer>
+            <Map />
+            <MapZones />
+            <Gif src="/dapp_meme.gif" x={2000} y={2000} />
+            <Img src="/dapp_building.png" x={600} y={300} scale={0.7} />
+          </Layer>
+        </Stage>
+      )}
     </div>
   );
 }

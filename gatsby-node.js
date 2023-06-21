@@ -26,6 +26,10 @@ exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
             test: /firebase/,
             use: loaders.null(),
           },
+          {
+            test: /konva/,
+            use: loaders.null(),
+          },
         ],
       },
     });

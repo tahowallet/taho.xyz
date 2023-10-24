@@ -71,7 +71,6 @@ export function Header() {
           `}
         >
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/web3pledge">Web3 Pledge</NavLink>
           <NavLink blank to="https://taho.upvoty.com/">
             Roadmap
           </NavLink>

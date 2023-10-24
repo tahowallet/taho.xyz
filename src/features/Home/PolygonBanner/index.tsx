@@ -24,7 +24,9 @@ export function HomeBanner() {
         `}
       >
         {"The Subscape Beta is launching soon! "}
-        <a href="https://waitlist.taho.xyz/"> <u>Join the waitlist.</u>.</a>
+        <a href="https://waitlist.taho.xyz/">
+          <u>Join the waitlist</u>.
+        </a>
       </div>
     </div>
   );

@@ -91,6 +91,12 @@ export function SecurityAudits() {
               detail={<>Swaps contracts</>}
               href="https://code4rena.com/reports/2021-10-tally/"
             />
+            <Audit
+              auditor={<>Least Authority</>}
+              date={<>July 2023</>}
+              detail={<>Private Key Import + Recovery Phrase Reveal</>}
+              href="https://leastauthority.com/wp-content/uploads/2023/07/Thesis_Taho_Wallet_Extension_Final_Audit_Report_Least-Authority.pdf"
+            />
           </tbody>
         </table>
       </div>

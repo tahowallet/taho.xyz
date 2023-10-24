@@ -53,8 +53,7 @@ export function HomeFeatures() {
       >
         Taho makes it safe and easy to connect to DeFi and web3.
         <br />
-        It has everything you need from MetaMask, plus lots more to
-        love:
+        It has everything you need from MetaMask, plus lots more to love:
       </p>
       <div
         className={css`
@@ -99,9 +98,7 @@ export function HomeFeatures() {
               </>
             }
           >
-            View all your Ethereum, Polygon,
-            <br />
-            Optimism and Arbitrum NFTs.
+            View all your NFTs in one place.
           </Feature>
         </div>
         <div
@@ -203,7 +200,7 @@ export function HomeFeatures() {
             justify-content: center;
           `}
         >
-          {Array.from({ length: 19 }).map((unused, i) => (
+          {Array.from({ length: 17 }).map((unused, i) => (
             <div
               className={css`
                 width: 16rem;

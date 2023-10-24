@@ -23,8 +23,10 @@ export function HomeBanner() {
           padding-left: 4rem;
         `}
       >
-        {"Tally Ho is now Taho. "}
-        <a href="https://blog.taho.xyz/rename-announcement/"> <u>Learn more</u>.</a>
+        {"The Subscape Beta is launching soon! "}
+        <a href="https://waitlist.taho.xyz/">
+          <u>Join the waitlist</u>.
+        </a>
       </div>
     </div>
   );

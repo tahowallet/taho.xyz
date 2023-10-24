@@ -99,9 +99,7 @@ export function HomeFeatures() {
               </>
             }
           >
-            View all your Ethereum, Polygon,
-            <br />
-            Optimism and Arbitrum NFTs.
+            View all your NFTs in one place.
           </Feature>
         </div>
         <div

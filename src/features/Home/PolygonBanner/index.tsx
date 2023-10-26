@@ -23,9 +23,9 @@ export function HomeBanner() {
           padding-left: 4rem;
         `}
       >
-        {"The Subscape Beta is launching soon! "}
-        <a href="https://tahobeta.deform.cc/portalopen/">
-          <u>Join the waitlist</u>.
+        {"The Subscape Beta is live! "}
+        <a href="https://app.taho.xyz/">
+          <u>Check eligibility</u>.
         </a>
       </div>
     </div>

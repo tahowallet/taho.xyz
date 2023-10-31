@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import { css } from "linaria";
 import React from "react";
+import BannerWrapper from "shared/components/BannerWrapper";
 import {
   bodyDarkGrey80,
   buttonBackgroundSemanticSuccess,
@@ -25,13 +26,7 @@ import { buttonShadow } from "shared/styles/shadows";
 
 export function HomeProductHero() {
   return (
-    <div
-      className={css`
-        max-width: ${sectionWideWidth};
-        padding: 0 ${sectionInlinePadding};
-        margin: 0 auto;
-      `}
-    >
+    <BannerWrapper>
       <div
         className={css`
           background: top 20px left 22px / auto no-repeat
@@ -76,23 +71,26 @@ export function HomeProductHero() {
             Taho is the first community-owned web3 wallet
           </p>
           <Link
-            className={"matomo_download " + css`
-              display: inline-block;
-              padding: ${buttonBlockPadding} ${buttonInlinePadding};
-              border-radius: ${buttonBorderRadius};
-              font: ${buttonLabelQuincy18};
-              letter-spacing: ${labelLetterSpacing};
-              box-shadow: ${buttonShadow};
-              background: ${buttonBackgroundSemanticSuccess};
-              color: ${buttonLabelHunterGreen};
-              margin: 1rem 0;
-            `}
+            className={
+              "matomo_download " +
+              css`
+                display: inline-block;
+                padding: ${buttonBlockPadding} ${buttonInlinePadding};
+                border-radius: ${buttonBorderRadius};
+                font: ${buttonLabelQuincy18};
+                letter-spacing: ${labelLetterSpacing};
+                box-shadow: ${buttonShadow};
+                background: ${buttonBackgroundSemanticSuccess};
+                color: ${buttonLabelHunterGreen};
+                margin: 1rem 0;
+              `
+            }
             to="https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd"
           >
             Download Now
           </Link>
         </div>
       </div>
-    </div>
+    </BannerWrapper>
   );
 }

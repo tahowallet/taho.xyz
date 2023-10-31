@@ -35,6 +35,13 @@ css`
     }
 
     @font-face {
+      font-family: "QuincyCF-Bold";
+      src: url("../fonts/quincy-cf-bold/quincy-cf-bold.woff2") format("woff2");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
       font-family: "Segment-Regular";
       src: url("../fonts/segment-regular/segment-regular.woff2") format("woff2");
       font-weight: normal;

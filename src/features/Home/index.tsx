@@ -2,7 +2,6 @@ import { DownloadCta } from "features/Download/Cta";
 import { DownloadHeader } from "features/Download/Header";
 import { Footer, footerSeparatorBackground } from "features/Footer";
 import { Header } from "features/Header";
-import { HomeCommunityPledge } from "features/Home/CommunityPledge";
 import { HomeFeatures } from "features/Home/Features";
 import { HomeProductHero } from "features/Home/Hero";
 import { HomeBanner } from "./PolygonBanner";
@@ -16,6 +15,7 @@ import {
   sectionBackgroundGold5,
   sectionBackgroundOffWhite,
 } from "shared/styles/colors";
+import SubscapeBanner from "./SubscapeBanner";
 
 export function Home() {
   return (
@@ -38,18 +38,17 @@ export function Home() {
         <HomeBanner />
         <div
           className={css`
-            padding: 6rem 0;
+            padding: 4.5rem 0;
             background: ${sectionBackgroundGold5};
           `}
         >
+          <SubscapeBanner />
           <HomeProductHero />
           <div id="download">
             <HomeTryIt />
             <DownloadCta />
           </div>
         </div>
-
-        <HomeCommunityPledge />
 
         <div
           className={css`

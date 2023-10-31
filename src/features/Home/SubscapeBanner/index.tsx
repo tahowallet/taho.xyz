@@ -11,11 +11,16 @@ export default function SubscapeBanner() {
       <div
         className={css`
           background: #081417;
+          height: 422px;
           padding: 4rem;
           border-radius: 1rem;
           position: relative;
           overflow: hidden;
+          @media (max-width: 64rem) {
+            height: 335px;
+          }
           @media (max-width: 48rem) {
+            height: 322px;
             text-align: center;
             padding: 6rem 4rem;
           }

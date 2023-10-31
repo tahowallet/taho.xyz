@@ -3,11 +3,6 @@ import React from "react";
 import BannerWrapper from "shared/components/BannerWrapper";
 import ButtonAnchor from "shared/components/ButtonAnchor";
 import { grey40 } from "shared/styles/color-palette";
-import {
-  fontSubTitleCssFragment,
-  quincyRegularFontFamily,
-  quincyTextFontFamily,
-} from "shared/styles/font-families";
 import { bodyNormalSegment24 } from "shared/styles/fonts";
 
 export default function SubscapeBanner() {
@@ -16,17 +11,34 @@ export default function SubscapeBanner() {
       <div
         className={css`
           background: #081417;
-          padding: 60px;
+          padding: 4rem;
           border-radius: 1rem;
           position: relative;
           overflow: hidden;
+          @media (max-width: 48rem) {
+            text-align: center;
+            padding: 6rem 4rem;
+          }
+          @media (max-width: 32rem) {
+            text-align: center;
+            padding: 4rem 3rem;
+          }
         `}
       >
         <div
           className={css`
-            width: 460px;
+            max-width: 460px;
             position: relative;
             z-index: 1;
+            @media (max-width: 64rem) {
+              max-width: 360px;
+            }
+            @media (max-width: 48rem) {
+              max-width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
           `}
         >
           <img
@@ -34,14 +46,17 @@ export default function SubscapeBanner() {
             height={58}
             width={279}
             className={css`
-              margin-bottom: 2rem;
+              margin-bottom: 32px;
+              @media (max-width: 32rem) {
+                height: 40px;
+              }
             `}
           />
           <p
             className={css`
               color: ${grey40};
               font: ${bodyNormalSegment24};
-              margin-bottom: 1.5rem;
+              margin-bottom: 24px;
             `}
           >
             Ready for a new adventure Nomad? Join your community in Subscape to
@@ -60,6 +75,29 @@ export default function SubscapeBanner() {
             right: 0;
             top: 0;
             height: 100%;
+            max-width: 800px;
+            object-fit: cover;
+            @media (max-width: 64rem) {
+              max-width: 500px;
+              opacity: 0.6;
+            }
+            @media (max-width: 48rem) {
+              display: none;
+            }
+          `}
+        />
+        <img
+          src={require("./portal.webp")}
+          className={css`
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            @media (min-width: 48rem) {
+              display: none;
+            }
           `}
         />
       </div>

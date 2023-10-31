@@ -4,7 +4,6 @@ import { Footer, footerSeparatorBackground } from "features/Footer";
 import { Header } from "features/Header";
 import { HomeFeatures } from "features/Home/Features";
 import { HomeProductHero } from "features/Home/Hero";
-import { HomeBanner } from "./PolygonBanner";
 import { HomeTryIt } from "features/Home/TryIt";
 import { Subscribe } from "features/Subscribe";
 import { css } from "linaria";
@@ -35,10 +34,9 @@ export function Home() {
           flex-flow: column;
         `}
       >
-        <HomeBanner />
         <div
           className={css`
-            padding: 4.5rem 0;
+            padding: 3rem 0;
             background: ${sectionBackgroundGold5};
           `}
         >

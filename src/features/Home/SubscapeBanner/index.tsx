@@ -62,7 +62,7 @@ export default function SubscapeBanner() {
             Ready for a new adventure Nomad? Join your community in Subscape to
             complete quests and earn $XP. Explore, govern, and earn in Subscape.
           </p>
-          <ButtonAnchor>
+          <ButtonAnchor href="https://app.taho.xyz">
             <span>Try the Beta</span>
             <img src={require("./new-tab.svg")} height={16} width={16} />
           </ButtonAnchor>

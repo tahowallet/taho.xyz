@@ -2,10 +2,22 @@ import React, { ReactNode } from "react";
 import { css } from "linaria";
 import { quincyBoldFontFamily } from "shared/styles/font-families";
 
-export default function ButtonAnchor({ children }: { children: ReactNode }) {
+type ButtonAnchorProps = {
+  children: ReactNode;
+  href: string;
+  target?: string;
+};
+
+export default function ButtonAnchor({
+  children,
+  href,
+  target = "_blank",
+}: ButtonAnchorProps) {
   return (
     <a
       type="button"
+      href={href}
+      target={target}
       className={css`
         display: flex;
         width: fit-content;

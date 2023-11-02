@@ -5,21 +5,25 @@ export function useFullHeight() {
 
   useEffect(() => {
     const resizeHandler = () => {
-      const scrollHeight = document.body.scrollHeight;
-      const clientHeight = document.body.clientHeight;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
 
-      if (scrollHeight > clientHeight) {
-        setHeight(`${scrollHeight + 1}px`); // adding missing pixel
-      } else {
-        setHeight(`${clientHeight}px`);
-      }
+      scrollHeight > clientHeight
+        ? setHeight(`${scrollHeight}px`)
+        : setHeight(`${clientHeight}px`);
     };
 
-    resizeHandler();
-    window.addEventListener("resize", resizeHandler);
+    if (typeof document !== "undefined") {
+      resizeHandler();
+      window.addEventListener("resize", resizeHandler);
+      window.addEventListener("scroll", resizeHandler);
 
-    return () => window.removeEventListener("resize", resizeHandler);
-  }, [document.body.scrollHeight, document.body.clientHeight]);
+      return () => {
+        window.removeEventListener("resize", resizeHandler);
+        window.removeEventListener("scroll", resizeHandler);
+      };
+    }
+  }, []);
 
   return height;
 }

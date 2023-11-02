@@ -1,6 +1,7 @@
 import { Widget } from "@typeform/embed-react";
 import { css } from "linaria";
-import React, { CSSProperties, useEffect, useRef, useState } from "react";
+import React, { CSSProperties, useEffect } from "react";
+import { useFullHeight } from "shared/hooks";
 import { bgGradient } from "shared/styles/bg-gradients";
 import { bodyLightGold5, bodyDarkGreen20 } from "shared/styles/colors";
 import {
@@ -76,10 +77,7 @@ css`
 `;
 
 function Goodbye() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<string>(
-    `${document.body.scrollHeight}px`
-  );
+  const height = useFullHeight();
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -91,22 +89,8 @@ function Goodbye() {
     document.title = "Goodbye";
   }, []);
 
-  useEffect(() => {
-    const resizeHandler = () => {
-      const scrollHeight = document.body.scrollHeight;
-      const clientHeight = document.body.clientHeight;
-
-      setHeight(`${Math.max(scrollHeight, clientHeight)}px`);
-    };
-
-    resizeHandler();
-    window.addEventListener("resize", resizeHandler);
-
-    return () => window.removeEventListener("resize", resizeHandler);
-  }, [document.body.scrollHeight, document.body.clientHeight]);
-
   return (
-    <div ref={containerRef} className="container">
+    <div className="container">
       <div className="cover gradient-1" style={{ height }} />
       <div className="cover gradient-2" style={{ height }} />
       <div className="cover gradient-3" style={{ height }} />

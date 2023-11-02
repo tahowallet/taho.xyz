@@ -1,11 +1,8 @@
 import { Widget } from "@typeform/embed-react";
 import { css } from "linaria";
-import React, { CSSProperties, useEffect, useRef, useState } from "react";
+import React, { CSSProperties, useEffect } from "react";
 import { bgGradient } from "shared/styles/bg-gradients";
-import {
-  bodyLightGold5,
-  bodyDarkGreen20,
-} from "shared/styles/colors";
+import { bodyLightGold5, bodyDarkGreen20 } from "shared/styles/colors";
 import {
   segmentFontFamily,
   quincyTextFontFamily,
@@ -79,9 +76,6 @@ css`
 `;
 
 function Goodbye() {
-  const containerRef = useRef<HTMLDivElement | null>(null)
-  const [height, setMaxHeight] = useState<string | undefined>()
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
 
@@ -89,25 +83,20 @@ function Goodbye() {
       window.posthog.capture("Uninstall", { distinct_id: params.get("uuid") });
     }
 
-    document.title = 'Goodbye';
+    document.title = "Goodbye";
   }, []);
 
-  useEffect(() => {
-    if (containerRef.current) {
-      setMaxHeight(`${containerRef.current.scrollHeight}px`)
-    }
-  }, [containerRef?.current?.scrollHeight])
-
   return (
-    <div ref={containerRef} className="container">
-      <div className="cover gradient-1" style={{ height }} />
-      <div className="cover gradient-2" style={{ height }} />
-      <div className="cover gradient-3" style={{ height }} />
+    <div className="container">
+      <div className="cover gradient-1" style={{ height: "100%" }} />
+      <div className="cover gradient-2" style={{ height: "100%" }} />
+      <div className="cover gradient-3" style={{ height: "100%" }} />
       <div className="banner">
         <div className="branding" />
         <h1>We’re sorry to see you go</h1>
         <p>
-          Help us build the wallet <span>YOU</span> deserve by answering these two questions?
+          Help us build the wallet <span>YOU</span> deserve by answering these
+          two questions?
         </p>
         <Widget id="iEZWGXuv" className="form" />
         <p>Follow us for news on improvements and new features.</p>

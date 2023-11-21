@@ -37,15 +37,6 @@ export function Dao() {
       <DaoTimeline />
       <DaoGetInvolved />
 
-      <div
-        className={css`
-          background: ${footerSeparatorBackground}, ${sectionBackgroundOffWhite};
-          padding: 6rem 0 28rem;
-        `}
-      >
-        <Subscribe />
-      </div>
-
       <Footer />
     </>
   );

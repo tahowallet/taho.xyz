@@ -68,15 +68,6 @@ export function Home() {
 
       <div
         className={css`
-          background: ${sectionBackgroundOffWhite};
-          padding: 6rem 0;
-        `}
-      >
-        <Subscribe />
-      </div>
-
-      <div
-        className={css`
           background: ${footerSeparatorBackground}, ${sectionBackgroundOffWhite};
           padding: 4rem 0 20rem;
         `}

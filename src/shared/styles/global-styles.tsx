@@ -49,9 +49,27 @@ css`
     }
 
     @font-face {
+      font-family: "Segment-Medium";
+      src: url("../fonts/segment-medium/segment-medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Segment-SemiBold";
+      src: url("../fonts/segment-semibold/segment-semibold.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
       font-family: "Segment-Bold";
       src: url("../fonts/segment-bold/segment-bold.woff2") format("woff2");
       font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "GT Alpina";
+      src: url("../fonts/gt-alpina-thin/gt-alpina-thin.woff2") format("woff2");
+      font-weight: 250;
       font-style: normal;
     }
   }

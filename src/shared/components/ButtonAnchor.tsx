@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { MouseEventHandler, ReactNode } from "react";
 import { css } from "linaria";
 import { quincyBoldFontFamily } from "shared/styles/font-families";
 
@@ -7,12 +7,14 @@ type ButtonAnchorProps = {
   href: string;
   squared?: boolean;
   target?: string;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
 export default function ButtonAnchor({
   children,
   href,
   target = "_blank",
+  onClick,
   squared = false
 }: ButtonAnchorProps) {
   const buttonCls = css`
@@ -66,6 +68,7 @@ export default function ButtonAnchor({
       href={href}
       target={target}
       className={`${buttonCls} ${squared ? "squared" : "normal"}`}
+      onClick={onClick}
     >
       {children}
     </a>

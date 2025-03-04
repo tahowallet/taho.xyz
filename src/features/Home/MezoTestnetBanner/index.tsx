@@ -1,11 +1,16 @@
 import { css } from "linaria";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import BannerWrapper from "shared/components/BannerWrapper";
 import ButtonAnchor from "shared/components/ButtonAnchor";
 import { grey40 } from "shared/styles/color-palette";
 import { bodyNormalSegment24 } from "shared/styles/fonts";
 
 export default function MezoTestnetBanner() {
+  const captureBannerClick = () => {
+    if (window.posthog !== undefined) {
+      window.posthog.capture("Join Mezo CTA");
+    }
+  }
   return (
     <BannerWrapper style={{ paddingBottom: "4.5rem" }}>
       <div
@@ -107,7 +112,7 @@ export default function MezoTestnetBanner() {
           Use them to collect swag or an exclusive NFT.<br/>
           <span>(available to Taho users only 🤫)</span>
           </p>
-          <ButtonAnchor squared href="https://mezo.org/matsnet">
+          <ButtonAnchor onClick={captureBannerClick} squared href="https://mezo.org/matsnet">
             <span>Login to claim</span>
             <img src={require("../../../shared/icons/new-tab.svg")} height={30} width={30} />
           </ButtonAnchor>

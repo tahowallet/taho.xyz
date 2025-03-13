@@ -8,7 +8,7 @@ import { bodyNormalSegment24 } from "shared/styles/fonts";
 export default function MezoTestnetBanner() {
   const captureBannerClick = () => {
     if (window.posthog !== undefined) {
-      window.posthog.capture("Join Mezo CTA");
+      window.posthog.capture("clicked-banner-join_mezo_cta");
     }
   }
   return (

@@ -28,7 +28,7 @@ export function FooterNav() {
       `}
     >
       <Link to="/">
-        <img width="168" height="127" src={require("./logo.svg")} 
+        <img width="168" height="127" src={"/images/logo.svg"} 
         />
       </Link>
       <div
@@ -62,9 +62,9 @@ export function FooterNav() {
           icon={{
             width: `24px`,
             height: `24px`,
-            src: `url(${require("./social-icons/discord.svg")})`,
-            hoverSrc: `url(${require("./social-icons/discord-hover.svg")})`,
-            activeSrc: `url(${require("./social-icons/discord-click.svg")})`,
+            src: `url("/images/social-icons/discord.svg")`,
+            hoverSrc: `url("/images/social-icons/discord-hover.svg")`,
+            activeSrc: `url("/images/social-icons/discord-click.svg")`,
           }}
         />
         <SocialLink
@@ -72,9 +72,9 @@ export function FooterNav() {
           icon={{
             width: `28px`,
             height: `24px`,
-            src: `url(${require("./social-icons/twitter.svg")})`,
-            hoverSrc: `url(${require("./social-icons/twitter-hover.svg")})`,
-            activeSrc: `url(${require("./social-icons/twitter-click.svg")})`,
+            src: `url("/images/social-icons/twitter.svg")`,
+            hoverSrc: `url("/images/social-icons/twitter-hover.svg")`,
+            activeSrc: `url("/images/social-icons/twitter-click.svg")`,
           }}
         />
         <SocialLink
@@ -82,9 +82,9 @@ export function FooterNav() {
           icon={{
             width: `28px`,
             height: `28px`,
-            src: `url(${require("./social-icons/github.svg")})`,
-            hoverSrc: `url(${require("./social-icons/github-hover.svg")})`,
-            activeSrc: `url(${require("./social-icons/github-click.svg")})`,
+            src: `url("/images/social-icons/github.svg")`,
+            hoverSrc: `url("/images/social-icons/github-hover.svg")`,
+            activeSrc: `url("/images/social-icons/github-click.svg")`,
           }}
         />
       </div>

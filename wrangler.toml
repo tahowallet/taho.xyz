@@ -1,0 +1,3 @@
+[compatibility_flags]
+compatibility_date = "2025-03-20"
+compatibility_flags = ["nodejs_compat"]

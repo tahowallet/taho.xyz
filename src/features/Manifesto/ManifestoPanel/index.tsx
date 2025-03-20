@@ -35,7 +35,7 @@ export function ManifestoPanel() {
             `}
             width="36"
             height="36"
-            src={require("./icon-sign.svg")}
+            src={"/images/icon-sign.svg"}
             alt=""
           />
         }

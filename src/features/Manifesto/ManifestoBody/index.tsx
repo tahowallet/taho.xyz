@@ -140,14 +140,14 @@ export function ManifestoBody() {
         `}
       >
         <Value
-          iconSrc={require("./icon-1-accessible.svg")}
+          iconSrc={"/images/icon-1-accessible.svg"}
           title={<>Access for everyone</>}
           body={
             <>You should have direct access to Web3—no matter where you live.</>
           }
         />
         <Value
-          iconSrc={require("./icon-2-oss.svg")}
+          iconSrc={"/images/icon-2-oss.svg"}
           title={<>Radical transparency</>}
           body={
             <>
@@ -157,7 +157,7 @@ export function ManifestoBody() {
           }
         />
         <Value
-          iconSrc={require("./icon-3-community.svg")}
+          iconSrc={"/images/icon-3-community.svg"}
           title={<>Full community ownership</>}
           body={
             <>

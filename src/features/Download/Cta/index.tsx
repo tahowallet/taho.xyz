@@ -13,6 +13,8 @@ import {
   sectionNarrowWidth,
   sectionInlinePadding,
 } from "shared/styles/lengths";
+import chromeLogo from "@browser-logos/chrome/chrome.svg";
+import braveLogo from "@browser-logos/brave/brave.svg";
 
 const chromeDownloadHref =
   "https://chrome.google.com/webstore/detail/taho/eajafomhmkipbjmfmhebemolkcicgfmd";
@@ -33,7 +35,7 @@ export function DownloadCta() {
     >
       <Option
         name="Chrome"
-        logoSrc={require("@browser-logos/chrome/chrome.svg")}
+        logoSrc={chromeLogo}
         href={chromeDownloadHref}
         twtrTrackPidParams={[
           "o9l8i",
@@ -47,7 +49,7 @@ export function DownloadCta() {
       /> */}
       <Option
         name="Brave"
-        logoSrc={require("@browser-logos/brave/brave.svg")}
+        logoSrc={braveLogo}
         href={chromeDownloadHref}
         twtrTrackPidParams={[
           "o9l8i",

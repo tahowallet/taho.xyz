@@ -33,7 +33,7 @@ export function DaoTestimonials() {
         `}
       >
         <Testimonial
-          authorIconSrc={require("./testimonial-icon-1-gitcoin.svg")}
+          authorIconSrc={"/images/testimonial-icon-1-gitcoin.svg"}
           authorHeadline="Kevin Owocki"
           authorSupport="Gitcoin co-founder"
         >
@@ -41,7 +41,7 @@ export function DaoTestimonials() {
           goods funding a top priority from their DAO&rsquo;s inception.”
         </Testimonial>
         <Testimonial
-          authorIconSrc={require("./testimonial-icon-2-bankless.png")}
+          authorIconSrc={"/images/testimonial-icon-2-bankless.png"}
           authorHeadline="BanklessDAO"
         >
           “Taho has been hard at work designing a DAO structure that is

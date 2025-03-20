@@ -47,7 +47,7 @@ export default function SubscapeBanner() {
           `}
         >
           <img
-            src={"./images/subscape-logo.svg"}
+            src={"/images/subscape-logo.svg"}
             height={58}
             width={279}
             className={css`
@@ -69,12 +69,12 @@ export default function SubscapeBanner() {
           </p>
           <ButtonAnchor href="https://app.taho.xyz">
             <span>Try the Beta</span>
-            <img src={"./images/new-tab.svg"} height={16} width={16} />
+            <img src={"/images/new-tab.svg"} height={16} width={16} />
           </ButtonAnchor>
         </div>
 
         <img
-          src={"./images/portal-cutout.webp"}
+          src={"/images/portal-cutout.webp"}
           className={css`
             position: absolute;
             right: 0;
@@ -92,7 +92,7 @@ export default function SubscapeBanner() {
           `}
         />
         <img
-          src={"./images/portal.webp"}
+          src={"/images/portal.webp"}
           className={css`
             position: absolute;
             inset: 0;

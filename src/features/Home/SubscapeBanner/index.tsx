@@ -74,7 +74,7 @@ export default function SubscapeBanner() {
         </div>
 
         <img
-          src={require("./portal-cutout.webp")}
+          src={"./images/portal-cutout.webp"}
           className={css`
             position: absolute;
             right: 0;
@@ -92,7 +92,7 @@ export default function SubscapeBanner() {
           `}
         />
         <img
-          src={require("./portal.webp")}
+          src={"./images/portal.webp"}
           className={css`
             position: absolute;
             inset: 0;

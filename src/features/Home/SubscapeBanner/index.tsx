@@ -47,7 +47,7 @@ export default function SubscapeBanner() {
           `}
         >
           <img
-            src={require("./subscape-logo.svg")}
+            src={"./images/subscape-logo.svg"}
             height={58}
             width={279}
             className={css`

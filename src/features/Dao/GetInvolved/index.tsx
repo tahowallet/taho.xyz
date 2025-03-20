@@ -70,7 +70,7 @@ export function DaoGetInvolved() {
         `}
       >
         <Option
-          iconSrc={require("./option-1-discord.svg")}
+          iconSrc={"/images/option-1-discord.svg"}
           href="https://chat.taho.xyz/"
           title="Discord"
         >

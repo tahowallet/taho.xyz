@@ -69,7 +69,7 @@ export default function SubscapeBanner() {
           </p>
           <ButtonAnchor href="https://app.taho.xyz">
             <span>Try the Beta</span>
-            <img src={require("./new-tab.svg")} height={16} width={16} />
+            <img src={"images/new-tab.svg"} height={16} width={16} />
           </ButtonAnchor>
         </div>
 

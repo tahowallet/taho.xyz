@@ -14,7 +14,7 @@ import {
   sectionBackgroundGold5,
   sectionBackgroundOffWhite,
 } from "shared/styles/colors";
-import SubscapeBanner from "./SubscapeBanner";
+import MezoTestnetBanner from "./MezoTestnetBanner";
 
 export function Home() {
   return (
@@ -40,7 +40,7 @@ export function Home() {
             background: ${sectionBackgroundGold5};
           `}
         >
-          <SubscapeBanner />
+          <MezoTestnetBanner/>
           <HomeProductHero />
           <div id="download">
             <HomeTryIt />

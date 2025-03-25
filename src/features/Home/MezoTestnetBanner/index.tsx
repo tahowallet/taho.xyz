@@ -110,7 +110,7 @@ export default function MezoTestnetBanner() {
           >
           Taho users get 20,000 free sats on the Mezo testnet.<br/>
           Use them to collect swag or an exclusive NFT.<br/>
-          <span>(available to Taho users only 🤫)</span>
+          <span>(available to existing Taho users only with code XTAHO 🤫)</span>
           </p>
           <ButtonAnchor onClick={captureBannerClick} squared href="https://mezo.org/matsnet">
             <span>Login to claim</span>

@@ -34,7 +34,7 @@ export function Header() {
             `}
             width="93"
             height="30"
-            src={require("./logo.svg")}
+            src={"/images/logo.svg"}
           />
         </Link>
         <Link
@@ -74,9 +74,6 @@ export function Header() {
           `}
         >
           <NavLink to="/">Home</NavLink>
-          <NavLink blank to="https://taho.upvoty.com/">
-            Roadmap
-          </NavLink>
           <NavLink blank to="https://blog.taho.xyz/">
             Blog
           </NavLink>

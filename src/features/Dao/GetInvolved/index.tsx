@@ -70,14 +70,14 @@ export function DaoGetInvolved() {
         `}
       >
         <Option
-          iconSrc={require("./option-1-discord.svg")}
+          iconSrc={"/images/option-1-discord.svg"}
           href="https://chat.taho.xyz/"
           title="Discord"
         >
           The best way to get started and join the community.
         </Option>
         <Option
-          iconSrc={require("./option-2-gov.svg")}
+          iconSrc={"/images/option-2-gov.svg"}
           href="https://gov.taho.xyz/"
           title="Governance Forum"
         >
@@ -85,15 +85,15 @@ export function DaoGetInvolved() {
           long-form thoughts.
         </Option>
         <Option
-          iconSrc={require("./option-3-workspace.svg")}
-          href="https://tahowallet.notion.site/"
+          iconSrc={"/images/option-3-workspace.svg"}
+          href="https://tallyhowallet.notion.site/"
           title="Community Workspace"
         >
           The community calendar, plus an overview of all our active working
           groups.
         </Option>
         <Option
-          iconSrc={require("./option-4-github.svg")}
+          iconSrc={"/images/option-4-github.svg"}
           href="https://github.com/tahowallet/extension"
           title="Github"
         >

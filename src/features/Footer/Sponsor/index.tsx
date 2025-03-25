@@ -19,13 +19,13 @@ export function Sponsor() {
       `}
     >
       <Link to="https://www.alchemy.com">
-        <img width="170px" height="25px" src={require("./alchemy.svg")} 
+        <img width="170px" height="25px" src={"/images/alchemy.svg"}
         />
       </Link>
         <div>
-            <img width="32px" height="30px" src={require("./star-mini.svg")}
+            <img width="32px" height="30px" src={"/images/star-mini.svg"}
             />
-        </div>       
+        </div>
         <div className={css`
         font-family: ${quincyRegularFontFamily};
         font-size: 24px;

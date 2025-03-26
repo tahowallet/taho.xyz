@@ -112,7 +112,7 @@ export default function MezoTestnetBanner() {
           Use them to collect swag or an exclusive NFT.<br/>
           <span>(available to existing Taho users only with code XTAHO 🤫)</span>
           </p>
-          <ButtonAnchor onClick={captureBannerClick} squared href="https://mezo.org/matsnet">
+          <ButtonAnchor onClick={captureBannerClick} squared href="https://mezo.org/matsnet/borrow?src=taho-claim-sats-banner">
             <span>Login to claim</span>
             <img src={"/icons/new-tab.svg"} height={30} width={30} />
           </ButtonAnchor>

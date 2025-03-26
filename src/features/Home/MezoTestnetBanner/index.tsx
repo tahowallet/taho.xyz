@@ -15,7 +15,7 @@ export default function MezoTestnetBanner() {
     <BannerWrapper style={{ paddingBottom: "4.5rem" }}>
       <div
         className={css`
-          background: url(${require('./mezo-bg.png')}) center/cover no-repeat #ff0046;
+          background: url('/images/mezo-bg.png') center/cover no-repeat #ff0046;
           height: 422px;
           border-radius: 1rem;
           position: relative;
@@ -41,7 +41,7 @@ export default function MezoTestnetBanner() {
           }
         `}>
       <img
-            src={require("./mezo-chest.png")}
+            src={"/images/mezo-chest.png"}
             className={css`
                 position: absolute;
                 top: 37px;
@@ -114,7 +114,7 @@ export default function MezoTestnetBanner() {
           </p>
           <ButtonAnchor onClick={captureBannerClick} squared href="https://mezo.org/matsnet">
             <span>Login to claim</span>
-            <img src={require("../../../shared/icons/new-tab.svg")} height={30} width={30} />
+            <img src={"/icons/new-tab.svg"} height={30} width={30} />
           </ButtonAnchor>
         </div>
       </div>

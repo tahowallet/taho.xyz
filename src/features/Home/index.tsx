@@ -40,7 +40,7 @@ export function Home() {
             background: ${sectionBackgroundGold5};
           `}
         >
-          <MezoTestnetBanner/>
+          {process.env.GATSBY_MEZO_BANNER === "true" && <MezoTestnetBanner />}
           <HomeProductHero />
           <div id="download">
             <HomeTryIt />

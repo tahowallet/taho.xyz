@@ -1,0 +1,22 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@taho.xyz
+Encryption: https://keybase.io/shadowfiend/pgp_keys.asc
+Encryption: https://keybase.io/piotrd/pgp_keys.asc
+Encryption: https://keybase.io/mhluongo/pgp_keys.asc
+Acknowledgments: https://taho.xyz/disclosed-vulnerabilities
+Preferred-Languages: en, es, fr
+Canonical: https://taho.xyz/.well-known/security.txt
+Policy: https://taho.xyz/SECURITY.md
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEkXss9aTVhBTmGyuQr/Im9Ka2R5cFAmgZ+JoACgkQr/Im9Ka2
+R5eTPgf/fy9RhFCYMH9Pn9LMhVT7OhtK8WO6+pep5NnqY4fY6cs4PdlijRkj37SV
+C7405T046jyO33b9CliYFnpO8QBpTxLzNhpMnS8zO60nqBix85cD1XjVl64qKD30
+itYcWip/NvNFHqv6oogBOnKdrmdarZtxgz/EzfnC0hzwY5G4tcYB7v9FkyV57ibh
+MQ4i/G0tsHILnF9p1P4nNc9su5G26r6HhJu6i8gnkJZpG2BVRy6LgD/dPS4z8Ext
+ZSqfRkfOI8kz8UIeoqfiOjgJHN9k1URNwQDYDHe9ypJBUI3TDXfVjetmIyNepzfM
+5LLUAJfgYI3nYFfqHP6Otz4L5ZTrlg==
+=bsaM
+-----END PGP SIGNATURE-----

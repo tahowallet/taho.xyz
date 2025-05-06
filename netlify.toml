@@ -4,11 +4,6 @@
   functions = "functions"
   publish = "./public/"
 
-[[redirects]]
-  from = "/community-edition"
-  to = "/"
-  status = 301
-
 ## Uncomment to use this redirect for Single Page Applications like create-react-app.
 ## Not needed for static site generators.
 #[[redirects]]

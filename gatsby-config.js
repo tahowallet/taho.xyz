@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Taho — The community owned & operated wallet`,
+    title: `Taho Test — The community owned & operated wallet`,
     description: ``,
     image: `https://taho.xyz/cover.png`, // Twitter wants an absolute rather than relative url.
     author: `@thesis_co`,

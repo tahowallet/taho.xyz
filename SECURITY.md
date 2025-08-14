@@ -14,8 +14,8 @@ https://taho.xyz/security.txt and include:
 - A text description of the vulnerability.
 - Preferably, code to reproduce the issue (unless it is a protocol issue).
 - If available, an initial assessment of impact, ideally using the
-  https://www.first.org/cvss/[Common Vulnerability Scoring System]. There is
-  a https://www.first.org/cvss/calculator/3.1[calculator] to help. Note that
+  [Common Vulnerability Scoring System](https://www.first.org/cvss/). There is
+  a [calculator](https://www.first.org/cvss/calculator/3.1) to help. Note that
 	for CVSS purposes, Thesis and its project teams generally treat fund
 	compromise as a loss of Confidentiality.
 - If desired, a suggestion on how to fix the issue.

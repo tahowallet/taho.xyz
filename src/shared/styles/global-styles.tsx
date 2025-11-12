@@ -72,5 +72,12 @@ css`
       font-weight: 250;
       font-style: normal;
     }
+    @font-face {
+      font-family: "RiformaLLWeb-Medium";
+      src: url("../fonts/riforma-ll-web-medium/RiformaLLWeb-Medium.woff2")
+        format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
   }
 `;

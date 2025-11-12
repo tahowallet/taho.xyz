@@ -1,5 +1,6 @@
 /* Full color palette. Do not use these color directly, prefer a usage-specific wrapper such as `textDarkHunterGreen`. */
 
+export const banksgivingHunterGreen = "rgb(0, 82, 75)";
 export const hunterGreen = "rgb(0 40 37)";
 export const trophyGold = "rgb(239 156 50)";
 export const green120 = "rgb(0 33 30)";

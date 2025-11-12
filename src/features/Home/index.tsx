@@ -14,7 +14,7 @@ import {
   sectionBackgroundGold5,
   sectionBackgroundOffWhite,
 } from "shared/styles/colors";
-import MezoTestnetBanner from "./MezoTestnetBanner";
+import MezoBanksgivingBanner from "./MezoBanksgivingBanner";
 
 export function Home() {
   return (
@@ -40,7 +40,7 @@ export function Home() {
             background: ${sectionBackgroundGold5};
           `}
         >
-          <MezoTestnetBanner />
+          <MezoBanksgivingBanner />
           <HomeProductHero />
           <div id="download">
             <HomeTryIt />

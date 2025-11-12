@@ -16,12 +16,14 @@ import {
   green80,
   green40,
   green60,
+  banksgivingHunterGreen,
 } from "shared/styles/color-palette";
 
 /* Colors organized by usage (to reduce mistakes and improve refactorings) */
 
 export const titleDarkHunterGreen = hunterGreen;
 export const titleDarkGreen80 = green80;
+export const titleBanksgivingHunterGreen = banksgivingHunterGreen;
 
 export const bodyDarkGrey80 = grey80;
 export const bodyDarkGrey60 = grey60;
@@ -44,6 +46,7 @@ export const buttonLabelLightOffWhite = offWhite;
 
 export const buttonBackgroundSemanticSuccess = semanticSuccess;
 export const buttonBackgroundTrophyGold = trophyGold;
+export const buttonBackgroundBanksgivingHunterGreen = banksgivingHunterGreen;
 
 export const sectionBackgroundGold5 = gold5;
 export const sectionBackgroundGold20 = gold20;

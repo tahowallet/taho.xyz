@@ -56,7 +56,8 @@ css`
     }
     @font-face {
       font-family: "Segment-SemiBold";
-      src: url("../fonts/segment-semibold/segment-semibold.woff2") format("woff2");
+      src: url("../fonts/segment-semibold/segment-semibold.woff2")
+        format("woff2");
       font-weight: 600;
       font-style: normal;
     }

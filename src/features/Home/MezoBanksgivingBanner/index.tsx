@@ -111,8 +111,14 @@ export default function MezoBanksgivingBanner() {
                 letter-spacing: -0.04em;
               `}
             >
-              Banksgiving is here, and Taho users can access
-              <br />
+              Banksgiving is here, and Taho users can access{" "}
+              <br
+                className={css`
+                  @media (max-width: 540px) {
+                    display: none;
+                  }
+                `}
+              />
               Mezo's Galxe quests to start stacking mats now.
             </p>
             <a

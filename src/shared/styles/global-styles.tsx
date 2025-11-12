@@ -56,7 +56,8 @@ css`
     }
     @font-face {
       font-family: "Segment-SemiBold";
-      src: url("../fonts/segment-semibold/segment-semibold.woff2") format("woff2");
+      src: url("../fonts/segment-semibold/segment-semibold.woff2")
+        format("woff2");
       font-weight: 600;
       font-style: normal;
     }
@@ -70,6 +71,13 @@ css`
       font-family: "GT Alpina";
       src: url("../fonts/gt-alpina-thin/gt-alpina-thin.woff2") format("woff2");
       font-weight: 250;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "RiformaLLWeb-Medium";
+      src: url("../fonts/riforma-ll-web-medium/RiformaLLWeb-Medium.woff2")
+        format("woff2");
+      font-weight: 500;
       font-style: normal;
     }
   }
